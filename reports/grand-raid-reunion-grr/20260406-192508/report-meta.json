@@ -1,0 +1,18 @@
+{
+  "title": "Grand Raid Reunion",
+  "generated_at": "2026-04-06T19:25:06.703078+00:00",
+  "participants_count": 2747,
+  "rows_evaluated": 2747,
+  "qualified_count": 131,
+  "strategy": "participant-first",
+  "same_name_mode": "highest",
+  "race_url": "https://raw.githubusercontent.com/mpaladin/trail-intel-pages/main/test-data/grand-raid-reunion-grr.csv",
+  "competition_name": "grr",
+  "score_threshold": 680.0,
+  "published_at": "2026-04-06T19:25:08.413806+00:00",
+  "race_slug": "grand-raid-reunion-grr",
+  "race_name": "Grand Raid Reunion",
+  "report_path": "reports/grand-raid-reunion-grr/20260406-192508/index.html",
+  "csv_path": "reports/grand-raid-reunion-grr/20260406-192508/report.csv",
+  "json_path": "reports/grand-raid-reunion-grr/20260406-192508/report.json"
+}
