@@ -1,0 +1,18 @@
+{
+  "title": "TrailIntel Smoke Test",
+  "generated_at": "2026-04-06T18:52:03.271024+00:00",
+  "participants_count": 3,
+  "rows_evaluated": 3,
+  "qualified_count": 3,
+  "strategy": "participant-first",
+  "same_name_mode": "highest",
+  "race_url": "https://raw.githubusercontent.com/mpaladin/trail-intel-pages/main/test-data/participants-smoke.csv",
+  "competition_name": "",
+  "score_threshold": 700.0,
+  "published_at": "2026-04-06T18:52:04.437975+00:00",
+  "race_slug": "trailintel-smoke-test",
+  "race_name": "TrailIntel Smoke Test",
+  "report_path": "reports/trailintel-smoke-test/20260406-185204/index.html",
+  "csv_path": "reports/trailintel-smoke-test/20260406-185204/report.csv",
+  "json_path": "reports/trailintel-smoke-test/20260406-185204/report.json"
+}
