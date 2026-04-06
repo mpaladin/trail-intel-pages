@@ -1,0 +1,280 @@
+input_name,utmb_index,utmb_match_name,utmb_match_score,utmb_profile_url,itra_score,itra_match_name,itra_match_score,itra_profile_url,combined_score,notes
+Lucien mermillon,884.0,Lucien MERMILLON,1.0,https://utmb.world/runner/4447384.lucien.mermillon,893.0,Lucien MERMILLON,1.0,https://itra.run/RunnerSpace/MERMILLON.Lucien/4490876,887.6,
+charly guerin,786.0,Charly GUERIN,1.0,https://utmb.world/runner/875325.charly.guerin,842.0,Charly GUERIN,1.0,https://itra.run/RunnerSpace/GUERIN.Charly/875325,808.4,
+Nicolas FIRMIN,787.0,Nicolas FIRMIN,1.0,https://utmb.world/runner/529052.nicolas.firmin,754.0,Nicolas FIRMIN,1.0,https://itra.run/RunnerSpace/FIRMIN.Nicolas/529052,773.8,
+Alexis GRAND,746.0,Alexis GRAND,1.0,https://utmb.world/runner/629165.alexis.grand,785.0,Alexis GRAND,1.0,https://itra.run/RunnerSpace/GRAND.Alexis/629165,761.5999999999999,
+Marin Giraud-Charreyron,737.0,Marin GIRAUD-CHARREYRON,1.0,https://utmb.world/runner/1962159.marin.giraudcharreyron,767.0,Marin GIRAUD CHARREYRON,1.0,https://itra.run/RunnerSpace/GIRAUD CHARREYRON.Marin/1962159,749.0,
+Sébastien Treffort,724.0,Sébastien TREFFORT,1.0,https://utmb.world/runner/4771886.sebastien.treffort,767.0,Sébastien TREFFORT,1.0,https://itra.run/RunnerSpace/TREFFORT.Sébastien/4626937,741.2,
+Cédric Mermet,720.0,Cédric MERMET,1.0,https://utmb.world/runner/473793.cedric.mermet,772.0,Cedric MERMET,1.0,https://itra.run/RunnerSpace/MERMET.Cedric/473793,740.8,
+Thomas Dubost,698.0,Thomas DUBOST,1.0,https://utmb.world/runner/4292744.thomas.dubost,767.0,Thomas DUBOST,1.0,https://itra.run/RunnerSpace/DUBOST.Thomas/4304180,725.6,
+Matthieu Laffitte,710.0,Matthieu LAFFITTE,1.0,https://utmb.world/runner/5196955.matthieu.laffitte,747.0,Matthieu LAFFITTE,1.0,https://itra.run/RunnerSpace/LAFFITTE.Matthieu/650327,724.8,
+Lucie JAMSIN,693.0,Lucie JAMSIN,1.0,https://utmb.world/runner/538272.lucie.jamsin,699.0,Lucie JAMSIN,1.0,https://itra.run/RunnerSpace/JAMSIN.Lucie/538272,695.4000000000001,
+Mika Urbauer,685.0,Mika URBAUER,1.0,https://utmb.world/runner/5112346.mika.urbauer,696.0,Mika URBAUER,1.0,https://itra.run/RunnerSpace/URBAUER.Mika/4830609,689.4000000000001,
+José manuel MARTINEZ,680.0,Jose Manuel MARTINEZ,1.0,https://utmb.world/runner/3417221.josemanuel.martinez,,,,,680.0,ITRA skipped because UTMB 680.0 <= threshold 680.0
+Alban Dequeudre,667.0,Alban DEQUEUDRE,1.0,https://utmb.world/runner/295668.alban.dequeudre,,,,,667.0,ITRA skipped because UTMB 667.0 <= threshold 680.0
+Etienne LEROY,665.0,Etienne LEROY,1.0,https://utmb.world/runner/4268751.etienne.leroy,,,,,665.0,ITRA skipped because UTMB 665.0 <= threshold 680.0
+Mattéo Gouet,663.0,Mattéo GOUET,1.0,https://utmb.world/runner/4227789.matteo.gouet,,,,,663.0,ITRA skipped because UTMB 663.0 <= threshold 680.0
+Tom Lelièvre,660.0,Tom LELIEVRE,1.0,https://utmb.world/runner/6997898.tom.lelievre,,,,,660.0,ITRA skipped because UTMB 660.0 <= threshold 680.0
+Rafel Bernat Prada,655.0,Rafel BERNAT PRADA,1.0,https://utmb.world/runner/2372089.rafel.bernatprada,,,,,655.0,ITRA skipped because UTMB 655.0 <= threshold 680.0
+Alexis Guillon,649.0,Alexis GUILLON,1.0,https://utmb.world/runner/6185612.alexis.guillon,,,,,649.0,ITRA skipped because UTMB 649.0 <= threshold 680.0
+Martin Panaville,649.0,Martin PANAVILLE,1.0,https://utmb.world/runner/6501572.martin.panaville,,,,,649.0,ITRA skipped because UTMB 649.0 <= threshold 680.0
+GUYLLAUME FREY,645.0,Guyllaume FREY,1.0,https://utmb.world/runner/3819055.guyllaume.frey,,,,,645.0,ITRA skipped because UTMB 645.0 <= threshold 680.0
+PIERRE-YVES PELISSON,751.0,Pierre-Yves PICHON,0.7894736842105262,https://utmb.world/runner/6558740.pierreyves.pichon,460.0,Pierre Yves PELISSON,1.0,https://itra.run/RunnerSpace/PELISSON.Pierre Yves/6249619,634.5999999999999,
+Nicolas Piccard,633.0,Nicolas PICARD,0.8258620689655173,https://utmb.world/runner/3896977.nicolas.picard,,,,,633.0,ITRA skipped because UTMB 633.0 <= threshold 680.0
+Thibaut Morand,627.0,Thibaut MORAND,1.0,https://utmb.world/runner/6414002.thibaut.morand,,,,,627.0,ITRA skipped because UTMB 627.0 <= threshold 680.0
+Christophe Ribot,624.0,Christophe RIBOT,1.0,https://utmb.world/runner/1226733.christophe.ribot,,,,,624.0,ITRA skipped because UTMB 624.0 <= threshold 680.0
+nathan millet-ursin,615.0,Nathan MILLET-URSIN,1.0,https://utmb.world/runner/1807445.nathan.milletursin,,,,,615.0,ITRA skipped because UTMB 615.0 <= threshold 680.0
+Alexandre Vatin,614.0,Alexandre VATIN,1.0,https://utmb.world/runner/2599137.alexandre.vatin,,,,,614.0,ITRA skipped because UTMB 614.0 <= threshold 680.0
+ADRIEN DELMAS,610.0,Adrien DELMAS,1.0,https://utmb.world/runner/3080895.adrien.delmas,,,,,610.0,ITRA skipped because UTMB 610.0 <= threshold 680.0
+Philippe Bonnet,609.0,Philippe BONNET,1.0,https://utmb.world/runner/5455338.philippe.bonnet,,,,,609.0,ITRA skipped because UTMB 609.0 <= threshold 680.0
+Julien Ducret,608.0,Julien DUCRET,1.0,https://utmb.world/runner/7537558.julien.ducret,,,,,608.0,ITRA skipped because UTMB 608.0 <= threshold 680.0
+nicolas vergnes,605.0,Nicolas VERGNES,1.0,https://utmb.world/runner/2212271.nicolas.vergnes,,,,,605.0,ITRA skipped because UTMB 605.0 <= threshold 680.0
+Morgan Aeschlimann,604.0,Morgan AESCHLIMANN,1.0,https://utmb.world/runner/876965.morgan.aeschlimann,,,,,604.0,ITRA skipped because UTMB 604.0 <= threshold 680.0
+Etienne LAPORTE,601.0,Etienne LAPORTE,1.0,https://utmb.world/runner/385620.etienne.laporte,,,,,601.0,ITRA skipped because UTMB 601.0 <= threshold 680.0
+STEPHANE METAIRIE,600.0,Stephane METAIRIE,1.0,https://utmb.world/runner/1071843.stephane.metairie,,,,,600.0,ITRA skipped because UTMB 600.0 <= threshold 680.0
+Nicolas Botelho,600.0,Nicolas BOTELHO,1.0,https://utmb.world/runner/5315456.nicolas.botelho,,,,,600.0,ITRA skipped because UTMB 600.0 <= threshold 680.0
+Damien Lambert,599.0,Damien LAMBERT,1.0,https://utmb.world/runner/196168.damien.lambert,,,,,599.0,ITRA skipped because UTMB 599.0 <= threshold 680.0
+Pierre CHAUVEAU,598.0,Pierre CHAUVEAU,1.0,https://utmb.world/runner/4794008.pierre.chauveau,,,,,598.0,ITRA skipped because UTMB 598.0 <= threshold 680.0
+Stephane Monteil,595.0,Stephane MONTEIL,1.0,https://utmb.world/runner/179641.stephane.monteil,,,,,595.0,ITRA skipped because UTMB 595.0 <= threshold 680.0
+RUDY Werle,595.0,Rudy WERLE,1.0,https://utmb.world/runner/4052952.rudy.werle,,,,,595.0,ITRA skipped because UTMB 595.0 <= threshold 680.0
+vincent saunier,587.0,Vincent SAUNIER,1.0,https://utmb.world/runner/6651410.vincent.saunier,,,,,587.0,ITRA skipped because UTMB 587.0 <= threshold 680.0
+Patrice DONCQUE,586.0,Patrice DONCQUE,1.0,https://utmb.world/runner/1090773.patrice.doncque,,,,,586.0,ITRA skipped because UTMB 586.0 <= threshold 680.0
+Teddy Poulenard,586.0,Teddy POULENARD,1.0,https://utmb.world/runner/1159997.teddy.poulenard,,,,,586.0,ITRA skipped because UTMB 586.0 <= threshold 680.0
+Christophe Magnenaz,576.0,Christophe MAGNENAZ,1.0,https://utmb.world/runner/27904.christophe.magnenaz,,,,,576.0,ITRA skipped because UTMB 576.0 <= threshold 680.0
+Julien Dehaynin,575.0,Julien DEHAYNIN,1.0,https://utmb.world/runner/1377603.julien.dehaynin,,,,,575.0,ITRA skipped because UTMB 575.0 <= threshold 680.0
+Paco Hernandez Moya,572.0,Paco HERNANDEZ MOYA,1.0,https://utmb.world/runner/5553854.paco.hernandezmoya,,,,,572.0,ITRA skipped because UTMB 572.0 <= threshold 680.0
+Luca Sonet,567.0,Luca SONET,1.0,https://utmb.world/runner/5597258.luca.sonet,,,,,567.0,ITRA skipped because UTMB 567.0 <= threshold 680.0
+Mickaël Dupont,567.0,Mickael DUPONT,1.0,https://utmb.world/runner/922151.mickael.dupont,,,,,567.0,ITRA skipped because UTMB 567.0 <= threshold 680.0
+Florian Chauvelin,566.0,Florian CHAUVELIN,1.0,https://utmb.world/runner/6993534.florian.chauvelin,,,,,566.0,ITRA skipped because UTMB 566.0 <= threshold 680.0
+Quentin MERMET-GUYENET,,,,,566.0,Quentin MERMET GUYENET,1.0,https://itra.run/RunnerSpace/MERMET GUYENET.Quentin/5878315,566.0,UTMB not found
+David Miguel,566.0,David MIGUEL,1.0,https://utmb.world/runner/38279.david.miguel,,,,,566.0,ITRA skipped because UTMB 566.0 <= threshold 680.0
+Matthieu Chalendar,565.0,Matthieu CHALENDAR,1.0,https://utmb.world/runner/2964849.matthieu.chalendar,,,,,565.0,ITRA skipped because UTMB 565.0 <= threshold 680.0
+Yohann Garcia,565.0,Yohann GARCIA,1.0,https://utmb.world/runner/475565.yohann.garcia,,,,,565.0,ITRA skipped because UTMB 565.0 <= threshold 680.0
+Catherine Lonchamp,563.0,Catherine LONCHAMP,1.0,https://utmb.world/runner/1431765.catherine.lonchamp,,,,,563.0,ITRA skipped because UTMB 563.0 <= threshold 680.0
+Florin Petrehus,562.0,Florin PETREHUS,1.0,https://utmb.world/runner/2354433.florin.petrehus,,,,,562.0,ITRA skipped because UTMB 562.0 <= threshold 680.0
+Simon Creusot,562.0,Simon CREUSOT,1.0,https://utmb.world/runner/5639976.simon.creusot,,,,,562.0,ITRA skipped because UTMB 562.0 <= threshold 680.0
+Bastien Bruneteau,561.0,Bastien BRUNETEAU,1.0,https://utmb.world/runner/5593812.bastien.bruneteau,,,,,561.0,ITRA skipped because UTMB 561.0 <= threshold 680.0
+Arnaud MARCHE,560.0,Arnaud MARCHE,1.0,https://utmb.world/runner/1495159.arnaud.marche,,,,,560.0,ITRA skipped because UTMB 560.0 <= threshold 680.0
+Raphaël Croibier,560.0,Raphaël CROIBIER,1.0,https://utmb.world/runner/5890550.raphael.croibier,,,,,560.0,ITRA skipped because UTMB 560.0 <= threshold 680.0
+Emmanuel ROUX,558.0,Emmanuel ROUX,1.0,https://utmb.world/runner/5575828.emmanuel.roux,,,,,558.0,ITRA skipped because UTMB 558.0 <= threshold 680.0
+emilien rougemont,555.0,Emilien ROUGEMONT,1.0,https://utmb.world/runner/6993286.emilien.rougemont,,,,,555.0,ITRA skipped because UTMB 555.0 <= threshold 680.0
+Cédric Rébucini,554.0,Cédric RÉBUCINI,1.0,https://utmb.world/runner/8303642.cedric.rebucini,,,,,554.0,ITRA skipped because UTMB 554.0 <= threshold 680.0
+Christophe Gaignard,552.0,Christophe GAIGNARD,1.0,https://utmb.world/runner/1109587.christophe.gaignard,,,,,552.0,ITRA skipped because UTMB 552.0 <= threshold 680.0
+mélanie gellie,547.0,Melanie GELLIE,1.0,https://utmb.world/runner/1371247.melanie.gellie,,,,,547.0,ITRA skipped because UTMB 547.0 <= threshold 680.0
+Valentin Poncet,545.0,Valentin PONCET,1.0,https://utmb.world/runner/3153793.valentin.poncet,,,,,545.0,ITRA skipped because UTMB 545.0 <= threshold 680.0
+Fabian Dalloz,545.0,Fabian DALLOZ,1.0,https://utmb.world/runner/5834789.fabian.dalloz,,,,,545.0,ITRA skipped because UTMB 545.0 <= threshold 680.0
+Guillaume Brouillet,542.0,Guillaume BROUILLET,1.0,https://utmb.world/runner/6296230.guillaume.brouillet,,,,,542.0,ITRA skipped because UTMB 542.0 <= threshold 680.0
+Anne-France D’argent,540.0,Anne-France D ARGENT,1.0,https://utmb.world/runner/4994158.annefrance.dargent,,,,,540.0,ITRA skipped because UTMB 540.0 <= threshold 680.0
+Steve Michelland,539.0,Steve MICHELLAND,1.0,https://utmb.world/runner/3515491.steve.michelland,,,,,539.0,ITRA skipped because UTMB 539.0 <= threshold 680.0
+Nicolas COILLARD,536.0,Nicolas COILLARD,1.0,https://utmb.world/runner/5593146.nicolas.coillard,,,,,536.0,ITRA skipped because UTMB 536.0 <= threshold 680.0
+Sébastien Jacquet,531.0,Sebastien JACQUET,1.0,https://utmb.world/runner/2067103.sebastien.jacquet,,,,,531.0,ITRA skipped because UTMB 531.0 <= threshold 680.0
+yann brugiere,530.0,Yann BRUGIERE,1.0,https://utmb.world/runner/297297.yann.brugiere,,,,,530.0,ITRA skipped because UTMB 530.0 <= threshold 680.0
+Romain GRASSET,526.0,Romain GRASSET,1.0,https://utmb.world/runner/496927.romain.grasset,,,,,526.0,ITRA skipped because UTMB 526.0 <= threshold 680.0
+Sébastien Bouvier,521.0,Sébastien BOUVIER,1.0,https://utmb.world/runner/8303652.sebastien.bouvier,,,,,521.0,ITRA skipped because UTMB 521.0 <= threshold 680.0
+Simon ROBELIN,520.0,Simon ROBELIN,1.0,https://utmb.world/runner/494842.simon.robelin,,,,,520.0,ITRA skipped because UTMB 520.0 <= threshold 680.0
+Julien KIS,519.0,Julien KIS,1.0,https://utmb.world/runner/3515485.julien.kis,,,,,519.0,ITRA skipped because UTMB 519.0 <= threshold 680.0
+Lea Garcia,518.0,Lea GARCIA,1.0,https://utmb.world/runner/7031770.lea.garcia,,,,,518.0,ITRA skipped because UTMB 518.0 <= threshold 680.0
+Maxime CALVEZ,517.0,Maxime CALVEZ,1.0,https://utmb.world/runner/8436848.maxime.calvez,,,,,517.0,ITRA skipped because UTMB 517.0 <= threshold 680.0
+Ludovic Gibaud,515.0,Ludovic GIBAUD,1.0,https://utmb.world/runner/3524049.ludovic.gibaud,,,,,515.0,ITRA skipped because UTMB 515.0 <= threshold 680.0
+Marion PATISSIER,514.0,Marion PATISSIER,1.0,https://utmb.world/runner/5542123.marion.patissier,,,,,514.0,ITRA skipped because UTMB 514.0 <= threshold 680.0
+Lionel Poulet,514.0,Lionel POULET,1.0,https://utmb.world/runner/5108178.lionel.poulet,,,,,514.0,ITRA skipped because UTMB 514.0 <= threshold 680.0
+Arthur Connétable,513.0,Arthur CONNÉTABLE,1.0,https://utmb.world/runner/5890692.arthur.connetable,,,,,513.0,ITRA skipped because UTMB 513.0 <= threshold 680.0
+Michaël Voirin,508.0,Michaël VOIRIN,1.0,https://utmb.world/runner/2087211.michael.voirin,,,,,508.0,ITRA skipped because UTMB 508.0 <= threshold 680.0
+gilles revaclier,508.0,Gilles REVACLIER,1.0,https://utmb.world/runner/48379.gilles.revaclier,,,,,508.0,ITRA skipped because UTMB 508.0 <= threshold 680.0
+Sébastien Nugues,508.0,Sébastien NUGUES,1.0,https://utmb.world/runner/1431799.sebastien.nugues,,,,,508.0,ITRA skipped because UTMB 508.0 <= threshold 680.0
+Pierre-Louis Vidoni,506.0,Pierre-Louis VIDONI,1.0,https://utmb.world/runner/6986462.pierrelouis.vidoni,,,,,506.0,ITRA skipped because UTMB 506.0 <= threshold 680.0
+Géraldine FAVRAT,505.0,Geraldine FAVRAT,1.0,https://utmb.world/runner/3524035.geraldine.favrat,,,,,505.0,ITRA skipped because UTMB 505.0 <= threshold 680.0
+Nathalie Leclerc,505.0,Nathalie LECLERC,1.0,https://utmb.world/runner/2407819.nathalie.leclerc,,,,,505.0,ITRA skipped because UTMB 505.0 <= threshold 680.0
+Rodolphe Sudan,504.0,Rodolphe SUDAN,1.0,https://utmb.world/runner/3392641.rodolphe.sudan,,,,,504.0,ITRA skipped because UTMB 504.0 <= threshold 680.0
+Guillaume Vallet,504.0,Guillaume VALLET,1.0,https://utmb.world/runner/1565141.guillaume.vallet,,,,,504.0,ITRA skipped because UTMB 504.0 <= threshold 680.0
+jean-romain gagliardini,502.0,Jean-Romain GAGLIARDINI,1.0,https://utmb.world/runner/5488998.jeanromain.gagliardini,,,,,502.0,ITRA skipped because UTMB 502.0 <= threshold 680.0
+Pauline Fichaux,502.0,Pauline FICHAUX,1.0,https://utmb.world/runner/6994402.pauline.fichaux,,,,,502.0,ITRA skipped because UTMB 502.0 <= threshold 680.0
+Aurélien Brunet,502.0,Aurélien BRUNET,1.0,https://utmb.world/runner/5842850.aurelien.brunet,,,,,502.0,ITRA skipped because UTMB 502.0 <= threshold 680.0
+Guillaume Chevillard,502.0,Guillaume CHEVILLARD,1.0,https://utmb.world/runner/7816336.guillaume.chevillard,,,,,502.0,ITRA skipped because UTMB 502.0 <= threshold 680.0
+Etienne Salvi,501.0,Etienne SALVI,1.0,https://utmb.world/runner/5342882.etienne.salvi,,,,,501.0,ITRA skipped because UTMB 501.0 <= threshold 680.0
+Romain Bermond,498.0,Romain BERMOND,1.0,https://utmb.world/runner/1503445.romain.bermond,,,,,498.0,ITRA skipped because UTMB 498.0 <= threshold 680.0
+David Bouquin,497.0,David BOUQUIN,1.0,https://utmb.world/runner/5089074.david.bouquin,,,,,497.0,ITRA skipped because UTMB 497.0 <= threshold 680.0
+Dylan Higgins,497.0,Dylan HIGGINS,1.0,https://utmb.world/runner/6501578.dylan.higgins,,,,,497.0,ITRA skipped because UTMB 497.0 <= threshold 680.0
+YVES MICHON,495.0,Yves MICHON,1.0,https://utmb.world/runner/116678.yves.michon,,,,,495.0,ITRA skipped because UTMB 495.0 <= threshold 680.0
+Thomas VUILLET,494.0,Thomas VUILLET,1.0,https://utmb.world/runner/10781.thomas.vuillet,,,,,494.0,ITRA skipped because UTMB 494.0 <= threshold 680.0
+Cedric Vuargnoz,494.0,Cedric VUARGNOZ,1.0,https://utmb.world/runner/595184.cedric.vuargnoz,,,,,494.0,ITRA skipped because UTMB 494.0 <= threshold 680.0
+Nerys Roberts-Law,,,,,493.0,Nerys ROBERTS-LAW,1.0,https://itra.run/RunnerSpace/ROBERTS-LAW.Nerys/6757185,493.0,UTMB not found
+tristan depierre,493.0,Tristan DEPIERRE,1.0,https://utmb.world/runner/5529740.tristan.depierre,,,,,493.0,ITRA skipped because UTMB 493.0 <= threshold 680.0
+sebastien esbelin,493.0,Sébastien ESBELIN,1.0,https://utmb.world/runner/4020602.sebastien.esbelin,,,,,493.0,ITRA skipped because UTMB 493.0 <= threshold 680.0
+Stéphane Loy,492.0,Stéphane LOY,1.0,https://utmb.world/runner/4198130.stephane.loy,,,,,492.0,ITRA skipped because UTMB 492.0 <= threshold 680.0
+julien dorseuil,491.0,Julien DORSEUIL,1.0,https://utmb.world/runner/520578.julien.dorseuil,,,,,491.0,ITRA skipped because UTMB 491.0 <= threshold 680.0
+Christophe Fleurisson,491.0,Christophe FLEURISSON,1.0,https://utmb.world/runner/5485365.christophe.fleurisson,,,,,491.0,ITRA skipped because UTMB 491.0 <= threshold 680.0
+Romain Blondel,489.0,Romain BLONDEL,1.0,https://utmb.world/runner/6541764.romain.blondel,,,,,489.0,ITRA skipped because UTMB 489.0 <= threshold 680.0
+Stephane Gay,489.0,Stephane GAY,1.0,https://utmb.world/runner/3132673.stephane.gay,,,,,489.0,ITRA skipped because UTMB 489.0 <= threshold 680.0
+Ophelie Lacroix,488.0,Ophelie LACROIX,1.0,https://utmb.world/runner/1798135.ophelie.lacroix,,,,,488.0,ITRA skipped because UTMB 488.0 <= threshold 680.0
+Maxime Prokop,488.0,Maxime PROKOP,1.0,https://utmb.world/runner/4163098.maxime.prokop,,,,,488.0,ITRA skipped because UTMB 488.0 <= threshold 680.0
+Julien La Barbera,487.0,Julien LA BARBERA,1.0,https://utmb.world/runner/1251547.julien.labarbera,,,,,487.0,ITRA skipped because UTMB 487.0 <= threshold 680.0
+Christine CATIN,487.0,Christine CATIN,1.0,https://utmb.world/runner/196578.christine.catin,,,,,487.0,ITRA skipped because UTMB 487.0 <= threshold 680.0
+Émilie Rinaldi,486.0,Émilie RINALDI (Emilie RINALDI),0.7558139534883721,https://utmb.world/runner/6651454.emilie.rinaldi,,,,,486.0,ITRA skipped because UTMB 486.0 <= threshold 680.0
+Mike JUSSELME,485.0,Mike JUSSELME,1.0,https://utmb.world/runner/7794684.mike.jusselme,,,,,485.0,ITRA skipped because UTMB 485.0 <= threshold 680.0
+Emeric Bernard,485.0,Emeric BERNARD,1.0,https://utmb.world/runner/7896712.emeric.bernard,,,,,485.0,ITRA skipped because UTMB 485.0 <= threshold 680.0
+Sylvain POULET,484.0,Sylvain POULET,1.0,https://utmb.world/runner/4714978.sylvain.poulet,,,,,484.0,ITRA skipped because UTMB 484.0 <= threshold 680.0
+Philippe KANMACHER,484.0,Philippe KANMACHER,1.0,https://utmb.world/runner/650234.philippe.kanmacher,,,,,484.0,ITRA skipped because UTMB 484.0 <= threshold 680.0
+Philippe Baraggia,482.0,Philippe BARAGGIA,1.0,https://utmb.world/runner/3392543.philippe.baraggia,,,,,482.0,ITRA skipped because UTMB 482.0 <= threshold 680.0
+Adrien Vuargnoz,481.0,Adrien VUARGNOZ,1.0,https://utmb.world/runner/4774622.adrien.vuargnoz,,,,,481.0,ITRA skipped because UTMB 481.0 <= threshold 680.0
+Sabine Miguel,481.0,Sabine MIGUEL,1.0,https://utmb.world/runner/246673.sabine.miguel,,,,,481.0,ITRA skipped because UTMB 481.0 <= threshold 680.0
+Léo Conil-Gonnet,481.0,Léo CONIL-GONNET,1.0,https://utmb.world/runner/6064942.leo.conilgonnet,,,,,481.0,ITRA skipped because UTMB 481.0 <= threshold 680.0
+Romain ZUCCALLI,479.0,Romain ZUCCALLI,1.0,https://utmb.world/runner/1837553.romain.zuccalli,,,,,479.0,ITRA skipped because UTMB 479.0 <= threshold 680.0
+Anna Goy,477.0,Anna GOY,1.0,https://utmb.world/runner/5593834.anna.goy,,,,,477.0,ITRA skipped because UTMB 477.0 <= threshold 680.0
+Laurent PUSSET,476.0,Laurent PUSSET,1.0,https://utmb.world/runner/3095387.laurent.pusset,,,,,476.0,ITRA skipped because UTMB 476.0 <= threshold 680.0
+Sébastien Petit,476.0,Sébastien PETIT,1.0,https://utmb.world/runner/7418310.sebastien.petit,,,,,476.0,ITRA skipped because UTMB 476.0 <= threshold 680.0
+nicole Joseph,474.0,Nicole JOSEPH,1.0,https://utmb.world/runner/4572516.nicole.joseph,,,,,474.0,ITRA skipped because UTMB 474.0 <= threshold 680.0
+Matthieu Trotin,474.0,Matthieu TROTIN,1.0,https://utmb.world/runner/6614324.matthieu.trotin,,,,,474.0,ITRA skipped because UTMB 474.0 <= threshold 680.0
+Nicolas Péchoux,474.0,Nicolas PÉCHOUX,1.0,https://utmb.world/runner/7896640.nicolas.pechoux,,,,,474.0,ITRA skipped because UTMB 474.0 <= threshold 680.0
+Perrine Carel,471.0,Perrine CAREL,1.0,https://utmb.world/runner/2976419.perrine.carel,,,,,471.0,ITRA skipped because UTMB 471.0 <= threshold 680.0
+Michaël Farny,468.0,Michaël FARNY,1.0,https://utmb.world/runner/6432246.michael.farny,,,,,468.0,ITRA skipped because UTMB 468.0 <= threshold 680.0
+Theo Romano,468.0,Theo ROMANO,1.0,https://utmb.world/runner/7407606.theo.romano,,,,,468.0,ITRA skipped because UTMB 468.0 <= threshold 680.0
+Olivier Brouillet,467.0,Olivier BROUILLET,1.0,https://utmb.world/runner/2512161.olivier.brouillet,,,,,467.0,ITRA skipped because UTMB 467.0 <= threshold 680.0
+Thomas Peutin,466.0,Thomas PEUTIN,1.0,https://utmb.world/runner/6993614.thomas.peutin,,,,,466.0,ITRA skipped because UTMB 466.0 <= threshold 680.0
+Yannice Berthault,464.0,Yannice BERTHAULT,1.0,https://utmb.world/runner/8303686.yannice.berthault,,,,,464.0,ITRA skipped because UTMB 464.0 <= threshold 680.0
+Quentin Fandart,464.0,Quentin FANDART,1.0,https://utmb.world/runner/7537614.quentin.fandart,,,,,464.0,ITRA skipped because UTMB 464.0 <= threshold 680.0
+Jérôme Clerc,463.0,Jerome CLERC,1.0,https://utmb.world/runner/41922.jerome.clerc,,,,,463.0,ITRA skipped because UTMB 463.0 <= threshold 680.0
+Coralie Latrive,463.0,Coralie LATRIVE,1.0,https://utmb.world/runner/5593168.coralie.latrive,,,,,463.0,ITRA skipped because UTMB 463.0 <= threshold 680.0
+Audrey Piccini,461.0,Audrey PICCINI,1.0,https://utmb.world/runner/8303692.audrey.piccini,,,,,461.0,ITRA skipped because UTMB 461.0 <= threshold 680.0
+David Juliet,460.0,David JULIET,1.0,https://utmb.world/runner/4148512.david.juliet,,,,,460.0,ITRA skipped because UTMB 460.0 <= threshold 680.0
+carine chaumé,455.0,Carine CHAUME,1.0,https://utmb.world/runner/2407677.carine.chaume,,,,,455.0,ITRA skipped because UTMB 455.0 <= threshold 680.0
+Roger Carminati,453.0,Roger CARMINATI,1.0,https://utmb.world/runner/8303244.roger.carminati,,,,,453.0,ITRA skipped because UTMB 453.0 <= threshold 680.0
+david luet,453.0,David LUET,1.0,https://utmb.world/runner/7005447.david.luet,,,,,453.0,ITRA skipped because UTMB 453.0 <= threshold 680.0
+Christelle PLISSONNIER,453.0,Christelle PLISSONNIER,1.0,https://utmb.world/runner/2289817.christelle.plissonnier,,,,,453.0,ITRA skipped because UTMB 453.0 <= threshold 680.0
+remi pinaud,452.0,Remi PINAUD,1.0,https://utmb.world/runner/7896650.remi.pinaud,,,,,452.0,ITRA skipped because UTMB 452.0 <= threshold 680.0
+JOSHUA KOLOPP,450.0,Joshua KOLOPP,1.0,https://utmb.world/runner/3006453.joshua.kolopp,,,,,450.0,ITRA skipped because UTMB 450.0 <= threshold 680.0
+Alexandre Moutardier,448.0,Alexandre MOUTARDIER,1.0,https://utmb.world/runner/7421638.alexandre.moutardier,,,,,448.0,ITRA skipped because UTMB 448.0 <= threshold 680.0
+Jean Helleisen,448.0,Jean HELLEISEN,1.0,https://utmb.world/runner/2989753.jean.helleisen,,,,,448.0,ITRA skipped because UTMB 448.0 <= threshold 680.0
+Matthias Petit,445.0,Matthias PETIT,1.0,https://utmb.world/runner/2029353.matthias.petit,,,,,445.0,ITRA skipped because UTMB 445.0 <= threshold 680.0
+MANON REY,444.0,Manon REY,1.0,https://utmb.world/runner/3515543.manon.rey,,,,,444.0,ITRA skipped because UTMB 444.0 <= threshold 680.0
+Pierre Bois,442.0,Pierre BOIS,1.0,https://utmb.world/runner/4978804.pierre.bois,,,,,442.0,ITRA skipped because UTMB 442.0 <= threshold 680.0
+Andy Cavazza,,,,,442.0,Andy CAVAZZA,1.0,https://itra.run/RunnerSpace/CAVAZZA.Andy/6249628,442.0,UTMB not found
+Jerome Dalloz,441.0,Jérôme DALLOZ,1.0,https://utmb.world/runner/473970.jerome.dalloz,,,,,441.0,ITRA skipped because UTMB 441.0 <= threshold 680.0
+Lucas Remy,439.0,Lucas REMY,1.0,https://utmb.world/runner/8312978.lucas.remy,,,,,439.0,ITRA skipped because UTMB 439.0 <= threshold 680.0
+Florent Dupertuis,,,,,439.0,Florent DUPERTUIS,1.0,https://itra.run/RunnerSpace/DUPERTUIS.Florent/5503798,439.0,UTMB not found
+Trung Dung NGUYEN KHAC,437.0,Trung Dung NGUYEN KHAC,1.0,https://utmb.world/runner/871377.trungdung.nguyenkhac,,,,,437.0,ITRA skipped because UTMB 437.0 <= threshold 680.0
+Claire Favre,437.0,Claire FAVRE,1.0,https://utmb.world/runner/7093104.claire.favre,,,,,437.0,ITRA skipped because UTMB 437.0 <= threshold 680.0
+Philippe VAREYON,436.0,Philippe VAREYON,1.0,https://utmb.world/runner/114958.philippe.vareyon,,,,,436.0,ITRA skipped because UTMB 436.0 <= threshold 680.0
+Nathan Fiat,436.0,Nathan FIAT,1.0,https://utmb.world/runner/8027204.nathan.fiat,,,,,436.0,ITRA skipped because UTMB 436.0 <= threshold 680.0
+Emmanuelle PERON,436.0,Emmanuelle PÉRON,1.0,https://utmb.world/runner/6993642.emmanuelle.peron,,,,,436.0,ITRA skipped because UTMB 436.0 <= threshold 680.0
+Séverine Vuitton,435.0,Séverine VUITTON,1.0,https://utmb.world/runner/6329910.severine.vuitton,,,,,435.0,ITRA skipped because UTMB 435.0 <= threshold 680.0
+Christophe Grenat-Petit-André,431.0,Christophe GRENAT,0.667391304347826,https://utmb.world/runner/44567.christophe.grenat,,,,,431.0,ITRA skipped because UTMB 431.0 <= threshold 680.0
+Christophe Antin,429.0,Christophe ANTIN,1.0,https://utmb.world/runner/243141.christophe.antin,,,,,429.0,ITRA skipped because UTMB 429.0 <= threshold 680.0
+Didier Pillard,428.0,Didier PILLARD,1.0,https://utmb.world/runner/4771958.didier.pillard,,,,,428.0,ITRA skipped because UTMB 428.0 <= threshold 680.0
+jordane moiroux,427.0,Jordane MOIROUX,1.0,https://utmb.world/runner/6994214.jordane.moiroux,,,,,427.0,ITRA skipped because UTMB 427.0 <= threshold 680.0
+Claire MOINDROT,419.0,Claire MOINDROT,1.0,https://utmb.world/runner/5593190.claire.moindrot,,,,,419.0,ITRA skipped because UTMB 419.0 <= threshold 680.0
+MAEL BRIAND,419.0,Mael BRIAND,1.0,https://utmb.world/runner/7896690.mael.briand,,,,,419.0,ITRA skipped because UTMB 419.0 <= threshold 680.0
+Marion Garrigue,417.0,Marion GARRIGUE,1.0,https://utmb.world/runner/3633785.marion.garrigue,,,,,417.0,ITRA skipped because UTMB 417.0 <= threshold 680.0
+Jimmy Faivre,416.0,Jimmy FAIVRE,1.0,https://utmb.world/runner/7322568.jimmy.faivre,,,,,416.0,ITRA skipped because UTMB 416.0 <= threshold 680.0
+ARNAUD DELAYE,416.0,Arnaud DELAYE,1.0,https://utmb.world/runner/2087091.arnaud.delaye,,,,,416.0,ITRA skipped because UTMB 416.0 <= threshold 680.0
+Eric Ravel,416.0,Eric RAVEL,1.0,https://utmb.world/runner/44359.eric.ravel,,,,,416.0,ITRA skipped because UTMB 416.0 <= threshold 680.0
+yannis Marion,416.0,Yannis MARION,1.0,https://utmb.world/runner/1305821.yannis.marion,,,,,416.0,ITRA skipped because UTMB 416.0 <= threshold 680.0
+Yannick Vernier,416.0,Yannick VERNIER,1.0,https://utmb.world/runner/2199451.yannick.vernier,,,,,416.0,ITRA skipped because UTMB 416.0 <= threshold 680.0
+Edouard Verschaeve,411.0,Edouard VERSCHAEVE,1.0,https://utmb.world/runner/42086.edouard.verschaeve,,,,,411.0,ITRA skipped because UTMB 411.0 <= threshold 680.0
+Mélanie Lumineau,410.0,Mélanie LUMINEAU,1.0,https://utmb.world/runner/5354288.melanie.lumineau,,,,,410.0,ITRA skipped because UTMB 410.0 <= threshold 680.0
+Christopher West,409.0,Christopher WEST,1.0,https://utmb.world/runner/7827936.christopher.west,,,,,409.0,ITRA skipped because UTMB 409.0 <= threshold 680.0
+Jonathan Hecquet,407.0,Jonathan HECQUET,1.0,https://utmb.world/runner/5345960.jonathan.hecquet,,,,,407.0,ITRA skipped because UTMB 407.0 <= threshold 680.0
+Alexandra Fall,407.0,Alexandra FALL,1.0,https://utmb.world/runner/6329914.alexandra.fall,,,,,407.0,ITRA skipped because UTMB 407.0 <= threshold 680.0
+Pierre-André Potelle,406.0,Pierre-Andre POTELLE,1.0,https://utmb.world/runner/7421980.pierreandre.potelle,,,,,406.0,ITRA skipped because UTMB 406.0 <= threshold 680.0
+SÉBASTIEN Sonzogni,406.0,Sébastien SONZOGNI,1.0,https://utmb.world/runner/7896702.sebastien.sonzogni,,,,,406.0,ITRA skipped because UTMB 406.0 <= threshold 680.0
+Simon Chevalier,406.0,Simon CHEVALIER,1.0,https://utmb.world/runner/6844096.simon.chevalier,,,,,406.0,ITRA skipped because UTMB 406.0 <= threshold 680.0
+JULIEN PESSE-GIROD,405.0,Julien PESSE-GIROD,1.0,https://utmb.world/runner/8303048.julien.pessegirod,,,,,405.0,ITRA skipped because UTMB 405.0 <= threshold 680.0
+jonathan beauquis,404.0,Jonathan BEAUQUIS,1.0,https://utmb.world/runner/7405404.jonathan.beauquis,,,,,404.0,ITRA skipped because UTMB 404.0 <= threshold 680.0
+Joan Martignoles,404.0,Joan MARTIGNOLES,1.0,https://utmb.world/runner/6210369.joan.martignoles,,,,,404.0,ITRA skipped because UTMB 404.0 <= threshold 680.0
+Teo MARTIGNOLES,404.0,Teo MARTIGNOLES,1.0,https://utmb.world/runner/7633507.teo.martignoles,,,,,404.0,ITRA skipped because UTMB 404.0 <= threshold 680.0
+Gérard JAMOT,403.0,Gerard JAMOT,1.0,https://utmb.world/runner/1870955.gerard.jamot,,,,,403.0,ITRA skipped because UTMB 403.0 <= threshold 680.0
+Mathis Thirvaudey,401.0,Mathis THIRVAUDEY,1.0,https://utmb.world/runner/7537464.mathis.thirvaudey,,,,,401.0,ITRA skipped because UTMB 401.0 <= threshold 680.0
+ALEXANDRE ALLAIRE,400.0,Alexandre ALLAIRE,1.0,https://utmb.world/runner/2580763.alexandre.allaire,,,,,400.0,ITRA skipped because UTMB 400.0 <= threshold 680.0
+Stéphanie Ribiollet,397.0,Stephanie RIBIOLLET,1.0,https://utmb.world/runner/707852.stephanie.ribiollet,,,,,397.0,ITRA skipped because UTMB 397.0 <= threshold 680.0
+Diane SCHEIDER,396.0,Diane SCHEIDER,1.0,https://utmb.world/runner/5148242.diane.scheider,,,,,396.0,ITRA skipped because UTMB 396.0 <= threshold 680.0
+Christophe MAILLET,396.0,Christophe MAILLET,1.0,https://utmb.world/runner/115301.christophe.maillet,,,,,396.0,ITRA skipped because UTMB 396.0 <= threshold 680.0
+emmanuel SCHIAVONE,395.0,Emmanuel SCHIAVONE,1.0,https://utmb.world/runner/1372079.emmanuel.schiavone,,,,,395.0,ITRA skipped because UTMB 395.0 <= threshold 680.0
+Jérôme ZOBEL,395.0,Jérôme ZOBEL,1.0,https://utmb.world/runner/4844574.jerome.zobel,,,,,395.0,ITRA skipped because UTMB 395.0 <= threshold 680.0
+Jonathan Galiano,393.0,Jonathan GALIANO,1.0,https://utmb.world/runner/1797729.jonathan.galiano,,,,,393.0,ITRA skipped because UTMB 393.0 <= threshold 680.0
+Anne-Catherine Grenat-Petit-André,392.0,Anne-Catherine GRENAT-PETIT-ANDRÉ,1.0,https://utmb.world/runner/1227485.annecatherine.grenatpetitandre,,,,,392.0,ITRA skipped because UTMB 392.0 <= threshold 680.0
+GLWADYS GUILLET,390.0,Glwadys GUILLET,1.0,https://utmb.world/runner/5302552.glwadys.guillet,,,,,390.0,ITRA skipped because UTMB 390.0 <= threshold 680.0
+Hélène Sevoz,388.0,Helene SEVOZ,1.0,https://utmb.world/runner/886055.helene.sevoz,,,,,388.0,ITRA skipped because UTMB 388.0 <= threshold 680.0
+stephane doublet,387.0,Stephane DOUBLET,1.0,https://utmb.world/runner/5311818.stephane.doublet,,,,,387.0,ITRA skipped because UTMB 387.0 <= threshold 680.0
+Frédérique Trumeau,382.0,Frederique TRUMEAU,1.0,https://utmb.world/runner/113396.frederique.trumeau,,,,,382.0,ITRA skipped because UTMB 382.0 <= threshold 680.0
+Guillaume Moulin,381.0,Guillaume MOULIN,1.0,https://utmb.world/runner/1799653.guillaume.moulin,,,,,381.0,ITRA skipped because UTMB 381.0 <= threshold 680.0
+Camille Renard,,,,,380.0,Camille RENARD,1.0,https://itra.run/RunnerSpace/RENARD.Camille/6249774,380.0,UTMB not found
+Alexandre Gerardin,379.0,Alexandre GERARDIN,1.0,https://utmb.world/runner/6478640.alexandre.gerardin,,,,,379.0,ITRA skipped because UTMB 379.0 <= threshold 680.0
+Thomas Brunet,378.0,Thomas BRUNET,1.0,https://utmb.world/runner/6795878.thomas.brunet,,,,,378.0,ITRA skipped because UTMB 378.0 <= threshold 680.0
+Margaux ANDRE,378.0,Margaux ANDRE,1.0,https://utmb.world/runner/5864058.margaux.andre,,,,,378.0,ITRA skipped because UTMB 378.0 <= threshold 680.0
+Juliette Darmedru,377.0,Juliette DARMEDRU,1.0,https://utmb.world/runner/8303926.juliette.darmedru,,,,,377.0,ITRA skipped because UTMB 377.0 <= threshold 680.0
+Doryan Di Fazio,376.0,Doryan DI FAZIO,1.0,https://utmb.world/runner/6889973.doryan.difazio,,,,,376.0,ITRA skipped because UTMB 376.0 <= threshold 680.0
+Pauline Bonnefoy,375.0,Pauline BONNEFOY,1.0,https://utmb.world/runner/8190274.pauline.bonnefoy,,,,,375.0,ITRA skipped because UTMB 375.0 <= threshold 680.0
+Fabienne Duchene,374.0,Fabienne DUCHENE,1.0,https://utmb.world/runner/2407851.fabienne.duchene,,,,,374.0,ITRA skipped because UTMB 374.0 <= threshold 680.0
+Marie CARDON,373.0,Marie CARDON,1.0,https://utmb.world/runner/5237166.marie.cardon,,,,,373.0,ITRA skipped because UTMB 373.0 <= threshold 680.0
+Thomas Dental,373.0,Thomas DENTAL,1.0,https://utmb.world/runner/7102454.thomas.dental,,,,,373.0,ITRA skipped because UTMB 373.0 <= threshold 680.0
+Matthieu Bouteille,369.0,Matthieu BOUTEILLE,1.0,https://utmb.world/runner/6994456.matthieu.bouteille,,,,,369.0,ITRA skipped because UTMB 369.0 <= threshold 680.0
+Ilaria DELLA POLLINA,368.0,Ilaria DELLA POLLINA,1.0,https://utmb.world/runner/8190288.ilaria.dellapollina,,,,,368.0,ITRA skipped because UTMB 368.0 <= threshold 680.0
+Angélique Pélisson,367.0,Angélique PÉLISSON,1.0,https://utmb.world/runner/6329976.angelique.pelisson,,,,,367.0,ITRA skipped because UTMB 367.0 <= threshold 680.0
+Frédéric PRADES,363.0,Frédéric PRADES,1.0,https://utmb.world/runner/592011.frederic.prades,,,,,363.0,ITRA skipped because UTMB 363.0 <= threshold 680.0
+Celia Biberon,363.0,Célia BIBERON,1.0,https://utmb.world/runner/7646566.celia.biberon,,,,,363.0,ITRA skipped because UTMB 363.0 <= threshold 680.0
+Christophe GELLON,362.0,Christophe GELLON,1.0,https://utmb.world/runner/5784869.christophe.gellon,,,,,362.0,ITRA skipped because UTMB 362.0 <= threshold 680.0
+alain robiaux,359.0,Alain ROBIAUX,1.0,https://utmb.world/runner/7771420.alain.robiaux,,,,,359.0,ITRA skipped because UTMB 359.0 <= threshold 680.0
+Arnaud Huber,356.0,Arnaud HUBER,1.0,https://utmb.world/runner/6783558.arnaud.huber,,,,,356.0,ITRA skipped because UTMB 356.0 <= threshold 680.0
+Gwenaëlle excoffier,352.0,Gwenaelle EXCOFFIER,1.0,https://utmb.world/runner/2095489.gwenaelle.excoffier,,,,,352.0,ITRA skipped because UTMB 352.0 <= threshold 680.0
+Nina Huguet,351.0,Nina HUGUET,1.0,https://utmb.world/runner/5255028.nina.huguet,,,,,351.0,ITRA skipped because UTMB 351.0 <= threshold 680.0
+Elena Dehaynin,351.0,Eléna DEHAYNIN,1.0,https://utmb.world/runner/5281659.elena.dehaynin,,,,,351.0,ITRA skipped because UTMB 351.0 <= threshold 680.0
+Tom Lhermet,349.0,Tom LHERMET,1.0,https://utmb.world/runner/8303480.tom.lhermet,,,,,349.0,ITRA skipped because UTMB 349.0 <= threshold 680.0
+Gwenhael Geoffray,345.0,Gwenhael GEOFFRAY,1.0,https://utmb.world/runner/8303490.gwenhael.geoffray,,,,,345.0,ITRA skipped because UTMB 345.0 <= threshold 680.0
+Antony BORELLI,343.0,Antony BORELLI,1.0,https://utmb.world/runner/7915810.antony.borelli,,,,,343.0,ITRA skipped because UTMB 343.0 <= threshold 680.0
+Pauline Boutemy,332.0,Pauline BOUTEMY,1.0,https://utmb.world/runner/7449836.pauline.boutemy,,,,,332.0,ITRA skipped because UTMB 332.0 <= threshold 680.0
+alexandra tahar,329.0,Alexandra TAHAR,1.0,https://utmb.world/runner/8303540.alexandra.tahar,,,,,329.0,ITRA skipped because UTMB 329.0 <= threshold 680.0
+damien CHAPELLE,321.0,Damien CHAPELLE,1.0,https://utmb.world/runner/2407783.damien.chapelle,,,,,321.0,ITRA skipped because UTMB 321.0 <= threshold 680.0
+Clovis Meunier,311.0,Clovis MEUNIER,1.0,https://utmb.world/runner/8026752.clovis.meunier,,,,,311.0,ITRA skipped because UTMB 311.0 <= threshold 680.0
+Didier RATAJCZAK,311.0,Didier RATAJCZAK,1.0,https://utmb.world/runner/7537532.didier.ratajczak,,,,,311.0,ITRA skipped because UTMB 311.0 <= threshold 680.0
+Vincent Alaminos,294.0,Vincent ALAMINOS,1.0,https://utmb.world/runner/8026810.vincent.alaminos,,,,,294.0,ITRA skipped because UTMB 294.0 <= threshold 680.0
+Gary Tournier,270.0,Gary TOURNIER,1.0,https://utmb.world/runner/6993924.gary.tournier,,,,,270.0,ITRA skipped because UTMB 270.0 <= threshold 680.0
+Dimitri Narçon,0.0,Dimitri NARÇON,1.0,https://utmb.world/runner/7896764.dimitri.narcon,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Caroline Brouard,0.0,Caroline BROUARD,1.0,https://utmb.world/runner/5254870.caroline.brouard,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Ethan Coutier,,,,,,Ethan COUTIER,1.0,https://itra.run/RunnerSpace/COUTIER.Ethan/6947365,0.0,UTMB not found; ITRA score missing in response
+Mathis Barbeaux,,,,,,,,,0.0,UTMB not found; ITRA not found
+Karim Maroua,0.0,Karim MAROUAN,0.822,https://utmb.world/runner/6651640.karim.marouan,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Léo Grosgurin,,,,,,,,,0.0,UTMB not found; ITRA not found
+Alexandre Pupel,0.0,Alexandre PUPEL,1.0,https://utmb.world/runner/1992105.alexandre.pupel,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Denis Poulain,0.0,Denis POULAIN,1.0,https://utmb.world/runner/499064.denis.poulain,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+catherine bossin,0.0,Catherine BOSSIN,1.0,https://utmb.world/runner/622423.catherine.bossin,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+karinne perny,0.0,Karinne PERNY,1.0,https://utmb.world/runner/5763792.karinne.perny,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Emile Medina,,,,,,,,,0.0,UTMB not found; ITRA not found
+DAYANA KOLOPP,0.0,Dayana KOLOPP,1.0,https://utmb.world/runner/8349264.dayana.kolopp,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Jennifer PRADES,0.0,Jennifer PRADES,1.0,https://utmb.world/runner/6784268.jennifer.prades,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Patricia Bornet,0.0,Patricia BORNET,1.0,https://utmb.world/runner/4774012.patricia.bornet,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Vanni La Storia,0.0,Vanni LA STORIA,1.0,https://utmb.world/runner/6651568.vanni.lastoria,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Aurélie SALAÜN,0.0,Aurélie SALAÜN,1.0,https://utmb.world/runner/7323374.aurelie.salaun,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Maria van Hasselt,0.0,Marie VAN DER HASSELT,0.7894736842105262,https://utmb.world/runner/5578832.marie.vanderhasselt,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Clément Brevet,,,,,,,,,0.0,UTMB not found; ITRA not found
+MARCO LA STORIA,0.0,Marco LA-STORIA,1.0,https://utmb.world/runner/110909.marco.lastoria,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Frédéric Tinivella,0.0,Frédéric TINIVELLA,1.0,https://utmb.world/runner/2407593.frederic.tinivella,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Alexandre Barbaret,0.0,Alexandre BARBARET,1.0,https://utmb.world/runner/7896900.alexandre.barbaret,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+patrick Poisot,0.0,Patrick POISOT,1.0,https://utmb.world/runner/525533.patrick.poisot,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+teddy ranaudo,0.0,Teddy RANAUDO,1.0,https://utmb.world/runner/7755399.teddy.ranaudo,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Louan Coupernot,,,,,,,,,0.0,UTMB not found; ITRA not found
+Jarod ALLEGRI,,,,,,,,,0.0,UTMB not found; ITRA not found
+Lucas Barnouin,,,,,,,,,0.0,UTMB not found; ITRA not found
+Dorian Barloy,,,,,,,,,0.0,UTMB not found; ITRA not found
+Julien ROBINOT,0.0,Julien ROBINOT,1.0,https://utmb.world/runner/827396.julien.robinot,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Jennifer Fichoux,0.0,Jennifer FICHOUX,1.0,https://utmb.world/runner/7896784.jennifer.fichoux,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Clément Bellaton,,,,,,,,,0.0,UTMB not found; ITRA not found
+Jordy Desroc,0.0,Jordy DESROC,1.0,https://utmb.world/runner/8492068.jordy.desroc,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Clément Poncin,0.0,Clément PONCIN,1.0,https://utmb.world/runner/4313369.clement.poncin,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Grégory Slowinski,,,,,,,,,0.0,UTMB not found; ITRA not found
+Catherine Dorier,0.0,Catherine DORIER,1.0,https://utmb.world/runner/1613585.catherine.dorier,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Alexis Calonne,,,,,,,,,0.0,UTMB not found; ITRA not found
+Augustin Woillard,0.0,Augustin WOILLARD,1.0,https://utmb.world/runner/4219187.augustin.woillard,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Benjamine Bidard,0.0,Benjamine BIDARD,1.0,https://utmb.world/runner/2293071.benjamine.bidard,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Eva Sanchez,0.0,Eva SANCHEZ-BAREA,0.8499999999999999,https://utmb.world/runner/225603.eva.sanchezbarea,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Bastien Delaigue,,,,,,,,,0.0,UTMB not found; ITRA not found
+Marie Mechain,,,,,,,,,0.0,UTMB not found; ITRA not found
+Alice Chaboud,0.0,Alice CHABOUD,1.0,https://utmb.world/runner/1249405.alice.chaboud,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Daniela Raiman,,,,,,,,,0.0,UTMB not found; ITRA not found
+Laetitia Berthet,,,,,,,,,0.0,UTMB not found; ITRA not found
+vanessa kohut,0.0,Vanessa KOHUT,1.0,https://utmb.world/runner/2420313.vanessa.kohut,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Alexis SALVATGE,,,,,,,,,0.0,UTMB not found; ITRA not found
+David Thuliez,,,,,,,,,0.0,UTMB not found; ITRA not found
+Frédéric BORGES,0.0,Frédéric BORGES,1.0,https://utmb.world/runner/325485.frederic.borges,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Christophe Catin,0.0,Christophe CATIN,1.0,https://utmb.world/runner/196577.christophe.catin,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Sébastien Paruitte,0.0,Sebastien PARUITTE,1.0,https://utmb.world/runner/1627291.sebastien.paruitte,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Lucie Fillat,0.0,Lucie FILLAT,1.0,https://utmb.world/runner/5997928.lucie.fillat,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
