@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trail du Sanglier 2026 - Le 40 km</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f1ea;
+      --panel: #fffdfa;
+      --panel-strong: #ffffff;
+      --text: #1f1f1b;
+      --muted: #625d53;
+      --accent: #0b6b5f;
+      --accent-soft: #d8efe7;
+      --border: #ddd3c2;
+      --warning-bg: #fff0cc;
+      --warning-text: #724b00;
+      --shadow: 0 16px 40px rgba(37, 28, 11, 0.08);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at top, #fbf7ef 0%, var(--bg) 55%, #ebe3d4 100%); color: var(--text); }
+    a { color: var(--accent); }
+    .page { max-width: 1280px; margin: 0 auto; padding: 32px 20px 48px; }
+    .hero { background: linear-gradient(135deg, rgba(11,107,95,0.12), rgba(148,95,32,0.16)); border: 1px solid rgba(11,107,95,0.12); border-radius: 24px; padding: 28px; box-shadow: var(--shadow); }
+    .hero h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.1; }
+    .hero p { margin: 8px 0 0; color: var(--muted); }
+    .meta-line, .cache-line { color: var(--muted); margin: 10px 0 0; }
+    .download-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .download-link { display: inline-flex; align-items: center; justify-content: center; min-width: 180px; padding: 12px 16px; background: var(--panel-strong); border: 1px solid var(--border); border-radius: 999px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 24px rgba(0,0,0,0.05); }
+    .metrics, .score-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 20px; }
+    .metric-card { background: var(--panel); border: 1px solid var(--border); border-radius: 18px; padding: 16px; box-shadow: 0 10px 26px rgba(0,0,0,0.04); }
+    .metric-label { color: var(--muted); font-size: 0.9rem; }
+    .metric-value { margin-top: 6px; font-size: 1.45rem; font-weight: 700; }
+    .section-grid { display: grid; gap: 18px; margin-top: 24px; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 24px; padding: 22px; box-shadow: var(--shadow); }
+    .panel h2 { margin: 0 0 14px; font-size: 1.4rem; }
+    .section-caption { margin-top: -4px; color: var(--muted); }
+    .warning { margin-top: 16px; padding: 14px 16px; border-radius: 16px; background: var(--warning-bg); color: var(--warning-text); border: 1px solid rgba(114,75,0,0.18); }
+    .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 18px; }
+    .chart-card { border: 1px solid var(--border); border-radius: 18px; background: var(--panel-strong); padding: 16px; }
+    .chart-card h3 { margin: 0 0 14px; font-size: 1.05rem; }
+    .hist-row { display: grid; grid-template-columns: 88px minmax(0, 1fr) 48px; gap: 10px; align-items: center; margin-top: 10px; }
+    .hist-label, .hist-count { color: var(--muted); font-size: 0.9rem; }
+    .hist-bar-track { width: 100%; min-height: 26px; background: #f1ece1; border-radius: 999px; overflow: hidden; }
+    .hist-bar { min-height: 26px; border-radius: 999px; background: linear-gradient(90deg, #0b6b5f, #1ea18f); color: white; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; font-weight: 700; font-size: 0.84rem; }
+    .hist-bar-empty { background: transparent; }
+    .results-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .results-table th, .results-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    .results-table th { font-size: 0.84rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); background: #faf6ee; position: sticky; top: 0; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 18px; background: var(--panel-strong); }
+    .compact-table { max-width: 420px; }
+    .empty-state { padding: 16px; border: 1px dashed var(--border); border-radius: 16px; color: var(--muted); background: rgba(255,255,255,0.35); }
+    @media (max-width: 760px) {
+      .page { padding: 18px 14px 28px; }
+      .hero { padding: 22px; border-radius: 20px; }
+      .hist-row { grid-template-columns: 76px minmax(0, 1fr) 40px; }
+      .results-table { font-size: 0.9rem; }
+      .results-table th, .results-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Trail du Sanglier 2026 - Le 40 km</h1>
+      <p>Static race report generated from the TrailIntel CLI.</p>
+      <p class="meta-line">Generated 2026-04-06 19:02 UTC | Competition: Le 40 km | Race source: <a href="https://in.yaka-inscription.com/trail-du-sanglier-2026?currentPage=select-competition" target="_blank" rel="noopener noreferrer">open source page</a></p>
+      <p class="cache-line">Cache: enabled (`/home/runner/work/trail-intel/trail-intel/.workflow-cache/trailintel_cache.duckdb`)</p>
+      <div class="download-row">
+        <a class="download-link" href="report.csv">Download CSV</a>
+        <a class="download-link" href="report.json">Download JSON</a>
+      </div>
+      <div class="metrics"><div class="metric-card"><div class="metric-label">Input participants</div><div class="metric-value">208</div></div><div class="metric-card"><div class="metric-label">Rows evaluated</div><div class="metric-value">208</div></div><div class="metric-card"><div class="metric-label">Qualified (&gt; threshold)</div><div class="metric-value">3</div></div><div class="metric-card"><div class="metric-label">Strategy</div><div class="metric-value">participant-first</div></div><div class="metric-card"><div class="metric-label">Same-name mode</div><div class="metric-value">highest</div></div></div>
+      
+    </section>
+
+    <section class="panel section-grid">
+      <div>
+        <h2>Score Distribution</h2>
+        <div class="score-metrics"><div class="metric-card"><div class="metric-label">Participants</div><div class="metric-value">208</div></div><div class="metric-card"><div class="metric-label">With UTMB</div><div class="metric-value">207</div></div><div class="metric-card"><div class="metric-label">With ITRA</div><div class="metric-value">4</div></div><div class="metric-card"><div class="metric-label">With Any Score</div><div class="metric-value">208</div></div></div>
+      </div>
+      <div class="charts">
+        <section class="chart-card"><h3>UTMB Index</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar" style="width: 35.85%"><span>19</span></div></div><div class="hist-count">19</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar" style="width: 15.09%"><span>8</span></div></div><div class="hist-count">8</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar" style="width: 52.83%"><span>28</span></div></div><div class="hist-count">28</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar" style="width: 90.57%"><span>48</span></div></div><div class="hist-count">48</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>53</span></div></div><div class="hist-count">53</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar" style="width: 52.83%"><span>28</span></div></div><div class="hist-count">28</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar" style="width: 26.42%"><span>14</span></div></div><div class="hist-count">14</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 11.32%"><span>6</span></div></div><div class="hist-count">6</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>2</span></div></div><div class="hist-count">2</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div></section>
+        <section class="chart-card"><h3>ITRA Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar" style="width: 50.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 50.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>2</span></div></div><div class="hist-count">2</div></div></section>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Top Athletes</h2>
+      <p class="section-caption">Showing up to the configured top rows for athletes above the threshold.</p>
+      <div class="table-wrap"><table class="results-table"><thead><tr><th>Rank</th><th>Athlete</th><th>UTMB</th><th>ITRA</th><th>Combined</th><th>UTMB Matched Name</th><th>ITRA Matched Name</th><th>UTMB Profile</th><th>ITRA Profile</th><th>Notes</th></tr></thead><tbody><tr><td>1</td><td>Massimo Paladin</td><td>769.0</td><td>775.0</td><td>771.4</td><td>Massimo PALADIN</td><td>Massimo PALADIN</td><td><a href="https://utmb.world/runner/921767.massimo.paladin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/PALADIN.Massimo/921767" target="_blank" rel="noopener noreferrer">ITRA</a></td><td></td></tr><tr><td>2</td><td>Martin Pariente</td><td>729.0</td><td>759.0</td><td>741.0</td><td>Martin PARIENTE</td><td>Martin PARIENTE</td><td><a href="https://utmb.world/runner/5447626.martin.pariente" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/PARIENTE.Martin/5100594" target="_blank" rel="noopener noreferrer">ITRA</a></td><td></td></tr><tr><td>3</td><td>Nicolas Hamoumraoui</td><td>707.0</td><td>746.0</td><td>722.6</td><td>Nicolas HAMOUMRAOUI</td><td>Nicolas HAMOUMRAOUI</td><td><a href="https://utmb.world/runner/713004.nicolas.hamoumraoui" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/HAMOUMRAOUI.Nicolas/713004" target="_blank" rel="noopener noreferrer">ITRA</a></td><td></td></tr></tbody></table></div>
+    </section>
+
+    <section class="panel"><h2>No result on both UTMB and ITRA</h2><div class="empty-state">All participants matched at least one provider.</div></section>
+  </main>
+</body>
+</html>
