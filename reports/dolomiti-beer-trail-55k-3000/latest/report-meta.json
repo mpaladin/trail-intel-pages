@@ -14,5 +14,6 @@
   "race_name": "Dolomiti Beer Trail",
   "report_path": "reports/dolomiti-beer-trail-55k-3000/latest/index.html",
   "csv_path": "reports/dolomiti-beer-trail-55k-3000/latest/report.csv",
-  "json_path": "reports/dolomiti-beer-trail-55k-3000/latest/report.json"
+  "json_path": "reports/dolomiti-beer-trail-55k-3000/latest/report.json",
+  "report_kind": "race"
 }

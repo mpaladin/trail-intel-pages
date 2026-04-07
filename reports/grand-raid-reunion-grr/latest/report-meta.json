@@ -3,7 +3,7 @@
   "generated_at": "2026-04-06T19:25:06.703078+00:00",
   "participants_count": 2747,
   "rows_evaluated": 2747,
-  "qualified_count": 131,
+  "qualified_count": 150,
   "strategy": "participant-first",
   "same_name_mode": "highest",
   "race_url": "https://raw.githubusercontent.com/mpaladin/trail-intel-pages/main/test-data/grand-raid-reunion-grr.csv",
@@ -14,5 +14,6 @@
   "race_name": "Grand Raid Reunion",
   "report_path": "reports/grand-raid-reunion-grr/latest/index.html",
   "csv_path": "reports/grand-raid-reunion-grr/latest/report.csv",
-  "json_path": "reports/grand-raid-reunion-grr/latest/report.json"
+  "json_path": "reports/grand-raid-reunion-grr/latest/report.json",
+  "report_kind": "race"
 }

@@ -14,5 +14,6 @@
   "race_name": "Trail du Sanglier 2026 - Le 40 km",
   "report_path": "reports/trail-du-sanglier-2026-le-40-km/20260406-190252/index.html",
   "csv_path": "reports/trail-du-sanglier-2026-le-40-km/20260406-190252/report.csv",
-  "json_path": "reports/trail-du-sanglier-2026-le-40-km/20260406-190252/report.json"
+  "json_path": "reports/trail-du-sanglier-2026-le-40-km/20260406-190252/report.json",
+  "report_kind": "race"
 }

@@ -14,5 +14,6 @@
   "race_name": "Trail de la Michaille",
   "report_path": "reports/trail-de-la-michaille/20260406-191418/index.html",
   "csv_path": "reports/trail-de-la-michaille/20260406-191418/report.csv",
-  "json_path": "reports/trail-de-la-michaille/20260406-191418/report.json"
+  "json_path": "reports/trail-de-la-michaille/20260406-191418/report.json",
+  "report_kind": "race"
 }
