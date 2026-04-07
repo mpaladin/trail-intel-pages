@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trail de Calibri</title>
+  <style>
+    
+    :root {
+      color-scheme: light;
+      --page-bg: #f3ece2;
+      --panel: rgba(255, 252, 247, 0.92);
+      --panel-strong: #fffdf9;
+      --panel-soft: #f8f2ea;
+      --text: #1f1c18;
+      --muted: #6a6056;
+      --line: rgba(117, 98, 74, 0.20);
+      --line-strong: rgba(117, 98, 74, 0.32);
+      --shadow: 0 24px 64px rgba(35, 24, 9, 0.10);
+      --accent: #0e5b85;
+      --accent-strong: #0b4462;
+      --accent-soft: rgba(14, 91, 133, 0.16);
+      --hero-start: rgba(14, 91, 133, 0.14);
+      --hero-end: rgba(31, 59, 92, 0.16);
+      --pill-bg: rgba(14, 91, 133, 0.12);
+      --pill-text: #0b4462;
+      --warning-bg: #fff3d4;
+      --warning-text: #734700;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Avenir Next", "Segoe UI", sans-serif;
+      font-family: var(--body-font);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 28%),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 32%),
+        radial-gradient(circle at top, #fbf7f1 0%, var(--page-bg) 54%, #e7dccb 100%);
+    }
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 22px 18px 56px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .nav-brand {
+      font-family: var(--heading-font);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .nav-link.is-active {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 32px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, var(--hero-start), var(--hero-end)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -48px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      letter-spacing: -0.01em;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 14ch;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 0.96;
+    }
+    .hero-lead {
+      margin: 14px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.6;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.60);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--panel-strong);
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+    .action-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .action-link.primary {
+      color: #ffffff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .metric-card {
+      min-height: 122px;
+      padding: 16px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 10px;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    .metric-subvalue {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+    .section-stack {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .panel {
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px 16px;
+      margin-bottom: 14px;
+    }
+    .panel h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2.05rem);
+      line-height: 1.02;
+    }
+    .section-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .collection-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .collection-card {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      line-height: 1.04;
+    }
+    .card-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .card-meta {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .warning {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(115, 71, 0, 0.20);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      line-height: 1.55;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .chart-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .chart-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.16rem;
+    }
+    .hist-row {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr) 52px;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .hist-label,
+    .hist-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-track {
+      min-height: 28px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--panel-soft);
+    }
+    .hist-bar {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-empty {
+      background: transparent;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+    .results-table th,
+    .results-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(117, 98, 74, 0.14);
+      text-align: left;
+      vertical-align: top;
+    }
+    .results-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #fbf6ef;
+      color: var(--muted);
+      font-size: 0.79rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .results-table tbody tr:nth-child(even) {
+      background: rgba(248, 242, 234, 0.65);
+    }
+    .rank-cell,
+    .score-cell {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .athlete-cell strong {
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .supporting-cell,
+    .link-cell,
+    .notes-cell {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .notes-cell {
+      min-width: 180px;
+    }
+    .compact-table {
+      max-width: 480px;
+    }
+    .chart-frame {
+      padding: 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+    .chart-frame img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+    }
+    .empty-state {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px dashed var(--line-strong);
+      background: rgba(255, 255, 255, 0.45);
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .page { padding: 16px 12px 34px; }
+      .site-nav { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 26px 22px; }
+      .panel { padding: 20px; }
+      .card-top { flex-direction: column; }
+      .hist-row { grid-template-columns: 72px minmax(0, 1fr) 42px; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { max-width: none; }
+      .meta-chip { white-space: normal; }
+      .results-table th,
+      .results-table td { padding: 9px 10px; }
+    }
+    
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="../../../index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link" href="../../../index.html">Home</a><a class="nav-link" href="../../../reports/index.html">Race Reports</a><a class="nav-link is-active" href="../../index.html" aria-current="page">Forecasts</a></div></nav>
+    
+    <section class="hero">
+      <p class="eyebrow">Route Forecast</p>
+      <h1>Trail de Calibri</h1>
+      <p class="hero-lead">Weather outlook for a 70.67 km route starting Apr 18, 2026 at 07:00 UTC+02:00.</p>
+      <div class="meta-row"><span class="meta-chip">Published Apr 7, 2026 at 19:54 UTC</span><span class="meta-chip">Europe/Rome</span><span class="meta-chip">Open-Meteo Forecast API</span></div>
+      <div class="action-row">
+        <a class="action-link primary" href="forecast.png">Download PNG</a>
+        <a class="action-link secondary" href="route.gpx">Download GPX</a>
+        <a class="action-link secondary" href="snapshot.json">Download JSON</a>
+      </div>
+      <div class="metric-grid"><div class="metric-card"><div class="metric-label">Start</div><div class="metric-value">Apr 18, 2026 at 07:00 UTC+02:00</div><div class="metric-subvalue">Europe/Rome</div></div><div class="metric-card"><div class="metric-label">Duration</div><div class="metric-value">7h</div><div class="metric-subvalue">Planned route duration</div></div><div class="metric-card"><div class="metric-label">Distance</div><div class="metric-value">70.67 km</div><div class="metric-subvalue">Total route distance</div></div><div class="metric-card"><div class="metric-label">Ascent</div><div class="metric-value">5019 m</div><div class="metric-subvalue">Estimated climbing</div></div><div class="metric-card"><div class="metric-label">Temperature</div><div class="metric-value">5.8C to 15.8C</div><div class="metric-subvalue">Expected route-wide range</div></div><div class="metric-card"><div class="metric-label">Max wind</div><div class="metric-value">16.7 km/h</div><div class="metric-subvalue">Peak forecast wind speed</div></div><div class="metric-card"><div class="metric-label">Estimated rain</div><div class="metric-value">0.0 mm</div><div class="metric-subvalue">Total route precipitation</div></div><div class="metric-card"><div class="metric-label">Wettest segment</div><div class="metric-value">Apr 18, 14:00</div><div class="metric-subvalue">0.00 mm rain • 45% probability</div></div></div>
+    </section>
+
+      <section class="section-stack">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Forecast Overview</h2>
+          <span class="pill">Hosted PNG summary</span>
+        </div>
+        <p class="section-caption">The full rendered route forecast chart preserved as a static image for quick sharing.</p>
+        <div class="chart-frame"><img src="forecast.png" alt="Forecast chart for Trail de Calibri"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Key Moments</h2>
+          <span class="pill">Fast route scan</span>
+        </div>
+        <p class="section-caption">Five fixed checkpoints pulled from the aligned route samples so the main swings in temperature, wind, and rain are easy to scan.</p>
+        <div class="metric-grid"><div class="metric-card"><div class="metric-label">Start</div><div class="metric-value">Apr 18, 07:00</div><div class="metric-subvalue">0.00 km • 6.9C • 5.9 km/h wind • 0.00 mm rain • 17% chance</div></div><div class="metric-card"><div class="metric-label">Coldest</div><div class="metric-value">Apr 18, 07:40</div><div class="metric-subvalue">6.73 km • 5.8C • 5.8 km/h wind • 0.00 mm rain • 17% chance</div></div><div class="metric-card"><div class="metric-label">Windiest</div><div class="metric-value">Apr 18, 14:00</div><div class="metric-subvalue">70.67 km • 15.8C • 16.7 km/h wind • 0.00 mm rain • 45% chance</div></div><div class="metric-card"><div class="metric-label">Wettest</div><div class="metric-value">Apr 18, 14:00</div><div class="metric-subvalue">70.67 km • 15.8C • 16.7 km/h wind • 0.00 mm rain • 45% chance</div></div><div class="metric-card"><div class="metric-label">Finish</div><div class="metric-value">Apr 18, 14:00</div><div class="metric-subvalue">70.67 km • 15.8C • 16.7 km/h wind • 0.00 mm rain • 45% chance</div></div></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Route Timeline</h2>
+          <span class="pill">Per-sample weather values</span>
+        </div>
+        <p class="section-caption">Aligned weather samples across the route timeline, formatted for quick scanning on desktop and mobile.</p>
+        <div class="table-wrap"><table class="results-table"><thead><tr><th>Timestamp</th><th>Distance (km)</th><th>Elevation (m)</th><th>Temp (C)</th><th>Feels Like (C)</th><th>Wind (km/h)</th><th>Gust (km/h)</th><th>Direction</th><th>Clouds (%)</th><th>Precip (mm)</th><th>Rain Chance (%)</th></tr></thead><tbody><tr><td class="score-cell">Apr 18, 07:00</td><td>0.0</td><td>462.0</td><td>6.9</td><td>4.9</td><td>5.9</td><td>12.2</td><td>128.0</td><td>8.0</td><td>0.0</td><td>17.0</td></tr><tr><td class="score-cell">Apr 18, 07:10</td><td>1.68</td><td>477.7786118154455</td><td>7.0</td><td>4.9</td><td>5.9</td><td>12.7</td><td>126.7</td><td>8.3</td><td>0.0</td><td>17.0</td></tr><tr><td class="score-cell">Apr 18, 07:20</td><td>3.37</td><td>571.0517142185423</td><td>6.6</td><td>4.4</td><td>5.9</td><td>13.2</td><td>125.3</td><td>8.7</td><td>0.0</td><td>17.0</td></tr><tr><td class="score-cell">Apr 18, 07:30</td><td>5.05</td><td>579.3545276731585</td><td>6.7</td><td>4.5</td><td>5.8</td><td>13.6</td><td>124.0</td><td>9.0</td><td>0.0</td><td>17.0</td></tr><tr><td class="score-cell">Apr 18, 07:40</td><td>6.73</td><td>738.5512550802036</td><td>5.8</td><td>3.5</td><td>5.8</td><td>14.1</td><td>122.7</td><td>9.3</td><td>0.0</td><td>17.0</td></tr><tr><td class="score-cell">Apr 18, 07:50</td><td>8.41</td><td>659.7884068495055</td><td>6.5</td><td>4.3</td><td>5.8</td><td>14.6</td><td>121.3</td><td>9.7</td><td>0.0</td><td>17.0</td></tr><tr><td class="score-cell">Apr 18, 08:00</td><td>10.1</td><td>595.0</td><td>7.1</td><td>5.1</td><td>5.8</td><td>15.1</td><td>120.0</td><td>10.0</td><td>0.0</td><td>19.0</td></tr><tr><td class="score-cell">Apr 18, 08:10</td><td>11.78</td><td>699.7907549499291</td><td>6.8</td><td>4.5</td><td>6.0</td><td>15.7</td><td>117.0</td><td>11.7</td><td>0.0</td><td>19.0</td></tr><tr><td class="score-cell">Apr 18, 08:20</td><td>13.46</td><td>748.8123616414515</td><td>6.7</td><td>4.4</td><td>6.2</td><td>16.3</td><td>114.0</td><td>13.3</td><td>0.0</td><td>19.0</td></tr><tr><td class="score-cell">Apr 18, 08:30</td><td>15.14</td><td>898.6549150763195</td><td>6.0</td><td>3.6</td><td>6.4</td><td>8.1</td><td>111.0</td><td>15.0</td><td>0.0</td><td>19.0</td></tr><tr><td class="score-cell">Apr 18, 08:40</td><td>16.83</td><td>742.0</td><td>7.3</td><td>5.0</td><td>6.6</td><td>17.5</td><td>108.0</td><td>16.7</td><td>0.0</td><td>19.0</td></tr><tr><td class="score-cell">Apr 18, 08:50</td><td>18.51</td><td>812.8120159711771</td><td>7.1</td><td>4.7</td><td>6.8</td><td>8.7</td><td>105.0</td><td>18.3</td><td>0.0</td><td>19.0</td></tr><tr><td class="score-cell">Apr 18, 09:00</td><td>20.19</td><td>891.7105138303518</td><td>6.9</td><td>4.4</td><td>7.0</td><td>9.0</td><td>102.0</td><td>20.0</td><td>0.0</td><td>23.0</td></tr><tr><td class="score-cell">Apr 18, 09:10</td><td>21.88</td><td>657.6661565567462</td><td>8.7</td><td>6.5</td><td>7.4</td><td>9.4</td><td>99.3</td><td>22.5</td><td>0.0</td><td>23.0</td></tr><tr><td class="score-cell">Apr 18, 09:20</td><td>23.56</td><td>762.7756159099022</td><td>8.4</td><td>6.0</td><td>7.8</td><td>9.8</td><td>96.7</td><td>25.0</td><td>0.0</td><td>23.0</td></tr><tr><td class="score-cell">Apr 18, 09:30</td><td>25.24</td><td>717.4589048193548</td><td>9.0</td><td>6.8</td><td>8.2</td><td>10.2</td><td>94.0</td><td>27.5</td><td>0.0</td><td>23.0</td></tr><tr><td class="score-cell">Apr 18, 09:40</td><td>26.92</td><td>597.1471802262167</td><td>10.1</td><td>8.0</td><td>8.6</td><td>10.7</td><td>91.3</td><td>30.0</td><td>0.0</td><td>23.0</td></tr><tr><td class="score-cell">Apr 18, 09:50</td><td>28.61</td><td>522.7776490111833</td><td>11.0</td><td>9.0</td><td>8.2</td><td>11.1</td><td>88.7</td><td>25.3</td><td>0.0</td><td>23.0</td></tr><tr><td class="score-cell">Apr 18, 10:00</td><td>30.29</td><td>633.0</td><td>10.6</td><td>8.4</td><td>8.7</td><td>11.5</td><td>85.0</td><td>27.0</td><td>0.0</td><td>27.0</td></tr><tr><td class="score-cell">Apr 18, 10:10</td><td>31.97</td><td>583.8565755039962</td><td>11.2</td><td>9.1</td><td>9.1</td><td>12.6</td><td>83.7</td><td>29.0</td><td>0.0</td><td>27.0</td></tr><tr><td class="score-cell">Apr 18, 10:20</td><td>33.65</td><td>537.2922333079042</td><td>11.8</td><td>9.7</td><td>9.5</td><td>13.1</td><td>82.3</td><td>31.0</td><td>0.0</td><td>27.0</td></tr><tr><td class="score-cell">Apr 18, 10:30</td><td>35.34</td><td>521.0</td><td>12.2</td><td>10.1</td><td>9.9</td><td>13.5</td><td>81.0</td><td>33.0</td><td>0.0</td><td>27.0</td></tr><tr><td class="score-cell">Apr 18, 10:40</td><td>37.02</td><td>819.175314547577</td><td>10.6</td><td>8.0</td><td>10.3</td><td>20.9</td><td>79.7</td><td>35.0</td><td>0.0</td><td>27.0</td></tr><tr><td class="score-cell">Apr 18, 10:50</td><td>38.7</td><td>795.2325953854895</td><td>11.0</td><td>8.5</td><td>10.7</td><td>21.6</td><td>78.3</td><td>37.0</td><td>0.0</td><td>27.0</td></tr><tr><td class="score-cell">Apr 18, 11:00</td><td>40.39</td><td>827.0</td><td>11.1</td><td>8.5</td><td>11.1</td><td>22.3</td><td>77.0</td><td>39.0</td><td>0.0</td><td>32.0</td></tr><tr><td class="score-cell">Apr 18, 11:10</td><td>42.07</td><td>649.7067496247437</td><td>12.4</td><td>10.2</td><td>10.3</td><td>22.5</td><td>73.5</td><td>33.7</td><td>0.0</td><td>32.0</td></tr><tr><td class="score-cell">Apr 18, 11:20</td><td>43.75</td><td>855.3737441463741</td><td>11.3</td><td>8.9</td><td>10.6</td><td>22.7</td><td>74.0</td><td>36.3</td><td>0.0</td><td>32.0</td></tr><tr><td class="score-cell">Apr 18, 11:30</td><td>45.43</td><td>782.227317024068</td><td>11.9</td><td>9.8</td><td>10.8</td><td>22.9</td><td>74.5</td><td>39.0</td><td>0.0</td><td>32.0</td></tr><tr><td class="score-cell">Apr 18, 11:40</td><td>47.12</td><td>876.1794847772612</td><td>11.6</td><td>9.3</td><td>11.0</td><td>23.0</td><td>75.0</td><td>41.7</td><td>0.0</td><td>32.0</td></tr><tr><td class="score-cell">Apr 18, 11:50</td><td>48.8</td><td>925.0</td><td>11.5</td><td>9.2</td><td>11.3</td><td>23.2</td><td>75.5</td><td>44.3</td><td>0.0</td><td>32.0</td></tr><tr><td class="score-cell">Apr 18, 12:00</td><td>50.48</td><td>892.5191852634907</td><td>11.9</td><td>9.8</td><td>11.5</td><td>23.4</td><td>76.0</td><td>47.0</td><td>0.0</td><td>37.0</td></tr><tr><td class="score-cell">Apr 18, 12:10</td><td>52.16</td><td>758.354355778774</td><td>12.8</td><td>10.8</td><td>13.1</td><td>23.3</td><td>77.5</td><td>56.7</td><td>0.0</td><td>37.0</td></tr><tr><td class="score-cell">Apr 18, 12:20</td><td>53.85</td><td>907.5054186584354</td><td>12.1</td><td>9.7</td><td>13.2</td><td>23.3</td><td>78.0</td><td>59.3</td><td>0.0</td><td>37.0</td></tr><tr><td class="score-cell">Apr 18, 12:30</td><td>55.53</td><td>935.0</td><td>12.0</td><td>9.7</td><td>13.4</td><td>23.2</td><td>78.5</td><td>62.0</td><td>0.0</td><td>37.0</td></tr><tr><td class="score-cell">Apr 18, 12:40</td><td>57.21</td><td>855.0</td><td>12.6</td><td>10.5</td><td>13.6</td><td>23.1</td><td>79.0</td><td>64.7</td><td>0.0</td><td>37.0</td></tr><tr><td class="score-cell">Apr 18, 12:50</td><td>58.9</td><td>674.1379769006019</td><td>14.0</td><td>12.1</td><td>13.7</td><td>23.1</td><td>79.5</td><td>67.3</td><td>0.0</td><td>37.0</td></tr><tr><td class="score-cell">Apr 18, 13:00</td><td>60.58</td><td>710.9812741695289</td><td>13.8</td><td>12.0</td><td>13.9</td><td>23.0</td><td>80.0</td><td>70.0</td><td>0.0</td><td>41.0</td></tr><tr><td class="score-cell">Apr 18, 13:10</td><td>62.26</td><td>618.1532249187304</td><td>14.5</td><td>12.8</td><td>14.0</td><td>24.6</td><td>79.8</td><td>72.2</td><td>0.0</td><td>41.0</td></tr><tr><td class="score-cell">Apr 18, 13:20</td><td>63.94</td><td>536.6036907268335</td><td>15.2</td><td>13.5</td><td>14.2</td><td>24.5</td><td>79.7</td><td>74.3</td><td>0.0</td><td>41.0</td></tr><tr><td class="score-cell">Apr 18, 13:30</td><td>65.63</td><td>707.2139873345438</td><td>14.2</td><td>12.2</td><td>14.3</td><td>24.3</td><td>79.5</td><td>76.5</td><td>0.0</td><td>41.0</td></tr><tr><td class="score-cell">Apr 18, 13:40</td><td>67.31</td><td>626.4977794981355</td><td>14.7</td><td>12.9</td><td>14.4</td><td>24.1</td><td>79.3</td><td>78.7</td><td>0.0</td><td>41.0</td></tr><tr><td class="score-cell">Apr 18, 13:50</td><td>68.99</td><td>551.0464671851951</td><td>15.1</td><td>13.2</td><td>16.6</td><td>24.0</td><td>76.3</td><td>85.2</td><td>0.0</td><td>41.0</td></tr><tr><td class="score-cell">Apr 18, 14:00</td><td>70.67</td><td>462.0</td><td>15.8</td><td>14.0</td><td>16.7</td><td>23.8</td><td>76.0</td><td>87.0</td><td>0.0</td><td>45.0</td></tr></tbody></table></div>
+      </section>
+    </section>
+    
+  </main>
+</body>
+</html>
