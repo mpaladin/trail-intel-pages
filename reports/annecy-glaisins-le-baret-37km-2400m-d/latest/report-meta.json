@@ -1,0 +1,19 @@
+{
+  "report_kind": "race",
+  "title": "annecy glaisins",
+  "generated_at": "2026-04-07T09:18:55.219588+00:00",
+  "participants_count": 613,
+  "rows_evaluated": 613,
+  "qualified_count": 40,
+  "strategy": "participant-first",
+  "same_name_mode": "highest",
+  "race_url": "https://in.njuko.com/hardloop-trail-annecy-les-glaisins-2026?currentPage=select-competition",
+  "competition_name": "Le Baret - 37km - 2400m D+",
+  "score_threshold": 680.0,
+  "published_at": "2026-04-07T09:18:58.572959+00:00",
+  "race_slug": "annecy-glaisins-le-baret-37km-2400m-d",
+  "race_name": "annecy glaisins",
+  "report_path": "reports/annecy-glaisins-le-baret-37km-2400m-d/latest/index.html",
+  "csv_path": "reports/annecy-glaisins-le-baret-37km-2400m-d/latest/report.csv",
+  "json_path": "reports/annecy-glaisins-le-baret-37km-2400m-d/latest/report.json"
+}
