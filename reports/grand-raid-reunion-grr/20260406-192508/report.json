@@ -132,7 +132,7 @@
     "betrail_match_name": "OLL\u00c9 BERNADES Marc",
     "betrail_match_score": 0.8870967741935483,
     "betrail_profile_url": "https://www.betrail.run/runner/olle.bernades.marc/overview",
-    "notes": "ITRA score missing in response; Betrail catalog fuzzy match",
+    "notes": "ITRA score missing in response; Betrail catalog fuzzy match; Betrail catalog fuzzy match",
     "combined_score": 871.0
   },
   {
@@ -34489,7 +34489,7 @@
     "betrail_match_name": "LEHOUX-GAGNON PATRICK",
     "betrail_match_score": 0.8599999999999999,
     "betrail_profile_url": "https://www.betrail.run/runner/lehoux-gagnon.patrick/overview",
-    "notes": "ITRA skipped because UTMB 395.0 <= threshold 680.0; Betrail catalog fuzzy match",
+    "notes": "ITRA skipped because UTMB 395.0 <= threshold 680.0; Betrail catalog fuzzy match; Betrail catalog fuzzy match",
     "combined_score": 395.0
   },
   {
@@ -43091,7 +43091,7 @@
     "betrail_match_name": "HOARAU EDDY-ALEXANDRE",
     "betrail_match_score": 0.9054054054054055,
     "betrail_profile_url": "https://www.betrail.run/runner/hoarau.eddy-alexandre/overview",
-    "notes": "ITRA skipped because UTMB 0.0 <= threshold 680.0; Betrail catalog fuzzy match",
+    "notes": "ITRA skipped because UTMB 0.0 <= threshold 680.0; Betrail catalog fuzzy match; Betrail catalog fuzzy match",
     "combined_score": 0.0
   },
   {

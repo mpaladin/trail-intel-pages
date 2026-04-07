@@ -125,7 +125,7 @@
       "UTMB Profile": "https://utmb.world/runner/352073.marc.bernadesolle",
       "ITRA Profile": "https://itra.run/RunnerSpace/OLLE.Bernades Marc/5860413",
       "Betrail Profile": "https://www.betrail.run/runner/olle.bernades.marc/overview",
-      "Notes": "ITRA score missing in response; Betrail catalog fuzzy match"
+      "Notes": "ITRA score missing in response; Betrail catalog fuzzy match; Betrail catalog fuzzy match"
     },
     {
       "Rank": 9,
@@ -1627,7 +1627,7 @@
       "UTMB Profile": "https://utmb.world/runner/352073.marc.bernadesolle",
       "ITRA Profile": "https://itra.run/RunnerSpace/OLLE.Bernades Marc/5860413",
       "Betrail Profile": "https://www.betrail.run/runner/olle.bernades.marc/overview",
-      "Notes": "ITRA score missing in response; Betrail catalog fuzzy match"
+      "Notes": "ITRA score missing in response; Betrail catalog fuzzy match; Betrail catalog fuzzy match"
     },
     {
       "Rank": 9,
@@ -31942,7 +31942,7 @@
       "UTMB Profile": "https://utmb.world/runner/825671.patrick.lehoux",
       "ITRA Profile": "",
       "Betrail Profile": "https://www.betrail.run/runner/lehoux-gagnon.patrick/overview",
-      "Notes": "ITRA skipped because UTMB 395.0 <= threshold 680.0; Betrail catalog fuzzy match"
+      "Notes": "ITRA skipped because UTMB 395.0 <= threshold 680.0; Betrail catalog fuzzy match; Betrail catalog fuzzy match"
     },
     {
       "Rank": 2030,
@@ -39532,7 +39532,7 @@
       "UTMB Profile": "https://utmb.world/runner/1311345.alexandre.hoarau",
       "ITRA Profile": "",
       "Betrail Profile": "https://www.betrail.run/runner/hoarau.eddy-alexandre/overview",
-      "Notes": "ITRA skipped because UTMB 0.0 <= threshold 680.0; Betrail catalog fuzzy match"
+      "Notes": "ITRA skipped because UTMB 0.0 <= threshold 680.0; Betrail catalog fuzzy match; Betrail catalog fuzzy match"
     },
     {
       "Rank": 2536,
