@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TrailIntel Pages</title>
+  <title>Sample Route</title>
   <style>
     
     :root {
@@ -17,13 +17,13 @@
       --line: rgba(117, 98, 74, 0.20);
       --line-strong: rgba(117, 98, 74, 0.32);
       --shadow: 0 24px 64px rgba(35, 24, 9, 0.10);
-      --accent: #8b5e34;
-      --accent-strong: #70461f;
-      --accent-soft: rgba(139, 94, 52, 0.16);
-      --hero-start: rgba(139, 94, 52, 0.16);
-      --hero-end: rgba(30, 107, 96, 0.16);
-      --pill-bg: rgba(139, 94, 52, 0.12);
-      --pill-text: #70461f;
+      --accent: #0e5b85;
+      --accent-strong: #0b4462;
+      --accent-soft: rgba(14, 91, 133, 0.16);
+      --hero-start: rgba(14, 91, 133, 0.14);
+      --hero-end: rgba(31, 59, 92, 0.16);
+      --pill-bg: rgba(14, 91, 133, 0.12);
+      --pill-text: #0b4462;
       --warning-bg: #fff3d4;
       --warning-text: #734700;
       --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
@@ -448,61 +448,38 @@
 </head>
 <body>
   <main class="page">
-    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link is-active" href="index.html" aria-current="page">Home</a><a class="nav-link" href="reports/index.html">Race Reports</a><a class="nav-link" href="forecasts/index.html">Forecasts</a></div></nav>
+    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="../../../index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link" href="../../../index.html">Home</a><a class="nav-link" href="../../../reports/index.html">Race Reports</a><a class="nav-link is-active" href="../../index.html" aria-current="page">Forecasts</a></div></nav>
     
     <section class="hero">
-      <p class="eyebrow">TrailIntel Static Publishing</p>
-      <h1>Trail race reports and forecast archives, in one editorial front door.</h1>
-      <p class="hero-lead">Browse the public TrailIntel archive of race-score reports and route-weather forecasts published by the GitHub workflows.</p>
-      <div class="meta-row"><span class="meta-chip">6 race report(s)</span><span class="meta-chip">2 forecast(s)</span><span class="meta-chip">Latest publish Apr 7, 2026 at 16:51 UTC</span></div>
+      <p class="eyebrow">Route Forecast</p>
+      <h1>Sample Route</h1>
+      <p class="hero-lead">Weather outlook for a 2.26 km route starting Apr 8, 2026 at 08:00 UTC+02:00.</p>
+      <div class="meta-row"><span class="meta-chip">Published Apr 7, 2026 at 16:51 UTC</span><span class="meta-chip">Europe/Rome</span><span class="meta-chip">Open-Meteo Forecast API</span></div>
       <div class="action-row">
-        <a class="action-link primary" href="reports/index.html">Browse race reports</a>
-        <a class="action-link secondary" href="forecasts/index.html">Browse forecasts</a>
+        <a class="action-link primary" href="forecast.png">Download PNG</a>
+        <a class="action-link secondary" href="route.gpx">Download GPX</a>
+        <a class="action-link secondary" href="snapshot.json">Download JSON</a>
       </div>
-      <div class="metric-grid">
-        <div class="metric-card"><div class="metric-label">Race reports</div><div class="metric-value">6</div><div class="metric-subvalue">Published score-driven race archives</div></div><div class="metric-card"><div class="metric-label">Forecasts</div><div class="metric-value">2</div><div class="metric-subvalue">Published route-weather outlooks</div></div><div class="metric-card"><div class="metric-label">Latest publish</div><div class="metric-value">Apr 7, 2026 at 16:51 UTC</div><div class="metric-subvalue">Most recent site update</div></div>
-      </div>
+      <div class="metric-grid"><div class="metric-card"><div class="metric-label">Start</div><div class="metric-value">Apr 8, 2026 at 08:00 UTC+02:00</div><div class="metric-subvalue">Europe/Rome</div></div><div class="metric-card"><div class="metric-label">Duration</div><div class="metric-value">2h 30m</div><div class="metric-subvalue">Planned route duration</div></div><div class="metric-card"><div class="metric-label">Distance</div><div class="metric-value">2.26 km</div><div class="metric-subvalue">Total route distance</div></div><div class="metric-card"><div class="metric-label">Ascent</div><div class="metric-value">62 m</div><div class="metric-subvalue">Estimated climbing</div></div><div class="metric-card"><div class="metric-label">Temperature</div><div class="metric-value">8.8C to 12.9C</div><div class="metric-subvalue">Expected route-wide range</div></div><div class="metric-card"><div class="metric-label">Max wind</div><div class="metric-value">7.8 km/h</div><div class="metric-subvalue">Peak forecast wind speed</div></div><div class="metric-card"><div class="metric-label">Estimated rain</div><div class="metric-value">0.0 mm</div><div class="metric-subvalue">Total route precipitation</div></div><div class="metric-card"><div class="metric-label">Wettest segment</div><div class="metric-value">Apr 8, 10:30</div><div class="metric-subvalue">0% rain probability</div></div></div>
     </section>
 
     <section class="section-stack">
       <section class="panel">
         <div class="panel-head">
-          <h2>Latest Highlights</h2>
-          <span class="pill">Newest published outputs</span>
+          <h2>Forecast Overview</h2>
+          <span class="pill">Hosted PNG summary</span>
         </div>
-        <p class="section-caption">Jump straight into the freshest race intelligence or forecast bundle from the public archive.</p>
-        <div class="collection-grid">
-          <article class="collection-card">
-            <div class="card-top">
-              <div>
-                <p class="eyebrow">Race Reports</p>
-                <h2 class="card-title"><a href="reports/annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/index.html">annecy glaisins</a></h2>
-                <p class="card-copy">Apr 7, 2026 at 09:18 UTC.</p>
-              </div>
-              <span class="pill">6 total</span>
-            </div>
-            <p class="card-meta">Score-based race analysis with leaderboard exports, provider links, and coverage summaries.</p>
-            <div class="action-row">
-              <a class="action-link primary" href="reports/index.html">Open race archive</a>
-              <a class="action-link secondary" href="reports/annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/index.html">Latest race report</a>
-            </div>
-          </article>
-          <article class="collection-card">
-            <div class="card-top">
-              <div>
-                <p class="eyebrow">Forecasts</p>
-                <h2 class="card-title"><a href="forecasts/sample-route/20260407-165151/index.html">Sample Route</a></h2>
-                <p class="card-copy">Apr 7, 2026 at 16:51 UTC.</p>
-              </div>
-              <span class="pill">2 total</span>
-            </div>
-            <p class="card-meta">Static route-weather bundles with hosted PNG summaries, GPX files, and archived forecast snapshots.</p>
-            <div class="action-row">
-              <a class="action-link primary" href="forecasts/index.html">Open forecast archive</a>
-              <a class="action-link secondary" href="forecasts/sample-route/20260407-165151/index.html">Latest forecast</a>
-            </div>
-          </article>
+        <p class="section-caption">The full rendered route forecast chart preserved as a static image for quick sharing.</p>
+        <div class="chart-frame"><img src="forecast.png" alt="Forecast chart for Sample Route"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Route Timeline</h2>
+          <span class="pill">Per-sample weather values</span>
         </div>
+        <p class="section-caption">Aligned weather samples across the route timeline, formatted for quick scanning on desktop and mobile.</p>
+        <div class="table-wrap"><table class="results-table"><thead><tr><th>Timestamp</th><th>Distance (km)</th><th>Elevation (m)</th><th>Temp (C)</th><th>Feels Like (C)</th><th>Wind (km/h)</th><th>Gust (km/h)</th><th>Direction</th><th>Clouds (%)</th><th>Precip (mm)</th><th>Rain Chance (%)</th></tr></thead><tbody><tr><td class="score-cell">Apr 8, 08:00</td><td>0.0</td><td>408.0</td><td>8.8</td><td>6.4</td><td>5.9</td><td>11.5</td><td>349.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 08:10</td><td>0.15</td><td>414.05072447116856</td><td>9.0</td><td>6.6</td><td>6.1</td><td>12.2</td><td>349.3</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 08:20</td><td>0.3</td><td>420.1014489423371</td><td>9.2</td><td>6.6</td><td>6.2</td><td>12.9</td><td>349.7</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 08:30</td><td>0.45</td><td>426.8113514016954</td><td>9.3</td><td>6.8</td><td>6.4</td><td>13.7</td><td>350.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 08:40</td><td>0.6</td><td>433.63621603933035</td><td>9.5</td><td>6.9</td><td>6.6</td><td>14.4</td><td>350.3</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 08:50</td><td>0.75</td><td>441.1605430068732</td><td>9.6</td><td>6.9</td><td>6.7</td><td>15.1</td><td>350.7</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 09:00</td><td>0.91</td><td>449.9250985150374</td><td>9.8</td><td>7.0</td><td>6.9</td><td>15.8</td><td>351.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 09:10</td><td>1.06</td><td>458.6896540232016</td><td>10.0</td><td>7.3</td><td>7.0</td><td>16.2</td><td>352.5</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 09:20</td><td>1.21</td><td>467.4542095313659</td><td>10.3</td><td>7.5</td><td>7.0</td><td>16.5</td><td>354.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 09:30</td><td>1.36</td><td>467.6716383645745</td><td>10.6</td><td>7.8</td><td>7.1</td><td>16.9</td><td>355.5</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 09:40</td><td>1.51</td><td>464.3901098509472</td><td>10.9</td><td>8.2</td><td>7.1</td><td>17.3</td><td>357.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 09:50</td><td>1.66</td><td>461.1085813373199</td><td>11.2</td><td>8.5</td><td>7.2</td><td>17.6</td><td>358.5</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 10:00</td><td>1.81</td><td>457.8446199647448</td><td>11.5</td><td>8.8</td><td>7.2</td><td>18.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 10:10</td><td>1.96</td><td>454.8964133098299</td><td>11.9</td><td>9.2</td><td>7.2</td><td>17.9</td><td>2.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 10:20</td><td>2.11</td><td>451.94820665491494</td><td>12.5</td><td>9.8</td><td>7.6</td><td>24.0</td><td>38.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><td class="score-cell">Apr 8, 10:30</td><td>2.26</td><td>449.0</td><td>12.9</td><td>10.2</td><td>7.8</td><td>23.8</td><td>38.5</td><td>0.0</td><td>0.0</td><td>0.0</td></tr></tbody></table></div>
       </section>
     </section>
     
