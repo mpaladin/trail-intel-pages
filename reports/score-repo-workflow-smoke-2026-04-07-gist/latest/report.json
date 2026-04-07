@@ -1,0 +1,53 @@
+[
+  {
+    "input_name": "PUPPI FRANCESCO",
+    "utmb_index": 933.0,
+    "utmb_match_name": "Francesco PUPPI",
+    "utmb_match_score": 0.72,
+    "utmb_profile_url": "https://utmb.world/runner/673108.francesco.puppi",
+    "itra_score": 945.0,
+    "itra_match_name": "Francesco PUPPI",
+    "itra_match_score": 0.72,
+    "itra_profile_url": "https://itra.run/RunnerSpace/PUPPI.Francesco/673108",
+    "betrail_score": 95.27,
+    "betrail_match_name": "PUPPI FRANCESCO",
+    "betrail_match_score": 1.0,
+    "betrail_profile_url": "https://www.betrail.run/runner/puppi.francesco/overview",
+    "notes": "",
+    "combined_score": 937.8
+  },
+  {
+    "input_name": "ALBON JONATHAN",
+    "utmb_index": 921.0,
+    "utmb_match_name": "Jonathan ALBON",
+    "utmb_match_score": 0.7,
+    "utmb_profile_url": "https://utmb.world/runner/527631.jonathan.albon",
+    "itra_score": 931.0,
+    "itra_match_name": "Jonathan ALBON",
+    "itra_match_score": 0.7,
+    "itra_profile_url": "https://itra.run/RunnerSpace/ALBON.Jonathan/527631",
+    "betrail_score": 96.19,
+    "betrail_match_name": "ALBON JONATHAN",
+    "betrail_match_score": 1.0,
+    "betrail_profile_url": "https://www.betrail.run/runner/albon.jonathan/overview",
+    "notes": "",
+    "combined_score": 925.0
+  },
+  {
+    "input_name": "BLANCHARD Mathieu",
+    "utmb_index": 893.0,
+    "utmb_match_name": "Mathieu BLANCHARD",
+    "utmb_match_score": 0.6705882352941176,
+    "utmb_profile_url": "https://utmb.world/runner/1064397.mathieu.blanchard",
+    "itra_score": 907.0,
+    "itra_match_name": "Mathieu BLANCHARD",
+    "itra_match_score": 0.6705882352941176,
+    "itra_profile_url": "https://itra.run/RunnerSpace/BLANCHARD.Mathieu/1064397",
+    "betrail_score": 95.85,
+    "betrail_match_name": "BLANCHARD Mathieu",
+    "betrail_match_score": 1.0,
+    "betrail_profile_url": "https://www.betrail.run/runner/blanchard.mathieu/overview",
+    "notes": "",
+    "combined_score": 898.5999999999999
+  }
+]

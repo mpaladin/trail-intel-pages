@@ -1,0 +1,133 @@
+{
+  "report_kind": "race",
+  "title": "Score Repo Workflow Smoke 2026-04-07 Gist",
+  "participants_count": 3,
+  "rows_evaluated": 3,
+  "qualified_count": 3,
+  "strategy": "participant-first",
+  "same_name_mode": "highest",
+  "rows": [
+    {
+      "Rank": 1,
+      "Athlete": "PUPPI FRANCESCO",
+      "UTMB": "933.0",
+      "ITRA": "945.0",
+      "Betrail": "95.3",
+      "Combined": "937.8",
+      "UTMB Matched Name": "Francesco PUPPI",
+      "ITRA Matched Name": "Francesco PUPPI",
+      "Betrail Matched Name": "PUPPI FRANCESCO",
+      "UTMB Profile": "https://utmb.world/runner/673108.francesco.puppi",
+      "ITRA Profile": "https://itra.run/RunnerSpace/PUPPI.Francesco/673108",
+      "Betrail Profile": "https://www.betrail.run/runner/puppi.francesco/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 2,
+      "Athlete": "ALBON JONATHAN",
+      "UTMB": "921.0",
+      "ITRA": "931.0",
+      "Betrail": "96.2",
+      "Combined": "925.0",
+      "UTMB Matched Name": "Jonathan ALBON",
+      "ITRA Matched Name": "Jonathan ALBON",
+      "Betrail Matched Name": "ALBON JONATHAN",
+      "UTMB Profile": "https://utmb.world/runner/527631.jonathan.albon",
+      "ITRA Profile": "https://itra.run/RunnerSpace/ALBON.Jonathan/527631",
+      "Betrail Profile": "https://www.betrail.run/runner/albon.jonathan/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 3,
+      "Athlete": "BLANCHARD Mathieu",
+      "UTMB": "893.0",
+      "ITRA": "907.0",
+      "Betrail": "95.8",
+      "Combined": "898.6",
+      "UTMB Matched Name": "Mathieu BLANCHARD",
+      "ITRA Matched Name": "Mathieu BLANCHARD",
+      "Betrail Matched Name": "BLANCHARD Mathieu",
+      "UTMB Profile": "https://utmb.world/runner/1064397.mathieu.blanchard",
+      "ITRA Profile": "https://itra.run/RunnerSpace/BLANCHARD.Mathieu/1064397",
+      "Betrail Profile": "https://www.betrail.run/runner/blanchard.mathieu/overview",
+      "Notes": ""
+    }
+  ],
+  "export_rows": [
+    {
+      "Rank": 1,
+      "Athlete": "PUPPI FRANCESCO",
+      "UTMB": "933.0",
+      "ITRA": "945.0",
+      "Betrail": "95.3",
+      "Combined": "937.8",
+      "UTMB Matched Name": "Francesco PUPPI",
+      "ITRA Matched Name": "Francesco PUPPI",
+      "Betrail Matched Name": "PUPPI FRANCESCO",
+      "UTMB Profile": "https://utmb.world/runner/673108.francesco.puppi",
+      "ITRA Profile": "https://itra.run/RunnerSpace/PUPPI.Francesco/673108",
+      "Betrail Profile": "https://www.betrail.run/runner/puppi.francesco/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 2,
+      "Athlete": "ALBON JONATHAN",
+      "UTMB": "921.0",
+      "ITRA": "931.0",
+      "Betrail": "96.2",
+      "Combined": "925.0",
+      "UTMB Matched Name": "Jonathan ALBON",
+      "ITRA Matched Name": "Jonathan ALBON",
+      "Betrail Matched Name": "ALBON JONATHAN",
+      "UTMB Profile": "https://utmb.world/runner/527631.jonathan.albon",
+      "ITRA Profile": "https://itra.run/RunnerSpace/ALBON.Jonathan/527631",
+      "Betrail Profile": "https://www.betrail.run/runner/albon.jonathan/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 3,
+      "Athlete": "BLANCHARD Mathieu",
+      "UTMB": "893.0",
+      "ITRA": "907.0",
+      "Betrail": "95.8",
+      "Combined": "898.6",
+      "UTMB Matched Name": "Mathieu BLANCHARD",
+      "ITRA Matched Name": "Mathieu BLANCHARD",
+      "Betrail Matched Name": "BLANCHARD Mathieu",
+      "UTMB Profile": "https://utmb.world/runner/1064397.mathieu.blanchard",
+      "ITRA Profile": "https://itra.run/RunnerSpace/BLANCHARD.Mathieu/1064397",
+      "Betrail Profile": "https://www.betrail.run/runner/blanchard.mathieu/overview",
+      "Notes": ""
+    }
+  ],
+  "no_result_names": [],
+  "utmb_scores": [
+    921.0,
+    893.0,
+    933.0
+  ],
+  "itra_scores": [
+    931.0,
+    907.0,
+    945.0
+  ],
+  "betrail_scores": [
+    96.19,
+    95.85,
+    95.27
+  ],
+  "score_summary": {
+    "participants": 3,
+    "with_utmb": 3,
+    "with_itra": 3,
+    "with_betrail": 3,
+    "with_any": 3
+  },
+  "cache_status": "DuckDB cache: enabled (`/home/runner/work/trail-intel/trail-intel/.workflow-cache/trailintel_cache.duckdb`) | Score repo: read/write (`/home/runner/work/trail-intel/trail-intel/score-repo`)",
+  "stale_cache_used": false,
+  "race_url": "https://gist.githubusercontent.com/mpaladin/9449215414bd710321f7e83d931dbde9/raw/800b846239eb1767aa383d1a2d057c2be78f1d12/workflow_smoke_participants.csv",
+  "competition_name": "",
+  "score_threshold": 680.0,
+  "sort_by": "combined",
+  "generated_at": "2026-04-07T08:57:37.424863+00:00"
+}
