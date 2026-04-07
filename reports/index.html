@@ -5,142 +5,610 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trail Race Reports</title>
   <style>
+    
     :root {
-      --bg: #f5efe4;
-      --panel: #fffdf9;
-      --text: #1d1f1a;
-      --muted: #645d52;
-      --accent: #165d52;
-      --border: #ddd1bc;
-      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color-scheme: light;
+      --page-bg: #f3ece2;
+      --panel: rgba(255, 252, 247, 0.92);
+      --panel-strong: #fffdf9;
+      --panel-soft: #f8f2ea;
+      --text: #1f1c18;
+      --muted: #6a6056;
+      --line: rgba(117, 98, 74, 0.20);
+      --line-strong: rgba(117, 98, 74, 0.32);
+      --shadow: 0 24px 64px rgba(35, 24, 9, 0.10);
+      --accent: #0b6b5f;
+      --accent-strong: #084f46;
+      --accent-soft: rgba(11, 107, 95, 0.16);
+      --hero-start: rgba(11, 107, 95, 0.14);
+      --hero-end: rgba(155, 101, 40, 0.16);
+      --pill-bg: rgba(11, 107, 95, 0.12);
+      --pill-text: #084f46;
+      --warning-bg: #fff3d4;
+      --warning-text: #734700;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Avenir Next", "Segoe UI", sans-serif;
+      font-family: var(--body-font);
     }
     * { box-sizing: border-box; }
-    body { margin: 0; background: linear-gradient(180deg, #faf7f0 0%, var(--bg) 100%); color: var(--text); }
-    .page { max-width: 980px; margin: 0 auto; padding: 28px 18px 42px; }
-    .hero { padding: 24px; background: var(--panel); border: 1px solid var(--border); border-radius: 24px; }
-    .hero h1 { margin: 0 0 8px; font-size: clamp(1.8rem, 3.5vw, 2.7rem); }
-    .hero p { margin: 0; color: var(--muted); }
-    .report-list { display: grid; gap: 14px; margin-top: 20px; }
-    .report-card { padding: 18px; background: var(--panel); border: 1px solid var(--border); border-radius: 20px; }
-    .report-card-head h2 { margin: 0; font-size: 1.25rem; }
-    .report-card-head p { margin: 6px 0 0; color: var(--muted); }
-    .report-card-metrics { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; color: var(--muted); }
-    .report-card-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; }
-    a { color: var(--accent); text-decoration: none; font-weight: 700; }
-    .empty-state { padding: 16px; border-radius: 16px; border: 1px dashed var(--border); color: var(--muted); background: rgba(255,255,255,0.5); }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 28%),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 32%),
+        radial-gradient(circle at top, #fbf7f1 0%, var(--page-bg) 54%, #e7dccb 100%);
+    }
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 22px 18px 56px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .nav-brand {
+      font-family: var(--heading-font);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .nav-link.is-active {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 32px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, var(--hero-start), var(--hero-end)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -48px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      letter-spacing: -0.01em;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 14ch;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 0.96;
+    }
+    .hero-lead {
+      margin: 14px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.6;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.60);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--panel-strong);
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+    .action-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .action-link.primary {
+      color: #ffffff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .metric-card {
+      min-height: 122px;
+      padding: 16px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 10px;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    .metric-subvalue {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+    .section-stack {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .panel {
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px 16px;
+      margin-bottom: 14px;
+    }
+    .panel h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2.05rem);
+      line-height: 1.02;
+    }
+    .section-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .collection-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .collection-card {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      line-height: 1.04;
+    }
+    .card-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .card-meta {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .warning {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(115, 71, 0, 0.20);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      line-height: 1.55;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .chart-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .chart-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.16rem;
+    }
+    .hist-row {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr) 52px;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .hist-label,
+    .hist-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-track {
+      min-height: 28px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--panel-soft);
+    }
+    .hist-bar {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-empty {
+      background: transparent;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+    .results-table th,
+    .results-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(117, 98, 74, 0.14);
+      text-align: left;
+      vertical-align: top;
+    }
+    .results-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #fbf6ef;
+      color: var(--muted);
+      font-size: 0.79rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .results-table tbody tr:nth-child(even) {
+      background: rgba(248, 242, 234, 0.65);
+    }
+    .rank-cell,
+    .score-cell {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .athlete-cell strong {
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .supporting-cell,
+    .link-cell,
+    .notes-cell {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .notes-cell {
+      min-width: 180px;
+    }
+    .compact-table {
+      max-width: 480px;
+    }
+    .chart-frame {
+      padding: 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+    .chart-frame img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+    }
+    .empty-state {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px dashed var(--line-strong);
+      background: rgba(255, 255, 255, 0.45);
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .page { padding: 16px 12px 34px; }
+      .site-nav { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 26px 22px; }
+      .panel { padding: 20px; }
+      .card-top { flex-direction: column; }
+      .hist-row { grid-template-columns: 72px minmax(0, 1fr) 42px; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { max-width: none; }
+      .meta-chip { white-space: normal; }
+      .results-table th,
+      .results-table td { padding: 9px 10px; }
+    }
+    
   </style>
 </head>
 <body>
   <main class="page">
+    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="../index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link" href="../index.html">Home</a><a class="nav-link is-active" href="index.html" aria-current="page">Race Reports</a><a class="nav-link" href="../forecasts/index.html">Forecasts</a></div></nav>
+    
     <section class="hero">
+      <p class="eyebrow">Race Archive</p>
       <h1>Trail Race Reports</h1>
-      <p>Static reports published by the TrailIntel GitHub Actions pipeline.</p>
+      <p class="hero-lead">Published TrailIntel race reports with curated score coverage, provider links, and downloadable exports.</p>
+      <div class="meta-row"><span class="meta-chip">6 published report(s)</span><span class="meta-chip">Latest publish Apr 7, 2026 at 09:18 UTC</span></div>
+      <div class="action-row">
+        <a class="action-link secondary" href="../index.html">Back to home</a>
+        <a class="action-link secondary" href="../forecasts/index.html">Browse forecasts</a>
+      </div>
+      <div class="metric-grid">
+        <div class="metric-card"><div class="metric-label">Published reports</div><div class="metric-value">6</div><div class="metric-subvalue">Timestamped race report bundles</div></div><div class="metric-card"><div class="metric-label">Participants screened</div><div class="metric-value">4723</div><div class="metric-subvalue">Across all published reports</div></div><div class="metric-card"><div class="metric-label">Above threshold</div><div class="metric-value">271</div><div class="metric-subvalue">Qualified leaderboard entries</div></div>
+      </div>
     </section>
-    <section class="report-list">
-      
-            <article class="report-card">
-              <div class="report-card-head">
-                <h2><a href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/index.html">annecy glaisins</a></h2>
-                <p>2026-04-07 09:18 UTC</p>
+
+    <section class="section-stack">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Published Reports</h2>
+          <span class="pill">Newest first</span>
+        </div>
+        <p class="section-caption">Each card links to the published report plus the archived CSV and JSON exports for the same run.</p>
+        <div class="collection-grid">
+          
+            <article class="collection-card">
+              <div class="card-top">
+                <div>
+                  <p class="eyebrow">Race Report</p>
+                  <h2 class="card-title"><a href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/index.html">annecy glaisins</a></h2>
+                  <p class="card-copy">Published Apr 7, 2026 at 09:18 UTC.</p>
+                </div>
+                <span class="pill">613 runners</span>
               </div>
-              <div class="report-card-metrics">
-                <span>Participants: <strong>613</strong></span>
-                <span>Qualified: <strong>42</strong></span>
-                <span>Strategy: <strong>participant-first</strong></span>
+              <div class="pill-row">
+                <span class="pill">42 above threshold</span><span class="pill">Participant First</span><span class="pill">CSV + JSON export</span>
               </div>
-              <div class="report-card-links">
-                <a href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/index.html">Open report</a>
-                <a href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/report.csv">CSV</a>
-                <a href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/report.json">JSON</a>
-              </div>
-            </article>
-            
-            <article class="report-card">
-              <div class="report-card-head">
-                <h2><a href="grand-raid-reunion-grr/20260406-192508/index.html">Grand Raid Reunion</a></h2>
-                <p>2026-04-06 19:25 UTC</p>
-              </div>
-              <div class="report-card-metrics">
-                <span>Participants: <strong>2747</strong></span>
-                <span>Qualified: <strong>150</strong></span>
-                <span>Strategy: <strong>participant-first</strong></span>
-              </div>
-              <div class="report-card-links">
-                <a href="grand-raid-reunion-grr/20260406-192508/index.html">Open report</a>
-                <a href="grand-raid-reunion-grr/20260406-192508/report.csv">CSV</a>
-                <a href="grand-raid-reunion-grr/20260406-192508/report.json">JSON</a>
+              <p class="card-meta">
+                Latest published bundle for this race report archive entry.
+              </p>
+              <div class="action-row">
+                <a class="action-link primary" href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/index.html">Open report</a>
+                <a class="action-link secondary" href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/report.csv">CSV</a>
+                <a class="action-link secondary" href="annecy-glaisins-le-baret-37km-2400m-d/20260407-091858/report.json">JSON</a>
               </div>
             </article>
             
-            <article class="report-card">
-              <div class="report-card-head">
-                <h2><a href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/index.html">Trail Glaisins</a></h2>
-                <p>2026-04-06 19:15 UTC</p>
+            <article class="collection-card">
+              <div class="card-top">
+                <div>
+                  <p class="eyebrow">Race Report</p>
+                  <h2 class="card-title"><a href="grand-raid-reunion-grr/20260406-192508/index.html">Grand Raid Reunion</a></h2>
+                  <p class="card-copy">Published Apr 6, 2026 at 19:25 UTC.</p>
+                </div>
+                <span class="pill">2747 runners</span>
               </div>
-              <div class="report-card-metrics">
-                <span>Participants: <strong>613</strong></span>
-                <span>Qualified: <strong>42</strong></span>
-                <span>Strategy: <strong>participant-first</strong></span>
+              <div class="pill-row">
+                <span class="pill">150 above threshold</span><span class="pill">Participant First</span><span class="pill">CSV + JSON export</span>
               </div>
-              <div class="report-card-links">
-                <a href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/index.html">Open report</a>
-                <a href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/report.csv">CSV</a>
-                <a href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/report.json">JSON</a>
-              </div>
-            </article>
-            
-            <article class="report-card">
-              <div class="report-card-head">
-                <h2><a href="dolomiti-beer-trail-55k-3000/20260406-191436/index.html">Dolomiti Beer Trail</a></h2>
-                <p>2026-04-06 19:14 UTC</p>
-              </div>
-              <div class="report-card-metrics">
-                <span>Participants: <strong>263</strong></span>
-                <span>Qualified: <strong>22</strong></span>
-                <span>Strategy: <strong>participant-first</strong></span>
-              </div>
-              <div class="report-card-links">
-                <a href="dolomiti-beer-trail-55k-3000/20260406-191436/index.html">Open report</a>
-                <a href="dolomiti-beer-trail-55k-3000/20260406-191436/report.csv">CSV</a>
-                <a href="dolomiti-beer-trail-55k-3000/20260406-191436/report.json">JSON</a>
+              <p class="card-meta">
+                Latest published bundle for this race report archive entry.
+              </p>
+              <div class="action-row">
+                <a class="action-link primary" href="grand-raid-reunion-grr/20260406-192508/index.html">Open report</a>
+                <a class="action-link secondary" href="grand-raid-reunion-grr/20260406-192508/report.csv">CSV</a>
+                <a class="action-link secondary" href="grand-raid-reunion-grr/20260406-192508/report.json">JSON</a>
               </div>
             </article>
             
-            <article class="report-card">
-              <div class="report-card-head">
-                <h2><a href="trail-de-la-michaille/20260406-191418/index.html">Trail de la Michaille</a></h2>
-                <p>2026-04-06 19:14 UTC</p>
+            <article class="collection-card">
+              <div class="card-top">
+                <div>
+                  <p class="eyebrow">Race Report</p>
+                  <h2 class="card-title"><a href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/index.html">Trail Glaisins</a></h2>
+                  <p class="card-copy">Published Apr 6, 2026 at 19:15 UTC.</p>
+                </div>
+                <span class="pill">613 runners</span>
               </div>
-              <div class="report-card-metrics">
-                <span>Participants: <strong>279</strong></span>
-                <span>Qualified: <strong>12</strong></span>
-                <span>Strategy: <strong>participant-first</strong></span>
+              <div class="pill-row">
+                <span class="pill">42 above threshold</span><span class="pill">Participant First</span><span class="pill">CSV + JSON export</span>
               </div>
-              <div class="report-card-links">
-                <a href="trail-de-la-michaille/20260406-191418/index.html">Open report</a>
-                <a href="trail-de-la-michaille/20260406-191418/report.csv">CSV</a>
-                <a href="trail-de-la-michaille/20260406-191418/report.json">JSON</a>
-              </div>
-            </article>
-            
-            <article class="report-card">
-              <div class="report-card-head">
-                <h2><a href="trail-du-sanglier-2026-le-40-km/20260406-190252/index.html">Trail du Sanglier 2026 - Le 40 km</a></h2>
-                <p>2026-04-06 19:02 UTC</p>
-              </div>
-              <div class="report-card-metrics">
-                <span>Participants: <strong>208</strong></span>
-                <span>Qualified: <strong>3</strong></span>
-                <span>Strategy: <strong>participant-first</strong></span>
-              </div>
-              <div class="report-card-links">
-                <a href="trail-du-sanglier-2026-le-40-km/20260406-190252/index.html">Open report</a>
-                <a href="trail-du-sanglier-2026-le-40-km/20260406-190252/report.csv">CSV</a>
-                <a href="trail-du-sanglier-2026-le-40-km/20260406-190252/report.json">JSON</a>
+              <p class="card-meta">
+                Latest published bundle for this race report archive entry.
+              </p>
+              <div class="action-row">
+                <a class="action-link primary" href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/index.html">Open report</a>
+                <a class="action-link secondary" href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/report.csv">CSV</a>
+                <a class="action-link secondary" href="trail-glaisins-le-baret-37km-2400m-d/20260406-191542/report.json">JSON</a>
               </div>
             </article>
             
+            <article class="collection-card">
+              <div class="card-top">
+                <div>
+                  <p class="eyebrow">Race Report</p>
+                  <h2 class="card-title"><a href="dolomiti-beer-trail-55k-3000/20260406-191436/index.html">Dolomiti Beer Trail</a></h2>
+                  <p class="card-copy">Published Apr 6, 2026 at 19:14 UTC.</p>
+                </div>
+                <span class="pill">263 runners</span>
+              </div>
+              <div class="pill-row">
+                <span class="pill">22 above threshold</span><span class="pill">Participant First</span><span class="pill">CSV + JSON export</span>
+              </div>
+              <p class="card-meta">
+                Latest published bundle for this race report archive entry.
+              </p>
+              <div class="action-row">
+                <a class="action-link primary" href="dolomiti-beer-trail-55k-3000/20260406-191436/index.html">Open report</a>
+                <a class="action-link secondary" href="dolomiti-beer-trail-55k-3000/20260406-191436/report.csv">CSV</a>
+                <a class="action-link secondary" href="dolomiti-beer-trail-55k-3000/20260406-191436/report.json">JSON</a>
+              </div>
+            </article>
+            
+            <article class="collection-card">
+              <div class="card-top">
+                <div>
+                  <p class="eyebrow">Race Report</p>
+                  <h2 class="card-title"><a href="trail-de-la-michaille/20260406-191418/index.html">Trail de la Michaille</a></h2>
+                  <p class="card-copy">Published Apr 6, 2026 at 19:14 UTC.</p>
+                </div>
+                <span class="pill">279 runners</span>
+              </div>
+              <div class="pill-row">
+                <span class="pill">12 above threshold</span><span class="pill">Participant First</span><span class="pill">CSV + JSON export</span>
+              </div>
+              <p class="card-meta">
+                Latest published bundle for this race report archive entry.
+              </p>
+              <div class="action-row">
+                <a class="action-link primary" href="trail-de-la-michaille/20260406-191418/index.html">Open report</a>
+                <a class="action-link secondary" href="trail-de-la-michaille/20260406-191418/report.csv">CSV</a>
+                <a class="action-link secondary" href="trail-de-la-michaille/20260406-191418/report.json">JSON</a>
+              </div>
+            </article>
+            
+            <article class="collection-card">
+              <div class="card-top">
+                <div>
+                  <p class="eyebrow">Race Report</p>
+                  <h2 class="card-title"><a href="trail-du-sanglier-2026-le-40-km/20260406-190252/index.html">Trail du Sanglier 2026 - Le 40 km</a></h2>
+                  <p class="card-copy">Published Apr 6, 2026 at 19:02 UTC.</p>
+                </div>
+                <span class="pill">208 runners</span>
+              </div>
+              <div class="pill-row">
+                <span class="pill">3 above threshold</span><span class="pill">Participant First</span><span class="pill">CSV + JSON export</span>
+              </div>
+              <p class="card-meta">
+                Latest published bundle for this race report archive entry.
+              </p>
+              <div class="action-row">
+                <a class="action-link primary" href="trail-du-sanglier-2026-le-40-km/20260406-190252/index.html">Open report</a>
+                <a class="action-link secondary" href="trail-du-sanglier-2026-le-40-km/20260406-190252/report.csv">CSV</a>
+                <a class="action-link secondary" href="trail-du-sanglier-2026-le-40-km/20260406-190252/report.json">JSON</a>
+              </div>
+            </article>
+            
+        </div>
+      </section>
     </section>
+    
   </main>
 </body>
 </html>

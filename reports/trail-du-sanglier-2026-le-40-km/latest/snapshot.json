@@ -5,7 +5,6 @@
   "rows_evaluated": 208,
   "qualified_count": 3,
   "strategy": "participant-first",
-  "same_name_mode": "highest",
   "rows": [
     {
       "Rank": 1,
@@ -3402,11 +3401,10 @@
     "with_betrail": 2,
     "with_any": 208
   },
-  "cache_status": "Cache: enabled (`/home/runner/work/trail-intel/trail-intel/.workflow-cache/trailintel_cache.duckdb`)",
-  "stale_cache_used": false,
   "race_url": "https://in.yaka-inscription.com/trail-du-sanglier-2026?currentPage=select-competition",
   "competition_name": "Le 40 km",
   "score_threshold": 700.0,
   "sort_by": "combined",
-  "generated_at": "2026-04-06T19:02:51.507310+00:00"
+  "generated_at": "2026-04-06T19:02:51.507310+00:00",
+  "stale_provider_fallback_used": false
 }

@@ -5,97 +5,488 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trail Glaisins</title>
   <style>
+    
     :root {
       color-scheme: light;
-      --bg: #f4f1ea;
-      --panel: #fffdfa;
-      --panel-strong: #ffffff;
-      --text: #1f1f1b;
-      --muted: #625d53;
+      --page-bg: #f3ece2;
+      --panel: rgba(255, 252, 247, 0.92);
+      --panel-strong: #fffdf9;
+      --panel-soft: #f8f2ea;
+      --text: #1f1c18;
+      --muted: #6a6056;
+      --line: rgba(117, 98, 74, 0.20);
+      --line-strong: rgba(117, 98, 74, 0.32);
+      --shadow: 0 24px 64px rgba(35, 24, 9, 0.10);
       --accent: #0b6b5f;
-      --accent-soft: #d8efe7;
-      --border: #ddd3c2;
-      --warning-bg: #fff0cc;
-      --warning-text: #724b00;
-      --shadow: 0 16px 40px rgba(37, 28, 11, 0.08);
-      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      --accent-strong: #084f46;
+      --accent-soft: rgba(11, 107, 95, 0.16);
+      --hero-start: rgba(11, 107, 95, 0.14);
+      --hero-end: rgba(155, 101, 40, 0.16);
+      --pill-bg: rgba(11, 107, 95, 0.12);
+      --pill-text: #084f46;
+      --warning-bg: #fff3d4;
+      --warning-text: #734700;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Avenir Next", "Segoe UI", sans-serif;
+      font-family: var(--body-font);
     }
     * { box-sizing: border-box; }
-    body { margin: 0; background: radial-gradient(circle at top, #fbf7ef 0%, var(--bg) 55%, #ebe3d4 100%); color: var(--text); }
-    a { color: var(--accent); }
-    .page { max-width: 1280px; margin: 0 auto; padding: 32px 20px 48px; }
-    .hero { background: linear-gradient(135deg, rgba(11,107,95,0.12), rgba(148,95,32,0.16)); border: 1px solid rgba(11,107,95,0.12); border-radius: 24px; padding: 28px; box-shadow: var(--shadow); }
-    .hero h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.1; }
-    .hero p { margin: 8px 0 0; color: var(--muted); }
-    .meta-line, .cache-line { color: var(--muted); margin: 10px 0 0; }
-    .download-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .download-link { display: inline-flex; align-items: center; justify-content: center; min-width: 180px; padding: 12px 16px; background: var(--panel-strong); border: 1px solid var(--border); border-radius: 999px; text-decoration: none; font-weight: 700; box-shadow: 0 10px 24px rgba(0,0,0,0.05); }
-    .metrics, .score-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 20px; }
-    .metric-card { background: var(--panel); border: 1px solid var(--border); border-radius: 18px; padding: 16px; box-shadow: 0 10px 26px rgba(0,0,0,0.04); }
-    .metric-label { color: var(--muted); font-size: 0.9rem; }
-    .metric-value { margin-top: 6px; font-size: 1.45rem; font-weight: 700; }
-    .section-grid { display: grid; gap: 18px; margin-top: 24px; }
-    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 24px; padding: 22px; box-shadow: var(--shadow); }
-    .panel h2 { margin: 0 0 14px; font-size: 1.4rem; }
-    .section-caption { margin-top: -4px; color: var(--muted); }
-    .warning { margin-top: 16px; padding: 14px 16px; border-radius: 16px; background: var(--warning-bg); color: var(--warning-text); border: 1px solid rgba(114,75,0,0.18); }
-    .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 18px; }
-    .chart-card { border: 1px solid var(--border); border-radius: 18px; background: var(--panel-strong); padding: 16px; }
-    .chart-card h3 { margin: 0 0 14px; font-size: 1.05rem; }
-    .hist-row { display: grid; grid-template-columns: 88px minmax(0, 1fr) 48px; gap: 10px; align-items: center; margin-top: 10px; }
-    .hist-label, .hist-count { color: var(--muted); font-size: 0.9rem; }
-    .hist-bar-track { width: 100%; min-height: 26px; background: #f1ece1; border-radius: 999px; overflow: hidden; }
-    .hist-bar { min-height: 26px; border-radius: 999px; background: linear-gradient(90deg, #0b6b5f, #1ea18f); color: white; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; font-weight: 700; font-size: 0.84rem; }
-    .hist-bar-empty { background: transparent; }
-    .results-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-    .results-table th, .results-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
-    .results-table th { font-size: 0.84rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); background: #faf6ee; position: sticky; top: 0; }
-    .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 18px; background: var(--panel-strong); }
-    .compact-table { max-width: 420px; }
-    .empty-state { padding: 16px; border: 1px dashed var(--border); border-radius: 16px; color: var(--muted); background: rgba(255,255,255,0.35); }
-    @media (max-width: 760px) {
-      .page { padding: 18px 14px 28px; }
-      .hero { padding: 22px; border-radius: 20px; }
-      .hist-row { grid-template-columns: 76px minmax(0, 1fr) 40px; }
-      .results-table { font-size: 0.9rem; }
-      .results-table th, .results-table td { padding: 8px 10px; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 28%),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 32%),
+        radial-gradient(circle at top, #fbf7f1 0%, var(--page-bg) 54%, #e7dccb 100%);
     }
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 22px 18px 56px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .nav-brand {
+      font-family: var(--heading-font);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .nav-link.is-active {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 32px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, var(--hero-start), var(--hero-end)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -48px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      letter-spacing: -0.01em;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 14ch;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 0.96;
+    }
+    .hero-lead {
+      margin: 14px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.6;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.60);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--panel-strong);
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+    .action-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .action-link.primary {
+      color: #ffffff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .metric-card {
+      min-height: 122px;
+      padding: 16px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 10px;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    .metric-subvalue {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+    .section-stack {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .panel {
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px 16px;
+      margin-bottom: 14px;
+    }
+    .panel h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2.05rem);
+      line-height: 1.02;
+    }
+    .section-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .collection-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .collection-card {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      line-height: 1.04;
+    }
+    .card-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .card-meta {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .warning {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(115, 71, 0, 0.20);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      line-height: 1.55;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .chart-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .chart-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.16rem;
+    }
+    .hist-row {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr) 52px;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .hist-label,
+    .hist-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-track {
+      min-height: 28px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--panel-soft);
+    }
+    .hist-bar {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-empty {
+      background: transparent;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+    .results-table th,
+    .results-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(117, 98, 74, 0.14);
+      text-align: left;
+      vertical-align: top;
+    }
+    .results-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #fbf6ef;
+      color: var(--muted);
+      font-size: 0.79rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .results-table tbody tr:nth-child(even) {
+      background: rgba(248, 242, 234, 0.65);
+    }
+    .rank-cell,
+    .score-cell {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .athlete-cell strong {
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .supporting-cell,
+    .link-cell,
+    .notes-cell {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .notes-cell {
+      min-width: 180px;
+    }
+    .compact-table {
+      max-width: 480px;
+    }
+    .chart-frame {
+      padding: 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+    .chart-frame img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+    }
+    .empty-state {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px dashed var(--line-strong);
+      background: rgba(255, 255, 255, 0.45);
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .page { padding: 16px 12px 34px; }
+      .site-nav { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 26px 22px; }
+      .panel { padding: 20px; }
+      .card-top { flex-direction: column; }
+      .hist-row { grid-template-columns: 72px minmax(0, 1fr) 42px; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { max-width: none; }
+      .meta-chip { white-space: normal; }
+      .results-table th,
+      .results-table td { padding: 9px 10px; }
+    }
+    
   </style>
 </head>
 <body>
   <main class="page">
+    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="../../../index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link" href="../../../index.html">Home</a><a class="nav-link is-active" href="../../index.html" aria-current="page">Race Reports</a><a class="nav-link" href="../../../forecasts/index.html">Forecasts</a></div></nav>
+    
     <section class="hero">
+      <p class="eyebrow">Race Report</p>
       <h1>Trail Glaisins</h1>
-      <p>Static race report generated from the TrailIntel CLI.</p>
-      <p class="meta-line">Generated 2026-04-06 19:15 UTC | Competition: Le Baret - 37km - 2400m D+ | Race source: <a href="https://in.njuko.com/hardloop-trail-annecy-les-glaisins-2026?currentPage=select-competition" target="_blank" rel="noopener noreferrer">open source page</a></p>
-      <p class="cache-line">Cache: enabled (`/home/runner/work/trail-intel/trail-intel/.workflow-cache/trailintel_cache.duckdb`)</p>
-      <div class="download-row">
-        <a class="download-link" href="report.csv">Download CSV</a>
-        <a class="download-link" href="report.json">Download JSON</a>
-      </div>
-      <div class="metrics"><div class="metric-card"><div class="metric-label">Input participants</div><div class="metric-value">613</div></div><div class="metric-card"><div class="metric-label">Rows evaluated</div><div class="metric-value">613</div></div><div class="metric-card"><div class="metric-label">Qualified (&gt; threshold)</div><div class="metric-value">42</div></div><div class="metric-card"><div class="metric-label">Strategy</div><div class="metric-value">participant-first</div></div><div class="metric-card"><div class="metric-label">Same-name mode</div><div class="metric-value">highest</div></div></div>
+      <p class="hero-lead">Screened 613 entrants for Le Baret - 37km - 2400m D+ and surfaced 42 athletes above the 680 threshold.</p>
+      <div class="meta-row"><span class="meta-chip">Published Apr 6, 2026 at 19:15 UTC</span><span class="meta-chip">Competition Le Baret - 37km - 2400m D+</span><span class="meta-chip">Race source <a href="https://in.njuko.com/hardloop-trail-annecy-les-glaisins-2026?currentPage=select-competition" target="_blank" rel="noopener noreferrer">open source page</a></span></div>
+      <div class="action-row"><a class="action-link primary" href="report.csv">Download CSV</a><a class="action-link secondary" href="report.json">Download JSON</a></div>
+      <div class="metric-grid"><div class="metric-card"><div class="metric-label">Athletes screened</div><div class="metric-value">613</div><div class="metric-subvalue">613 rows evaluated</div></div><div class="metric-card"><div class="metric-label">Above threshold</div><div class="metric-value">42</div><div class="metric-subvalue">Leaderboard entries surfaced</div></div><div class="metric-card"><div class="metric-label">Score threshold</div><div class="metric-value">680</div><div class="metric-subvalue">Combined-score cutoff</div></div><div class="metric-card"><div class="metric-label">Ranking strategy</div><div class="metric-value">Participant First</div><div class="metric-subvalue">Ordering rule used for the report</div></div><div class="metric-card"><div class="metric-label">Coverage</div><div class="metric-value">566</div><div class="metric-subvalue">Participants with at least one provider score</div></div></div>
       
     </section>
 
-    <section class="panel section-grid">
-      <div>
-        <h2>Score Distribution</h2>
-        <div class="score-metrics"><div class="metric-card"><div class="metric-label">Participants</div><div class="metric-value">613</div></div><div class="metric-card"><div class="metric-label">With UTMB</div><div class="metric-value">564</div></div><div class="metric-card"><div class="metric-label">With ITRA</div><div class="metric-value">16</div></div><div class="metric-card"><div class="metric-label">With Betrail</div><div class="metric-value">33</div></div><div class="metric-card"><div class="metric-label">With Any Score</div><div class="metric-value">566</div></div></div>
-      </div>
-      <div class="charts">
-        <section class="chart-card"><h3>UTMB Index</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar" style="width: 34.43%"><span>42</span></div></div><div class="hist-count">42</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>4</span></div></div><div class="hist-count">4</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar" style="width: 25.41%"><span>31</span></div></div><div class="hist-count">31</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar" style="width: 56.56%"><span>69</span></div></div><div class="hist-count">69</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>122</span></div></div><div class="hist-count">122</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 92.62%"><span>113</span></div></div><div class="hist-count">113</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar" style="width: 59.02%"><span>72</span></div></div><div class="hist-count">72</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar" style="width: 40.98%"><span>50</span></div></div><div class="hist-count">50</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 22.95%"><span>28</span></div></div><div class="hist-count">28</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 17.21%"><span>21</span></div></div><div class="hist-count">21</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.56%"><span>8</span></div></div><div class="hist-count">8</div></div><div class="hist-row"><div class="hist-label">800-849</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>2</span></div></div><div class="hist-count">2</div></div><div class="hist-row"><div class="hist-label">850-899</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div></section>
-        <section class="chart-card"><h3>ITRA Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 33.33%"><span>2</span></div></div><div class="hist-count">2</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 16.67%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>6</span></div></div><div class="hist-count">6</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>6</span></div></div><div class="hist-count">6</div></div><div class="hist-row"><div class="hist-label">800-849</div><div class="hist-bar-track"><div class="hist-bar" style="width: 16.67%"><span>1</span></div></div><div class="hist-count">1</div></div></section>
-        <section class="chart-card"><h3>Betrail Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>33</span></div></div><div class="hist-count">33</div></div></section>
-      </div>
-    </section>
+    <section class="section-stack">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Field Snapshot</h2>
+          <span class="pill">Coverage across UTMB, ITRA, and Betrail</span>
+        </div>
+        <p class="section-caption">Quick coverage stats plus score distributions for the full participant field.</p>
+        <div class="metric-grid"><div class="metric-card"><div class="metric-label">UTMB matches</div><div class="metric-value">564</div><div class="metric-subvalue">Athletes with a UTMB profile or index</div></div><div class="metric-card"><div class="metric-label">ITRA matches</div><div class="metric-value">16</div><div class="metric-subvalue">Athletes with an ITRA profile or score</div></div><div class="metric-card"><div class="metric-label">Betrail matches</div><div class="metric-value">33</div><div class="metric-subvalue">Athletes with a Betrail profile or score</div></div><div class="metric-card"><div class="metric-label">Any provider</div><div class="metric-value">566</div><div class="metric-subvalue">Participants matched at least once</div></div><div class="metric-card"><div class="metric-label">Unmatched</div><div class="metric-value">46</div><div class="metric-subvalue">Participants with no provider match</div></div></div>
+        <div class="charts">
+          <section class="chart-card"><h3>UTMB Index</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar" style="width: 34.43%"><span>42</span></div></div><div class="hist-count">42</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>4</span></div></div><div class="hist-count">4</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar" style="width: 25.41%"><span>31</span></div></div><div class="hist-count">31</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar" style="width: 56.56%"><span>69</span></div></div><div class="hist-count">69</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>122</span></div></div><div class="hist-count">122</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 92.62%"><span>113</span></div></div><div class="hist-count">113</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar" style="width: 59.02%"><span>72</span></div></div><div class="hist-count">72</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar" style="width: 40.98%"><span>50</span></div></div><div class="hist-count">50</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 22.95%"><span>28</span></div></div><div class="hist-count">28</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 17.21%"><span>21</span></div></div><div class="hist-count">21</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.56%"><span>8</span></div></div><div class="hist-count">8</div></div><div class="hist-row"><div class="hist-label">800-849</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>2</span></div></div><div class="hist-count">2</div></div><div class="hist-row"><div class="hist-label">850-899</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div></section>
+          <section class="chart-card"><h3>ITRA Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 33.33%"><span>2</span></div></div><div class="hist-count">2</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 16.67%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>6</span></div></div><div class="hist-count">6</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>6</span></div></div><div class="hist-count">6</div></div><div class="hist-row"><div class="hist-label">800-849</div><div class="hist-bar-track"><div class="hist-bar" style="width: 16.67%"><span>1</span></div></div><div class="hist-count">1</div></div></section>
+          <section class="chart-card"><h3>Betrail Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>33</span></div></div><div class="hist-count">33</div></div></section>
+        </div>
+      </section>
 
-    <section class="panel">
-      <h2>Top Athletes</h2>
-      <p class="section-caption">Showing up to the configured top rows for athletes above the threshold.</p>
-      <div class="table-wrap"><table class="results-table"><thead><tr><th>Rank</th><th>Athlete</th><th>UTMB</th><th>ITRA</th><th>Betrail</th><th>Combined</th><th>UTMB Matched Name</th><th>ITRA Matched Name</th><th>Betrail Matched Name</th><th>UTMB Profile</th><th>ITRA Profile</th><th>Betrail Profile</th><th>Notes</th></tr></thead><tbody><tr><td>1</td><td>aurélien dunand-pallaz</td><td>876.0</td><td>-</td><td>91.1</td><td>876.0</td><td>Aurelien DUNAND PALLAZ</td><td></td><td>DUNAND-PALLAZ Aurélien</td><td><a href="https://utmb.world/runner/11045.aurelien.dunandpallaz" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/dunand.pallaz.aurelien/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>2</td><td>VALENTIN lacroix</td><td>823.0</td><td>-</td><td>85.7</td><td>823.0</td><td>Valentin LACROIX</td><td></td><td>LACROIX VALENTIN</td><td><a href="https://utmb.world/runner/440430.valentin.lacroix" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/lacroix.valentin.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>3</td><td>Jean-Marie THEVENARD</td><td>812.0</td><td>-</td><td>84.2</td><td>812.0</td><td>Jean-Marie THEVENARD</td><td></td><td>THEVENARD JEAN MARIE</td><td><a href="https://utmb.world/runner/42922.jeanmarie.thevenard" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/thevenard.jean.marie/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>4</td><td>Loïs Ardiet</td><td>798.0</td><td>-</td><td>76.8</td><td>798.0</td><td>Loïs ARDIET</td><td></td><td>ARDIET LOïS</td><td><a href="https://utmb.world/runner/6174730.lois.ardiet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/ardiet.lois/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403; /api/runner/find HTTP 403; /api/runner/findByName HTTP 403</td></tr><tr><td>5</td><td>Thomas Rozé</td><td>784.0</td><td>816.0</td><td>81.6</td><td>796.8</td><td>Thomas ROZE</td><td>Thomas ROZE</td><td>ROZE THOMAS</td><td><a href="https://utmb.world/runner/444321.thomas.roze" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/ROZE.Thomas/444321" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/roze.thomas/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>6</td><td>Ronan Callet</td><td>788.0</td><td>-</td><td>76.7</td><td>788.0</td><td>Ronan CALLET</td><td></td><td>CALLET RONAN</td><td><a href="https://utmb.world/runner/4241927.ronan.callet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/callet.ronan/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>7</td><td>Christophe Polaszek</td><td>772.0</td><td>785.0</td><td>73.8</td><td>777.2</td><td>Christophe POLASZEK</td><td>Christophe POLASZEK</td><td>POLASZEK CHRISTOPHE</td><td><a href="https://utmb.world/runner/525706.christophe.polaszek" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/POLASZEK.Christophe/525706" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/polaszek.christophe/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>8</td><td>Nicolas Marcy</td><td>777.0</td><td>-</td><td>74.9</td><td>777.0</td><td>Nicolas MARCY</td><td></td><td>MARCY NICOLAS</td><td><a href="https://utmb.world/runner/5627838.nicolas.marcy" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/marcy.nicolas/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>9</td><td>Thibaut Witvoet</td><td>770.0</td><td>-</td><td>78.0</td><td>770.0</td><td>Thibaut WITVOET</td><td></td><td>WITVOET THIBAUT</td><td><a href="https://utmb.world/runner/3136227.thibaut.witvoet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/witvoet.thibaut/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>10</td><td>Léo Pargemin</td><td>772.0</td><td>760.0</td><td>72.0</td><td>767.2</td><td>Léo PARGEMIN</td><td>Leo PARGEMIN</td><td>PARGEMIN LÉO</td><td><a href="https://utmb.world/runner/1413837.leo.pargemin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/PARGEMIN.Leo/1413837" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/pargemin.leo/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>11</td><td>Victor OLIVIER</td><td>747.0</td><td>780.0</td><td>73.7</td><td>760.2</td><td>Victor OLIVIER</td><td>Victor OLIVIER</td><td>OLIVIER VICTOR</td><td><a href="https://utmb.world/runner/1732725.victor.olivier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/OLIVIER.Victor/1732725" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/olivier.victor/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>12</td><td>LOUIS DULIN</td><td>759.0</td><td>-</td><td>73.6</td><td>759.0</td><td>Louis DULIN</td><td></td><td>DULIN LOUIS</td><td><a href="https://utmb.world/runner/2231605.louis.dulin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/dulin.louis/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>13</td><td>Antoine Bouchet</td><td>748.0</td><td>-</td><td>72.6</td><td>748.0</td><td>Antoine BOUCHET</td><td></td><td>BOUCHET ANTOINE</td><td><a href="https://utmb.world/runner/11104.antoine.bouchet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/bouchet.antoine/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>14</td><td>DARDO Emmanuel OCAMPo</td><td>746.0</td><td>-</td><td>73.5</td><td>746.0</td><td>Dardo Emmanuel OCAMPO</td><td></td><td>OCAMPO DARDO EMMANUEL</td><td><a href="https://utmb.world/runner/490947.dardoemmanuel.ocampo" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/ocampo.dardo.emmanuel/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>15</td><td>Pierre MAZILLE</td><td>746.0</td><td>-</td><td>70.5</td><td>746.0</td><td>Pierre MAZILLE</td><td></td><td>MAZILLE PIERRE</td><td><a href="https://utmb.world/runner/710309.pierre.mazille" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/mazille.pierre/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>16</td><td>Anthony Vernagallo</td><td>745.0</td><td>-</td><td>72.4</td><td>745.0</td><td>Anthony VERNAGALLO</td><td></td><td>VERNAGALLO ANTHONY</td><td><a href="https://utmb.world/runner/1175223.anthony.vernagallo" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/vernagallo.anthony/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>17</td><td>Rémy Valenti</td><td>742.0</td><td>-</td><td>74.8</td><td>742.0</td><td>Rémy VALENTI</td><td></td><td>VALENTI REMY</td><td><a href="https://utmb.world/runner/4200273.remy.valenti" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/valenti.remy/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403; /api/runner/find HTTP 403; /api/runner/findByName HTTP 403</td></tr><tr><td>18</td><td>Maxime Kern</td><td>734.0</td><td>751.0</td><td>69.2</td><td>740.8</td><td>Maxime KERN</td><td>Maxime KERN</td><td>KERN MAXIME</td><td><a href="https://utmb.world/runner/1794581.maxime.kern" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/KERN.Maxime/1794581" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/kern.maxime.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>19</td><td>Louis Bouchet</td><td>722.0</td><td>768.0</td><td>69.9</td><td>740.4</td><td>Louis BOUCHET</td><td>Louis BOUCHET</td><td>BOUCHET LOUIS</td><td><a href="https://utmb.world/runner/1609853.louis.bouchet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/BOUCHET.Louis/1609853" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/bouchet.louis/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>20</td><td>Josué Lobry</td><td>740.0</td><td>-</td><td>75.7</td><td>740.0</td><td>Josue LOBRY</td><td></td><td>LOBRY JOSUé</td><td><a href="https://utmb.world/runner/4197492.josue.lobry" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/lobry.josue/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>21</td><td>Jordan Fata</td><td>730.0</td><td>749.0</td><td>72.3</td><td>737.6</td><td>Jordan FATA</td><td>Jordan FATA</td><td>FATA JORDAN</td><td><a href="https://utmb.world/runner/135597.jordan.fata" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/FATA.Jordan/135597" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/fata.jordan/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>22</td><td>Nicolas DAUVERGNE</td><td>716.0</td><td>764.0</td><td>70.0</td><td>735.2</td><td>Nicolas DAUVERGNE</td><td>Nicolas DAUVERGNE</td><td>DAUVERGNE NICOLAS</td><td><a href="https://utmb.world/runner/595180.nicolas.dauvergne" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/DAUVERGNE.Nicolas/595180" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/dauvergne.nicolas.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>23</td><td>Téo THIODAT</td><td>731.0</td><td>-</td><td>73.5</td><td>731.0</td><td>Teo THIODAT</td><td></td><td>THIODAT TEO</td><td><a href="https://utmb.world/runner/5399040.teo.thiodat" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/thiodat.teo/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>24</td><td>Simon Royer</td><td>728.0</td><td>-</td><td>73.9</td><td>728.0</td><td>Simon ROYER</td><td></td><td>ROYER SIMON</td><td><a href="https://utmb.world/runner/1150757.simon.royer" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/royer.simon/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>25</td><td>Bastien Missud</td><td>726.0</td><td>-</td><td>-</td><td>726.0</td><td>Bastien MISSUD</td><td></td><td></td><td><a href="https://utmb.world/runner/2075589.bastien.missud" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403</td></tr><tr><td>26</td><td>Sylvain Montmasson</td><td>709.0</td><td>743.0</td><td>69.9</td><td>722.6</td><td>Sylvain MONTMASSON</td><td>Sylvain MONTMASSON</td><td>MONTMASSON SYLVAIN</td><td><a href="https://utmb.world/runner/4709130.sylvain.montmasson" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/MONTMASSON.Sylvain/4390893" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/montmasson.sylvain/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>27</td><td>Upi Supriatna snp</td><td>716.0</td><td>731.0</td><td>-</td><td>722.0</td><td>Upi SUPRIATNA SNP</td><td>Upi SUPRIATNA SNP</td><td></td><td><a href="https://utmb.world/runner/4693359.upi.supriatnasnp" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/SUPRIATNA SNP.Upi/4630740" target="_blank" rel="noopener noreferrer">ITRA</a></td><td></td><td></td></tr><tr><td>28</td><td>Paul Dérail</td><td>709.0</td><td>740.0</td><td>68.6</td><td>721.4</td><td>Paul DÉRAIL</td><td>Paul DERAIL</td><td>DERAIL PAUL</td><td><a href="https://utmb.world/runner/2646659.paul.derail" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/DERAIL.Paul/2646659" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/derail.paul/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>29</td><td>Amaury Garnier</td><td>719.0</td><td>-</td><td>70.5</td><td>719.0</td><td>Amaury GARNIER</td><td></td><td>GARNIER AMAURY</td><td><a href="https://utmb.world/runner/6329542.amaury.garnier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/garnier.amaury/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>30</td><td>William Rousseau</td><td>690.0</td><td>742.0</td><td>69.0</td><td>710.8</td><td>William ROUSSEAU</td><td>William ROUSSEAU</td><td>ROUSSEAU WILLIAM</td><td><a href="https://utmb.world/runner/4202116.william.rousseau" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/ROUSSEAU.William/4198515" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/rousseau.william/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>31</td><td>Thomas AUBINIERE</td><td>701.0</td><td>720.0</td><td>69.7</td><td>708.6</td><td>Thomas AUBINIERE</td><td>Thomas AUBINIERE</td><td>AUBINIERE THOMAS</td><td><a href="https://utmb.world/runner/1611795.thomas.aubiniere" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/AUBINIERE.Thomas/1611795" target="_blank" rel="noopener noreferrer">ITRA</a></td><td><a href="https://www.betrail.run/runner/aubiniere.thomas.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td></td></tr><tr><td>32</td><td>Thomas Dereme</td><td>708.0</td><td>-</td><td>70.9</td><td>708.0</td><td>Thomas DEREME</td><td></td><td>DEREME THOMAS</td><td><a href="https://utmb.world/runner/4046492.thomas.dereme" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/dereme.thomas/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>33</td><td>Octave Dusart</td><td>706.0</td><td>-</td><td>68.1</td><td>706.0</td><td>Octave DUSART</td><td></td><td>DUSART OCTAVE</td><td><a href="https://utmb.world/runner/6962661.octave.dusart" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td><a href="https://www.betrail.run/runner/dusart.octave/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>34</td><td>Ingrid Terrier</td><td>691.0</td><td>-</td><td>-</td><td>691.0</td><td>Ingrid TERRIER</td><td></td><td></td><td><a href="https://utmb.world/runner/386042.ingrid.terrier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>35</td><td>Guilhem Clerc</td><td>688.0</td><td>694.0</td><td>-</td><td>690.4</td><td>Guilhem CLERC</td><td>Guilhem CLERC</td><td></td><td><a href="https://utmb.world/runner/289580.guilhem.clerc" target="_blank" rel="noopener noreferrer">UTMB</a></td><td><a href="https://itra.run/RunnerSpace/CLERC.Guilhem/289580" target="_blank" rel="noopener noreferrer">ITRA</a></td><td></td><td></td></tr><tr><td>36</td><td>Jules Robin</td><td>690.0</td><td>-</td><td>-</td><td>690.0</td><td>Jules ROBIN</td><td></td><td></td><td><a href="https://utmb.world/runner/5240504.jules.robin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>37</td><td>Alexandre Delizee</td><td>689.0</td><td>-</td><td>-</td><td>689.0</td><td>Alexandre DELIZEE</td><td></td><td></td><td><a href="https://utmb.world/runner/3141207.alexandre.delizee" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>38</td><td>Dominique Baratay</td><td>688.0</td><td>-</td><td>-</td><td>688.0</td><td>Dominique BARATAY</td><td></td><td></td><td><a href="https://utmb.world/runner/1494445.dominique.baratay" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>39</td><td>florian specker</td><td>687.0</td><td>-</td><td>-</td><td>687.0</td><td>Florian SPECKER</td><td></td><td></td><td><a href="https://utmb.world/runner/5471756.florian.specker" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td>40</td><td>Olivier BRASIER</td><td>681.0</td><td>-</td><td>-</td><td>681.0</td><td>Olivier BRASIER</td><td></td><td></td><td><a href="https://utmb.world/runner/912879.olivier.brasier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td></td><td></td><td>ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr></tbody></table></div>
-    </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Leaderboard</h2>
+          <span class="pill">Top combined-score athletes</span>
+        </div>
+        <p class="section-caption">Highest-ranked athletes above the configured threshold, including provider links and matching notes.</p>
+        <div class="table-wrap"><table class="results-table"><thead><tr><th>Rank</th><th>Athlete</th><th>UTMB</th><th>ITRA</th><th>Betrail</th><th>Combined</th><th>UTMB Match</th><th>ITRA Match</th><th>Betrail Match</th><th>UTMB Link</th><th>ITRA Link</th><th>Betrail Link</th><th>Notes</th></tr></thead><tbody><tr><td class="rank-cell">1</td><td class="athlete-cell"><strong>aurélien dunand-pallaz</strong></td><td class="score-cell">876.0</td><td class="score-cell">-</td><td class="score-cell">91.1</td><td class="score-cell">876.0</td><td class="supporting-cell">Aurelien DUNAND PALLAZ</td><td class="supporting-cell"></td><td class="supporting-cell">DUNAND-PALLAZ Aurélien</td><td class="link-cell"><a href="https://utmb.world/runner/11045.aurelien.dunandpallaz" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/dunand.pallaz.aurelien/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">2</td><td class="athlete-cell"><strong>VALENTIN lacroix</strong></td><td class="score-cell">823.0</td><td class="score-cell">-</td><td class="score-cell">85.7</td><td class="score-cell">823.0</td><td class="supporting-cell">Valentin LACROIX</td><td class="supporting-cell"></td><td class="supporting-cell">LACROIX VALENTIN</td><td class="link-cell"><a href="https://utmb.world/runner/440430.valentin.lacroix" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/lacroix.valentin.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">3</td><td class="athlete-cell"><strong>Jean-Marie THEVENARD</strong></td><td class="score-cell">812.0</td><td class="score-cell">-</td><td class="score-cell">84.2</td><td class="score-cell">812.0</td><td class="supporting-cell">Jean-Marie THEVENARD</td><td class="supporting-cell"></td><td class="supporting-cell">THEVENARD JEAN MARIE</td><td class="link-cell"><a href="https://utmb.world/runner/42922.jeanmarie.thevenard" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/thevenard.jean.marie/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">4</td><td class="athlete-cell"><strong>Loïs Ardiet</strong></td><td class="score-cell">798.0</td><td class="score-cell">-</td><td class="score-cell">76.8</td><td class="score-cell">798.0</td><td class="supporting-cell">Loïs ARDIET</td><td class="supporting-cell"></td><td class="supporting-cell">ARDIET LOïS</td><td class="link-cell"><a href="https://utmb.world/runner/6174730.lois.ardiet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/ardiet.lois/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403; /api/runner/find HTTP 403; /api/runner/findByName HTTP 403</td></tr><tr><td class="rank-cell">5</td><td class="athlete-cell"><strong>Thomas Rozé</strong></td><td class="score-cell">784.0</td><td class="score-cell">816.0</td><td class="score-cell">81.6</td><td class="score-cell">796.8</td><td class="supporting-cell">Thomas ROZE</td><td class="supporting-cell">Thomas ROZE</td><td class="supporting-cell">ROZE THOMAS</td><td class="link-cell"><a href="https://utmb.world/runner/444321.thomas.roze" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/ROZE.Thomas/444321" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/roze.thomas/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">6</td><td class="athlete-cell"><strong>Ronan Callet</strong></td><td class="score-cell">788.0</td><td class="score-cell">-</td><td class="score-cell">76.7</td><td class="score-cell">788.0</td><td class="supporting-cell">Ronan CALLET</td><td class="supporting-cell"></td><td class="supporting-cell">CALLET RONAN</td><td class="link-cell"><a href="https://utmb.world/runner/4241927.ronan.callet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/callet.ronan/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">7</td><td class="athlete-cell"><strong>Christophe Polaszek</strong></td><td class="score-cell">772.0</td><td class="score-cell">785.0</td><td class="score-cell">73.8</td><td class="score-cell">777.2</td><td class="supporting-cell">Christophe POLASZEK</td><td class="supporting-cell">Christophe POLASZEK</td><td class="supporting-cell">POLASZEK CHRISTOPHE</td><td class="link-cell"><a href="https://utmb.world/runner/525706.christophe.polaszek" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/POLASZEK.Christophe/525706" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/polaszek.christophe/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">8</td><td class="athlete-cell"><strong>Nicolas Marcy</strong></td><td class="score-cell">777.0</td><td class="score-cell">-</td><td class="score-cell">74.9</td><td class="score-cell">777.0</td><td class="supporting-cell">Nicolas MARCY</td><td class="supporting-cell"></td><td class="supporting-cell">MARCY NICOLAS</td><td class="link-cell"><a href="https://utmb.world/runner/5627838.nicolas.marcy" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/marcy.nicolas/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">9</td><td class="athlete-cell"><strong>Thibaut Witvoet</strong></td><td class="score-cell">770.0</td><td class="score-cell">-</td><td class="score-cell">78.0</td><td class="score-cell">770.0</td><td class="supporting-cell">Thibaut WITVOET</td><td class="supporting-cell"></td><td class="supporting-cell">WITVOET THIBAUT</td><td class="link-cell"><a href="https://utmb.world/runner/3136227.thibaut.witvoet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/witvoet.thibaut/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">10</td><td class="athlete-cell"><strong>Léo Pargemin</strong></td><td class="score-cell">772.0</td><td class="score-cell">760.0</td><td class="score-cell">72.0</td><td class="score-cell">767.2</td><td class="supporting-cell">Léo PARGEMIN</td><td class="supporting-cell">Leo PARGEMIN</td><td class="supporting-cell">PARGEMIN LÉO</td><td class="link-cell"><a href="https://utmb.world/runner/1413837.leo.pargemin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/PARGEMIN.Leo/1413837" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/pargemin.leo/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">11</td><td class="athlete-cell"><strong>Victor OLIVIER</strong></td><td class="score-cell">747.0</td><td class="score-cell">780.0</td><td class="score-cell">73.7</td><td class="score-cell">760.2</td><td class="supporting-cell">Victor OLIVIER</td><td class="supporting-cell">Victor OLIVIER</td><td class="supporting-cell">OLIVIER VICTOR</td><td class="link-cell"><a href="https://utmb.world/runner/1732725.victor.olivier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/OLIVIER.Victor/1732725" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/olivier.victor/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">12</td><td class="athlete-cell"><strong>LOUIS DULIN</strong></td><td class="score-cell">759.0</td><td class="score-cell">-</td><td class="score-cell">73.6</td><td class="score-cell">759.0</td><td class="supporting-cell">Louis DULIN</td><td class="supporting-cell"></td><td class="supporting-cell">DULIN LOUIS</td><td class="link-cell"><a href="https://utmb.world/runner/2231605.louis.dulin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/dulin.louis/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">13</td><td class="athlete-cell"><strong>Antoine Bouchet</strong></td><td class="score-cell">748.0</td><td class="score-cell">-</td><td class="score-cell">72.6</td><td class="score-cell">748.0</td><td class="supporting-cell">Antoine BOUCHET</td><td class="supporting-cell"></td><td class="supporting-cell">BOUCHET ANTOINE</td><td class="link-cell"><a href="https://utmb.world/runner/11104.antoine.bouchet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/bouchet.antoine/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">14</td><td class="athlete-cell"><strong>DARDO Emmanuel OCAMPo</strong></td><td class="score-cell">746.0</td><td class="score-cell">-</td><td class="score-cell">73.5</td><td class="score-cell">746.0</td><td class="supporting-cell">Dardo Emmanuel OCAMPO</td><td class="supporting-cell"></td><td class="supporting-cell">OCAMPO DARDO EMMANUEL</td><td class="link-cell"><a href="https://utmb.world/runner/490947.dardoemmanuel.ocampo" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/ocampo.dardo.emmanuel/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">15</td><td class="athlete-cell"><strong>Pierre MAZILLE</strong></td><td class="score-cell">746.0</td><td class="score-cell">-</td><td class="score-cell">70.5</td><td class="score-cell">746.0</td><td class="supporting-cell">Pierre MAZILLE</td><td class="supporting-cell"></td><td class="supporting-cell">MAZILLE PIERRE</td><td class="link-cell"><a href="https://utmb.world/runner/710309.pierre.mazille" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/mazille.pierre/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">16</td><td class="athlete-cell"><strong>Anthony Vernagallo</strong></td><td class="score-cell">745.0</td><td class="score-cell">-</td><td class="score-cell">72.4</td><td class="score-cell">745.0</td><td class="supporting-cell">Anthony VERNAGALLO</td><td class="supporting-cell"></td><td class="supporting-cell">VERNAGALLO ANTHONY</td><td class="link-cell"><a href="https://utmb.world/runner/1175223.anthony.vernagallo" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/vernagallo.anthony/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">17</td><td class="athlete-cell"><strong>Rémy Valenti</strong></td><td class="score-cell">742.0</td><td class="score-cell">-</td><td class="score-cell">74.8</td><td class="score-cell">742.0</td><td class="supporting-cell">Rémy VALENTI</td><td class="supporting-cell"></td><td class="supporting-cell">VALENTI REMY</td><td class="link-cell"><a href="https://utmb.world/runner/4200273.remy.valenti" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/valenti.remy/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403; /api/runner/find HTTP 403; /api/runner/findByName HTTP 403</td></tr><tr><td class="rank-cell">18</td><td class="athlete-cell"><strong>Maxime Kern</strong></td><td class="score-cell">734.0</td><td class="score-cell">751.0</td><td class="score-cell">69.2</td><td class="score-cell">740.8</td><td class="supporting-cell">Maxime KERN</td><td class="supporting-cell">Maxime KERN</td><td class="supporting-cell">KERN MAXIME</td><td class="link-cell"><a href="https://utmb.world/runner/1794581.maxime.kern" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/KERN.Maxime/1794581" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/kern.maxime.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">19</td><td class="athlete-cell"><strong>Louis Bouchet</strong></td><td class="score-cell">722.0</td><td class="score-cell">768.0</td><td class="score-cell">69.9</td><td class="score-cell">740.4</td><td class="supporting-cell">Louis BOUCHET</td><td class="supporting-cell">Louis BOUCHET</td><td class="supporting-cell">BOUCHET LOUIS</td><td class="link-cell"><a href="https://utmb.world/runner/1609853.louis.bouchet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/BOUCHET.Louis/1609853" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/bouchet.louis/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">20</td><td class="athlete-cell"><strong>Josué Lobry</strong></td><td class="score-cell">740.0</td><td class="score-cell">-</td><td class="score-cell">75.7</td><td class="score-cell">740.0</td><td class="supporting-cell">Josue LOBRY</td><td class="supporting-cell"></td><td class="supporting-cell">LOBRY JOSUé</td><td class="link-cell"><a href="https://utmb.world/runner/4197492.josue.lobry" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/lobry.josue/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">21</td><td class="athlete-cell"><strong>Jordan Fata</strong></td><td class="score-cell">730.0</td><td class="score-cell">749.0</td><td class="score-cell">72.3</td><td class="score-cell">737.6</td><td class="supporting-cell">Jordan FATA</td><td class="supporting-cell">Jordan FATA</td><td class="supporting-cell">FATA JORDAN</td><td class="link-cell"><a href="https://utmb.world/runner/135597.jordan.fata" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/FATA.Jordan/135597" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/fata.jordan/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">22</td><td class="athlete-cell"><strong>Nicolas DAUVERGNE</strong></td><td class="score-cell">716.0</td><td class="score-cell">764.0</td><td class="score-cell">70.0</td><td class="score-cell">735.2</td><td class="supporting-cell">Nicolas DAUVERGNE</td><td class="supporting-cell">Nicolas DAUVERGNE</td><td class="supporting-cell">DAUVERGNE NICOLAS</td><td class="link-cell"><a href="https://utmb.world/runner/595180.nicolas.dauvergne" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/DAUVERGNE.Nicolas/595180" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/dauvergne.nicolas.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">23</td><td class="athlete-cell"><strong>Téo THIODAT</strong></td><td class="score-cell">731.0</td><td class="score-cell">-</td><td class="score-cell">73.5</td><td class="score-cell">731.0</td><td class="supporting-cell">Teo THIODAT</td><td class="supporting-cell"></td><td class="supporting-cell">THIODAT TEO</td><td class="link-cell"><a href="https://utmb.world/runner/5399040.teo.thiodat" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/thiodat.teo/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">24</td><td class="athlete-cell"><strong>Simon Royer</strong></td><td class="score-cell">728.0</td><td class="score-cell">-</td><td class="score-cell">73.9</td><td class="score-cell">728.0</td><td class="supporting-cell">Simon ROYER</td><td class="supporting-cell"></td><td class="supporting-cell">ROYER SIMON</td><td class="link-cell"><a href="https://utmb.world/runner/1150757.simon.royer" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/royer.simon/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">25</td><td class="athlete-cell"><strong>Bastien Missud</strong></td><td class="score-cell">726.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">726.0</td><td class="supporting-cell">Bastien MISSUD</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2075589.bastien.missud" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403</td></tr><tr><td class="rank-cell">26</td><td class="athlete-cell"><strong>Sylvain Montmasson</strong></td><td class="score-cell">709.0</td><td class="score-cell">743.0</td><td class="score-cell">69.9</td><td class="score-cell">722.6</td><td class="supporting-cell">Sylvain MONTMASSON</td><td class="supporting-cell">Sylvain MONTMASSON</td><td class="supporting-cell">MONTMASSON SYLVAIN</td><td class="link-cell"><a href="https://utmb.world/runner/4709130.sylvain.montmasson" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/MONTMASSON.Sylvain/4390893" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/montmasson.sylvain/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">27</td><td class="athlete-cell"><strong>Upi Supriatna snp</strong></td><td class="score-cell">716.0</td><td class="score-cell">731.0</td><td class="score-cell">-</td><td class="score-cell">722.0</td><td class="supporting-cell">Upi SUPRIATNA SNP</td><td class="supporting-cell">Upi SUPRIATNA SNP</td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4693359.upi.supriatnasnp" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/SUPRIATNA SNP.Upi/4630740" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell">&mdash;</td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">28</td><td class="athlete-cell"><strong>Paul Dérail</strong></td><td class="score-cell">709.0</td><td class="score-cell">740.0</td><td class="score-cell">68.6</td><td class="score-cell">721.4</td><td class="supporting-cell">Paul DÉRAIL</td><td class="supporting-cell">Paul DERAIL</td><td class="supporting-cell">DERAIL PAUL</td><td class="link-cell"><a href="https://utmb.world/runner/2646659.paul.derail" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/DERAIL.Paul/2646659" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/derail.paul/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">29</td><td class="athlete-cell"><strong>Amaury Garnier</strong></td><td class="score-cell">719.0</td><td class="score-cell">-</td><td class="score-cell">70.5</td><td class="score-cell">719.0</td><td class="supporting-cell">Amaury GARNIER</td><td class="supporting-cell"></td><td class="supporting-cell">GARNIER AMAURY</td><td class="link-cell"><a href="https://utmb.world/runner/6329542.amaury.garnier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/garnier.amaury/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">30</td><td class="athlete-cell"><strong>William Rousseau</strong></td><td class="score-cell">690.0</td><td class="score-cell">742.0</td><td class="score-cell">69.0</td><td class="score-cell">710.8</td><td class="supporting-cell">William ROUSSEAU</td><td class="supporting-cell">William ROUSSEAU</td><td class="supporting-cell">ROUSSEAU WILLIAM</td><td class="link-cell"><a href="https://utmb.world/runner/4202116.william.rousseau" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/ROUSSEAU.William/4198515" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/rousseau.william/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">31</td><td class="athlete-cell"><strong>Thomas AUBINIERE</strong></td><td class="score-cell">701.0</td><td class="score-cell">720.0</td><td class="score-cell">69.7</td><td class="score-cell">708.6</td><td class="supporting-cell">Thomas AUBINIERE</td><td class="supporting-cell">Thomas AUBINIERE</td><td class="supporting-cell">AUBINIERE THOMAS</td><td class="link-cell"><a href="https://utmb.world/runner/1611795.thomas.aubiniere" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/AUBINIERE.Thomas/1611795" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/aubiniere.thomas.1/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">32</td><td class="athlete-cell"><strong>Thomas Dereme</strong></td><td class="score-cell">708.0</td><td class="score-cell">-</td><td class="score-cell">70.9</td><td class="score-cell">708.0</td><td class="supporting-cell">Thomas DEREME</td><td class="supporting-cell"></td><td class="supporting-cell">DEREME THOMAS</td><td class="link-cell"><a href="https://utmb.world/runner/4046492.thomas.dereme" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/dereme.thomas/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">33</td><td class="athlete-cell"><strong>Octave Dusart</strong></td><td class="score-cell">706.0</td><td class="score-cell">-</td><td class="score-cell">68.1</td><td class="score-cell">706.0</td><td class="supporting-cell">Octave DUSART</td><td class="supporting-cell"></td><td class="supporting-cell">DUSART OCTAVE</td><td class="link-cell"><a href="https://utmb.world/runner/6962661.octave.dusart" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/dusart.octave/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">34</td><td class="athlete-cell"><strong>Ingrid Terrier</strong></td><td class="score-cell">691.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">691.0</td><td class="supporting-cell">Ingrid TERRIER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/386042.ingrid.terrier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">35</td><td class="athlete-cell"><strong>Guilhem Clerc</strong></td><td class="score-cell">688.0</td><td class="score-cell">694.0</td><td class="score-cell">-</td><td class="score-cell">690.4</td><td class="supporting-cell">Guilhem CLERC</td><td class="supporting-cell">Guilhem CLERC</td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/289580.guilhem.clerc" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/CLERC.Guilhem/289580" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell">&mdash;</td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">36</td><td class="athlete-cell"><strong>Jules Robin</strong></td><td class="score-cell">690.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">690.0</td><td class="supporting-cell">Jules ROBIN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/5240504.jules.robin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">37</td><td class="athlete-cell"><strong>Alexandre Delizee</strong></td><td class="score-cell">689.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">689.0</td><td class="supporting-cell">Alexandre DELIZEE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/3141207.alexandre.delizee" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">38</td><td class="athlete-cell"><strong>Dominique Baratay</strong></td><td class="score-cell">688.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">688.0</td><td class="supporting-cell">Dominique BARATAY</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1494445.dominique.baratay" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">39</td><td class="athlete-cell"><strong>florian specker</strong></td><td class="score-cell">687.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">687.0</td><td class="supporting-cell">Florian SPECKER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/5471756.florian.specker" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">40</td><td class="athlete-cell"><strong>Olivier BRASIER</strong></td><td class="score-cell">681.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">681.0</td><td class="supporting-cell">Olivier BRASIER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/912879.olivier.brasier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: ITRA lookup failed: /api/runner/find HTTP 403; /api/runner/findByName HTTP 403 (stopped after 8 consecutive failures)</td></tr></tbody></table></div>
+      </section>
 
-    <section class="panel"><h2>No result on UTMB, ITRA, and Betrail</h2><p class="section-caption">46 participant(s) had no match on any provider.</p><div class="table-wrap compact-table"><table class="results-table"><thead><tr><th>Athlete</th></tr></thead><tbody><tr><td>Alan Houdeau</td></tr><tr><td>Alexis Guenand</td></tr><tr><td>Alice Bellec</td></tr><tr><td>Anaë Duperray</td></tr><tr><td>Axel Vimeux</td></tr><tr><td>Clara Creuzevault</td></tr><tr><td>Claudia DENIS</td></tr><tr><td>Cyril Nicid</td></tr><tr><td>Erdenetulga Enkhbold</td></tr><tr><td>Erwan Jehanno</td></tr><tr><td>Ewen Le Buhan</td></tr><tr><td>Fred Aguayo</td></tr><tr><td>GABRIEL SAMSON</td></tr><tr><td>Grégory BELLIN</td></tr><tr><td>Guihaume Petrou</td></tr><tr><td>HUGo Larribeau</td></tr><tr><td>Hippolyte Kourtessis</td></tr><tr><td>Jonathan BADO</td></tr><tr><td>Jonathan Sasse</td></tr><tr><td>Justine Duchamp</td></tr><tr><td>Kevin PORRET</td></tr><tr><td>Laughane Janin</td></tr><tr><td>Laureen Pinto</td></tr><tr><td>Louis Bernede</td></tr><tr><td>Léo Minne</td></tr><tr><td>Marian Citea</td></tr><tr><td>Marine Michelin</td></tr><tr><td>Martin DECLERCQ</td></tr><tr><td>Marty Zwisler</td></tr><tr><td>Matteo Rouziere</td></tr><tr><td>Maxime Volkov</td></tr><tr><td>Nicolas Grond</td></tr><tr><td>Noé KERGRESSE</td></tr><tr><td>OLIVIER DARFEUILLES</td></tr><tr><td>Pamela Amirault</td></tr><tr><td>Pierre Daly</td></tr><tr><td>Pierre MAZOIR</td></tr><tr><td>Robin Voiseux</td></tr><tr><td>Rodolphe Kunze</td></tr><tr><td>Romain Guenebaut</td></tr><tr><td>Sacha MOJICEVIC</td></tr><tr><td>Solène Fontaine</td></tr><tr><td>Tim LEQUEUX</td></tr><tr><td>benoit girardin</td></tr><tr><td>oscar koenig</td></tr><tr><td>sébastien fossier</td></tr></tbody></table></div></section>
+      <section class="panel"><div class="panel-head"><h2>Unmatched Athletes</h2></div><p class="section-caption">46 participant(s) did not match UTMB, ITRA, or Betrail.</p><div class="table-wrap compact-table"><table class="results-table"><thead><tr><th>Athlete</th></tr></thead><tbody><tr><td>Alan Houdeau</td></tr><tr><td>Alexis Guenand</td></tr><tr><td>Alice Bellec</td></tr><tr><td>Anaë Duperray</td></tr><tr><td>Axel Vimeux</td></tr><tr><td>Clara Creuzevault</td></tr><tr><td>Claudia DENIS</td></tr><tr><td>Cyril Nicid</td></tr><tr><td>Erdenetulga Enkhbold</td></tr><tr><td>Erwan Jehanno</td></tr><tr><td>Ewen Le Buhan</td></tr><tr><td>Fred Aguayo</td></tr><tr><td>GABRIEL SAMSON</td></tr><tr><td>Grégory BELLIN</td></tr><tr><td>Guihaume Petrou</td></tr><tr><td>HUGo Larribeau</td></tr><tr><td>Hippolyte Kourtessis</td></tr><tr><td>Jonathan BADO</td></tr><tr><td>Jonathan Sasse</td></tr><tr><td>Justine Duchamp</td></tr><tr><td>Kevin PORRET</td></tr><tr><td>Laughane Janin</td></tr><tr><td>Laureen Pinto</td></tr><tr><td>Louis Bernede</td></tr><tr><td>Léo Minne</td></tr><tr><td>Marian Citea</td></tr><tr><td>Marine Michelin</td></tr><tr><td>Martin DECLERCQ</td></tr><tr><td>Marty Zwisler</td></tr><tr><td>Matteo Rouziere</td></tr><tr><td>Maxime Volkov</td></tr><tr><td>Nicolas Grond</td></tr><tr><td>Noé KERGRESSE</td></tr><tr><td>OLIVIER DARFEUILLES</td></tr><tr><td>Pamela Amirault</td></tr><tr><td>Pierre Daly</td></tr><tr><td>Pierre MAZOIR</td></tr><tr><td>Robin Voiseux</td></tr><tr><td>Rodolphe Kunze</td></tr><tr><td>Romain Guenebaut</td></tr><tr><td>Sacha MOJICEVIC</td></tr><tr><td>Solène Fontaine</td></tr><tr><td>Tim LEQUEUX</td></tr><tr><td>benoit girardin</td></tr><tr><td>oscar koenig</td></tr><tr><td>sébastien fossier</td></tr></tbody></table></div></section>
+    </section>
+    
   </main>
 </body>
 </html>
