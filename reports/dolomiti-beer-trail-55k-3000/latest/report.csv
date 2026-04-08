@@ -1,7 +1,264 @@
 input_name,utmb_index,utmb_match_name,utmb_match_score,utmb_profile_url,itra_score,itra_match_name,itra_match_score,itra_profile_url,betrail_score,betrail_match_name,betrail_match_score,betrail_profile_url,combined_score,notes
-Eesti Keel,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found; Betrail catalog unavailable: Betrail request blocked by Cloudflare.
-Select your language,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found; Betrail catalog unavailable: Betrail request blocked by Cloudflare.
-Data Privacy,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found; Betrail catalog unavailable: Betrail request blocked by Cloudflare.
-Terms of Use,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found; Betrail catalog unavailable: Betrail request blocked by Cloudflare.
-Cookie Settings,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found; Betrail catalog unavailable: Betrail request blocked by Cloudflare.
-Questions about events,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found; Betrail catalog unavailable: Betrail request blocked by Cloudflare.
+Michele Meridio,848.0,Michele MERIDIO,1.0,https://utmb.world/runner/1524379.michele.meridio,881.0,Michele MERIDIO,1.0,https://itra.run/RunnerSpace/MERIDIO.Michele/4163264,82.85,MERIDIO MICHELE,1.0,https://www.betrail.run/runner/meridio.michele/overview,861.2,
+Diego Angella,844.0,Diego ANGELLA,1.0,https://utmb.world/runner/415878.diego.angella,883.0,Diego ANGELLA,1.0,https://itra.run/RunnerSpace/ANGELLA.Diego/415878,79.74,ANGELLA DIEGO,1.0,https://www.betrail.run/runner/angella.diego/overview,859.6,
+Sergio Bonaldi,847.0,Sergio BONALDI,1.0,https://utmb.world/runner/4755402.sergio.bonaldi,863.0,Sergio BONALDI,1.0,https://itra.run/RunnerSpace/BONALDI.Sergio/4515283,83.32,BONALDI SERGIO,1.0,https://www.betrail.run/runner/bonaldi.sergio/overview,853.4000000000001,
+Tiziano Scatolin,806.0,Tiziano SCATOLIN,1.0,https://utmb.world/runner/3999116.tiziano.scatolin,849.0,Tiziano SCATOLIN,1.0,https://itra.run/RunnerSpace/SCATOLIN.Tiziano/3999116,79.71,SCATOLIN TIZIANO,1.0,https://www.betrail.run/runner/scatolin.tiziano/overview,823.2,
+MARCO GUBERT,796.0,Marco GUBERT,1.0,https://utmb.world/runner/880371.marco.gubert,846.0,Marco GUBERT,1.0,https://itra.run/RunnerSpace/GUBERT.Marco/880371,75.53,GUBERT MARCO,1.0,https://www.betrail.run/runner/gubert.marco/overview,816.0,
+IVAN GERONAZZO,765.0,Ivan GERONAZZO,1.0,https://utmb.world/runner/34654.ivan.geronazzo,819.0,Ivan GERONAZZO,1.0,https://itra.run/RunnerSpace/GERONAZZO.Ivan/34654,72.81,GERONAZZO IVAN,1.0,https://www.betrail.run/runner/geronazzo.ivan/overview,786.6,
+Alberto Freschi,762.0,Alberto FRESCHI,1.0,https://utmb.world/runner/4249785.alberto.freschi,807.0,Alberto FRESCHI,1.0,https://itra.run/RunnerSpace/FRESCHI.Alberto/4286529,,,,,780.0,
+Alessio Zambon,761.0,Alessio ZAMBON,1.0,https://utmb.world/runner/650913.alessio.zambon,808.0,Alessio ZAMBON,1.0,https://itra.run/RunnerSpace/ZAMBON.Alessio/650913,75.47,ZAMBON ALESSIO,1.0,https://www.betrail.run/runner/zambon.alessio/overview,779.8,
+Lorenzo De Rocco,764.0,Lorenzo DE ROCCO,1.0,https://utmb.world/runner/4231962.lorenzo.derocco,798.0,Lorenzo DE ROCCO,1.0,https://itra.run/RunnerSpace/DE ROCCO.Lorenzo/4157750,72.96,DE ROCCO LORENZO,1.0,https://www.betrail.run/runner/de.rocco.lorenzo/overview,777.6,
+Fabrizio Trentin,732.0,Fabrizio TRENTIN,1.0,https://utmb.world/runner/6723641.fabrizio.trentin,786.0,Fabrizio TRENTIN,1.0,https://itra.run/RunnerSpace/TRENTIN.Fabrizio/6333289,68.43,TRENTIN FABRIZIO,1.0,https://www.betrail.run/runner/trentin.fabrizio/overview,753.6,
+Ion Coban,727.0,Ion COBAN,1.0,https://utmb.world/runner/4833268.ion.coban,759.0,Ion COBAN,1.0,https://itra.run/RunnerSpace/COBAN.Ion/4658966,70.74,COBAN ION,1.0,https://www.betrail.run/runner/coban.ion/overview,739.8,
+Fabio Pivato,728.0,Fabio PIVATO,1.0,https://utmb.world/runner/4249784.fabio.pivato,754.0,Fabio PIVATO,1.0,https://itra.run/RunnerSpace/PIVATO.Fabio/4286528,71.38,PIVATO FABIO,1.0,https://www.betrail.run/runner/pivato.fabio/overview,738.4000000000001,
+Giulia Marchesoni,738.0,Giulia MARCHESONI,1.0,https://utmb.world/runner/880395.giulia.marchesoni,733.0,Giulia MARCHESONI,1.0,https://itra.run/RunnerSpace/MARCHESONI.Giulia/880395,,,,,736.0,
+Matteo Paladin,724.0,Matteo PALADIN,1.0,https://utmb.world/runner/4029843.matteo.paladin,737.0,Matteo PALADIN,1.0,https://itra.run/RunnerSpace/PALADIN.Matteo/4442655,70.46,PALADIN MATTEO,1.0,https://www.betrail.run/runner/paladin.matteo/overview,729.2,
+Cristian Camanini,712.0,Cristian CAMANINI,1.0,https://utmb.world/runner/2658587.cristian.camanini,746.0,Cristian CAMANINI,1.0,https://itra.run/RunnerSpace/CAMANINI.Cristian/2658587,74.15,CAMANINI CRISTIAN,1.0,https://www.betrail.run/runner/camanini.cristian/overview,725.6,
+Marco Ferrari,719.0,Marco FERRARI,1.0,https://utmb.world/runner/6747215.marco.ferrari,725.0,Marco FERRARI,1.0,https://itra.run/RunnerSpace/FERRARI.Marco/6342424,,,,,721.4,
+Luca Nardi,702.0,Luca NARDI,1.0,https://utmb.world/runner/4155382.luca.nardi,747.0,Luca NARDI,1.0,https://itra.run/RunnerSpace/NARDI.Luca/4477578,,,,,720.0,
+Matteo Gonzo,698.0,Matteo GONZO,1.0,https://utmb.world/runner/2536885.matteo.gonzo,734.0,Matteo GONZO,1.0,https://itra.run/RunnerSpace/GONZO.Matteo/2536885,,,,,712.4000000000001,
+Kevin Fantinato,689.0,Kevin FANTINATO,1.0,https://utmb.world/runner/5784954.kevin.fantinato,741.0,Kevin FANTINATO,1.0,https://itra.run/RunnerSpace/FANTINATO.Kevin/5269613,,,,,709.8,
+Daniel Menegon,694.0,Daniel MENEGON,1.0,https://utmb.world/runner/445946.daniel.menegon,719.0,Daniel MENEGON,1.0,https://itra.run/RunnerSpace/MENEGON.Daniel/445946,,,,,704.0,
+Davide Sommariva,681.0,Davide SOMMARIVA,1.0,https://utmb.world/runner/5145784.davide.sommariva,729.0,Davide SOMMARIVA,1.0,https://itra.run/RunnerSpace/SOMMARIVA.Davide/4554756,,,,,700.2,
+Ivan Giordano,695.0,Ivan GIORDANO,1.0,https://utmb.world/runner/357176.ivan.giordano,706.0,Ivan GIORDANO,1.0,https://itra.run/RunnerSpace/GIORDANO.Ivan/357176,68.85,GIORDANO IVAN,1.0,https://www.betrail.run/runner/giordano.ivan/overview,699.4000000000001,
+Paola Gelpi,677.0,Paola GELPI,1.0,https://utmb.world/runner/3505985.paola.gelpi,,,,,,,,,677.0,ITRA skipped because UTMB 677.0 <= threshold 680.0
+Federica Zuccollo,665.0,Federica ZUCCOLLO,1.0,https://utmb.world/runner/1524373.federica.zuccollo,,,,,,,,,665.0,ITRA skipped because UTMB 665.0 <= threshold 680.0
+Alberto Bianchin,661.0,Alberto BIANCHIN,1.0,https://utmb.world/runner/4219658.alberto.bianchin,,,,,,,,,661.0,ITRA skipped because UTMB 661.0 <= threshold 680.0
+Daniele Fant,659.0,Daniele FANT,1.0,https://utmb.world/runner/296061.daniele.fant,,,,,,,,,659.0,ITRA skipped because UTMB 659.0 <= threshold 680.0
+Michel Santagiuliana,659.0,Michel SANTAGIULIANA,1.0,https://utmb.world/runner/5701096.michel.santagiuliana,,,,,,,,,659.0,ITRA skipped because UTMB 659.0 <= threshold 680.0
+FRANCESCO DE RIZ,652.0,Francesco DE RIZ,1.0,https://utmb.world/runner/624193.francesco.deriz,,,,,,,,,652.0,ITRA skipped because UTMB 652.0 <= threshold 680.0
+Gianni Berlanda,648.0,Gianni BERLANDA,1.0,https://utmb.world/runner/2483763.gianni.berlanda,,,,,,,,,648.0,ITRA skipped because UTMB 648.0 <= threshold 680.0
+Enrico De Marco,645.0,Enrico DE MARCO,1.0,https://utmb.world/runner/2114629.enrico.demarco,,,,,,,,,645.0,ITRA skipped because UTMB 645.0 <= threshold 680.0
+Alessandro Chimenton,645.0,Alessandro CHIMENTON,1.0,https://utmb.world/runner/2009971.alessandro.chimenton,,,,,,,,,645.0,ITRA skipped because UTMB 645.0 <= threshold 680.0
+FABIO AZZALIN,644.0,Fabio AZZALIN,1.0,https://utmb.world/runner/2009747.fabio.azzalin,,,,,,,,,644.0,ITRA skipped because UTMB 644.0 <= threshold 680.0
+Gerhard Pittschieler,643.0,Gerhard PITTSCHIELER,1.0,https://utmb.world/runner/806406.gerhard.pittschieler,,,,,,,,,643.0,ITRA skipped because UTMB 643.0 <= threshold 680.0
+Rodolfo Pais Bianco,641.0,Rodolfo PAIS BIANCO,1.0,https://utmb.world/runner/5558718.rodolfo.paisbianco,,,,,,,,,641.0,ITRA skipped because UTMB 641.0 <= threshold 680.0
+Alan Pol,640.0,Alan POL,1.0,https://utmb.world/runner/6030746.alan.pol,,,,,,,,,640.0,ITRA skipped because UTMB 640.0 <= threshold 680.0
+RUBEN BASSANI,635.0,Ruben BASSANI,1.0,https://utmb.world/runner/4155282.ruben.bassani,,,,,,,,,635.0,ITRA skipped because UTMB 635.0 <= threshold 680.0
+Eros De Col,629.0,Eros DE COL,1.0,https://utmb.world/runner/5619347.eros.decol,,,,,,,,,629.0,ITRA skipped because UTMB 629.0 <= threshold 680.0
+Stefano Marchesini,628.0,Stefano MARCHESINI,1.0,https://utmb.world/runner/4293596.stefano.marchesini,,,,,,,,,628.0,ITRA skipped because UTMB 628.0 <= threshold 680.0
+Ivan Saburov,627.0,Ivan SABUROV,1.0,https://utmb.world/runner/3076667.ivan.saburov,,,,,,,,,627.0,ITRA skipped because UTMB 627.0 <= threshold 680.0
+Denny Sponga,624.0,Denny SPONGA,1.0,https://utmb.world/runner/6030752.denny.sponga,,,,,,,,,624.0,ITRA skipped because UTMB 624.0 <= threshold 680.0
+Nicola Tormen,624.0,Nicola TORMEN,1.0,https://utmb.world/runner/4764974.nicola.tormen,,,,,,,,,624.0,ITRA skipped because UTMB 624.0 <= threshold 680.0
+Gianluca Confalonieri,624.0,Gianluca CONFALONIERI,1.0,https://utmb.world/runner/4137536.gianluca.confalonieri,,,,,,,,,624.0,ITRA skipped because UTMB 624.0 <= threshold 680.0
+ALEX CIMOLIN,621.0,Alex CIMOLIN,1.0,https://utmb.world/runner/5571842.alex.cimolin,,,,,,,,,621.0,ITRA skipped because UTMB 621.0 <= threshold 680.0
+Fabricio Tiago Guisso Tartarotti,615.0,Fabricio Tiago GUISSO TARTAROTTI,1.0,https://utmb.world/runner/3444525.fabriciotiago.guissotartarotti,,,,,,,,,615.0,ITRA skipped because UTMB 615.0 <= threshold 680.0
+Giacomo Meneghini,615.0,Giacomo MENEGHINI,1.0,https://utmb.world/runner/5145804.giacomo.meneghini,,,,,,,,,615.0,ITRA skipped because UTMB 615.0 <= threshold 680.0
+Stefano Veneran,614.0,Stefano VENERAN,1.0,https://utmb.world/runner/5263188.stefano.veneran,,,,,,,,,614.0,ITRA skipped because UTMB 614.0 <= threshold 680.0
+Michael Bonsembiante,614.0,Michael BONSEMBIANTE,1.0,https://utmb.world/runner/973795.michael.bonsembiante,,,,,,,,,614.0,ITRA skipped because UTMB 614.0 <= threshold 680.0
+Andrea Folchi,609.0,Andrea FOLCHI,1.0,https://utmb.world/runner/4293508.andrea.folchi,,,,,,,,,609.0,ITRA skipped because UTMB 609.0 <= threshold 680.0
+Gabriela Camelia Gales,608.0,Gabriela Camelia GALES,1.0,https://utmb.world/runner/4768682.gabrielacamelia.gales,,,,,,,,,608.0,ITRA skipped because UTMB 608.0 <= threshold 680.0
+Simone Bagatin,607.0,Simone BAGATIN,1.0,https://utmb.world/runner/5027818.simone.bagatin,,,,,,,,,607.0,ITRA skipped because UTMB 607.0 <= threshold 680.0
+Michele Montalbano,606.0,Michele MONTALBANO,1.0,https://utmb.world/runner/4148050.michele.montalbano,,,,,,,,,606.0,ITRA skipped because UTMB 606.0 <= threshold 680.0
+Marco Petris,603.0,Marco PETRIS,1.0,https://utmb.world/runner/6086180.marco.petris,,,,,,,,,603.0,ITRA skipped because UTMB 603.0 <= threshold 680.0
+Gianluca Tomaselli,603.0,Gianluca TOMASELLI,1.0,https://utmb.world/runner/6723667.gianluca.tomaselli,,,,,,,,,603.0,ITRA skipped because UTMB 603.0 <= threshold 680.0
+Nicola Orazio,602.0,Nicola ORAZIO,1.0,https://utmb.world/runner/4459350.nicola.orazio,,,,,,,,,602.0,ITRA skipped because UTMB 602.0 <= threshold 680.0
+Luisa Gasparini,601.0,Luisa GASPARINI,1.0,https://utmb.world/runner/4375866.luisa.gasparini,,,,,,,,,601.0,ITRA skipped because UTMB 601.0 <= threshold 680.0
+Nicholas Bonsembiante,601.0,Nicholas BONSEMBIANTE,1.0,https://utmb.world/runner/623408.nicholas.bonsembiante,,,,,,,,,601.0,ITRA skipped because UTMB 601.0 <= threshold 680.0
+MASSIMO BARCO,596.0,Massimo BARCO,1.0,https://utmb.world/runner/7061730.massimo.barco,,,,,,,,,596.0,ITRA skipped because UTMB 596.0 <= threshold 680.0
+Alex Pinamonti,596.0,Alex PINAMONTI,1.0,https://utmb.world/runner/525076.alex.pinamonti,,,,,,,,,596.0,ITRA skipped because UTMB 596.0 <= threshold 680.0
+Luca Tonet,594.0,Luca TONET,1.0,https://utmb.world/runner/19310.luca.tonet,,,,,,,,,594.0,ITRA skipped because UTMB 594.0 <= threshold 680.0
+Dario Peloso,594.0,Dario PELOSO,1.0,https://utmb.world/runner/4206364.dario.peloso,,,,,,,,,594.0,ITRA skipped because UTMB 594.0 <= threshold 680.0
+Guido Rossettini,594.0,Guido ROSSETTINI,1.0,https://utmb.world/runner/1313073.guido.rossettini,,,,,,,,,594.0,ITRA skipped because UTMB 594.0 <= threshold 680.0
+Michael Quirin Breitenberger,594.0,Michael Quirin BREITENBERGER,1.0,https://utmb.world/runner/4417948.michaelquirin.breitenberger,,,,,,,,,594.0,ITRA skipped because UTMB 594.0 <= threshold 680.0
+Milena Pasin,593.0,Milena PASIN,1.0,https://utmb.world/runner/109449.milena.pasin,,,,,,,,,593.0,ITRA skipped because UTMB 593.0 <= threshold 680.0
+Matteo Serena,592.0,Matteo SERENA,1.0,https://utmb.world/runner/8207228.matteo.serena,,,,,,,,,592.0,ITRA skipped because UTMB 592.0 <= threshold 680.0
+Boris Da Ren,591.0,Boris DA REN,1.0,https://utmb.world/runner/810608.boris.daren,,,,,,,,,591.0,ITRA skipped because UTMB 591.0 <= threshold 680.0
+Marco Biava,591.0,Marco BIAVA,1.0,https://utmb.world/runner/999005.marco.biava,,,,,,,,,591.0,ITRA skipped because UTMB 591.0 <= threshold 680.0
+Andrea Bonino,591.0,Andrea BONINO,1.0,https://utmb.world/runner/5297498.andrea.bonino,,,,,,,,,591.0,ITRA skipped because UTMB 591.0 <= threshold 680.0
+Mirko Lovisotto,588.0,Mirko LOVISOTTO,1.0,https://utmb.world/runner/525486.mirko.lovisotto,,,,,,,,,588.0,ITRA skipped because UTMB 588.0 <= threshold 680.0
+Roberto Tavana,588.0,Roberto TAVANA,1.0,https://utmb.world/runner/308597.roberto.tavana,,,,,,,,,588.0,ITRA skipped because UTMB 588.0 <= threshold 680.0
+Damiano Bordignon,587.0,Damiano BORDIGNON,1.0,https://utmb.world/runner/4130690.damiano.bordignon,,,,,,,,,587.0,ITRA skipped because UTMB 587.0 <= threshold 680.0
+Alberto Dal Sasso,586.0,Alberto DAL SASSO,1.0,https://utmb.world/runner/5701110.alberto.dalsasso,,,,,,,,,586.0,ITRA skipped because UTMB 586.0 <= threshold 680.0
+Matteo Crespan,585.0,Matteo CRESPAN,1.0,https://utmb.world/runner/5451886.matteo.crespan,,,,,,,,,585.0,ITRA skipped because UTMB 585.0 <= threshold 680.0
+Mariangela Curini,585.0,Mariangela CURINI,1.0,https://utmb.world/runner/445936.mariangela.curini,,,,,,,,,585.0,ITRA skipped because UTMB 585.0 <= threshold 680.0
+Laura Mariani,585.0,Laura MARIANI,1.0,https://utmb.world/runner/4150752.laura.mariani,,,,,,,,,585.0,ITRA skipped because UTMB 585.0 <= threshold 680.0
+Andrea Comparin,583.0,Andrea COMPARIN,1.0,https://utmb.world/runner/5297504.andrea.comparin,,,,,,,,,583.0,ITRA skipped because UTMB 583.0 <= threshold 680.0
+Valentino Perotto,582.0,Valentino PEROTTO,1.0,https://utmb.world/runner/5145924.valentino.perotto,,,,,,,,,582.0,ITRA skipped because UTMB 582.0 <= threshold 680.0
+Andrea Gatto,580.0,Andrea GATTO,1.0,https://utmb.world/runner/3277595.andrea.gatto,,,,,,,,,580.0,ITRA skipped because UTMB 580.0 <= threshold 680.0
+Mattia Artuso,580.0,Mattia ARTUSO,1.0,https://utmb.world/runner/6030790.mattia.artuso,,,,,,,,,580.0,ITRA skipped because UTMB 580.0 <= threshold 680.0
+Simone Catalani,580.0,Simone CATALANI,1.0,https://utmb.world/runner/60455.simone.catalani,,,,,,,,,580.0,ITRA skipped because UTMB 580.0 <= threshold 680.0
+Luca Mattarucco,578.0,Luca MATTARUCCO,1.0,https://utmb.world/runner/3012625.luca.mattarucco,,,,,,,,,578.0,ITRA skipped because UTMB 578.0 <= threshold 680.0
+Emilio Bressan,576.0,Emilio BRESSAN,1.0,https://utmb.world/runner/6030782.emilio.bressan,,,,,,,,,576.0,ITRA skipped because UTMB 576.0 <= threshold 680.0
+Luciano De Col,576.0,Luciano DE COL,1.0,https://utmb.world/runner/4132210.luciano.decol,,,,,,,,,576.0,ITRA skipped because UTMB 576.0 <= threshold 680.0
+Andrea Ghizzo,576.0,Andrea GHIZZO,1.0,https://utmb.world/runner/4130698.andrea.ghizzo,,,,,,,,,576.0,ITRA skipped because UTMB 576.0 <= threshold 680.0
+LUCA AGOSTINI,576.0,Luca AGOSTINI,1.0,https://utmb.world/runner/7138332.luca.agostini,,,,,,,,,576.0,ITRA skipped because UTMB 576.0 <= threshold 680.0
+Alessandro Zanardo,575.0,Alessandro ZANARDO,1.0,https://utmb.world/runner/1061669.alessandro.zanardo,,,,,,,,,575.0,ITRA skipped because UTMB 575.0 <= threshold 680.0
+Daniel Haas,573.0,Daniel HAAS,1.0,https://utmb.world/runner/4140962.daniel.haas,,,,,,,,,573.0,ITRA skipped because UTMB 573.0 <= threshold 680.0
+Mirko Broseghini,572.0,Mirko BROSEGHINI,1.0,https://utmb.world/runner/2050281.mirko.broseghini,,,,,,,,,572.0,ITRA skipped because UTMB 572.0 <= threshold 680.0
+Verena Huber,572.0,Verena HUBER,1.0,https://utmb.world/runner/5027838.verena.huber,,,,,,,,,572.0,ITRA skipped because UTMB 572.0 <= threshold 680.0
+Matteo Baldisserotto,571.0,Matteo BALDISSEROTTO,1.0,https://utmb.world/runner/5146134.matteo.baldisserotto,,,,,,,,,571.0,ITRA skipped because UTMB 571.0 <= threshold 680.0
+Laura De Cian,568.0,Laura DE CIAN,1.0,https://utmb.world/runner/2009765.laura.decian,,,,,,,,,568.0,ITRA skipped because UTMB 568.0 <= threshold 680.0
+Giovanni Dalle Mole,566.0,Giovanni DALLE MOLE,1.0,https://utmb.world/runner/5451798.giovanni.dallemole,,,,,,,,,566.0,ITRA skipped because UTMB 566.0 <= threshold 680.0
+Piergiovanni Stefani,565.0,Piergiovanni STEFANI,1.0,https://utmb.world/runner/1583715.piergiovanni.stefani,,,,,,,,,565.0,ITRA skipped because UTMB 565.0 <= threshold 680.0
+Christian Zanella,565.0,Christian ZANELLA,1.0,https://utmb.world/runner/623395.christian.zanella,,,,,,,,,565.0,ITRA skipped because UTMB 565.0 <= threshold 680.0
+Ivo Crepaldi,565.0,Ivo CREPALDI,1.0,https://utmb.world/runner/1031747.ivo.crepaldi,,,,,,,,,565.0,ITRA skipped because UTMB 565.0 <= threshold 680.0
+Michele Cinel,564.0,Michele CINEL,1.0,https://utmb.world/runner/445827.michele.cinel,,,,,,,,,564.0,ITRA skipped because UTMB 564.0 <= threshold 680.0
+Mattia Bertoni,563.0,Mattia BERTONI,1.0,https://utmb.world/runner/2390841.mattia.bertoni,,,,,,,,,563.0,ITRA skipped because UTMB 563.0 <= threshold 680.0
+Federico Zanin,560.0,Federico ZANIN,1.0,https://utmb.world/runner/588399.federico.zanin,,,,,,,,,560.0,ITRA skipped because UTMB 560.0 <= threshold 680.0
+Luca Candido,560.0,Luca CANDIDO,1.0,https://utmb.world/runner/588411.luca.candido,,,,,,,,,560.0,ITRA skipped because UTMB 560.0 <= threshold 680.0
+Federico Ossi,559.0,Federico OSSI,1.0,https://utmb.world/runner/3385099.federico.ossi,,,,,,,,,559.0,ITRA skipped because UTMB 559.0 <= threshold 680.0
+Filippo Guerra,558.0,Filippo GUERRA,1.0,https://utmb.world/runner/445888.filippo.guerra,,,,,,,,,558.0,ITRA skipped because UTMB 558.0 <= threshold 680.0
+Sara Cavallet,557.0,Sara CAVALLET,1.0,https://utmb.world/runner/4511692.sara.cavallet,,,,,,,,,557.0,ITRA skipped because UTMB 557.0 <= threshold 680.0
+Gianluca Giacomini,557.0,Gianluca GIACOMINI,1.0,https://utmb.world/runner/527772.gianluca.giacomini,,,,,,,,,557.0,ITRA skipped because UTMB 557.0 <= threshold 680.0
+Stefano Frozza,556.0,Stefano FROZZA,1.0,https://utmb.world/runner/445988.stefano.frozza,,,,,,,,,556.0,ITRA skipped because UTMB 556.0 <= threshold 680.0
+Francesco Piccioli,553.0,Francesco PICCIOLI,1.0,https://utmb.world/runner/424959.francesco.piccioli,,,,,,,,,553.0,ITRA skipped because UTMB 553.0 <= threshold 680.0
+Emmanuele Burigo,553.0,Emmanuele BURIGO,1.0,https://utmb.world/runner/6176532.emmanuele.burigo,,,,,,,,,553.0,ITRA skipped because UTMB 553.0 <= threshold 680.0
+Marco Nerini,550.0,Marco NERINI,1.0,https://utmb.world/runner/5145922.marco.nerini,,,,,,,,,550.0,ITRA skipped because UTMB 550.0 <= threshold 680.0
+Mario De Carli,549.0,Mario DE CARLI,1.0,https://utmb.world/runner/6030798.mario.decarli,,,,,,,,,549.0,ITRA skipped because UTMB 549.0 <= threshold 680.0
+Mirco Ros,549.0,Mirco ROS,1.0,https://utmb.world/runner/5837226.mirco.ros,,,,,,,,,549.0,ITRA skipped because UTMB 549.0 <= threshold 680.0
+RANIERO BROSEGHINI,549.0,Raniero BROSEGHINI,1.0,https://utmb.world/runner/1466647.raniero.broseghini,,,,,,,,,549.0,ITRA skipped because UTMB 549.0 <= threshold 680.0
+Michele Zanella,548.0,Michele ZANELLA,1.0,https://utmb.world/runner/972459.michele.zanella,,,,,,,,,548.0,ITRA skipped because UTMB 548.0 <= threshold 680.0
+Omar Scopel,546.0,Omar SCOPEL,1.0,https://utmb.world/runner/3451907.omar.scopel,,,,,,,,,546.0,ITRA skipped because UTMB 546.0 <= threshold 680.0
+Silvia Bertolo,546.0,Silvia BERTOLO,1.0,https://utmb.world/runner/5837228.silvia.bertolo,,,,,,,,,546.0,ITRA skipped because UTMB 546.0 <= threshold 680.0
+Alberto Facci,545.0,Alberto FACCI,1.0,https://utmb.world/runner/5028022.alberto.facci,,,,,,,,,545.0,ITRA skipped because UTMB 545.0 <= threshold 680.0
+Johannes Lang,545.0,Johannes LANG,1.0,https://utmb.world/runner/6320212.johannes.lang,,,,,,,,,545.0,ITRA skipped because UTMB 545.0 <= threshold 680.0
+Michele Remor,544.0,Michele REMOR,1.0,https://utmb.world/runner/197727.michele.remor,,,,,,,,,544.0,ITRA skipped because UTMB 544.0 <= threshold 680.0
+Carlos Alberto Marques Dos Santos,544.0,Carlos Alberto MARQUES DOS SANTOS,1.0,https://utmb.world/runner/3505997.carlosalberto.marquesdossantos,,,,,,,,,544.0,ITRA skipped because UTMB 544.0 <= threshold 680.0
+Sofia Moschi,544.0,Sofia MOSCHI,1.0,https://utmb.world/runner/4536806.sofia.moschi,,,,,,,,,544.0,ITRA skipped because UTMB 544.0 <= threshold 680.0
+Enzo Corvaglia,544.0,Enzo CORVAGLIA,1.0,https://utmb.world/runner/6208262.enzo.corvaglia,,,,,,,,,544.0,ITRA skipped because UTMB 544.0 <= threshold 680.0
+Giulio Casarotto,543.0,Giulio CASAROTTO,1.0,https://utmb.world/runner/5220878.giulio.casarotto,,,,,,,,,543.0,ITRA skipped because UTMB 543.0 <= threshold 680.0
+Giovanni Marchi,541.0,Giovanni MARCHI,1.0,https://utmb.world/runner/34665.giovanni.marchi,,,,,,,,,541.0,ITRA skipped because UTMB 541.0 <= threshold 680.0
+Valentina Zanet,541.0,Valentina ZANET,1.0,https://utmb.world/runner/4459334.valentina.zanet,,,,,,,,,541.0,ITRA skipped because UTMB 541.0 <= threshold 680.0
+Vittorio Benvenuti,538.0,Vittorio BENVENUTI,1.0,https://utmb.world/runner/1060433.vittorio.benvenuti,,,,,,,,,538.0,ITRA skipped because UTMB 538.0 <= threshold 680.0
+Stefano Ragusa,537.0,Stefano RAGUSA,1.0,https://utmb.world/runner/345088.stefano.ragusa,,,,,,,,,537.0,ITRA skipped because UTMB 537.0 <= threshold 680.0
+Daniele Rigo,535.0,Daniele RIGO,1.0,https://utmb.world/runner/1435263.daniele.rigo,,,,,,,,,535.0,ITRA skipped because UTMB 535.0 <= threshold 680.0
+Andrea Salvatori,534.0,Andrea SALVATORI,1.0,https://utmb.world/runner/6961708.andrea.salvatori,,,,,,,,,534.0,ITRA skipped because UTMB 534.0 <= threshold 680.0
+Enrico Fonso,533.0,Enrico FONSO,1.0,https://utmb.world/runner/6539880.enrico.fonso,,,,,,,,,533.0,ITRA skipped because UTMB 533.0 <= threshold 680.0
+Roberta Casati,532.0,Roberta CASATI,1.0,https://utmb.world/runner/1718641.roberta.casati,,,,,,,,,532.0,ITRA skipped because UTMB 532.0 <= threshold 680.0
+Dylan Pomini,532.0,Dylan POMINI,1.0,https://utmb.world/runner/6539904.dylan.pomini,,,,,,,,,532.0,ITRA skipped because UTMB 532.0 <= threshold 680.0
+Mattia Zanella,531.0,Mattia ZANELLA,1.0,https://utmb.world/runner/7419888.mattia.zanella,,,,,,,,,531.0,ITRA skipped because UTMB 531.0 <= threshold 680.0
+Massimo Citton,531.0,Massimo CITTON,1.0,https://utmb.world/runner/5142652.massimo.citton,,,,,,,,,531.0,ITRA skipped because UTMB 531.0 <= threshold 680.0
+Raffale Salvadori,531.0,Raffaele SALVADORI,0.83,https://utmb.world/runner/945881.raffaele.salvadori,,,,,,,,,531.0,ITRA skipped because UTMB 531.0 <= threshold 680.0
+Fabiola Giudici,531.0,Fabiola GIUDICI,1.0,https://utmb.world/runner/1106467.fabiola.giudici,,,,,,,,,531.0,ITRA skipped because UTMB 531.0 <= threshold 680.0
+Rita Ferrarese,530.0,Rita FERRARESE,1.0,https://utmb.world/runner/1551759.rita.ferrarese,,,,,,,,,530.0,ITRA skipped because UTMB 530.0 <= threshold 680.0
+Osvaldo Pennacchi,529.0,Osvaldo PENNACCHI,1.0,https://utmb.world/runner/2978419.osvaldo.pennacchi,,,,,,,,,529.0,ITRA skipped because UTMB 529.0 <= threshold 680.0
+Sarah Natali,527.0,Sarah NATALI,1.0,https://utmb.world/runner/1343887.sarah.natali,,,,,,,,,527.0,ITRA skipped because UTMB 527.0 <= threshold 680.0
+Davide Frattin,525.0,Davide FRATTIN,1.0,https://utmb.world/runner/2009973.davide.frattin,,,,,,,,,525.0,ITRA skipped because UTMB 525.0 <= threshold 680.0
+Cristian Pasquinelli,524.0,Cristian PASQUINELLI,1.0,https://utmb.world/runner/2601221.cristian.pasquinelli,,,,,,,,,524.0,ITRA skipped because UTMB 524.0 <= threshold 680.0
+Thomas Piovesan,523.0,Thomas PIOVESAN,1.0,https://utmb.world/runner/7693158.thomas.piovesan,,,,,,,,,523.0,ITRA skipped because UTMB 523.0 <= threshold 680.0
+Marco De Vallier,522.0,Marco DE VALLIER,1.0,https://utmb.world/runner/445844.marco.devallier,,,,,,,,,522.0,ITRA skipped because UTMB 522.0 <= threshold 680.0
+Andrea Tonin,521.0,Andrea TONIN,1.0,https://utmb.world/runner/19531.andrea.tonin,,,,,,,,,521.0,ITRA skipped because UTMB 521.0 <= threshold 680.0
+Roberto Turatello,520.0,Roberto TURATELLO,1.0,https://utmb.world/runner/317188.roberto.turatello,,,,,,,,,520.0,ITRA skipped because UTMB 520.0 <= threshold 680.0
+Daniele Venier,517.0,Daniele VENIER,1.0,https://utmb.world/runner/1679539.daniele.venier,,,,,,,,,517.0,ITRA skipped because UTMB 517.0 <= threshold 680.0
+Claudio Fruet,516.0,Claudio FRUET,1.0,https://utmb.world/runner/4731592.claudio.fruet,,,,,,,,,516.0,ITRA skipped because UTMB 516.0 <= threshold 680.0
+Alessandro Fior,515.0,Alessandro FIOR,1.0,https://utmb.world/runner/2625061.alessandro.fior,,,,,,,,,515.0,ITRA skipped because UTMB 515.0 <= threshold 680.0
+Stefano Furlan,515.0,Stefano FURLAN,1.0,https://utmb.world/runner/4142526.stefano.furlan,,,,,,,,,515.0,ITRA skipped because UTMB 515.0 <= threshold 680.0
+Michele Carneri,515.0,Michele CARNERI,1.0,https://utmb.world/runner/4699986.michele.carneri,,,,,,,,,515.0,ITRA skipped because UTMB 515.0 <= threshold 680.0
+Enrico Mestriner,514.0,Enrico MESTRINER,1.0,https://utmb.world/runner/308632.enrico.mestriner,,,,,,,,,514.0,ITRA skipped because UTMB 514.0 <= threshold 680.0
+Riccardo Stefanutto,512.0,Riccardo STEFANUTTO,1.0,https://utmb.world/runner/6220576.riccardo.stefanutto,,,,,,,,,512.0,ITRA skipped because UTMB 512.0 <= threshold 680.0
+Marco Brunello,511.0,Marco BRUNELLO,1.0,https://utmb.world/runner/4678018.marco.brunello,,,,,,,,,511.0,ITRA skipped because UTMB 511.0 <= threshold 680.0
+Devis Bolzon,511.0,Devis BOLZON,1.0,https://utmb.world/runner/1524251.devis.bolzon,,,,,,,,,511.0,ITRA skipped because UTMB 511.0 <= threshold 680.0
+Fabrizio Floridia,510.0,Fabrizio FLORIDIA,1.0,https://utmb.world/runner/478939.fabrizio.floridia,,,,,,,,,510.0,ITRA skipped because UTMB 510.0 <= threshold 680.0
+Sabrina Signori,510.0,Sabrina SIGNORI,1.0,https://utmb.world/runner/446103.sabrina.signori,,,,,,,,,510.0,ITRA skipped because UTMB 510.0 <= threshold 680.0
+Luca Basso,508.0,Luca BASSO,1.0,https://utmb.world/runner/5451898.luca.basso,,,,,,,,,508.0,ITRA skipped because UTMB 508.0 <= threshold 680.0
+Renato Fontana,506.0,Renato FONTANA,1.0,https://utmb.world/runner/1435309.renato.fontana,,,,,,,,,506.0,ITRA skipped because UTMB 506.0 <= threshold 680.0
+Greshia Cappozzo,504.0,Greshia CAPPOZZO,1.0,https://utmb.world/runner/5064181.greshia.cappozzo,,,,,,,,,504.0,ITRA skipped because UTMB 504.0 <= threshold 680.0
+Mariano Stivanello,504.0,Mariano STIVANELLO,1.0,https://utmb.world/runner/653645.mariano.stivanello,,,,,,,,,504.0,ITRA skipped because UTMB 504.0 <= threshold 680.0
+Fabrizio Baldin,503.0,Fabrizio BALDIN,1.0,https://utmb.world/runner/4219642.fabrizio.baldin,,,,,,,,,503.0,ITRA skipped because UTMB 503.0 <= threshold 680.0
+Lavinia Ionescu,500.0,Lavinia IONESCU,1.0,https://utmb.world/runner/5835570.lavinia.ionescu,,,,,,,,,500.0,ITRA skipped because UTMB 500.0 <= threshold 680.0
+Damiano Bontorin,499.0,Damiano BONTORIN,1.0,https://utmb.world/runner/445942.damiano.bontorin,,,,,,,,,499.0,ITRA skipped because UTMB 499.0 <= threshold 680.0
+Monica Torres,498.0,Monica TORRES,1.0,https://utmb.world/runner/442388.monica.torres,,,,,,,,,498.0,ITRA skipped because UTMB 498.0 <= threshold 680.0
+Dania Bernardi,498.0,Dania BERNARDI,1.0,https://utmb.world/runner/1357713.dania.bernardi,,,,,,,,,498.0,ITRA skipped because UTMB 498.0 <= threshold 680.0
+Fabio Scattola,497.0,Fabio SCATTOLA,1.0,https://utmb.world/runner/6030806.fabio.scattola,,,,,,,,,497.0,ITRA skipped because UTMB 497.0 <= threshold 680.0
+Daniele Garbujo,497.0,Daniele GARBUJO,1.0,https://utmb.world/runner/4511728.daniele.garbujo,,,,,,,,,497.0,ITRA skipped because UTMB 497.0 <= threshold 680.0
+Alessandro Canal,497.0,Alessandro CANAL,1.0,https://utmb.world/runner/4104299.alessandro.canal,,,,,,,,,497.0,ITRA skipped because UTMB 497.0 <= threshold 680.0
+Andrea Bettega,495.0,Andrea BETTEGA,1.0,https://utmb.world/runner/5146184.andrea.bettega,,,,,,,,,495.0,ITRA skipped because UTMB 495.0 <= threshold 680.0
+Isidoro Bianchi,495.0,Isidoro BIANCHI,1.0,https://utmb.world/runner/117571.isidoro.bianchi,,,,,,,,,495.0,ITRA skipped because UTMB 495.0 <= threshold 680.0
+Mauro Bravi,494.0,Mauro BRAVI,1.0,https://utmb.world/runner/4765044.mauro.bravi,,,,,,,,,494.0,ITRA skipped because UTMB 494.0 <= threshold 680.0
+Giacomo Cecchini,494.0,Giacomo CECCHINI,1.0,https://utmb.world/runner/1913985.giacomo.cecchini,,,,,,,,,494.0,ITRA skipped because UTMB 494.0 <= threshold 680.0
+Elisabetta Gumiero,494.0,Elisabetta GUMIERO,1.0,https://utmb.world/runner/425001.elisabetta.gumiero,,,,,,,,,494.0,ITRA skipped because UTMB 494.0 <= threshold 680.0
+Angelo Pio Mondin,493.0,Angelo-Pio MONDIN,1.0,https://utmb.world/runner/445993.angelopio.mondin,,,,,,,,,493.0,ITRA skipped because UTMB 493.0 <= threshold 680.0
+Luca Scapin,493.0,Luca SCAPIN,1.0,https://utmb.world/runner/3658099.luca.scapin,,,,,,,,,493.0,ITRA skipped because UTMB 493.0 <= threshold 680.0
+Alessandro Sorgato,493.0,Alessandro SORGATO,1.0,https://utmb.world/runner/916693.alessandro.sorgato,,,,,,,,,493.0,ITRA skipped because UTMB 493.0 <= threshold 680.0
+Orienne Tomasella,493.0,Orienne TOMASELLA,1.0,https://utmb.world/runner/4128871.orienne.tomasella,,,,,,,,,493.0,ITRA skipped because UTMB 493.0 <= threshold 680.0
+Flavio Cariali,491.0,Flavio CARIALI,1.0,https://utmb.world/runner/1333133.flavio.cariali,,,,,,,,,491.0,ITRA skipped because UTMB 491.0 <= threshold 680.0
+Cesare Barbieri,490.0,Cesare BARBIERI,1.0,https://utmb.world/runner/1357715.cesare.barbieri,,,,,,,,,490.0,ITRA skipped because UTMB 490.0 <= threshold 680.0
+Vanni Zucchello,489.0,Vanni ZUCCHELLO,1.0,https://utmb.world/runner/2009753.vanni.zucchello,,,,,,,,,489.0,ITRA skipped because UTMB 489.0 <= threshold 680.0
+Matteo Ostanello,488.0,Matteo OSTANELLO,1.0,https://utmb.world/runner/1853001.matteo.ostanello,,,,,,,,,488.0,ITRA skipped because UTMB 488.0 <= threshold 680.0
+Guido Bortolot,487.0,Guido BORTOLOT,1.0,https://utmb.world/runner/478973.guido.bortolot,,,,,,,,,487.0,ITRA skipped because UTMB 487.0 <= threshold 680.0
+Carlo Dal Vecchio,487.0,Carlo DAL VECCHIO,1.0,https://utmb.world/runner/60121.carlo.dalvecchio,,,,,,,,,487.0,ITRA skipped because UTMB 487.0 <= threshold 680.0
+Fabio Eugenio Redaelli,484.0,Fabio Eugenio REDAELLI,1.0,https://utmb.world/runner/3152295.fabioeugenio.redaelli,,,,,,,,,484.0,ITRA skipped because UTMB 484.0 <= threshold 680.0
+Florian Hofer,484.0,Florian HOFER,1.0,https://utmb.world/runner/2050285.florian.hofer,,,,,,,,,484.0,ITRA skipped because UTMB 484.0 <= threshold 680.0
+Erika Pold,483.0,Erika POLD,1.0,https://utmb.world/runner/4187730.erika.pold,,,,,,,,,483.0,ITRA skipped because UTMB 483.0 <= threshold 680.0
+Luca Busatto,483.0,Luca BUSATTO,1.0,https://utmb.world/runner/1384471.luca.busatto,,,,,,,,,483.0,ITRA skipped because UTMB 483.0 <= threshold 680.0
+LORIS GALEOTTI,483.0,Loris GALEOTTI,1.0,https://utmb.world/runner/3636225.loris.galeotti,,,,,,,,,483.0,ITRA skipped because UTMB 483.0 <= threshold 680.0
+Marcella Orizio,482.0,Marcella ORIZIO,1.0,https://utmb.world/runner/2362627.marcella.orizio,,,,,,,,,482.0,ITRA skipped because UTMB 482.0 <= threshold 680.0
+Renato Mortagna,482.0,Renato MORTAGNA,1.0,https://utmb.world/runner/4741192.renato.mortagna,,,,,,,,,482.0,ITRA skipped because UTMB 482.0 <= threshold 680.0
+Laura Gavazzi,482.0,Laura GAVAZZI,1.0,https://utmb.world/runner/1913845.laura.gavazzi,,,,,,,,,482.0,ITRA skipped because UTMB 482.0 <= threshold 680.0
+Alessandro Marangon,481.0,Alessandro MARANGON,1.0,https://utmb.world/runner/3012485.alessandro.marangon,,,,,,,,,481.0,ITRA skipped because UTMB 481.0 <= threshold 680.0
+Mirco Poloni,481.0,Mirco POLONI,1.0,https://utmb.world/runner/749596.mirco.poloni,,,,,,,,,481.0,ITRA skipped because UTMB 481.0 <= threshold 680.0
+Paolo Ernesto Maccagnan,480.0,Paolo Ernesto MACCAGNAN,1.0,https://utmb.world/runner/4951354.paoloernesto.maccagnan,,,,,,,,,480.0,ITRA skipped because UTMB 480.0 <= threshold 680.0
+Alessandero Marzaro,477.0,Alessandro MARZARO,0.8310810810810811,https://utmb.world/runner/2036591.alessandro.marzaro,,,,,,,,,477.0,ITRA skipped because UTMB 477.0 <= threshold 680.0
+Michele Baroni,477.0,Michele BARONI,1.0,https://utmb.world/runner/7335404.michele.baroni,,,,,,,,,477.0,ITRA skipped because UTMB 477.0 <= threshold 680.0
+Massimo Pinton,476.0,Massimo PINTON,1.0,https://utmb.world/runner/2624999.massimo.pinton,,,,,,,,,476.0,ITRA skipped because UTMB 476.0 <= threshold 680.0
+Vinicio Celadin,475.0,Vinicio CELADIN,1.0,https://utmb.world/runner/4009136.vinicio.celadin,,,,,,,,,475.0,ITRA skipped because UTMB 475.0 <= threshold 680.0
+Irene Gaiot,475.0,Irene GAIOT,1.0,https://utmb.world/runner/1679515.irene.gaiot,,,,,,,,,475.0,ITRA skipped because UTMB 475.0 <= threshold 680.0
+Mauro Lorenzetto,474.0,Mauro LORENZETTO,1.0,https://utmb.world/runner/7196806.mauro.lorenzetto,,,,,,,,,474.0,ITRA skipped because UTMB 474.0 <= threshold 680.0
+Monica Groff,474.0,Monica GROFF,1.0,https://utmb.world/runner/3009241.monica.groff,,,,,,,,,474.0,ITRA skipped because UTMB 474.0 <= threshold 680.0
+Roberto Zanco,474.0,Roberto ZANCO,1.0,https://utmb.world/runner/2054865.roberto.zanco,,,,,,,,,474.0,ITRA skipped because UTMB 474.0 <= threshold 680.0
+Francesca Lovisotto,472.0,Francesca LOVISOTTO,1.0,https://utmb.world/runner/1061779.francesca.lovisotto,,,,,,,,,472.0,ITRA skipped because UTMB 472.0 <= threshold 680.0
+Ruggero Silimbani,470.0,Ruggero SILIMBANI,1.0,https://utmb.world/runner/319478.ruggero.silimbani,,,,,,,,,470.0,ITRA skipped because UTMB 470.0 <= threshold 680.0
+Mauro Gambaiani,470.0,Mauro GAMBAIANI,1.0,https://utmb.world/runner/230509.mauro.gambaiani,,,,,,,,,470.0,ITRA skipped because UTMB 470.0 <= threshold 680.0
+Raùl Alberto Nieto,470.0,Raùl Alberto NIETO,1.0,https://utmb.world/runner/972527.raulalberto.nieto,,,,,,,,,470.0,ITRA skipped because UTMB 470.0 <= threshold 680.0
+Silvia Cavazzuti,468.0,Silvia CAVAZZUTI,1.0,https://utmb.world/runner/1717731.silvia.cavazzuti,,,,,,,,,468.0,ITRA skipped because UTMB 468.0 <= threshold 680.0
+Rita Pizzardo,467.0,Rita PIZZARDO,1.0,https://utmb.world/runner/4465750.rita.pizzardo,,,,,,,,,467.0,ITRA skipped because UTMB 467.0 <= threshold 680.0
+Alessandro Menato,467.0,Alessandro MENATO,1.0,https://utmb.world/runner/1333031.alessandro.menato,,,,,,,,,467.0,ITRA skipped because UTMB 467.0 <= threshold 680.0
+Enrico Merlo,466.0,Enrico MERLO,1.0,https://utmb.world/runner/4465906.enrico.merlo,,,,,,,,,466.0,ITRA skipped because UTMB 466.0 <= threshold 680.0
+Paolo Grando,465.0,Paolo GRANDO,1.0,https://utmb.world/runner/7244602.paolo.grando,,,,,,,,,465.0,ITRA skipped because UTMB 465.0 <= threshold 680.0
+Michele De Pieri,464.0,Michele DE PIERI,1.0,https://utmb.world/runner/7061458.michele.depieri,,,,,,,,,464.0,ITRA skipped because UTMB 464.0 <= threshold 680.0
+Elisabetta Varotto,463.0,Elisabetta VAROTTO,1.0,https://utmb.world/runner/7299044.elisabetta.varotto,,,,,,,,,463.0,ITRA skipped because UTMB 463.0 <= threshold 680.0
+Paolo De Biasi,461.0,Paolo DE BIASI,1.0,https://utmb.world/runner/60114.paolo.debiasi,,,,,,,,,461.0,ITRA skipped because UTMB 461.0 <= threshold 680.0
+Michele Somenzi,461.0,Michele SOMENZI,1.0,https://utmb.world/runner/5148632.michele.somenzi,,,,,,,,,461.0,ITRA skipped because UTMB 461.0 <= threshold 680.0
+Daniele Roman,459.0,Daniele ROMAN,1.0,https://utmb.world/runner/982615.daniele.roman,,,,,,,,,459.0,ITRA skipped because UTMB 459.0 <= threshold 680.0
+Michael Bolzon,459.0,Michael BOLZON,1.0,https://utmb.world/runner/5036316.michael.bolzon,,,,,,,,,459.0,ITRA skipped because UTMB 459.0 <= threshold 680.0
+Alessio Zemignani,458.0,Alessio ZEMIGNANI,1.0,https://utmb.world/runner/1328435.alessio.zemignani,,,,,,,,,458.0,ITRA skipped because UTMB 458.0 <= threshold 680.0
+Stefano Grandi,457.0,Stefano GRANDI,1.0,https://utmb.world/runner/654102.stefano.grandi,,,,,,,,,457.0,ITRA skipped because UTMB 457.0 <= threshold 680.0
+Lucia Mitolo,457.0,Lucia MITOLO,1.0,https://utmb.world/runner/7040574.lucia.mitolo,,,,,,,,,457.0,ITRA skipped because UTMB 457.0 <= threshold 680.0
+Luca Roncolato,456.0,Luca RONCOLATO,1.0,https://utmb.world/runner/323113.luca.roncolato,,,,,,,,,456.0,ITRA skipped because UTMB 456.0 <= threshold 680.0
+Gaetano Calgaro,454.0,Gaetano CALGARO,1.0,https://utmb.world/runner/109302.gaetano.calgaro,,,,,,,,,454.0,ITRA skipped because UTMB 454.0 <= threshold 680.0
+Camilla Lorenzoni,453.0,Camilla LORENZONI,1.0,https://utmb.world/runner/4465656.camilla.lorenzoni,,,,,,,,,453.0,ITRA skipped because UTMB 453.0 <= threshold 680.0
+Piergiorgio Del Ben,452.0,Piergiorgio DEL BEN,1.0,https://utmb.world/runner/5558684.piergiorgio.delben,,,,,,,,,452.0,ITRA skipped because UTMB 452.0 <= threshold 680.0
+Alessandro Ortolan,452.0,Alessandro ORTOLAN,1.0,https://utmb.world/runner/7397430.alessandro.ortolan,,,,,,,,,452.0,ITRA skipped because UTMB 452.0 <= threshold 680.0
+Nicola Borgato,452.0,Nicola BORGATO,1.0,https://utmb.world/runner/1333125.nicola.borgato,,,,,,,,,452.0,ITRA skipped because UTMB 452.0 <= threshold 680.0
+Edoardo Bridda,448.0,Edoardo BRIDDA,1.0,https://utmb.world/runner/5494669.edoardo.bridda,,,,,,,,,448.0,ITRA skipped because UTMB 448.0 <= threshold 680.0
+Margherita Manzan,447.0,Margherita MANZAN,1.0,https://utmb.world/runner/5148724.margherita.manzan,,,,,,,,,447.0,ITRA skipped because UTMB 447.0 <= threshold 680.0
+Giorgia Vanin,446.0,Giorgia VANIN,1.0,https://utmb.world/runner/4132201.giorgia.vanin,,,,,,,,,446.0,ITRA skipped because UTMB 446.0 <= threshold 680.0
+Roberto Maestrini,444.0,Roberto MAESTRINI,1.0,https://utmb.world/runner/8234880.roberto.maestrini,,,,,,,,,444.0,ITRA skipped because UTMB 444.0 <= threshold 680.0
+Ivan Miorelli,442.0,Ivan MIORELLI,1.0,https://utmb.world/runner/2625049.ivan.miorelli,,,,,,,,,442.0,ITRA skipped because UTMB 442.0 <= threshold 680.0
+Paola Cogo,442.0,Paola COGO,1.0,https://utmb.world/runner/1313487.paola.cogo,,,,,,,,,442.0,ITRA skipped because UTMB 442.0 <= threshold 680.0
+Jürgen Ledl,437.0,Jurgen LEDL,1.0,https://utmb.world/runner/743818.jurgen.ledl,,,,,,,,,437.0,ITRA skipped because UTMB 437.0 <= threshold 680.0
+Cristina Bovo,433.0,Cristina BOVO,1.0,https://utmb.world/runner/3460145.cristina.bovo,,,,,,,,,433.0,ITRA skipped because UTMB 433.0 <= threshold 680.0
+Mattia Martinello,433.0,Mattia MARTINELLO,1.0,https://utmb.world/runner/8325996.mattia.martinello,,,,,,,,,433.0,ITRA skipped because UTMB 433.0 <= threshold 680.0
+Ilenia Piroddi,430.0,Ilenia PIRODDI,1.0,https://utmb.world/runner/3786563.ilenia.piroddi,,,,,,,,,430.0,ITRA skipped because UTMB 430.0 <= threshold 680.0
+Michele Barison,426.0,Michele BARISON,1.0,https://utmb.world/runner/488019.michele.barison,,,,,,,,,426.0,ITRA skipped because UTMB 426.0 <= threshold 680.0
+Margherita Limongi,425.0,Margherita LIMONGI,1.0,https://utmb.world/runner/3242859.margherita.limongi,,,,,,,,,425.0,ITRA skipped because UTMB 425.0 <= threshold 680.0
+Christian Gallimberti,424.0,Christian GALLIMBERTI,1.0,https://utmb.world/runner/624415.christian.gallimberti,,,,,,,,,424.0,ITRA skipped because UTMB 424.0 <= threshold 680.0
+Nicolò Rampin,422.0,Nicolò RAMPIN,1.0,https://utmb.world/runner/7800794.nicolo.rampin,,,,,,,,,422.0,ITRA skipped because UTMB 422.0 <= threshold 680.0
+Arianna Cagnin,421.0,Arianna CAGNIN,1.0,https://utmb.world/runner/5028200.arianna.cagnin,,,,,,,,,421.0,ITRA skipped because UTMB 421.0 <= threshold 680.0
+Debora Barbisan,420.0,Debora BARBISAN,1.0,https://utmb.world/runner/5585100.debora.barbisan,,,,,,,,,420.0,ITRA skipped because UTMB 420.0 <= threshold 680.0
+Roberto Giacomini,419.0,Roberto GIACOMINI,1.0,https://utmb.world/runner/19497.roberto.giacomini,,,,,,,,,419.0,ITRA skipped because UTMB 419.0 <= threshold 680.0
+Giorgio Gentilezza,416.0,Giorgio GENTILEZZA,1.0,https://utmb.world/runner/6030912.giorgio.gentilezza,,,,,,,,,416.0,ITRA skipped because UTMB 416.0 <= threshold 680.0
+Nadia Turato,413.0,Nadia TURATO,1.0,https://utmb.world/runner/1913521.nadia.turato,,,,,,,,,413.0,ITRA skipped because UTMB 413.0 <= threshold 680.0
+Tatiana Peruffo,411.0,Tatiana PERUFFO,1.0,https://utmb.world/runner/3506285.tatiana.peruffo,,,,,,,,,411.0,ITRA skipped because UTMB 411.0 <= threshold 680.0
+Raffaella Bonetti,411.0,Raffaella BONETTI,1.0,https://utmb.world/runner/445836.raffaella.bonetti,,,,,,,,,411.0,ITRA skipped because UTMB 411.0 <= threshold 680.0
+Francesco Greggio,408.0,Francesco GREGGIO,1.0,https://utmb.world/runner/987017.francesco.greggio,,,,,,,,,408.0,ITRA skipped because UTMB 408.0 <= threshold 680.0
+Yuri Fabbri,404.0,Yuri FABBRI,1.0,https://utmb.world/runner/319489.yuri.fabbri,,,,,,,,,404.0,ITRA skipped because UTMB 404.0 <= threshold 680.0
+Roberto Petrolini,403.0,Roberto PETROLINI,1.0,https://utmb.world/runner/7241406.roberto.petrolini,,,,,,,,,403.0,ITRA skipped because UTMB 403.0 <= threshold 680.0
+Cristian Boscaro,398.0,Cristian BOSCARO,1.0,https://utmb.world/runner/1913423.cristian.boscaro,,,,,,,,,398.0,ITRA skipped because UTMB 398.0 <= threshold 680.0
+Fontana Robero,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+Alessandro Erroi,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+Giorgio Marin,0.0,Giorgio MARIN,1.0,https://utmb.world/runner/19874.giorgio.marin,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Davide Zambon,0.0,Davide ZAMBON,1.0,https://utmb.world/runner/311876.davide.zambon,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Loris Merlo,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+Matteo Venuti,0.0,Matteo VENUTI,1.0,https://utmb.world/runner/3451865.matteo.venuti,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Mirta Romana Lydia Maria Basile Giannini,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+Elena Calzavara,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+Tania Asunta Carlet,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+Melih Namdar,0.0,Melih NAMDAR,1.0,https://utmb.world/runner/7680950.melih.namdar,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Kyle Grogan,0.0,Kyle GROGAN,1.0,https://utmb.world/runner/3380149.kyle.grogan,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Paolo Bizzotto,0.0,Paolo BIZZOTTO,1.0,https://utmb.world/runner/21270.paolo.bizzotto,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+Oscar Da Re,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+Luca Angelino,,,,,,,,,,,,,0.0,UTMB not found; ITRA not found
+ANGELO BARISAN,0.0,Angelo BARISAN,1.0,https://utmb.world/runner/624265.angelo.barisan,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0
+MARCO LONDEI,0.0,Marco LONDEI,1.0,https://utmb.world/runner/8479018.marco.londei,,,,,,,,,0.0,ITRA skipped because UTMB 0.0 <= threshold 680.0

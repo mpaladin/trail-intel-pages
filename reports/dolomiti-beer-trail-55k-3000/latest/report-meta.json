@@ -1,18 +1,18 @@
 {
-  "report_kind": "race",
   "title": "Dolomiti Beer Trail",
-  "generated_at": "2026-04-08T16:45:12.221389+00:00",
-  "participants_count": 6,
-  "rows_evaluated": 6,
-  "qualified_count": 0,
+  "generated_at": "2026-04-06T19:14:34.549701+00:00",
+  "participants_count": 263,
+  "rows_evaluated": 263,
+  "qualified_count": 22,
   "strategy": "participant-first",
-  "race_url": "https://my.raceresult.com/375451/",
+  "race_url": "https://my.raceresult.com/375451/participants",
   "competition_name": "55k +3000",
   "score_threshold": 680.0,
-  "published_at": "2026-04-08T16:45:16.249753+00:00",
+  "published_at": "2026-04-06T19:14:36.567608+00:00",
   "race_slug": "dolomiti-beer-trail-55k-3000",
   "race_name": "Dolomiti Beer Trail",
   "report_path": "reports/dolomiti-beer-trail-55k-3000/latest/index.html",
   "csv_path": "reports/dolomiti-beer-trail-55k-3000/latest/report.csv",
-  "json_path": "reports/dolomiti-beer-trail-55k-3000/latest/report.json"
+  "json_path": "reports/dolomiti-beer-trail-55k-3000/latest/report.json",
+  "report_kind": "race"
 }
