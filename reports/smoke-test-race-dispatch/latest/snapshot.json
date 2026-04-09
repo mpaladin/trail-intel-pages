@@ -1,0 +1,130 @@
+{
+  "report_kind": "race",
+  "title": "Smoke Test Race Dispatch",
+  "participants_count": 3,
+  "rows_evaluated": 3,
+  "qualified_count": 3,
+  "strategy": "participant-first",
+  "rows": [
+    {
+      "Rank": 1,
+      "Athlete": "Jim Walmsley",
+      "UTMB": "951.0",
+      "ITRA": "958.0",
+      "Betrail": "96.6",
+      "Combined": "953.8",
+      "UTMB Matched Name": "Jim WALMSLEY",
+      "ITRA Matched Name": "Jim WALMSLEY",
+      "Betrail Matched Name": "WALMSLEY JIM",
+      "UTMB Profile": "https://utmb.world/runner/485740.jim.walmsley",
+      "ITRA Profile": "https://itra.run/RunnerSpace/WALMSLEY.Jim/485740",
+      "Betrail Profile": "https://www.betrail.run/runner/walmsley.jim/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 2,
+      "Athlete": "Kilian Jornet",
+      "UTMB": "929.0",
+      "ITRA": "944.0",
+      "Betrail": "95.9",
+      "Combined": "935.0",
+      "UTMB Matched Name": "Kilian JORNET BURGADA",
+      "ITRA Matched Name": "Kilian JORNET BURGADA",
+      "Betrail Matched Name": "JORNET BURGADA KILIAN",
+      "UTMB Profile": "https://utmb.world/runner/2704.kilian.jornetburgada",
+      "ITRA Profile": "https://itra.run/RunnerSpace/JORNET BURGADA.Kilian/2704",
+      "Betrail Profile": "https://www.betrail.run/runner/jornet.burgada.kilian/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 3,
+      "Athlete": "Courtney Dauwalter",
+      "UTMB": "837.0",
+      "ITRA": "845.0",
+      "Betrail": "-",
+      "Combined": "840.2",
+      "UTMB Matched Name": "Courtney DAUWALTER",
+      "ITRA Matched Name": "Courtney DAUWALTER",
+      "Betrail Matched Name": "",
+      "UTMB Profile": "https://utmb.world/runner/30959.courtney.dauwalter",
+      "ITRA Profile": "https://itra.run/RunnerSpace/DAUWALTER.Courtney/30959",
+      "Betrail Profile": "",
+      "Notes": "Betrail catalog unavailable: Betrail request blocked by Cloudflare."
+    }
+  ],
+  "export_rows": [
+    {
+      "Rank": 1,
+      "Athlete": "Jim Walmsley",
+      "UTMB": "951.0",
+      "ITRA": "958.0",
+      "Betrail": "96.6",
+      "Combined": "953.8",
+      "UTMB Matched Name": "Jim WALMSLEY",
+      "ITRA Matched Name": "Jim WALMSLEY",
+      "Betrail Matched Name": "WALMSLEY JIM",
+      "UTMB Profile": "https://utmb.world/runner/485740.jim.walmsley",
+      "ITRA Profile": "https://itra.run/RunnerSpace/WALMSLEY.Jim/485740",
+      "Betrail Profile": "https://www.betrail.run/runner/walmsley.jim/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 2,
+      "Athlete": "Kilian Jornet",
+      "UTMB": "929.0",
+      "ITRA": "944.0",
+      "Betrail": "95.9",
+      "Combined": "935.0",
+      "UTMB Matched Name": "Kilian JORNET BURGADA",
+      "ITRA Matched Name": "Kilian JORNET BURGADA",
+      "Betrail Matched Name": "JORNET BURGADA KILIAN",
+      "UTMB Profile": "https://utmb.world/runner/2704.kilian.jornetburgada",
+      "ITRA Profile": "https://itra.run/RunnerSpace/JORNET BURGADA.Kilian/2704",
+      "Betrail Profile": "https://www.betrail.run/runner/jornet.burgada.kilian/overview",
+      "Notes": ""
+    },
+    {
+      "Rank": 3,
+      "Athlete": "Courtney Dauwalter",
+      "UTMB": "837.0",
+      "ITRA": "845.0",
+      "Betrail": "-",
+      "Combined": "840.2",
+      "UTMB Matched Name": "Courtney DAUWALTER",
+      "ITRA Matched Name": "Courtney DAUWALTER",
+      "Betrail Matched Name": "",
+      "UTMB Profile": "https://utmb.world/runner/30959.courtney.dauwalter",
+      "ITRA Profile": "https://itra.run/RunnerSpace/DAUWALTER.Courtney/30959",
+      "Betrail Profile": "",
+      "Notes": "Betrail catalog unavailable: Betrail request blocked by Cloudflare."
+    }
+  ],
+  "no_result_names": [],
+  "utmb_scores": [
+    951.0,
+    929.0,
+    837.0
+  ],
+  "itra_scores": [
+    958.0,
+    944.0,
+    845.0
+  ],
+  "betrail_scores": [
+    96.59,
+    95.86
+  ],
+  "score_summary": {
+    "participants": 3,
+    "with_utmb": 3,
+    "with_itra": 3,
+    "with_betrail": 2,
+    "with_any": 3
+  },
+  "stale_provider_fallback_used": false,
+  "race_url": "https://gist.githubusercontent.com/mpaladin/fec58426072bac3d5f15ad3ed1764913/raw/efa9651a3c7da490c7c46ab9fdb40abbe98846ef/participants.csv",
+  "competition_name": "",
+  "score_threshold": 680.0,
+  "sort_by": "combined",
+  "generated_at": "2026-04-09T17:20:17.940876+00:00"
+}

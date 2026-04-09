@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "Smoke Test Race Dispatch",
+  "generated_at": "2026-04-09T17:20:17.940876+00:00",
+  "participants_count": 3,
+  "rows_evaluated": 3,
+  "qualified_count": 3,
+  "strategy": "participant-first",
+  "race_url": "https://gist.githubusercontent.com/mpaladin/fec58426072bac3d5f15ad3ed1764913/raw/efa9651a3c7da490c7c46ab9fdb40abbe98846ef/participants.csv",
+  "competition_name": "",
+  "score_threshold": 680.0,
+  "published_at": "2026-04-09T17:20:21.155142+00:00",
+  "race_slug": "smoke-test-race-dispatch",
+  "race_name": "Smoke Test Race Dispatch",
+  "report_path": "reports/smoke-test-race-dispatch/20260409-172021/index.html",
+  "csv_path": "reports/smoke-test-race-dispatch/20260409-172021/report.csv",
+  "json_path": "reports/smoke-test-race-dispatch/20260409-172021/report.json"
+}
