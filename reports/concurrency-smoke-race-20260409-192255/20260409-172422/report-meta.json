@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "Concurrency Smoke Race 20260409-192255",
+  "generated_at": "2026-04-09T17:24:18.999047+00:00",
+  "participants_count": 3,
+  "rows_evaluated": 3,
+  "qualified_count": 3,
+  "strategy": "participant-first",
+  "race_url": "https://gist.githubusercontent.com/mpaladin/fec58426072bac3d5f15ad3ed1764913/raw/efa9651a3c7da490c7c46ab9fdb40abbe98846ef/participants.csv",
+  "competition_name": "",
+  "score_threshold": 680.0,
+  "published_at": "2026-04-09T17:24:22.687398+00:00",
+  "race_slug": "concurrency-smoke-race-20260409-192255",
+  "race_name": "Concurrency Smoke Race 20260409-192255",
+  "report_path": "reports/concurrency-smoke-race-20260409-192255/20260409-172422/index.html",
+  "csv_path": "reports/concurrency-smoke-race-20260409-192255/20260409-172422/report.csv",
+  "json_path": "reports/concurrency-smoke-race-20260409-192255/20260409-172422/report.json"
+}
