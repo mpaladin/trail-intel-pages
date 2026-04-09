@@ -1,0 +1,53 @@
+[
+  {
+    "input_name": "Jim Walmsley",
+    "utmb_index": 951.0,
+    "utmb_match_name": "Jim WALMSLEY",
+    "utmb_match_score": 0.7666666666666666,
+    "utmb_profile_url": "https://utmb.world/runner/485740.jim.walmsley",
+    "itra_score": 958.0,
+    "itra_match_name": "Jim WALMSLEY",
+    "itra_match_score": 0.7666666666666666,
+    "itra_profile_url": "https://itra.run/RunnerSpace/WALMSLEY.Jim/485740",
+    "betrail_score": 96.59,
+    "betrail_match_name": "WALMSLEY JIM",
+    "betrail_match_score": 1.0,
+    "betrail_profile_url": "https://www.betrail.run/runner/walmsley.jim/overview",
+    "notes": "",
+    "combined_score": 953.8000000000001
+  },
+  {
+    "input_name": "Kilian Jornet",
+    "utmb_index": 929.0,
+    "utmb_match_name": "Kilian JORNET BURGADA",
+    "utmb_match_score": 0.8352941176470587,
+    "utmb_profile_url": "https://utmb.world/runner/2704.kilian.jornetburgada",
+    "itra_score": 944.0,
+    "itra_match_name": "Kilian JORNET BURGADA",
+    "itra_match_score": 0.8352941176470587,
+    "itra_profile_url": "https://itra.run/RunnerSpace/JORNET BURGADA.Kilian/2704",
+    "betrail_score": null,
+    "betrail_match_name": null,
+    "betrail_match_score": null,
+    "betrail_profile_url": null,
+    "notes": "Betrail catalog unavailable: Betrail request blocked by Cloudflare.",
+    "combined_score": 935.0
+  },
+  {
+    "input_name": "Courtney Dauwalter",
+    "utmb_index": 837.0,
+    "utmb_match_name": "Courtney DAUWALTER",
+    "utmb_match_score": 1.0,
+    "utmb_profile_url": "https://utmb.world/runner/30959.courtney.dauwalter",
+    "itra_score": 845.0,
+    "itra_match_name": "Courtney DAUWALTER",
+    "itra_match_score": 1.0,
+    "itra_profile_url": "https://itra.run/RunnerSpace/DAUWALTER.Courtney/30959",
+    "betrail_score": null,
+    "betrail_match_name": null,
+    "betrail_match_score": null,
+    "betrail_profile_url": null,
+    "notes": "Betrail catalog unavailable: Betrail request blocked by Cloudflare.",
+    "combined_score": 840.2
+  }
+]
