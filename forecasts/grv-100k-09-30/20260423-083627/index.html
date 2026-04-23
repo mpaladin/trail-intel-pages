@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GRV 100k 09:30</title>
+  <style>
+    
+    :root {
+      color-scheme: light;
+      --page-bg: #f3ece2;
+      --panel: rgba(255, 252, 247, 0.92);
+      --panel-strong: #fffdf9;
+      --panel-soft: #f8f2ea;
+      --text: #1f1c18;
+      --muted: #6a6056;
+      --line: rgba(117, 98, 74, 0.20);
+      --line-strong: rgba(117, 98, 74, 0.32);
+      --shadow: 0 24px 64px rgba(35, 24, 9, 0.10);
+      --accent: #0e5b85;
+      --accent-strong: #0b4462;
+      --accent-soft: rgba(14, 91, 133, 0.16);
+      --hero-start: rgba(14, 91, 133, 0.14);
+      --hero-end: rgba(31, 59, 92, 0.16);
+      --pill-bg: rgba(14, 91, 133, 0.12);
+      --pill-text: #0b4462;
+      --warning-bg: #fff3d4;
+      --warning-text: #734700;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Avenir Next", "Segoe UI", sans-serif;
+      font-family: var(--body-font);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 28%),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 32%),
+        radial-gradient(circle at top, #fbf7f1 0%, var(--page-bg) 54%, #e7dccb 100%);
+    }
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 22px 18px 56px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .nav-brand {
+      font-family: var(--heading-font);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .nav-link.is-active {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 32px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, var(--hero-start), var(--hero-end)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -48px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      letter-spacing: -0.01em;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 14ch;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 0.96;
+    }
+    .hero-lead {
+      margin: 14px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.6;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.60);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--panel-strong);
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+    .action-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .action-link.primary {
+      color: #ffffff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .metric-card {
+      min-height: 122px;
+      padding: 16px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 10px;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    .metric-subvalue {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+    .section-stack {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .panel {
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px 16px;
+      margin-bottom: 14px;
+    }
+    .panel h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2.05rem);
+      line-height: 1.02;
+    }
+    .section-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .collection-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .collection-card {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      line-height: 1.04;
+    }
+    .card-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .card-meta {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .warning {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(115, 71, 0, 0.20);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      line-height: 1.55;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .chart-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .chart-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.16rem;
+    }
+    .hist-row {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr) 52px;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .hist-label,
+    .hist-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-track {
+      min-height: 28px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--panel-soft);
+    }
+    .hist-bar {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-empty {
+      background: transparent;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+    .results-table th,
+    .results-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(117, 98, 74, 0.14);
+      text-align: left;
+      vertical-align: top;
+    }
+    .results-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #fbf6ef;
+      color: var(--muted);
+      font-size: 0.79rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .results-table tbody tr:nth-child(even) {
+      background: rgba(248, 242, 234, 0.65);
+    }
+    .rank-cell,
+    .score-cell {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .athlete-cell strong {
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .supporting-cell,
+    .link-cell,
+    .notes-cell {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .notes-cell {
+      min-width: 180px;
+    }
+    .compact-table {
+      max-width: 480px;
+    }
+    .chart-frame {
+      padding: 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+    .chart-frame img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+    }
+    .empty-state {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px dashed var(--line-strong);
+      background: rgba(255, 255, 255, 0.45);
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .page { padding: 16px 12px 34px; }
+      .site-nav { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 26px 22px; }
+      .panel { padding: 20px; }
+      .card-top { flex-direction: column; }
+      .hist-row { grid-template-columns: 72px minmax(0, 1fr) 42px; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { max-width: none; }
+      .meta-chip { white-space: normal; }
+      .results-table th,
+      .results-table td { padding: 9px 10px; }
+    }
+    
+  </style>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uplot@1.6.32/dist/uPlot.min.css" integrity="sha384-IfV0B7MIOYuO95kO9G5ySKPz/85zqFNOAs8iy4tkK5zd9izhJAB8b7lHrwYqqmYE" crossorigin="anonymous">
+  <style>
+    .forecast-map-stage {
+      display: grid;
+      overflow: hidden;
+      min-height: 360px;
+      margin-top: 18px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.82), transparent 30%),
+        linear-gradient(160deg, rgba(14, 91, 133, 0.14), rgba(242, 104, 42, 0.12));
+    }
+    .forecast-map-stage > * {
+      grid-area: 1 / 1;
+    }
+    .forecast-map-stage.is-live .map-fallback {
+      display: none;
+    }
+    .interactive-map,
+    .map-fallback {
+      width: 100%;
+      min-height: 360px;
+    }
+    .interactive-map {
+      background: #e1e8e2;
+    }
+    .map-fallback {
+      padding: 10px;
+    }
+    .route-map {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .map-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    .leaflet-container {
+      font-family: var(--body-font);
+    }
+    .leaflet-control-attribution {
+      background: rgba(255, 255, 255, 0.82) !important;
+      backdrop-filter: blur(8px);
+    }
+    .leaflet-control-attribution a {
+      color: var(--accent-strong);
+    }
+    .provider-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .provider-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .provider-swatch {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 999px;
+      background: var(--provider-color);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+    }
+    .provider-pill {
+      min-height: 28px;
+      padding: 0 10px;
+      font-size: 0.74rem;
+    }
+    .forecast-chart-hover {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .forecast-chart-hover strong {
+      color: var(--text);
+    }
+    .forecast-chart-hover-grid {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .forecast-chart-hover-row {
+      display: grid;
+      gap: 4px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.65);
+    }
+    .forecast-chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .forecast-chart-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .forecast-chart-card h3 {
+      margin: 0;
+      font-size: 1.16rem;
+    }
+    .chart-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    .forecast-chart-canvas {
+      margin-top: 14px;
+      min-height: 340px;
+      padding: 12px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      overflow: hidden;
+    }
+    .forecast-chart-canvas .uplot {
+      width: 100%;
+    }
+    @media (max-width: 980px) {
+      .forecast-chart-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .forecast-chart-canvas {
+        min-height: 300px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <main class="page">
+    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="../../../index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link" href="../../../index.html">Home</a><a class="nav-link" href="../../../reports/index.html">Race Reports</a><a class="nav-link is-active" href="../../index.html" aria-current="page">Forecasts</a></div></nav>
+    
+    <section class="hero">
+      <p class="eyebrow">Route Forecast</p>
+      <h1>GRV 100k 09:30</h1>
+      <p class="hero-lead">Weather outlook for a 86.12 km route starting Apr 25, 2026 at 06:30 UTC+02:00.</p>
+      <div class="meta-row"><span class="meta-chip">Published Apr 23, 2026 at 08:36 UTC</span><span class="meta-chip">Europe/Rome</span><span class="meta-chip">Open-Meteo Forecast API</span></div>
+      <div class="action-row">
+        <a class="action-link primary" href="forecast.png">Download PNG</a>
+        <a class="action-link secondary" href="route.gpx">Download GPX</a>
+        <a class="action-link secondary" href="snapshot.json">Download JSON</a>
+      </div>
+      <div class="metric-grid"><div class="metric-card"><div class="metric-label">Start</div><div class="metric-value">Apr 25, 2026 at 06:30 UTC+02:00</div><div class="metric-subvalue">Europe/Rome</div></div><div class="metric-card"><div class="metric-label">Duration</div><div class="metric-value">9h 30m</div><div class="metric-subvalue">Planned route duration</div></div><div class="metric-card"><div class="metric-label">Distance</div><div class="metric-value">86.12 km</div><div class="metric-subvalue">Total route distance</div></div><div class="metric-card"><div class="metric-label">Ascent</div><div class="metric-value">4459 m</div><div class="metric-subvalue">Estimated climbing</div></div><div class="metric-card"><div class="metric-label">Temperature</div><div class="metric-value">9.8C to 21.8C</div><div class="metric-subvalue">Expected route-wide range</div></div><div class="metric-card"><div class="metric-label">Max wind</div><div class="metric-value">11.3 km/h</div><div class="metric-subvalue">Peak forecast wind speed</div></div><div class="metric-card"><div class="metric-label">Estimated rain</div><div class="metric-value">0.0 mm</div><div class="metric-subvalue">Total route precipitation</div></div><div class="metric-card"><div class="metric-label">Wettest segment</div><div class="metric-value">Apr 25, 06:30</div><div class="metric-subvalue">0.00 mm rain • 0% chance</div></div></div>
+    </section>
+
+    <section class="section-stack">
+      
+      
+      <section class="panel">
+        <div class="panel-head">
+          <h2>OpenStreetMap Route Box</h2>
+          <span class="pill">Interactive map</span>
+        </div>
+        <p class="section-caption">Pan and zoom the route over a live OpenStreetMap-style basemap. The fallback route overview stays available when tiles cannot load.</p>
+        <div class="forecast-map-stage" id="forecast-route-map-stage">
+          <div id="forecast-route-map" class="interactive-map" role="img" aria-label="Interactive route map"></div>
+          <div id="forecast-route-map-fallback" class="map-fallback">
+            
+      <svg class="route-map" viewBox="0 0 620 320" role="img" aria-label="Route overview">
+        <defs>
+          <linearGradient id="route-bg" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#dff0f8" />
+            <stop offset="100%" stop-color="#f7ead7" />
+          </linearGradient>
+          <linearGradient id="route-line" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop offset="0%" stop-color="#0e5b85" />
+            <stop offset="100%" stop-color="#f2682a" />
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="620" height="320" rx="28" fill="url(#route-bg)" />
+        <g opacity="0.5">
+          <circle cx="88" cy="76" r="54" fill="#ffffff" />
+          <circle cx="508" cy="84" r="42" fill="#ffffff" />
+          <path d="M0 284 C102 224 168 228 264 258 C362 288 452 218 620 242 L620 320 L0 320 Z" fill="#d4e6db" />
+        </g>
+        <polyline
+          points="130.4,201.4 131.7,204.3 135.1,207.4 138.3,211.2 142.5,215.0 145.4,218.3 153.1,218.9 157.6,222.1 161.9,224.5 166.1,226.8 171.9,230.5 178.3,232.4 184.9,234.3 189.4,235.0 192.5,232.7 188.4,231.8 192.7,231.3 198.3,231.2 199.4,230.1 203.4,228.2 205.9,225.1 210.0,221.3 210.4,217.5 215.1,218.9 220.0,218.3 226.5,216.7 233.0,215.2 237.5,215.6 236.2,214.2 239.6,213.7 240.3,212.8 244.6,214.0 249.8,213.9 247.8,211.4 250.6,210.7 252.6,210.0 255.1,210.0 255.3,209.3 259.4,209.7 264.7,211.2 266.4,213.3 267.0,217.6 268.6,220.7 273.2,222.4 278.5,225.4 281.2,226.0 287.8,225.9 296.9,224.3 303.4,223.0 309.8,222.1 316.6,220.7 321.8,217.5 327.7,218.6 332.1,215.0 335.4,213.1 338.5,211.5 342.8,211.7 347.0,214.2 351.3,212.8 356.5,208.5 361.5,206.7 364.5,205.7 370.1,206.1 374.9,204.7 381.3,204.3 386.7,203.1 391.5,201.6 389.5,200.2 388.8,199.0 391.2,197.8 397.6,196.1 403.5,194.4 407.4,194.8 409.4,197.2 410.7,194.3 412.8,191.5 418.5,191.7 426.2,191.0 429.4,190.9 429.3,189.3 425.5,188.3 420.6,186.4 415.4,184.1 411.8,181.6 405.5,180.3 399.4,179.3 393.7,178.9 389.0,178.3 382.6,179.2 379.0,179.9 375.4,179.7 377.8,176.5 383.3,173.6 389.6,171.3 394.7,169.4 401.8,168.7 407.4,167.7 410.2,167.3 416.5,165.9 419.3,163.7 422.0,164.0 425.1,163.1 430.2,162.5 434.4,162.5 440.8,161.2 446.5,161.6 441.5,165.1 441.3,168.1 443.9,168.6 443.1,167.2 448.0,165.1 453.7,162.3 457.8,160.8 458.4,158.1 455.9,156.3 451.1,156.0 453.6,155.3 460.0,152.4 463.4,148.3 464.2,143.8 464.5,139.0 464.5,135.9 459.5,140.8 456.3,145.9 454.1,146.7 451.1,146.9 447.9,147.3 445.4,147.1 441.7,147.0 437.5,147.7 434.9,147.6 430.3,147.1 425.1,147.0 420.8,146.7 417.6,145.9 413.6,146.1 410.8,145.9 406.1,146.7 400.7,146.4 396.1,145.8 390.9,147.3 386.1,148.4 381.5,148.9 378.3,149.9 375.8,151.1 373.0,150.8 370.3,149.1 369.7,146.5 369.5,143.0 366.8,140.2 363.8,140.0 362.4,137.6 358.7,136.8 354.3,136.6 350.7,137.7 347.0,138.6 344.6,139.0 347.1,140.3 344.7,141.9 338.9,144.5 333.6,147.7 329.8,150.6 326.3,153.0 320.2,154.7 315.8,157.3 311.3,158.6 306.9,158.0 300.2,158.1 294.2,157.6 289.3,157.8 286.1,157.3 285.7,155.5 283.5,154.2 281.1,153.0 276.5,151.4 270.7,151.2 266.1,152.9 260.0,153.5 254.0,153.2 247.0,152.7 241.7,148.9 236.1,148.7 229.9,147.5 225.8,148.6 221.8,150.2 220.8,148.1 221.1,143.6 216.7,145.8 212.4,148.6 208.4,149.0 208.1,147.5 208.2,145.4 204.1,145.2 202.6,144.2 201.5,140.8 203.3,137.9 202.8,135.6 202.7,133.7 202.6,131.9 204.8,130.9 208.9,130.1 207.7,127.1 204.3,125.8 200.6,124.9 197.7,126.2 192.1,129.0 188.1,131.6 186.1,128.1 182.6,126.7 180.2,126.0 175.8,122.1 176.4,119.3 176.0,114.5 171.3,111.3 167.4,112.4 164.8,113.8 159.2,112.2 155.3,109.2 153.0,108.4 151.3,106.6 148.6,105.0 146.4,102.4 146.6,98.5 148.3,95.6 149.4,93.7 152.3,90.8 156.5,88.7 157.9,86.5 155.3,84.8 151.2,83.2 152.0,80.9 154.5,77.9 153.6,75.9 154.2,74.5 155.8,74.8 161.9,78.2 165.4,75.9 169.4,76.0 171.5,79.8 172.7,79.9 174.9,79.9 179.0,80.2 181.4,79.4 185.9,78.6 189.9,78.2 191.1,80.3 196.7,82.3 202.2,83.2 203.7,80.3 202.4,74.9 202.9,69.9 207.7,69.8 212.8,71.0 218.7,74.1 221.5,74.8 223.1,72.0 226.2,67.5 230.9,64.1 236.3,65.7 240.2,68.4 240.2,69.0 240.0,70.2 240.9,70.9 240.2,71.9 239.8,72.7 239.8,74.0 240.6,74.6 242.0,75.1 242.8,75.5 243.1,76.5 243.2,77.8 242.8,81.5 240.0,86.2 238.1,90.5 238.3,94.3 237.5,97.3 239.0,98.1 241.8,96.8 245.3,92.9 248.7,91.1 253.4,88.7 257.7,86.0 261.9,85.0 261.0,88.0 259.2,90.5 257.8,92.5 257.1,96.6 257.8,99.8 256.3,101.7 262.1,101.7 267.6,99.5 270.1,99.6 274.1,98.5 274.8,97.2 277.6,93.2 280.5,89.9 280.6,92.6 279.0,95.9 280.6,97.4 281.5,99.0 282.5,100.4 283.5,102.8 284.4,106.4 288.4,104.0 291.8,104.4 293.6,107.8 297.3,110.2 300.4,113.3 301.9,118.1 302.1,121.6 303.4,126.1 305.5,130.1 307.7,132.0 313.2,132.8 313.8,129.3 316.5,126.2 318.5,124.8 322.0,124.3 323.9,123.7 326.0,119.7 329.8,120.2 331.1,116.6 330.2,112.4 330.8,108.2 330.2,104.9 329.8,101.4 331.3,99.1 335.5,97.2 338.5,97.9 345.2,98.7 350.5,101.8 356.1,103.2 362.9,103.4 364.6,105.5 364.4,105.4 366.4,103.8 372.2,103.7 379.3,106.8 384.3,109.2 386.4,110.9 389.3,111.7 393.4,113.0 399.0,113.8 403.7,116.6 404.9,115.4 406.4,118.1 412.9,120.4 418.6,120.1 425.7,120.8 431.0,121.3 437.1,122.0 443.2,123.0 446.5,126.6 447.3,128.9 449.1,130.2 450.4,131.0 450.7,130.2 450.8,129.6 452.2,128.8 453.2,129.3 457.6,129.5 462.9,129.3 468.2,130.3 470.2,133.2 467.6,136.9 465.5,142.4 463.9,149.0 462.1,153.0 466.3,156.4 471.9,159.0 473.3,163.4 480.2,164.0 485.3,165.0 490.8,166.0 497.2,165.6 503.5,163.8 509.7,163.0 517.1,163.4 522.5,165.1 524.4,169.5 526.1,173.5 527.7,174.8 530.8,172.0 534.7,168.8 540.9,168.8 547.1,170.5 551.4,173.3 557.4,175.2 560.7,175.3 564.7,174.5 564.4,177.7 559.9,178.6 552.1,177.3 545.7,177.0 543.8,178.8 544.0,181.8 543.5,184.6 538.9,186.6 546.0,185.7 552.3,184.5 558.2,184.1 561.0,188.3 557.2,191.5 557.8,194.7 564.2,192.6 569.6,189.8 572.5,192.3 579.4,192.8 586.0,192.5 590.5,195.8 589.8,196.5 583.1,195.7 577.0,195.5 580.6,197.4 586.9,199.4 588.1,203.4 585.3,200.4 580.0,201.5 578.7,202.1 583.5,202.7 579.4,203.9 576.2,203.3 581.3,205.3 578.1,205.7 578.2,206.4 577.8,207.1 578.6,208.3 572.8,210.3 574.9,211.9 573.5,214.8 571.2,216.8 565.3,217.5 564.9,218.4 561.1,218.7 560.1,218.1 557.8,217.9 553.8,217.9 551.6,216.5 549.6,215.0 543.5,214.2 533.8,212.7 524.7,211.9 518.6,211.2 523.0,209.8 529.1,205.7 527.8,204.4 522.7,204.5 517.1,204.3 510.9,204.3 505.4,204.1 498.8,204.6 492.5,205.1 484.4,205.9 477.5,207.9 472.3,209.0 466.6,211.2 461.8,214.2 454.7,214.2 448.1,216.4 442.4,217.6 436.3,220.0 431.6,222.2 425.0,224.7 417.0,227.6 411.2,230.2 406.8,231.9 401.9,232.7 395.9,231.7 397.4,228.5 400.6,225.3 397.5,223.8 399.6,219.3 395.4,218.6 390.6,218.9 387.6,218.0 381.9,219.8 377.1,220.8 372.9,221.0 368.0,221.7 363.4,221.6 359.7,222.1 356.1,223.3 351.6,224.6 349.4,224.9 346.5,224.4 343.2,224.9 337.6,225.5 334.4,226.5 329.8,228.1 324.7,228.5 319.4,228.8 314.7,229.3 311.1,228.7 308.7,227.9 302.5,228.1 295.7,227.8 289.7,228.0 282.8,227.4 276.5,228.0 270.0,229.6 264.3,232.2 259.6,234.2 254.9,235.2 250.8,234.4 245.6,234.5 239.7,235.9 236.5,237.4 231.3,237.8 227.8,238.9 224.1,241.4 220.8,243.7 217.6,246.1 210.1,248.5 204.7,250.2 200.9,250.8 195.6,249.6 191.5,250.1 186.5,249.6 181.6,248.8 179.5,250.3 178.4,249.1 175.7,247.0 170.6,247.7 166.5,246.8 165.5,249.7 165.8,252.2 162.4,255.0 158.1,254.1 155.4,250.8 154.4,247.6 150.6,246.9 143.5,248.5 141.5,250.3 141.1,247.8 138.8,247.2 133.6,250.9 128.2,253.5 124.7,255.1 119.4,255.9 116.1,253.1 112.3,250.7 108.5,247.6 105.9,244.0 105.0,240.2 104.2,235.3 101.7,230.1 97.2,232.1 91.5,233.1 89.3,232.2 88.3,232.7 87.1,234.5 83.8,235.0 80.2,232.7 80.3,237.4 79.0,239.3 74.4,238.1 67.3,237.8 62.1,238.3 55.4,238.6 49.4,238.3 44.7,235.5 41.6,232.8 37.2,229.5 33.8,225.8 32.7,220.8 30.9,216.9 28.6,212.5 29.7,209.6 30.9,205.2 34.4,203.2 37.1,200.4 40.3,200.5 43.7,203.3 45.8,203.4 44.5,202.1 44.8,199.4 45.7,197.2 45.6,195.3 44.9,193.8 46.9,191.5 51.3,189.7 54.8,188.9 59.4,187.8 61.9,185.0 68.1,184.1 72.1,185.4 76.7,186.1 81.9,185.0 87.3,184.6 91.8,186.3 97.6,185.8 103.4,186.3 107.2,190.3 111.9,190.8 117.6,191.0 122.7,194.6 124.4,198.2 127.2,197.5 130.9,200.7 130.5,201.3"
+          fill="none"
+          stroke="url(#route-line)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="12"
+        />
+        <circle cx="130.4" cy="201.4" r="10" fill="#30a46c" stroke="#ffffff" stroke-width="4" />
+        <circle cx="130.5" cy="201.3" r="10" fill="#cf4b2b" stroke="#ffffff" stroke-width="4" />
+      </svg>
+    
+          </div>
+        </div>
+        <p id="forecast-route-map-note" class="map-note">Loading live basemap tiles and route overlays…</p>
+        <script id="forecast-route-map-data" type="application/json">{"bounds": {"min_lat": 44.16024, "max_lat": 44.22584, "min_lon": 5.09378, "max_lon": 5.28606}, "points": [{"lat": 44.17894, "lon": 5.12868}, {"lat": 44.17794, "lon": 5.12912}, {"lat": 44.176895, "lon": 5.1303}, {"lat": 44.17557, "lon": 5.13139}, {"lat": 44.17429, "lon": 5.13281}, {"lat": 44.17318, "lon": 5.13382}, {"lat": 44.172965, "lon": 5.136445}, {"lat": 44.17188, "lon": 5.13795}, {"lat": 44.171055, "lon": 5.139425}, {"lat": 44.17026, "lon": 5.14087}, {"lat": 44.169015, "lon": 5.14284}, {"lat": 44.168345, "lon": 5.145025}, {"lat": 44.167725, "lon": 5.147255}, {"lat": 44.16747, "lon": 5.1488}, {"lat": 44.16824, "lon": 5.14986}, {"lat": 44.16855, "lon": 5.14848}, {"lat": 44.16872, "lon": 5.14993}, {"lat": 44.16877, "lon": 5.15184}, {"lat": 44.16915, "lon": 5.15222}, {"lat": 44.16978, "lon": 5.15359}, {"lat": 44.17083, "lon": 5.15443}, {"lat": 44.17214, "lon": 5.15582}, {"lat": 44.17344, "lon": 5.15595}, {"lat": 44.17296, "lon": 5.15756}, {"lat": 44.17315, "lon": 5.15924}, {"lat": 44.173714, "lon": 5.161451}, {"lat": 44.17422, "lon": 5.16368}, {"lat": 44.17408, "lon": 5.16522}, {"lat": 44.17455, "lon": 5.16477}, {"lat": 44.17473, "lon": 5.16591}, {"lat": 44.175033, "lon": 5.166145}, {"lat": 44.17463, "lon": 5.16763}, {"lat": 44.17467, "lon": 5.1694}, {"lat": 44.17553, "lon": 5.16872}, {"lat": 44.17577, "lon": 5.16967}, {"lat": 44.17599, "lon": 5.17035}, {"lat": 44.17601, "lon": 5.17119}, {"lat": 44.17623, "lon": 5.17128}, {"lat": 44.17611, "lon": 5.17268}, {"lat": 44.17558, "lon": 5.17448}, {"lat": 44.17487, "lon": 5.17504}, {"lat": 44.17339, "lon": 5.17525}, {"lat": 44.17233, "lon": 5.17579}, {"lat": 44.17178, "lon": 5.17739}, {"lat": 44.170745, "lon": 5.179195}, {"lat": 44.17053, "lon": 5.180103}, {"lat": 44.170561, "lon": 5.182358}, {"lat": 44.17113, "lon": 5.18546}, {"lat": 44.17157, "lon": 5.18767}, {"lat": 44.17188, "lon": 5.18985}, {"lat": 44.17234, "lon": 5.19217}, {"lat": 44.17343, "lon": 5.19394}, {"lat": 44.17307, "lon": 5.19596}, {"lat": 44.1743, "lon": 5.19747}, {"lat": 44.174945, "lon": 5.19859}, {"lat": 44.17547, "lon": 5.19962}, {"lat": 44.1754, "lon": 5.20111}, {"lat": 44.17456, "lon": 5.20252}, {"lat": 44.17504, "lon": 5.204}, {"lat": 44.17651, "lon": 5.205785}, {"lat": 44.17713, "lon": 5.20749}, {"lat": 44.17746, "lon": 5.2085}, {"lat": 44.17731, "lon": 5.2104}, {"lat": 44.1778, "lon": 5.21205}, {"lat": 44.17795, "lon": 5.21424}, {"lat": 44.17835, "lon": 5.21608}, {"lat": 44.17885, "lon": 5.21772}, {"lat": 44.17934, "lon": 5.21704}, {"lat": 44.17974, "lon": 5.21677}, {"lat": 44.18016, "lon": 5.21759}, {"lat": 44.18073, "lon": 5.21979}, {"lat": 44.18132, "lon": 5.2218}, {"lat": 44.18116, "lon": 5.22311}, {"lat": 44.18036, "lon": 5.22382}, {"lat": 44.18133, "lon": 5.22426}, {"lat": 44.18231, "lon": 5.22498}, {"lat": 44.182222, "lon": 5.226913}, {"lat": 44.18247, "lon": 5.22955}, {"lat": 44.18252, "lon": 5.23062}, {"lat": 44.18304, "lon": 5.23058}, {"lat": 44.18339, "lon": 5.22929}, {"lat": 44.18403, "lon": 5.22761}, {"lat": 44.18483, "lon": 5.22585}, {"lat": 44.18566, "lon": 5.22461}, {"lat": 44.186107, "lon": 5.22247}, {"lat": 44.18646, "lon": 5.220383}, {"lat": 44.1866, "lon": 5.21844}, {"lat": 44.1868, "lon": 5.21684}, {"lat": 44.1865, "lon": 5.214685}, {"lat": 44.18626, "lon": 5.21345}, {"lat": 44.18631, "lon": 5.21221}, {"lat": 44.187403, "lon": 5.213025}, {"lat": 44.18841, "lon": 5.2149}, {"lat": 44.189175, "lon": 5.217055}, {"lat": 44.18984, "lon": 5.21878}, {"lat": 44.19006, "lon": 5.221231}, {"lat": 44.19042, "lon": 5.22314}, {"lat": 44.19055, "lon": 5.22409}, {"lat": 44.19102, "lon": 5.22623}, {"lat": 44.19178, "lon": 5.22717}, {"lat": 44.19169, "lon": 5.2281}, {"lat": 44.19199, "lon": 5.22915}, {"lat": 44.192172, "lon": 5.2309}, {"lat": 44.19219, "lon": 5.23233}, {"lat": 44.19263, "lon": 5.23451}, {"lat": 44.19248, "lon": 5.23646}, {"lat": 44.191298, "lon": 5.234748}, {"lat": 44.19029, "lon": 5.23469}, {"lat": 44.19011, "lon": 5.23558}, {"lat": 44.19059, "lon": 5.2353}, {"lat": 44.191315, "lon": 5.23696}, {"lat": 44.19225, "lon": 5.2389}, {"lat": 44.19278, "lon": 5.24032}, {"lat": 44.1937, "lon": 5.2405}, {"lat": 44.194285, "lon": 5.23967}, {"lat": 44.19441, "lon": 5.238035}, {"lat": 44.19465, "lon": 5.23889}, {"lat": 44.195635, "lon": 5.24106}, {"lat": 44.197032, "lon": 5.242228}, {"lat": 44.19855, "lon": 5.24248}, {"lat": 44.2002, "lon": 5.24259}, {"lat": 44.20126, "lon": 5.24259}, {"lat": 44.19957, "lon": 5.240885}, {"lat": 44.19786, "lon": 5.2398}, {"lat": 44.19759, "lon": 5.23906}, {"lat": 44.19749, "lon": 5.23802}, {"lat": 44.19738, "lon": 5.23692}, {"lat": 44.19745, "lon": 5.23607}, {"lat": 44.19747, "lon": 5.23483}, {"lat": 44.19724, "lon": 5.23338}, {"lat": 44.19728, "lon": 5.23249}, {"lat": 44.19743, "lon": 5.23093}, {"lat": 44.197465, "lon": 5.22915}, {"lat": 44.19756, "lon": 5.22768}, {"lat": 44.19785, "lon": 5.2266}, {"lat": 44.19779, "lon": 5.22523}, {"lat": 44.19783, "lon": 5.224285}, {"lat": 44.19757, "lon": 5.22267}, {"lat": 44.19769, "lon": 5.220835}, {"lat": 44.19789, "lon": 5.21927}, {"lat": 44.197385, "lon": 5.217495}, {"lat": 44.197007, "lon": 5.215877}, {"lat": 44.19684, "lon": 5.21431}, {"lat": 44.1965, "lon": 5.2132}, {"lat": 44.19609, "lon": 5.21235}, {"lat": 44.19616, "lon": 5.21141}, {"lat": 44.19676, "lon": 5.21049}, {"lat": 44.19764, "lon": 5.21026}, {"lat": 44.19885, "lon": 5.21019}, {"lat": 44.1998, "lon": 5.20929}, {"lat": 44.19985, "lon": 5.20825}, {"lat": 44.20069, "lon": 5.20779}, {"lat": 44.200935, "lon": 5.206517}, {"lat": 44.20101, "lon": 5.20502}, {"lat": 44.20065, "lon": 5.20381}, {"lat": 44.20033, "lon": 5.20254}, {"lat": 44.20021, "lon": 5.20172}, {"lat": 44.19975, "lon": 5.20256}, {"lat": 44.1992, "lon": 5.20174}, {"lat": 44.19832, "lon": 5.19978}, {"lat": 44.19723, "lon": 5.19798}, {"lat": 44.19624, "lon": 5.19667}, {"lat": 44.19542, "lon": 5.19547}, {"lat": 44.19485, "lon": 5.1934}, {"lat": 44.19395, "lon": 5.19191}, {"lat": 44.19352, "lon": 5.19036}, {"lat": 44.19371, "lon": 5.18888}, {"lat": 44.193675, "lon": 5.186565}, {"lat": 44.19385, "lon": 5.18453}, {"lat": 44.19378, "lon": 5.18286}, {"lat": 44.19395, "lon": 5.18178}, {"lat": 44.19458, "lon": 5.18164}, {"lat": 44.19501, "lon": 5.18088}, {"lat": 44.19541, "lon": 5.18007}, {"lat": 44.19596, "lon": 5.178498}, {"lat": 44.19604, "lon": 5.176535}, {"lat": 44.195465, "lon": 5.174955}, {"lat": 44.195265, "lon": 5.17289}, {"lat": 44.19535, "lon": 5.170815}, {"lat": 44.195517, "lon": 5.168454}, {"lat": 44.196821, "lon": 5.166636}, {"lat": 44.196877, "lon": 5.16473}, {"lat": 44.197287, "lon": 5.162598}, {"lat": 44.196919, "lon": 5.161205}, {"lat": 44.196397, "lon": 5.159864}, {"lat": 44.19711, "lon": 5.1595}, {"lat": 44.19862, "lon": 5.15961}, {"lat": 44.19789, "lon": 5.15811}, {"lat": 44.19692, "lon": 5.15664}, {"lat": 44.196805, "lon": 5.155275}, {"lat": 44.1973, "lon": 5.15519}, {"lat": 44.198033, "lon": 5.155225}, {"lat": 44.198102, "lon": 5.153813}, {"lat": 44.198415, "lon": 5.153295}, {"lat": 44.19959, "lon": 5.15292}, {"lat": 44.20057, "lon": 5.15353}, {"lat": 44.20137, "lon": 5.15339}, {"lat": 44.20202, "lon": 5.15333}, {"lat": 44.20263, "lon": 5.15331}, {"lat": 44.20297, "lon": 5.15406}, {"lat": 44.20324, "lon": 5.15546}, {"lat": 44.20425, "lon": 5.15505}, {"lat": 44.2047, "lon": 5.1539}, {"lat": 44.205, "lon": 5.15264}, {"lat": 44.20456, "lon": 5.151635}, {"lat": 44.2036, "lon": 5.14974}, {"lat": 44.20272, "lon": 5.14836}, {"lat": 44.203921, "lon": 5.147669}, {"lat": 44.204395, "lon": 5.14647}, {"lat": 44.204639, "lon": 5.145672}, {"lat": 44.20595, "lon": 5.14417}, {"lat": 44.20693, "lon": 5.14437}, {"lat": 44.20855, "lon": 5.14424}, {"lat": 44.20963, "lon": 5.14262}, {"lat": 44.209284, "lon": 5.141312}, {"lat": 44.20879, "lon": 5.14043}, {"lat": 44.20932, "lon": 5.1385}, {"lat": 44.21037, "lon": 5.13718}, {"lat": 44.210635, "lon": 5.13641}, {"lat": 44.211244, "lon": 5.135801}, {"lat": 44.211775, "lon": 5.134905}, {"lat": 44.21267, "lon": 5.13414}, {"lat": 44.213995, "lon": 5.13423}, {"lat": 44.21499, "lon": 5.1348}, {"lat": 44.21563, "lon": 5.135155}, {"lat": 44.21664, "lon": 5.13617}, {"lat": 44.21736, "lon": 5.1376}, {"lat": 44.218092, "lon": 5.13808}, {"lat": 44.218665, "lon": 5.137185}, {"lat": 44.21923, "lon": 5.13577}, {"lat": 44.22001, "lon": 5.13606}, {"lat": 44.22102, "lon": 5.13689}, {"lat": 44.221696, "lon": 5.136604}, {"lat": 44.222177, "lon": 5.136812}, {"lat": 44.22207, "lon": 5.13736}, {"lat": 44.22092, "lon": 5.13943}, {"lat": 44.22172, "lon": 5.140607}, {"lat": 44.22168, "lon": 5.142}, {"lat": 44.220393, "lon": 5.142701}, {"lat": 44.220346, "lon": 5.143119}, {"lat": 44.22035, "lon": 5.14385}, {"lat": 44.22025, "lon": 5.14527}, {"lat": 44.22053, "lon": 5.14608}, {"lat": 44.22079, "lon": 5.14761}, {"lat": 44.22094, "lon": 5.14897}, {"lat": 44.2202, "lon": 5.1494}, {"lat": 44.21954, "lon": 5.15128}, {"lat": 44.21921, "lon": 5.15318}, {"lat": 44.22022, "lon": 5.153675}, {"lat": 44.222065, "lon": 5.15324}, {"lat": 44.22376, "lon": 5.15341}, {"lat": 44.2238, "lon": 5.15504}, {"lat": 44.22339, "lon": 5.15677}, {"lat": 44.22233, "lon": 5.15878}, {"lat": 44.22208, "lon": 5.15974}, {"lat": 44.22304, "lon": 5.16031}, {"lat": 44.22457, "lon": 5.16135}, {"lat": 44.22572, "lon": 5.16294}, {"lat": 44.225198, "lon": 5.164784}, {"lat": 44.224258, "lon": 5.166109}, {"lat": 44.224049, "lon": 5.166137}, {"lat": 44.22365, "lon": 5.166065}, {"lat": 44.2234, "lon": 5.166369}, {"lat": 44.223077, "lon": 5.166115}, {"lat": 44.222819, "lon": 5.165989}, {"lat": 44.222358, "lon": 5.165993}, {"lat": 44.22215, "lon": 5.166267}, {"lat": 44.221977, "lon": 5.166747}, {"lat": 44.221856, "lon": 5.16701}, {"lat": 44.221522, "lon": 5.167118}, {"lat": 44.22105, "lon": 5.16714}, {"lat": 44.2198, "lon": 5.167}, {"lat": 44.218215, "lon": 5.166065}, {"lat": 44.21674, "lon": 5.16542}, {"lat": 44.21544, "lon": 5.16546}, {"lat": 44.21442, "lon": 5.1652}, {"lat": 44.21416, "lon": 5.16572}, {"lat": 44.21458, "lon": 5.16668}, {"lat": 44.21591, "lon": 5.16785}, {"lat": 44.21654, "lon": 5.16903}, {"lat": 44.21734, "lon": 5.17061}, {"lat": 44.218275, "lon": 5.172085}, {"lat": 44.21861, "lon": 5.17351}, {"lat": 44.21759, "lon": 5.17323}, {"lat": 44.21675, "lon": 5.17259}, {"lat": 44.21606, "lon": 5.17211}, {"lat": 44.21464, "lon": 5.171895}, {"lat": 44.21358, "lon": 5.17213}, {"lat": 44.21291, "lon": 5.1716}, {"lat": 44.2129, "lon": 5.1736}, {"lat": 44.21366, "lon": 5.17546}, {"lat": 44.213618, "lon": 5.176318}, {"lat": 44.214023, "lon": 5.177676}, {"lat": 44.214464, "lon": 5.177905}, {"lat": 44.21583, "lon": 5.178859}, {"lat": 44.21694, "lon": 5.17987}, {"lat": 44.21603, "lon": 5.17988}, {"lat": 44.21489, "lon": 5.17936}, {"lat": 44.21439, "lon": 5.17989}, {"lat": 44.21382, "lon": 5.18019}, {"lat": 44.21337, "lon": 5.18053}, {"lat": 44.21255, "lon": 5.18087}, {"lat": 44.2113, "lon": 5.18119}, {"lat": 44.21214, "lon": 5.18257}, {"lat": 44.212, "lon": 5.18372}, {"lat": 44.21085, "lon": 5.18433}, {"lat": 44.21003, "lon": 5.18558}, {"lat": 44.20895, "lon": 5.18665}, {"lat": 44.207325, "lon": 5.187175}, {"lat": 44.20612, "lon": 5.18721}, {"lat": 44.20461, "lon": 5.187685}, {"lat": 44.20324, "lon": 5.18839}, {"lat": 44.2026, "lon": 5.18912}, {"lat": 44.20231, "lon": 5.191}, {"lat": 44.20351, "lon": 5.19122}, {"lat": 44.20456, "lon": 5.19214}, {"lat": 44.20504, "lon": 5.19281}, {"lat": 44.2052, "lon": 5.194}, {"lat": 44.2054, "lon": 5.19466}, {"lat": 44.20677, "lon": 5.19539}, {"lat": 44.20661, "lon": 5.19668}, {"lat": 44.207835, "lon": 5.19711}, {"lat": 44.209253, "lon": 5.196817}, {"lat": 44.21071, "lon": 5.197}, {"lat": 44.21182, "lon": 5.19681}, {"lat": 44.21303, "lon": 5.19666}, {"lat": 44.21379, "lon": 5.19718}, {"lat": 44.21444, "lon": 5.19861}, {"lat": 44.21422, "lon": 5.19965}, {"lat": 44.21395, "lon": 5.20191}, {"lat": 44.212873, "lon": 5.203716}, {"lat": 44.21242, "lon": 5.20563}, {"lat": 44.21235, "lon": 5.20795}, {"lat": 44.21161, "lon": 5.20854}, {"lat": 44.21164, "lon": 5.20848}, {"lat": 44.2122, "lon": 5.20915}, {"lat": 44.21223, "lon": 5.21113}, {"lat": 44.21119, "lon": 5.21355}, {"lat": 44.21035, "lon": 5.21524}, {"lat": 44.20978, "lon": 5.21597}, {"lat": 44.20952, "lon": 5.21696}, {"lat": 44.20908, "lon": 5.21835}, {"lat": 44.20879, "lon": 5.22025}, {"lat": 44.20782, "lon": 5.22187}, {"lat": 44.20826, "lon": 5.22228}, {"lat": 44.20733, "lon": 5.22278}, {"lat": 44.20655, "lon": 5.225}, {"lat": 44.20665, "lon": 5.22696}, {"lat": 44.2064, "lon": 5.22937}, {"lat": 44.20622, "lon": 5.23117}, {"lat": 44.20598, "lon": 5.23325}, {"lat": 44.20564, "lon": 5.23533}, {"lat": 44.20443, "lon": 5.23647}, {"lat": 44.20364, "lon": 5.23674}, {"lat": 44.20319, "lon": 5.23735}, {"lat": 44.202933, "lon": 5.237786}, {"lat": 44.203192, "lon": 5.237879}, {"lat": 44.203401, "lon": 5.237921}, {"lat": 44.20367, "lon": 5.238384}, {"lat": 44.2035, "lon": 5.23874}, {"lat": 44.20344, "lon": 5.24024}, {"lat": 44.20352, "lon": 5.24203}, {"lat": 44.20318, "lon": 5.24385}, {"lat": 44.20219, "lon": 5.24453}, {"lat": 44.200915, "lon": 5.243635}, {"lat": 44.19903, "lon": 5.24294}, {"lat": 44.196787, "lon": 5.242375}, {"lat": 44.195425, "lon": 5.241765}, {"lat": 44.19428, "lon": 5.24321}, {"lat": 44.193375, "lon": 5.245125}, {"lat": 44.191895, "lon": 5.24559}, {"lat": 44.19168, "lon": 5.24796}, {"lat": 44.19133, "lon": 5.24967}, {"lat": 44.191, "lon": 5.25155}, {"lat": 44.19112, "lon": 5.25375}, {"lat": 44.191745, "lon": 5.255905}, {"lat": 44.192008, "lon": 5.25799}, {"lat": 44.19187, "lon": 5.26054}, {"lat": 44.19129, "lon": 5.26236}, {"lat": 44.18981, "lon": 5.263}, {"lat": 44.188432, "lon": 5.263602}, {"lat": 44.188, "lon": 5.264125}, {"lat": 44.18896, "lon": 5.26519}, {"lat": 44.19004, "lon": 5.26654}, {"lat": 44.190045, "lon": 5.26865}, {"lat": 44.189466, "lon": 5.270741}, {"lat": 44.188515, "lon": 5.272235}, {"lat": 44.187875, "lon": 5.274275}, {"lat": 44.18782, "lon": 5.27538}, {"lat": 44.18811, "lon": 5.27674}, {"lat": 44.187, "lon": 5.27666}, {"lat": 44.18671, "lon": 5.27512}, {"lat": 44.18715, "lon": 5.27246}, {"lat": 44.18724, "lon": 5.27029}, {"lat": 44.18664, "lon": 5.26964}, {"lat": 44.185605, "lon": 5.269685}, {"lat": 44.18465, "lon": 5.269525}, {"lat": 44.18396, "lon": 5.26796}, {"lat": 44.18428, "lon": 5.270383}, {"lat": 44.18468, "lon": 5.272514}, {"lat": 44.18481, "lon": 5.274535}, {"lat": 44.18338, "lon": 5.2755}, {"lat": 44.1823, "lon": 5.27421}, {"lat": 44.18122, "lon": 5.274405}, {"lat": 44.181917, "lon": 5.276595}, {"lat": 44.18289, "lon": 5.27844}, {"lat": 44.18203, "lon": 5.27942}, {"lat": 44.18187, "lon": 5.281778}, {"lat": 44.18195, "lon": 5.28401}, {"lat": 44.180832, "lon": 5.285555}, {"lat": 44.18059, "lon": 5.2853}, {"lat": 44.18087, "lon": 5.28304}, {"lat": 44.18093, "lon": 5.28093}, {"lat": 44.180275, "lon": 5.28218}, {"lat": 44.1796, "lon": 5.284315}, {"lat": 44.17826, "lon": 5.28474}, {"lat": 44.17925, "lon": 5.28376}, {"lat": 44.17888, "lon": 5.28197}, {"lat": 44.17869, "lon": 5.28151}, {"lat": 44.17848, "lon": 5.28316}, {"lat": 44.17807, "lon": 5.28175}, {"lat": 44.17828, "lon": 5.28066}, {"lat": 44.1776, "lon": 5.28241}, {"lat": 44.17747, "lon": 5.28132}, {"lat": 44.177215, "lon": 5.281347}, {"lat": 44.17698, "lon": 5.28122}, {"lat": 44.17656, "lon": 5.28149}, {"lat": 44.175903, "lon": 5.279512}, {"lat": 44.17534, "lon": 5.28023}, {"lat": 44.174373, "lon": 5.279753}, {"lat": 44.173671, "lon": 5.278979}, {"lat": 44.173446, "lon": 5.276957}, {"lat": 44.173145, "lon": 5.276804}, {"lat": 44.173044, "lon": 5.275513}, {"lat": 44.17322, "lon": 5.275201}, {"lat": 44.173287, "lon": 5.274386}, {"lat": 44.17331, "lon": 5.273049}, {"lat": 44.173789, "lon": 5.272295}, {"lat": 44.17429, "lon": 5.27159}, {"lat": 44.174575, "lon": 5.269533}, {"lat": 44.17507, "lon": 5.266222}, {"lat": 44.17536, "lon": 5.263125}, {"lat": 44.17558, "lon": 5.26102}, {"lat": 44.17607, "lon": 5.26253}, {"lat": 44.177465, "lon": 5.26461}, {"lat": 44.177895, "lon": 5.264175}, {"lat": 44.177866, "lon": 5.262424}, {"lat": 44.17793, "lon": 5.26053}, {"lat": 44.17794, "lon": 5.25842}, {"lat": 44.17799, "lon": 5.25654}, {"lat": 44.17784, "lon": 5.25428}, {"lat": 44.17768, "lon": 5.252135}, {"lat": 44.177375, "lon": 5.24939}, {"lat": 44.17672, "lon": 5.24701}, {"lat": 44.17635, "lon": 5.24525}, {"lat": 44.17558, "lon": 5.24332}, {"lat": 44.17456, "lon": 5.24166}, {"lat": 44.174565, "lon": 5.239255}, {"lat": 44.173815, "lon": 5.237015}, {"lat": 44.17339, "lon": 5.23507}, {"lat": 44.17257, "lon": 5.232972}, {"lat": 44.17183, "lon": 5.23137}, {"lat": 44.170968, "lon": 5.22911}, {"lat": 44.16998, "lon": 5.226402}, {"lat": 44.1691, "lon": 5.22442}, {"lat": 44.16853, "lon": 5.22291}, {"lat": 44.16826, "lon": 5.22126}, {"lat": 44.16859, "lon": 5.21919}, {"lat": 44.1697, "lon": 5.21972}, {"lat": 44.17079, "lon": 5.22081}, {"lat": 44.17129, "lon": 5.21975}, {"lat": 44.17284, "lon": 5.22045}, {"lat": 44.17306, "lon": 5.21903}, {"lat": 44.17295, "lon": 5.2174}, {"lat": 44.17325, "lon": 5.21638}, {"lat": 44.17264, "lon": 5.214425}, {"lat": 44.17231, "lon": 5.21281}, {"lat": 44.17223, "lon": 5.21135}, {"lat": 44.17201, "lon": 5.20969}, {"lat": 44.17204, "lon": 5.20811}, {"lat": 44.17187, "lon": 5.20687}, {"lat": 44.17147, "lon": 5.20563}, {"lat": 44.17101, "lon": 5.2041}, {"lat": 44.17092, "lon": 5.20336}, {"lat": 44.17107, "lon": 5.20235}, {"lat": 44.17093, "lon": 5.20124}, {"lat": 44.17072, "lon": 5.19932}, {"lat": 44.17036, "lon": 5.19825}, {"lat": 44.16981, "lon": 5.19667}, {"lat": 44.16967, "lon": 5.19494}, {"lat": 44.1696, "lon": 5.19314}, {"lat": 44.16942, "lon": 5.19152}, {"lat": 44.16961, "lon": 5.19029}, {"lat": 44.1699, "lon": 5.18949}, {"lat": 44.16983, "lon": 5.18738}, {"lat": 44.16994, "lon": 5.18506}, {"lat": 44.169865, "lon": 5.18301}, {"lat": 44.17006, "lon": 5.18064}, {"lat": 44.169855, "lon": 5.178505}, {"lat": 44.16931, "lon": 5.17627}, {"lat": 44.16841, "lon": 5.17434}, {"lat": 44.167727, "lon": 5.172723}, {"lat": 44.16741, "lon": 5.17114}, {"lat": 44.16766, "lon": 5.16973}, {"lat": 44.167655, "lon": 5.167965}, {"lat": 44.167175, "lon": 5.165945}, {"lat": 44.16666, "lon": 5.16485}, {"lat": 44.1665, "lon": 5.1631}, {"lat": 44.16613, "lon": 5.16191}, {"lat": 44.16528, "lon": 5.16065}, {"lat": 44.16449, "lon": 5.15951}, {"lat": 44.16367, "lon": 5.15841}, {"lat": 44.16287, "lon": 5.15586}, {"lat": 44.16228, "lon": 5.15402}, {"lat": 44.1621, "lon": 5.15273}, {"lat": 44.1625, "lon": 5.15092}, {"lat": 44.16233, "lon": 5.14953}, {"lat": 44.16248, "lon": 5.14783}, {"lat": 44.16275, "lon": 5.14615}, {"lat": 44.16226, "lon": 5.14542}, {"lat": 44.16268, "lon": 5.14506}, {"lat": 44.16338, "lon": 5.14414}, {"lat": 44.16313, "lon": 5.142385}, {"lat": 44.16345, "lon": 5.14099}, {"lat": 44.162455, "lon": 5.140673}, {"lat": 44.16161, "lon": 5.14075}, {"lat": 44.16066, "lon": 5.13961}, {"lat": 44.16097, "lon": 5.138145}, {"lat": 44.16207, "lon": 5.13722}, {"lat": 44.163187, "lon": 5.13686}, {"lat": 44.16341, "lon": 5.13558}, {"lat": 44.16286, "lon": 5.13316}, {"lat": 44.16225, "lon": 5.13248}, {"lat": 44.163115, "lon": 5.132325}, {"lat": 44.16331, "lon": 5.131545}, {"lat": 44.162037, "lon": 5.129782}, {"lat": 44.16117, "lon": 5.12794}, {"lat": 44.16063, "lon": 5.12674}, {"lat": 44.160335, "lon": 5.12495}, {"lat": 44.161298, "lon": 5.123812}, {"lat": 44.162125, "lon": 5.122516}, {"lat": 44.163175, "lon": 5.12121}, {"lat": 44.1644, "lon": 5.12034}, {"lat": 44.1657, "lon": 5.12003}, {"lat": 44.167365, "lon": 5.119755}, {"lat": 44.16914, "lon": 5.1189}, {"lat": 44.16845, "lon": 5.11738}, {"lat": 44.16812, "lon": 5.11543}, {"lat": 44.16844, "lon": 5.11467}, {"lat": 44.16826, "lon": 5.11435}, {"lat": 44.16764, "lon": 5.11392}, {"lat": 44.16747, "lon": 5.11282}, {"lat": 44.16825, "lon": 5.11159}, {"lat": 44.16666, "lon": 5.11162}, {"lat": 44.16602, "lon": 5.11116}, {"lat": 44.16642, "lon": 5.10961}, {"lat": 44.16651, "lon": 5.10719}, {"lat": 44.16635, "lon": 5.1054}, {"lat": 44.16623, "lon": 5.10313}, {"lat": 44.16635, "lon": 5.10106}, {"lat": 44.1673, "lon": 5.09946}, {"lat": 44.16821, "lon": 5.09843}, {"lat": 44.16933, "lon": 5.09692}, {"lat": 44.17062, "lon": 5.09576}, {"lat": 44.1723, "lon": 5.095385}, {"lat": 44.17364, "lon": 5.094775}, {"lat": 44.17513, "lon": 5.093985}, {"lat": 44.17614, "lon": 5.09437}, {"lat": 44.17764, "lon": 5.09478}, {"lat": 44.1783, "lon": 5.09597}, {"lat": 44.17925, "lon": 5.09687}, {"lat": 44.17924, "lon": 5.09799}, {"lat": 44.17829, "lon": 5.09914}, {"lat": 44.17824, "lon": 5.09986}, {"lat": 44.17868, "lon": 5.09939}, {"lat": 44.17961, "lon": 5.0995}, {"lat": 44.18037, "lon": 5.0998}, {"lat": 44.18099, "lon": 5.09977}, {"lat": 44.18151, "lon": 5.09953}, {"lat": 44.18229, "lon": 5.10021}, {"lat": 44.18293, "lon": 5.10172}, {"lat": 44.18319, "lon": 5.10293}, {"lat": 44.18355, "lon": 5.10449}, {"lat": 44.18452, "lon": 5.10534}, {"lat": 44.18484, "lon": 5.10745}, {"lat": 44.184393, "lon": 5.10883}, {"lat": 44.18413, "lon": 5.11039}, {"lat": 44.18453, "lon": 5.11217}, {"lat": 44.18464, "lon": 5.11399}, {"lat": 44.18406, "lon": 5.11554}, {"lat": 44.18425, "lon": 5.11751}, {"lat": 44.18406, "lon": 5.1195}, {"lat": 44.18271, "lon": 5.12079}, {"lat": 44.18255, "lon": 5.12239}, {"lat": 44.182455, "lon": 5.124335}, {"lat": 44.18125, "lon": 5.12605}, {"lat": 44.18, "lon": 5.12666}, {"lat": 44.18027, "lon": 5.12761}, {"lat": 44.17916, "lon": 5.12887}, {"lat": 44.17895, "lon": 5.12871}], "attribution": "Map © OpenStreetMap contributors © CARTO"}</script>
+      </section>
+    
+      
+      <section class="panel" id="forecast-charts">
+        <div class="panel-head">
+          <h2>Forecast Charts</h2>
+          <span class="pill">uPlot comparison view</span>
+        </div>
+        <p class="section-caption">Interactive provider overlays across the sampled route. Hover any chart to compare the same moment in time.</p>
+        <div class="provider-legend"><span class="provider-chip"><span class="provider-swatch" style="--provider-color:#0e5b85"></span>Open-Meteo<span class="pill provider-pill">Primary</span></span></div>
+        <div id="forecast-chart-hover" class="forecast-chart-hover" aria-live="polite">
+          Hover a chart to inspect the same route moment across providers.
+        </div>
+        <noscript>
+          <div class="empty-state">Interactive charts need JavaScript enabled. The PNG summary and downloads below still contain the forecast details.</div>
+        </noscript>
+        <div id="forecast-charts-fallback" class="empty-state" hidden>
+          Interactive charts could not load. The PNG summary and downloads below still contain the forecast details.
+        </div>
+        <div class="forecast-chart-grid" data-forecast-chart-grid>
+          
+            <article class="forecast-chart-card">
+              <div class="panel-head">
+                <h3>Temperature</h3>
+              </div>
+              <p class="section-caption">Ambient temperature across the sampled route, with all available providers overlaid.</p>
+              <p class="chart-note" id="chart-note-temperature">Preparing interactive comparison...</p>
+              <div
+                class="forecast-chart-canvas"
+                id="chart-temperature"
+                data-chart-id="temperature"
+              ></div>
+            </article>
+            
+            <article class="forecast-chart-card">
+              <div class="panel-head">
+                <h3>Feels Like</h3>
+              </div>
+              <p class="section-caption">Apparent temperature comparison across providers when the metric is available.</p>
+              <p class="chart-note" id="chart-note-feels-like">Preparing interactive comparison...</p>
+              <div
+                class="forecast-chart-canvas"
+                id="chart-feels-like"
+                data-chart-id="feels-like"
+              ></div>
+            </article>
+            
+            <article class="forecast-chart-card">
+              <div class="panel-head">
+                <h3>Precipitation</h3>
+              </div>
+              <p class="section-caption">Estimated precipitation intensity along the route for every available provider.</p>
+              <p class="chart-note" id="chart-note-precipitation">Preparing interactive comparison...</p>
+              <div
+                class="forecast-chart-canvas"
+                id="chart-precipitation"
+                data-chart-id="precipitation"
+              ></div>
+            </article>
+            
+            <article class="forecast-chart-card">
+              <div class="panel-head">
+                <h3>Cloud Cover</h3>
+              </div>
+              <p class="section-caption">Cloud cover percentage along the same sampled route for each provider.</p>
+              <p class="chart-note" id="chart-note-cloud-cover">Preparing interactive comparison...</p>
+              <div
+                class="forecast-chart-canvas"
+                id="chart-cloud-cover"
+                data-chart-id="cloud-cover"
+              ></div>
+            </article>
+            
+            <article class="forecast-chart-card">
+              <div class="panel-head">
+                <h3>Wind (km/h)</h3>
+              </div>
+              <p class="section-caption">Sustained wind comparison across providers, aligned to the sampled route.</p>
+              <p class="chart-note" id="chart-note-wind">Preparing interactive comparison...</p>
+              <div
+                class="forecast-chart-canvas"
+                id="chart-wind"
+                data-chart-id="wind"
+              ></div>
+            </article>
+            
+            <article class="forecast-chart-card">
+              <div class="panel-head">
+                <h3>Elevation</h3>
+              </div>
+              <p class="section-caption">Route profile aligned to the forecast timeline so hover details can tie weather back to terrain.</p>
+              <p class="chart-note" id="chart-note-elevation">Preparing interactive comparison...</p>
+              <div
+                class="forecast-chart-canvas"
+                id="chart-elevation"
+                data-chart-id="elevation"
+              ></div>
+            </article>
+            
+        </div>
+        <script id="forecast-chart-data" type="application/json">{"x_axis": "time", "timezone": "Europe/Rome", "providers": [{"provider_id": "open-meteo", "label": "Open-Meteo", "is_primary": true, "color": "#0e5b85", "coverage": {"has_apparent_temperature": true, "has_wind_gust": true, "has_precipitation_probability": true}, "samples": [{"timestamp": "2026-04-25T06:30:00+02:00", "distance_km": 0.0, "elevation_m": 310.0, "temperature_c": 10.5, "apparent_temperature_c": 8.8, "wind_kph": 4.1, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T06:40:00+02:00", "distance_km": 1.51, "elevation_m": 370.0, "temperature_c": 10.0, "apparent_temperature_c": 8.3, "wind_kph": 4.2, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T06:50:00+02:00", "distance_km": 3.02, "elevation_m": 469.8, "temperature_c": 9.9, "apparent_temperature_c": 7.8, "wind_kph": 6.2, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T07:00:00+02:00", "distance_km": 4.53, "elevation_m": 521.3, "temperature_c": 10.4, "apparent_temperature_c": 8.3, "wind_kph": 5.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T07:10:00+02:00", "distance_km": 6.04, "elevation_m": 674.0, "temperature_c": 9.9, "apparent_temperature_c": 7.5, "wind_kph": 6.8, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T07:20:00+02:00", "distance_km": 7.55, "elevation_m": 724.0, "temperature_c": 10.1, "apparent_temperature_c": 7.7, "wind_kph": 6.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T07:30:00+02:00", "distance_km": 9.07, "elevation_m": 807.0, "temperature_c": 9.8, "apparent_temperature_c": 7.3, "wind_kph": 6.1, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T07:40:00+02:00", "distance_km": 10.58, "elevation_m": 897.4, "temperature_c": 10.7, "apparent_temperature_c": 8.6, "wind_kph": 3.6, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T07:50:00+02:00", "distance_km": 12.09, "elevation_m": 866.2, "temperature_c": 11.1, "apparent_temperature_c": 9.2, "wind_kph": 3.1, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T08:00:00+02:00", "distance_km": 13.6, "elevation_m": 536.0, "temperature_c": 11.7, "apparent_temperature_c": 9.8, "wind_kph": 4.4, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T08:10:00+02:00", "distance_km": 15.11, "elevation_m": 647.7, "temperature_c": 11.5, "apparent_temperature_c": 9.7, "wind_kph": 4.4, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T08:20:00+02:00", "distance_km": 16.62, "elevation_m": 855.0, "temperature_c": 12.0, "apparent_temperature_c": 10.3, "wind_kph": 2.6, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T08:30:00+02:00", "distance_km": 18.13, "elevation_m": 984.0, "temperature_c": 11.5, "apparent_temperature_c": 9.7, "wind_kph": 2.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T08:40:00+02:00", "distance_km": 19.64, "elevation_m": 1099.0, "temperature_c": 11.1, "apparent_temperature_c": 9.2, "wind_kph": 2.4, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T08:50:00+02:00", "distance_km": 21.15, "elevation_m": 1060.3, "temperature_c": 11.7, "apparent_temperature_c": 9.8, "wind_kph": 2.4, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T09:00:00+02:00", "distance_km": 22.66, "elevation_m": 745.6, "temperature_c": 12.5, "apparent_temperature_c": 11.6, "wind_kph": 1.1, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T09:10:00+02:00", "distance_km": 24.17, "elevation_m": 514.4, "temperature_c": 14.3, "apparent_temperature_c": 13.6, "wind_kph": 1.6, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T09:20:00+02:00", "distance_km": 25.68, "elevation_m": 539.6, "temperature_c": 14.3, "apparent_temperature_c": 13.5, "wind_kph": 2.1, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T09:30:00+02:00", "distance_km": 27.2, "elevation_m": 434.1, "temperature_c": 14.3, "apparent_temperature_c": 13.7, "wind_kph": 2.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T09:40:00+02:00", "distance_km": 28.71, "elevation_m": 391.0, "temperature_c": 14.8, "apparent_temperature_c": 14.1, "wind_kph": 2.9, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T09:50:00+02:00", "distance_km": 30.22, "elevation_m": 361.2, "temperature_c": 15.2, "apparent_temperature_c": 14.6, "wind_kph": 3.3, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T10:00:00+02:00", "distance_km": 31.73, "elevation_m": 344.5, "temperature_c": 15.5, "apparent_temperature_c": 14.8, "wind_kph": 3.7, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T10:10:00+02:00", "distance_km": 33.24, "elevation_m": 264.0, "temperature_c": 16.3, "apparent_temperature_c": 16.0, "wind_kph": 4.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T10:20:00+02:00", "distance_km": 34.75, "elevation_m": 331.5, "temperature_c": 16.2, "apparent_temperature_c": 15.7, "wind_kph": 4.7, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T10:30:00+02:00", "distance_km": 36.26, "elevation_m": 312.8, "temperature_c": 17.0, "apparent_temperature_c": 16.6, "wind_kph": 5.0, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T10:40:00+02:00", "distance_km": 37.77, "elevation_m": 390.6, "temperature_c": 16.8, "apparent_temperature_c": 16.2, "wind_kph": 5.3, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T10:50:00+02:00", "distance_km": 39.28, "elevation_m": 433.2, "temperature_c": 16.7, "apparent_temperature_c": 16.2, "wind_kph": 5.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T11:00:00+02:00", "distance_km": 40.79, "elevation_m": 423.0, "temperature_c": 17.0, "apparent_temperature_c": 16.5, "wind_kph": 5.8, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T11:10:00+02:00", "distance_km": 42.3, "elevation_m": 454.9, "temperature_c": 17.1, "apparent_temperature_c": 17.0, "wind_kph": 6.0, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T11:20:00+02:00", "distance_km": 43.81, "elevation_m": 480.8, "temperature_c": 17.1, "apparent_temperature_c": 17.1, "wind_kph": 6.3, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T11:30:00+02:00", "distance_km": 45.33, "elevation_m": 332.2, "temperature_c": 18.2, "apparent_temperature_c": 18.2, "wind_kph": 6.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T11:40:00+02:00", "distance_km": 46.84, "elevation_m": 403.7, "temperature_c": 17.9, "apparent_temperature_c": 17.9, "wind_kph": 6.8, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T11:50:00+02:00", "distance_km": 48.35, "elevation_m": 621.8, "temperature_c": 16.8, "apparent_temperature_c": 16.9, "wind_kph": 7.0, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T12:00:00+02:00", "distance_km": 49.86, "elevation_m": 920.6, "temperature_c": 15.8, "apparent_temperature_c": 15.9, "wind_kph": 7.8, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T12:10:00+02:00", "distance_km": 51.37, "elevation_m": 1086.8, "temperature_c": 14.9, "apparent_temperature_c": 14.8, "wind_kph": 8.0, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T12:20:00+02:00", "distance_km": 52.88, "elevation_m": 1225.1, "temperature_c": 14.1, "apparent_temperature_c": 13.8, "wind_kph": 8.2, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T12:30:00+02:00", "distance_km": 54.39, "elevation_m": 1328.0, "temperature_c": 13.6, "apparent_temperature_c": 13.2, "wind_kph": 8.4, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T12:40:00+02:00", "distance_km": 55.9, "elevation_m": 1398.8, "temperature_c": 13.3, "apparent_temperature_c": 13.0, "wind_kph": 8.7, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T12:50:00+02:00", "distance_km": 57.41, "elevation_m": 1457.0, "temperature_c": 13.1, "apparent_temperature_c": 12.7, "wind_kph": 8.9, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T13:00:00+02:00", "distance_km": 58.92, "elevation_m": 1576.8, "temperature_c": 12.4, "apparent_temperature_c": 11.6, "wind_kph": 8.8, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T13:10:00+02:00", "distance_km": 60.43, "elevation_m": 1780.0, "temperature_c": 11.3, "apparent_temperature_c": 10.5, "wind_kph": 9.3, "cloud_cover_pct": 3.2, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T13:20:00+02:00", "distance_km": 61.94, "elevation_m": 1818.0, "temperature_c": 11.0, "apparent_temperature_c": 10.3, "wind_kph": 9.6, "cloud_cover_pct": 6.3, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T13:30:00+02:00", "distance_km": 63.46, "elevation_m": 1602.2, "temperature_c": 12.5, "apparent_temperature_c": 12.0, "wind_kph": 9.8, "cloud_cover_pct": 9.5, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T13:40:00+02:00", "distance_km": 64.97, "elevation_m": 1494.6, "temperature_c": 13.3, "apparent_temperature_c": 12.9, "wind_kph": 10.0, "cloud_cover_pct": 12.7, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T13:50:00+02:00", "distance_km": 66.48, "elevation_m": 1362.9, "temperature_c": 14.2, "apparent_temperature_c": 14.1, "wind_kph": 10.3, "cloud_cover_pct": 15.8, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T14:00:00+02:00", "distance_km": 67.99, "elevation_m": 1111.6, "temperature_c": 15.9, "apparent_temperature_c": 16.2, "wind_kph": 10.5, "cloud_cover_pct": 19.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T14:10:00+02:00", "distance_km": 69.5, "elevation_m": 967.0, "temperature_c": 16.9, "apparent_temperature_c": 17.4, "wind_kph": 10.4, "cloud_cover_pct": 17.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T14:20:00+02:00", "distance_km": 71.01, "elevation_m": 781.5, "temperature_c": 17.8, "apparent_temperature_c": 17.7, "wind_kph": 11.3, "cloud_cover_pct": 6.3, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T14:30:00+02:00", "distance_km": 72.52, "elevation_m": 781.0, "temperature_c": 17.9, "apparent_temperature_c": 17.7, "wind_kph": 11.1, "cloud_cover_pct": 5.5, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T14:40:00+02:00", "distance_km": 74.03, "elevation_m": 618.9, "temperature_c": 19.0, "apparent_temperature_c": 19.1, "wind_kph": 10.9, "cloud_cover_pct": 4.7, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T14:50:00+02:00", "distance_km": 75.54, "elevation_m": 474.0, "temperature_c": 20.2, "apparent_temperature_c": 20.0, "wind_kph": 10.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T15:00:00+02:00", "distance_km": 77.05, "elevation_m": 409.0, "temperature_c": 20.7, "apparent_temperature_c": 20.6, "wind_kph": 10.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T15:10:00+02:00", "distance_km": 78.56, "elevation_m": 346.0, "temperature_c": 21.2, "apparent_temperature_c": 21.1, "wind_kph": 10.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T15:20:00+02:00", "distance_km": 80.07, "elevation_m": 453.3, "temperature_c": 20.5, "apparent_temperature_c": 20.3, "wind_kph": 10.5, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T15:30:00+02:00", "distance_km": 81.59, "elevation_m": 459.0, "temperature_c": 20.5, "apparent_temperature_c": 20.2, "wind_kph": 10.6, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T15:40:00+02:00", "distance_km": 83.1, "elevation_m": 406.8, "temperature_c": 21.0, "apparent_temperature_c": 20.7, "wind_kph": 10.6, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T15:50:00+02:00", "distance_km": 84.61, "elevation_m": 287.0, "temperature_c": 21.8, "apparent_temperature_c": 21.6, "wind_kph": 10.6, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}, {"timestamp": "2026-04-25T16:00:00+02:00", "distance_km": 86.12, "elevation_m": 310.0, "temperature_c": 21.7, "apparent_temperature_c": 21.4, "wind_kph": 10.6, "cloud_cover_pct": 0.0, "precipitation_mm": 0.0}]}], "route_profile": [{"timestamp": "2026-04-25T06:30:00+02:00", "distance_km": 0.0, "elevation_m": 310.0}, {"timestamp": "2026-04-25T06:40:00+02:00", "distance_km": 1.51, "elevation_m": 370.0}, {"timestamp": "2026-04-25T06:50:00+02:00", "distance_km": 3.02, "elevation_m": 469.8}, {"timestamp": "2026-04-25T07:00:00+02:00", "distance_km": 4.53, "elevation_m": 521.3}, {"timestamp": "2026-04-25T07:10:00+02:00", "distance_km": 6.04, "elevation_m": 674.0}, {"timestamp": "2026-04-25T07:20:00+02:00", "distance_km": 7.55, "elevation_m": 724.0}, {"timestamp": "2026-04-25T07:30:00+02:00", "distance_km": 9.07, "elevation_m": 807.0}, {"timestamp": "2026-04-25T07:40:00+02:00", "distance_km": 10.58, "elevation_m": 897.4}, {"timestamp": "2026-04-25T07:50:00+02:00", "distance_km": 12.09, "elevation_m": 866.2}, {"timestamp": "2026-04-25T08:00:00+02:00", "distance_km": 13.6, "elevation_m": 536.0}, {"timestamp": "2026-04-25T08:10:00+02:00", "distance_km": 15.11, "elevation_m": 647.7}, {"timestamp": "2026-04-25T08:20:00+02:00", "distance_km": 16.62, "elevation_m": 855.0}, {"timestamp": "2026-04-25T08:30:00+02:00", "distance_km": 18.13, "elevation_m": 984.0}, {"timestamp": "2026-04-25T08:40:00+02:00", "distance_km": 19.64, "elevation_m": 1099.0}, {"timestamp": "2026-04-25T08:50:00+02:00", "distance_km": 21.15, "elevation_m": 1060.3}, {"timestamp": "2026-04-25T09:00:00+02:00", "distance_km": 22.66, "elevation_m": 745.6}, {"timestamp": "2026-04-25T09:10:00+02:00", "distance_km": 24.17, "elevation_m": 514.4}, {"timestamp": "2026-04-25T09:20:00+02:00", "distance_km": 25.68, "elevation_m": 539.6}, {"timestamp": "2026-04-25T09:30:00+02:00", "distance_km": 27.2, "elevation_m": 434.1}, {"timestamp": "2026-04-25T09:40:00+02:00", "distance_km": 28.71, "elevation_m": 391.0}, {"timestamp": "2026-04-25T09:50:00+02:00", "distance_km": 30.22, "elevation_m": 361.2}, {"timestamp": "2026-04-25T10:00:00+02:00", "distance_km": 31.73, "elevation_m": 344.5}, {"timestamp": "2026-04-25T10:10:00+02:00", "distance_km": 33.24, "elevation_m": 264.0}, {"timestamp": "2026-04-25T10:20:00+02:00", "distance_km": 34.75, "elevation_m": 331.5}, {"timestamp": "2026-04-25T10:30:00+02:00", "distance_km": 36.26, "elevation_m": 312.8}, {"timestamp": "2026-04-25T10:40:00+02:00", "distance_km": 37.77, "elevation_m": 390.6}, {"timestamp": "2026-04-25T10:50:00+02:00", "distance_km": 39.28, "elevation_m": 433.2}, {"timestamp": "2026-04-25T11:00:00+02:00", "distance_km": 40.79, "elevation_m": 423.0}, {"timestamp": "2026-04-25T11:10:00+02:00", "distance_km": 42.3, "elevation_m": 454.9}, {"timestamp": "2026-04-25T11:20:00+02:00", "distance_km": 43.81, "elevation_m": 480.8}, {"timestamp": "2026-04-25T11:30:00+02:00", "distance_km": 45.33, "elevation_m": 332.2}, {"timestamp": "2026-04-25T11:40:00+02:00", "distance_km": 46.84, "elevation_m": 403.7}, {"timestamp": "2026-04-25T11:50:00+02:00", "distance_km": 48.35, "elevation_m": 621.8}, {"timestamp": "2026-04-25T12:00:00+02:00", "distance_km": 49.86, "elevation_m": 920.6}, {"timestamp": "2026-04-25T12:10:00+02:00", "distance_km": 51.37, "elevation_m": 1086.8}, {"timestamp": "2026-04-25T12:20:00+02:00", "distance_km": 52.88, "elevation_m": 1225.1}, {"timestamp": "2026-04-25T12:30:00+02:00", "distance_km": 54.39, "elevation_m": 1328.0}, {"timestamp": "2026-04-25T12:40:00+02:00", "distance_km": 55.9, "elevation_m": 1398.8}, {"timestamp": "2026-04-25T12:50:00+02:00", "distance_km": 57.41, "elevation_m": 1457.0}, {"timestamp": "2026-04-25T13:00:00+02:00", "distance_km": 58.92, "elevation_m": 1576.8}, {"timestamp": "2026-04-25T13:10:00+02:00", "distance_km": 60.43, "elevation_m": 1780.0}, {"timestamp": "2026-04-25T13:20:00+02:00", "distance_km": 61.94, "elevation_m": 1818.0}, {"timestamp": "2026-04-25T13:30:00+02:00", "distance_km": 63.46, "elevation_m": 1602.2}, {"timestamp": "2026-04-25T13:40:00+02:00", "distance_km": 64.97, "elevation_m": 1494.6}, {"timestamp": "2026-04-25T13:50:00+02:00", "distance_km": 66.48, "elevation_m": 1362.9}, {"timestamp": "2026-04-25T14:00:00+02:00", "distance_km": 67.99, "elevation_m": 1111.6}, {"timestamp": "2026-04-25T14:10:00+02:00", "distance_km": 69.5, "elevation_m": 967.0}, {"timestamp": "2026-04-25T14:20:00+02:00", "distance_km": 71.01, "elevation_m": 781.5}, {"timestamp": "2026-04-25T14:30:00+02:00", "distance_km": 72.52, "elevation_m": 781.0}, {"timestamp": "2026-04-25T14:40:00+02:00", "distance_km": 74.03, "elevation_m": 618.9}, {"timestamp": "2026-04-25T14:50:00+02:00", "distance_km": 75.54, "elevation_m": 474.0}, {"timestamp": "2026-04-25T15:00:00+02:00", "distance_km": 77.05, "elevation_m": 409.0}, {"timestamp": "2026-04-25T15:10:00+02:00", "distance_km": 78.56, "elevation_m": 346.0}, {"timestamp": "2026-04-25T15:20:00+02:00", "distance_km": 80.07, "elevation_m": 453.3}, {"timestamp": "2026-04-25T15:30:00+02:00", "distance_km": 81.59, "elevation_m": 459.0}, {"timestamp": "2026-04-25T15:40:00+02:00", "distance_km": 83.1, "elevation_m": 406.8}, {"timestamp": "2026-04-25T15:50:00+02:00", "distance_km": 84.61, "elevation_m": 287.0}, {"timestamp": "2026-04-25T16:00:00+02:00", "distance_km": 86.12, "elevation_m": 310.0}]}</script>
+      </section>
+    
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Forecast Overview</h2>
+          <span class="pill">Hosted PNG summary</span>
+        </div>
+        <p class="section-caption">The full rendered route forecast chart preserved as a static image for quick sharing.</p>
+        <div class="chart-frame"><img src="forecast.png" alt="Forecast chart for GRV 100k 09:30"></div>
+      </section>
+    </section>
+    
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+  <script>
+    (() => {
+      const stage = document.getElementById("forecast-route-map-stage");
+      const container = document.getElementById("forecast-route-map");
+      const fallback = document.getElementById("forecast-route-map-fallback");
+      const note = document.getElementById("forecast-route-map-note");
+      const payloadEl = document.getElementById("forecast-route-map-data");
+
+      function setFallback(message) {
+        if (stage) {
+          stage.classList.remove("is-live");
+        }
+        if (fallback) {
+          fallback.hidden = false;
+        }
+        if (note) {
+          note.textContent = message;
+        }
+      }
+
+      if (!container || !payloadEl) {
+        return;
+      }
+      if (typeof window.L !== "object") {
+        setFallback("Interactive map could not load from the CDN; showing the static route overview instead.");
+        return;
+      }
+
+      let payload = null;
+      try {
+        payload = JSON.parse(payloadEl.textContent || "{}");
+      } catch (_error) {
+        setFallback("Interactive route data could not be parsed; showing the static route overview instead.");
+        return;
+      }
+
+      if (!Array.isArray(payload?.points) || !payload.points.length || !payload?.bounds) {
+        setFallback("Interactive route data is unavailable; showing the static route overview instead.");
+        return;
+      }
+
+      let map = null;
+      try {
+        map = window.L.map(container, {
+          zoomControl: true,
+          attributionControl: false,
+        });
+      } catch (_error) {
+        setFallback("Interactive map unavailable; showing the static route overview instead.");
+        return;
+      }
+
+      window.L.control
+        .attribution({
+          position: "bottomright",
+          prefix: false,
+        })
+        .addTo(map)
+        .addAttribution(payload.attribution || "Map © OpenStreetMap contributors © CARTO");
+
+      map.fitBounds(
+        [
+          [payload.bounds.min_lat, payload.bounds.min_lon],
+          [payload.bounds.max_lat, payload.bounds.max_lon],
+        ],
+        { padding: [20, 20] },
+      );
+
+      const tileLayer = window.L.tileLayer("https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: payload.attribution || "Map © OpenStreetMap contributors © CARTO",
+        crossOrigin: true,
+      }).addTo(map);
+
+      let loadedTileCount = 0;
+      let failedTileCount = 0;
+      let resolved = false;
+      const maybeFallback = (message) => {
+        if (resolved || loadedTileCount > 0) {
+          return;
+        }
+        resolved = true;
+        setFallback(message);
+      };
+
+      tileLayer.on("tileload", () => {
+        loadedTileCount += 1;
+        if (!resolved) {
+          resolved = true;
+          stage?.classList.add("is-live");
+          if (fallback) {
+            fallback.hidden = true;
+          }
+          if (note) {
+            note.textContent = "CARTO Voyager tiles with the route overlay on an OpenStreetMap-style basemap.";
+          }
+          window.setTimeout(() => map?.invalidateSize(), 0);
+        }
+      });
+      tileLayer.on("tileerror", () => {
+        failedTileCount += 1;
+        if (failedTileCount >= 4) {
+          maybeFallback("Map tiles were unavailable; showing the static route overview instead.");
+        }
+      });
+      window.setTimeout(() => {
+        maybeFallback("Map tiles did not load in time; showing the static route overview instead.");
+      }, 3500);
+
+      window.L.polyline(
+        payload.points.map((point) => [point.lat, point.lon]),
+        {
+          color: "#f2682a",
+          weight: 5,
+          opacity: 0.95,
+        },
+      ).addTo(map);
+
+      const firstPoint = payload.points[0];
+      const lastPoint = payload.points.at(-1) ?? firstPoint;
+      window.L.circleMarker([firstPoint.lat, firstPoint.lon], {
+        radius: 8,
+        color: "#ffffff",
+        weight: 3,
+        fillColor: "#30a46c",
+        fillOpacity: 1,
+      }).addTo(map);
+      window.L.circleMarker([lastPoint.lat, lastPoint.lon], {
+        radius: 8,
+        color: "#ffffff",
+        weight: 3,
+        fillColor: "#cf4b2b",
+        fillOpacity: 1,
+      }).addTo(map);
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/uplot@1.6.32/dist/uPlot.iife.min.js" integrity="sha384-Gx3t0zdBAuQOuvvmaLZj7HKEiSgWTAs+VdtNY7wt19QDPTDQjFIwAuXDj0zeN00c" crossorigin="anonymous"></script>
+  <script>
+    (() => {
+      const chartSection = document.getElementById("forecast-charts");
+      const fallback = document.getElementById("forecast-charts-fallback");
+      const hover = document.getElementById("forecast-chart-hover");
+      const payloadEl = document.getElementById("forecast-chart-data");
+      const chartSpecs = [{"id": "temperature", "title": "Temperature", "caption": "Ambient temperature across the sampled route, with all available providers overlaid."}, {"id": "feels-like", "title": "Feels Like", "caption": "Apparent temperature comparison across providers when the metric is available."}, {"id": "precipitation", "title": "Precipitation", "caption": "Estimated precipitation intensity along the route for every available provider."}, {"id": "cloud-cover", "title": "Cloud Cover", "caption": "Cloud cover percentage along the same sampled route for each provider."}, {"id": "wind", "title": "Wind (km/h)", "caption": "Sustained wind comparison across providers, aligned to the sampled route."}, {"id": "elevation", "title": "Elevation", "caption": "Route profile aligned to the forecast timeline so hover details can tie weather back to terrain."}];
+      const colorLookup = {"open-meteo": "#0e5b85"};
+      const chartEntries = [];
+      let activeHoverKey = "";
+
+      function setFallback(message) {
+        const grid = chartSection?.querySelector("[data-forecast-chart-grid]");
+        if (grid) {
+          grid.hidden = true;
+        }
+        if (fallback) {
+          fallback.hidden = false;
+          fallback.textContent = message;
+        }
+      }
+
+      function parsePayload() {
+        if (!payloadEl) {
+          setFallback("Interactive chart data is missing from this report.");
+          return null;
+        }
+        try {
+          return JSON.parse(payloadEl.textContent || "{}");
+        } catch (_error) {
+          setFallback("Interactive chart data could not be parsed.");
+          return null;
+        }
+      }
+
+      function buildDateFormatter(timezoneName) {
+        const options = {
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        };
+        if (timezoneName) {
+          try {
+            return new Intl.DateTimeFormat("en-US", {...options, timeZone: timezoneName});
+          } catch (_error) {
+            return new Intl.DateTimeFormat("en-US", options);
+          }
+        }
+        return new Intl.DateTimeFormat("en-US", options);
+      }
+
+      function buildAxisDateFormatter(timezoneName) {
+        const options = {
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        };
+        if (timezoneName) {
+          try {
+            return new Intl.DateTimeFormat("en-US", {...options, timeZone: timezoneName});
+          } catch (_error) {
+            return new Intl.DateTimeFormat("en-US", options);
+          }
+        }
+        return new Intl.DateTimeFormat("en-US", options);
+      }
+
+      function formatNumber(value, digits) {
+        if (value === null || value === undefined || Number.isNaN(value)) {
+          return "n/a";
+        }
+        return Number(value).toFixed(digits);
+      }
+
+      function hasMetricValue(metricId, coverage) {
+        if (metricId === "feels-like") {
+          return !!coverage?.has_apparent_temperature;
+        }
+        return true;
+      }
+
+      function getMetricValue(sample, metricId) {
+        if (!sample) {
+          return null;
+        }
+        switch (metricId) {
+          case "temperature":
+            return sample.temperature_c;
+          case "feels-like":
+            return sample.apparent_temperature_c;
+          case "precipitation":
+            return sample.precipitation_mm;
+          case "cloud-cover":
+            return sample.cloud_cover_pct;
+          case "wind":
+            return sample.wind_kph;
+          default:
+            return null;
+        }
+      }
+
+      function metricUnit(metricId) {
+        switch (metricId) {
+          case "temperature":
+          case "feels-like":
+            return "C";
+          case "precipitation":
+            return "mm";
+          case "cloud-cover":
+            return "%";
+          case "wind":
+            return "km/h";
+          case "elevation":
+            return "m";
+          default:
+            return "";
+        }
+      }
+
+      function metricDigits(metricId) {
+        switch (metricId) {
+          case "precipitation":
+            return 2;
+          case "wind":
+          case "cloud-cover":
+          case "elevation":
+            return 0;
+          default:
+            return 1;
+        }
+      }
+
+      function axisValueLabel(metricId, value) {
+        const digits = metricDigits(metricId);
+        if (metricId === "wind") {
+          return formatNumber(value, digits);
+        }
+        return `${formatNumber(value, digits)} ${metricUnit(metricId)}`;
+      }
+
+      function renderHoverContent(metricId, metricTitle, idx, payload, providerSeries) {
+        if (!hover) {
+          return;
+        }
+        const profile = payload.route_profile?.[idx];
+        if (!profile) {
+          hover.textContent = "Hover a chart to inspect the same route moment across providers.";
+          return;
+        }
+        const unit = metricUnit(metricId);
+        const digits = metricDigits(metricId);
+        const rows = providerSeries
+          .map((entry) => {
+            const value = entry.values[idx];
+            return `
+              <div class="forecast-chart-hover-row">
+                <strong style="color:${entry.color}">${entry.label}</strong>
+                <span>${formatNumber(value, digits)} ${unit}</span>
+              </div>
+            `;
+          })
+          .join("");
+        hover.innerHTML = `
+          <strong>${metricTitle}</strong><br>
+          ${dateFormatter.format(new Date(Date.parse(profile.timestamp)))} •
+          ${formatNumber(profile.distance_km, 2)} km •
+          ${profile.elevation_m === null || profile.elevation_m === undefined ? "n/a" : `${formatNumber(profile.elevation_m, 0)} m`}
+          <div class="forecast-chart-hover-grid">${rows}</div>
+        `;
+      }
+
+      function initMetricChart(metricSpec, payload, dateFormatter) {
+        const note = document.getElementById(`chart-note-${metricSpec.id}`);
+        const container = document.getElementById(`chart-${metricSpec.id}`);
+        if (!container) {
+          return;
+        }
+
+        if (metricSpec.id === "elevation") {
+          const xValues = payload.route_profile.map((point) => Date.parse(point.timestamp));
+          const yValues = payload.route_profile.map((point) =>
+            point.elevation_m === null || point.elevation_m === undefined
+              ? null
+              : Number(point.elevation_m),
+          );
+          if (!yValues.some((value) => value !== null)) {
+            container.innerHTML = '<div class="empty-state">Route elevation is unavailable for this forecast.</div>';
+            if (note) {
+              note.textContent = "Elevation uses the route profile rather than provider data.";
+            }
+            return;
+          }
+          if (note) {
+            note.textContent = "Elevation comes from the GPX route profile and is aligned to the same time axis.";
+          }
+          const opts = {
+            width: Math.max(container.clientWidth - 24, 280),
+            height: 300,
+            legend: { show: false },
+            cursor: {
+              sync: { key: "trailintel-forecast-sync" },
+              drag: { x: false, y: false },
+            },
+            scales: {
+              x: { time: true },
+            },
+            axes: [
+              {
+                size: 76,
+                space: 120,
+                values: (_u, vals) => vals.map((value) => axisDateFormatter.format(new Date(value))),
+              },
+              {
+                size: 78,
+                values: (_u, vals) => vals.map((value) => `${formatNumber(value, 0)} m`),
+              },
+            ],
+            series: [
+              {},
+              {
+                label: "Elevation",
+                stroke: "#8a6a2f",
+                width: 2,
+                spanGaps: true,
+                points: { show: false },
+              },
+            ],
+            plugins: [
+              {
+                hooks: {
+                  setCursor: [
+                    (u) => {
+                      if (u.cursor.idx == null || u.cursor.idx < 0) {
+                        return;
+                      }
+                      const hoverKey = `${metricSpec.id}:${u.cursor.idx}`;
+                      if (hoverKey === activeHoverKey) {
+                        return;
+                      }
+                      activeHoverKey = hoverKey;
+                      renderHoverContent(
+                        metricSpec.id,
+                        metricSpec.title,
+                        u.cursor.idx,
+                        payload,
+                        [{
+                          label: "Elevation",
+                          color: "#8a6a2f",
+                          values: yValues,
+                        }],
+                      );
+                    },
+                  ],
+                },
+              },
+            ],
+          };
+          const chart = new window.uPlot(opts, [xValues, yValues], container);
+          chartEntries.push({ chart, container });
+          return;
+        }
+
+        const seriesEntries = [];
+        const unavailableLabels = [];
+        const xValues =
+          payload.route_profile?.map((point) => Date.parse(point.timestamp)) ?? [];
+
+        for (const provider of payload.providers ?? []) {
+          if (!hasMetricValue(metricSpec.id, provider.coverage || {})) {
+            unavailableLabels.push(provider.label);
+            continue;
+          }
+          const values = (provider.samples ?? []).map((sample) => {
+            const value = getMetricValue(sample, metricSpec.id);
+            return value === null || value === undefined ? null : Number(value);
+          });
+          if (!values.some((value) => value !== null)) {
+            unavailableLabels.push(provider.label);
+            continue;
+          }
+          seriesEntries.push({
+            providerId: provider.provider_id,
+            label: provider.label,
+            color: provider.color || colorLookup[provider.provider_id] || "#0e5b85",
+            values,
+          });
+        }
+
+        if (!seriesEntries.length) {
+          container.innerHTML = `<div class="empty-state">No ${metricSpec.title.toLowerCase()} comparison data is available for this forecast.</div>`;
+          if (note) {
+            note.textContent = unavailableLabels.length
+              ? `Unavailable from: ${unavailableLabels.join(", ")}.`
+              : `No provider data is available for this metric.`;
+          }
+          return;
+        }
+
+        if (note) {
+          const baseNote = unavailableLabels.length
+            ? `Unavailable from: ${unavailableLabels.join(", ")}.`
+            : `All available providers are plotted on the same chart.`;
+          note.textContent = metricSpec.id === "wind"
+            ? `${baseNote} Values shown in km/h.`
+            : baseNote;
+        }
+
+        const opts = {
+          width: Math.max(container.clientWidth - 24, 280),
+          height: 280,
+          legend: { show: false },
+          cursor: {
+            sync: { key: "trailintel-forecast-sync" },
+            drag: { x: false, y: false },
+          },
+          scales: {
+            x: { time: true },
+          },
+          axes: [
+            {
+              size: 76,
+              space: 120,
+              values: (_u, vals) => vals.map((value) => axisDateFormatter.format(new Date(value))),
+            },
+            {
+              size: 64,
+              values: (_u, vals) => vals.map((value) => axisValueLabel(metricSpec.id, value)),
+            },
+          ],
+          series: [
+            {},
+            ...seriesEntries.map((entry) => ({
+              label: entry.label,
+              stroke: entry.color,
+              width: 2,
+              spanGaps: true,
+              points: { show: false },
+            })),
+          ],
+          plugins: [
+            {
+              hooks: {
+                setCursor: [
+                  (u) => {
+                    if (u.cursor.idx == null || u.cursor.idx < 0) {
+                      return;
+                    }
+                    const hoverKey = `${metricSpec.id}:${u.cursor.idx}`;
+                    if (hoverKey === activeHoverKey) {
+                      return;
+                    }
+                    activeHoverKey = hoverKey;
+                    renderHoverContent(
+                      metricSpec.id,
+                      metricSpec.title,
+                      u.cursor.idx,
+                      payload,
+                      seriesEntries,
+                    );
+                  },
+                ],
+              },
+            },
+          ],
+        };
+
+        const chart = new window.uPlot(
+          opts,
+          [xValues, ...seriesEntries.map((entry) => entry.values)],
+          container,
+        );
+        chartEntries.push({ chart, container });
+      }
+
+      const payload = parsePayload();
+      if (!payload) {
+        return;
+      }
+      if (typeof window.uPlot !== "function") {
+        setFallback("Interactive charts could not load from the CDN. The PNG summary and downloads below still contain the forecast details.");
+        return;
+      }
+      if (!Array.isArray(payload.providers) || !payload.providers.length) {
+        setFallback("No interactive provider chart data is available for this report.");
+        return;
+      }
+      if (!Array.isArray(payload.route_profile) || !payload.route_profile.length) {
+        setFallback("The route profile is missing from the interactive chart data.");
+        return;
+      }
+
+      const dateFormatter = buildDateFormatter(payload.timezone || "");
+      const axisDateFormatter = buildAxisDateFormatter(payload.timezone || "");
+      for (const metricSpec of chartSpecs) {
+        initMetricChart(metricSpec, payload, dateFormatter);
+      }
+
+      const resizeCharts = () => {
+        for (const entry of chartEntries) {
+          entry.chart.setSize({
+            width: Math.max(entry.container.clientWidth - 24, 280),
+            height: 300,
+          });
+        }
+      };
+
+      if (typeof ResizeObserver === "function") {
+        const observer = new ResizeObserver(() => resizeCharts());
+        for (const entry of chartEntries) {
+          observer.observe(entry.container);
+        }
+      } else {
+        window.addEventListener("resize", resizeCharts);
+      }
+    })();
+  </script>
+    
+</body>
+</html>
