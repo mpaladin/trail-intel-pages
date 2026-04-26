@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "Malcesine Baldo Trail",
+  "generated_at": "2026-04-26T06:29:52.131719+00:00",
+  "participants_count": 252,
+  "rows_evaluated": 252,
+  "qualified_count": 23,
+  "strategy": "participant-first",
+  "race_url": "https://event.endu.net/events/event/entrants?editionId=100384",
+  "competition_name": "52 k",
+  "score_threshold": 670.0,
+  "published_at": "2026-04-26T06:29:55.012741+00:00",
+  "race_slug": "malcesine-baldo-trail-52-k",
+  "race_name": "Malcesine Baldo Trail",
+  "report_path": "reports/malcesine-baldo-trail-52-k/20260426-062955/index.html",
+  "csv_path": "reports/malcesine-baldo-trail-52-k/20260426-062955/report.csv",
+  "json_path": "reports/malcesine-baldo-trail-52-k/20260426-062955/report.json"
+}
