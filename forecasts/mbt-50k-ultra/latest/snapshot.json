@@ -1,0 +1,3581 @@
+{
+  "report_kind": "forecast",
+  "title": "MBT_50k_ultra",
+  "generated_at": "2026-05-01T14:51:40.105988+00:00",
+  "start_time": "2026-05-02T06:30:00+02:00",
+  "end_time": "2026-05-02T12:30:00+02:00",
+  "timezone": "Europe/Rome",
+  "duration": "06:00",
+  "route_distance_km": 52.45,
+  "route_ascent_m": 4818.5,
+  "sample_count": 37,
+  "source_label": "Open-Meteo Forecast API",
+  "summary": {
+    "temperature_min_c": 4.3,
+    "temperature_max_c": 19.8,
+    "wind_max_kph": 11.3,
+    "precipitation_total_mm": 0.0,
+    "wettest_time": "2026-05-02T06:30:00+02:00",
+    "wettest_precipitation_mm": 0.0,
+    "wettest_probability_pct": 0.0
+  },
+  "key_moments": [
+    {
+      "kind": "start",
+      "label": "Start",
+      "timestamp": "2026-05-02T06:30:00+02:00",
+      "distance_km": 0.0,
+      "temperature_c": 14.5,
+      "wind_kph": 3.7,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "kind": "coldest",
+      "label": "Coldest",
+      "timestamp": "2026-05-02T07:50:00+02:00",
+      "distance_km": 11.66,
+      "temperature_c": 4.3,
+      "wind_kph": 0.8,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "kind": "windiest",
+      "label": "Windiest",
+      "timestamp": "2026-05-02T12:30:00+02:00",
+      "distance_km": 52.45,
+      "temperature_c": 19.8,
+      "wind_kph": 11.3,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "kind": "wettest",
+      "label": "Wettest",
+      "timestamp": "2026-05-02T06:30:00+02:00",
+      "distance_km": 0.0,
+      "temperature_c": 14.5,
+      "wind_kph": 3.7,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "kind": "finish",
+      "label": "Finish",
+      "timestamp": "2026-05-02T12:30:00+02:00",
+      "distance_km": 52.45,
+      "temperature_c": 19.8,
+      "wind_kph": 11.3,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    }
+  ],
+  "sample_rows": [
+    {
+      "index": 0,
+      "timestamp": "2026-05-02T06:30:00+02:00",
+      "distance_km": 0.0,
+      "elevation_m": 71.9,
+      "temperature_c": 14.5,
+      "apparent_temperature_c": 13.2,
+      "wind_kph": 3.7,
+      "wind_gust_kph": 4.5,
+      "wind_direction_deg": 40.5,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 1,
+      "timestamp": "2026-05-02T06:40:00+02:00",
+      "distance_km": 1.46,
+      "elevation_m": 135.67063583538817,
+      "temperature_c": 14.1,
+      "apparent_temperature_c": 12.8,
+      "wind_kph": 4.1,
+      "wind_gust_kph": 5.0,
+      "wind_direction_deg": 39.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 2,
+      "timestamp": "2026-05-02T06:50:00+02:00",
+      "distance_km": 2.91,
+      "elevation_m": 336.9465234644031,
+      "temperature_c": 13.1,
+      "apparent_temperature_c": 11.3,
+      "wind_kph": 4.9,
+      "wind_gust_kph": 5.9,
+      "wind_direction_deg": 36.5,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 3,
+      "timestamp": "2026-05-02T07:00:00+02:00",
+      "distance_km": 4.37,
+      "elevation_m": 594.1552451233412,
+      "temperature_c": 10.3,
+      "apparent_temperature_c": 7.9,
+      "wind_kph": 6.0,
+      "wind_gust_kph": 6.5,
+      "wind_direction_deg": 57.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 4,
+      "timestamp": "2026-05-02T07:10:00+02:00",
+      "distance_km": 5.83,
+      "elevation_m": 615.5457666944387,
+      "temperature_c": 10.8,
+      "apparent_temperature_c": 9.3,
+      "wind_kph": 2.9,
+      "wind_gust_kph": 3.7,
+      "wind_direction_deg": 37.5,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 5,
+      "timestamp": "2026-05-02T07:20:00+02:00",
+      "distance_km": 7.28,
+      "elevation_m": 1013.5769726973674,
+      "temperature_c": 8.8,
+      "apparent_temperature_c": 6.5,
+      "wind_kph": 3.1,
+      "wind_gust_kph": 5.0,
+      "wind_direction_deg": 66.3,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 6,
+      "timestamp": "2026-05-02T07:30:00+02:00",
+      "distance_km": 8.74,
+      "elevation_m": 1418.8324913712459,
+      "temperature_c": 6.8,
+      "apparent_temperature_c": 4.5,
+      "wind_kph": 2.2,
+      "wind_gust_kph": 5.1,
+      "wind_direction_deg": 340.5,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 7,
+      "timestamp": "2026-05-02T07:40:00+02:00",
+      "distance_km": 10.2,
+      "elevation_m": 1702.6495880698078,
+      "temperature_c": 5.7,
+      "apparent_temperature_c": 3.1,
+      "wind_kph": 0.7,
+      "wind_gust_kph": 3.6,
+      "wind_direction_deg": 0.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 8,
+      "timestamp": "2026-05-02T07:50:00+02:00",
+      "distance_km": 11.66,
+      "elevation_m": 1954.534005209063,
+      "temperature_c": 4.3,
+      "apparent_temperature_c": 1.4,
+      "wind_kph": 0.8,
+      "wind_gust_kph": 3.8,
+      "wind_direction_deg": 22.5,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 9,
+      "timestamp": "2026-05-02T08:00:00+02:00",
+      "distance_km": 13.11,
+      "elevation_m": 1982.2969216338824,
+      "temperature_c": 4.3,
+      "apparent_temperature_c": 1.4,
+      "wind_kph": 1.0,
+      "wind_gust_kph": 4.0,
+      "wind_direction_deg": 45.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 10,
+      "timestamp": "2026-05-02T08:10:00+02:00",
+      "distance_km": 14.57,
+      "elevation_m": 1720.6162108164106,
+      "temperature_c": 6.2,
+      "apparent_temperature_c": 3.6,
+      "wind_kph": 1.0,
+      "wind_gust_kph": 4.2,
+      "wind_direction_deg": 48.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 11,
+      "timestamp": "2026-05-02T08:20:00+02:00",
+      "distance_km": 16.03,
+      "elevation_m": 1621.8016166265397,
+      "temperature_c": 6.9,
+      "apparent_temperature_c": 4.4,
+      "wind_kph": 1.4,
+      "wind_gust_kph": 4.2,
+      "wind_direction_deg": 297.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 12,
+      "timestamp": "2026-05-02T08:30:00+02:00",
+      "distance_km": 17.48,
+      "elevation_m": 1621.145311583458,
+      "temperature_c": 7.1,
+      "apparent_temperature_c": 4.8,
+      "wind_kph": 1.3,
+      "wind_gust_kph": 4.5,
+      "wind_direction_deg": 279.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 13,
+      "timestamp": "2026-05-02T08:40:00+02:00",
+      "distance_km": 18.94,
+      "elevation_m": 1492.1319529123125,
+      "temperature_c": 8.0,
+      "apparent_temperature_c": 5.9,
+      "wind_kph": 1.7,
+      "wind_gust_kph": 5.9,
+      "wind_direction_deg": 287.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 14,
+      "timestamp": "2026-05-02T08:50:00+02:00",
+      "distance_km": 20.4,
+      "elevation_m": 1394.2902678280248,
+      "temperature_c": 8.2,
+      "apparent_temperature_c": 6.2,
+      "wind_kph": 2.5,
+      "wind_gust_kph": 5.4,
+      "wind_direction_deg": 286.3,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 15,
+      "timestamp": "2026-05-02T09:00:00+02:00",
+      "distance_km": 21.85,
+      "elevation_m": 1198.384739219017,
+      "temperature_c": 10.4,
+      "apparent_temperature_c": 8.2,
+      "wind_kph": 2.5,
+      "wind_gust_kph": 5.8,
+      "wind_direction_deg": 98.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 16,
+      "timestamp": "2026-05-02T09:10:00+02:00",
+      "distance_km": 23.31,
+      "elevation_m": 1255.3797677482685,
+      "temperature_c": 10.2,
+      "apparent_temperature_c": 8.0,
+      "wind_kph": 2.9,
+      "wind_gust_kph": 6.6,
+      "wind_direction_deg": 100.2,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 17,
+      "timestamp": "2026-05-02T09:20:00+02:00",
+      "distance_km": 24.77,
+      "elevation_m": 1301.2574784290905,
+      "temperature_c": 10.6,
+      "apparent_temperature_c": 8.5,
+      "wind_kph": 2.4,
+      "wind_gust_kph": 8.0,
+      "wind_direction_deg": 127.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 18,
+      "timestamp": "2026-05-02T09:30:00+02:00",
+      "distance_km": 26.22,
+      "elevation_m": 1225.3893109005273,
+      "temperature_c": 11.3,
+      "apparent_temperature_c": 9.2,
+      "wind_kph": 2.7,
+      "wind_gust_kph": 8.6,
+      "wind_direction_deg": 127.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 19,
+      "timestamp": "2026-05-02T09:40:00+02:00",
+      "distance_km": 27.68,
+      "elevation_m": 1079.6497856887688,
+      "temperature_c": 11.4,
+      "apparent_temperature_c": 8.9,
+      "wind_kph": 4.8,
+      "wind_gust_kph": 10.3,
+      "wind_direction_deg": 130.3,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 20,
+      "timestamp": "2026-05-02T09:50:00+02:00",
+      "distance_km": 29.14,
+      "elevation_m": 1074.1717407827682,
+      "temperature_c": 11.6,
+      "apparent_temperature_c": 9.2,
+      "wind_kph": 5.1,
+      "wind_gust_kph": 10.8,
+      "wind_direction_deg": 131.2,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 21,
+      "timestamp": "2026-05-02T10:00:00+02:00",
+      "distance_km": 30.59,
+      "elevation_m": 1146.341191632599,
+      "temperature_c": 11.5,
+      "apparent_temperature_c": 9.1,
+      "wind_kph": 5.1,
+      "wind_gust_kph": 11.5,
+      "wind_direction_deg": 129.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 22,
+      "timestamp": "2026-05-02T10:10:00+02:00",
+      "distance_km": 32.05,
+      "elevation_m": 1368.598872763665,
+      "temperature_c": 9.7,
+      "apparent_temperature_c": 7.1,
+      "wind_kph": 5.9,
+      "wind_gust_kph": 12.7,
+      "wind_direction_deg": 118.7,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 23,
+      "timestamp": "2026-05-02T10:20:00+02:00",
+      "distance_km": 33.51,
+      "elevation_m": 1373.2815220769685,
+      "temperature_c": 11.2,
+      "apparent_temperature_c": 9.4,
+      "wind_kph": 4.2,
+      "wind_gust_kph": 11.3,
+      "wind_direction_deg": 127.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 24,
+      "timestamp": "2026-05-02T10:30:00+02:00",
+      "distance_km": 34.97,
+      "elevation_m": 1431.4209387051942,
+      "temperature_c": 11.0,
+      "apparent_temperature_c": 9.2,
+      "wind_kph": 4.5,
+      "wind_gust_kph": 11.7,
+      "wind_direction_deg": 127.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 25,
+      "timestamp": "2026-05-02T10:40:00+02:00",
+      "distance_km": 36.42,
+      "elevation_m": 1460.0231986245153,
+      "temperature_c": 10.7,
+      "apparent_temperature_c": 10.0,
+      "wind_kph": 1.7,
+      "wind_gust_kph": 7.8,
+      "wind_direction_deg": 225.7,
+      "cloud_cover_pct": 26.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 26,
+      "timestamp": "2026-05-02T10:50:00+02:00",
+      "distance_km": 37.88,
+      "elevation_m": 1739.8562985266738,
+      "temperature_c": 9.1,
+      "apparent_temperature_c": 8.2,
+      "wind_kph": 1.8,
+      "wind_gust_kph": 8.1,
+      "wind_direction_deg": 221.3,
+      "cloud_cover_pct": 32.5,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 27,
+      "timestamp": "2026-05-02T11:00:00+02:00",
+      "distance_km": 39.34,
+      "elevation_m": 1550.8576914226007,
+      "temperature_c": 10.6,
+      "apparent_temperature_c": 10.1,
+      "wind_kph": 1.8,
+      "wind_gust_kph": 8.3,
+      "wind_direction_deg": 217.0,
+      "cloud_cover_pct": 39.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 28,
+      "timestamp": "2026-05-02T11:10:00+02:00",
+      "distance_km": 40.79,
+      "elevation_m": 1316.2477387853187,
+      "temperature_c": 11.3,
+      "apparent_temperature_c": 10.6,
+      "wind_kph": 4.9,
+      "wind_gust_kph": 14.4,
+      "wind_direction_deg": 273.3,
+      "cloud_cover_pct": 13.5,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 29,
+      "timestamp": "2026-05-02T11:20:00+02:00",
+      "distance_km": 42.25,
+      "elevation_m": 1276.3634624161202,
+      "temperature_c": 11.7,
+      "apparent_temperature_c": 11.1,
+      "wind_kph": 5.1,
+      "wind_gust_kph": 14.4,
+      "wind_direction_deg": 272.7,
+      "cloud_cover_pct": 16.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 30,
+      "timestamp": "2026-05-02T11:30:00+02:00",
+      "distance_km": 43.71,
+      "elevation_m": 1256.18098560795,
+      "temperature_c": 12.1,
+      "apparent_temperature_c": 11.6,
+      "wind_kph": 5.2,
+      "wind_gust_kph": 14.4,
+      "wind_direction_deg": 272.0,
+      "cloud_cover_pct": 18.5,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 31,
+      "timestamp": "2026-05-02T11:40:00+02:00",
+      "distance_km": 45.16,
+      "elevation_m": 920.6587685387876,
+      "temperature_c": 13.8,
+      "apparent_temperature_c": 12.4,
+      "wind_kph": 8.5,
+      "wind_gust_kph": 10.1,
+      "wind_direction_deg": 257.3,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 32,
+      "timestamp": "2026-05-02T11:50:00+02:00",
+      "distance_km": 46.62,
+      "elevation_m": 571.5318942555837,
+      "temperature_c": 16.4,
+      "apparent_temperature_c": 15.4,
+      "wind_kph": 8.5,
+      "wind_gust_kph": 10.7,
+      "wind_direction_deg": 253.7,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 33,
+      "timestamp": "2026-05-02T12:00:00+02:00",
+      "distance_km": 48.08,
+      "elevation_m": 536.7515379581279,
+      "temperature_c": 16.7,
+      "apparent_temperature_c": 15.8,
+      "wind_kph": 9.1,
+      "wind_gust_kph": 11.5,
+      "wind_direction_deg": 252.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 34,
+      "timestamp": "2026-05-02T12:10:00+02:00",
+      "distance_km": 49.53,
+      "elevation_m": 461.3073089991823,
+      "temperature_c": 17.3,
+      "apparent_temperature_c": 16.6,
+      "wind_kph": 9.3,
+      "wind_gust_kph": 11.9,
+      "wind_direction_deg": 250.8,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 35,
+      "timestamp": "2026-05-02T12:20:00+02:00",
+      "distance_km": 50.99,
+      "elevation_m": 278.0487451445953,
+      "temperature_c": 18.3,
+      "apparent_temperature_c": 17.4,
+      "wind_kph": 11.0,
+      "wind_gust_kph": 15.2,
+      "wind_direction_deg": 231.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    },
+    {
+      "index": 36,
+      "timestamp": "2026-05-02T12:30:00+02:00",
+      "distance_km": 52.45,
+      "elevation_m": 69.18,
+      "temperature_c": 19.8,
+      "apparent_temperature_c": 19.1,
+      "wind_kph": 11.3,
+      "wind_gust_kph": 15.8,
+      "wind_direction_deg": 231.0,
+      "cloud_cover_pct": 0.0,
+      "precipitation_mm": 0.0,
+      "precipitation_probability": 0.0
+    }
+  ],
+  "route_map": {
+    "bounds": {
+      "min_lat": 45.73076,
+      "max_lat": 45.81298,
+      "min_lon": 10.80986,
+      "max_lon": 10.90593
+    },
+    "points": [
+      {
+        "lat": 45.76827,
+        "lon": 10.81095
+      },
+      {
+        "lat": 45.76767,
+        "lon": 10.81081
+      },
+      {
+        "lat": 45.76708,
+        "lon": 10.8104
+      },
+      {
+        "lat": 45.76663,
+        "lon": 10.81001
+      },
+      {
+        "lat": 45.76604,
+        "lon": 10.81018
+      },
+      {
+        "lat": 45.76567,
+        "lon": 10.81109
+      },
+      {
+        "lat": 45.76586,
+        "lon": 10.8122
+      },
+      {
+        "lat": 45.76622,
+        "lon": 10.81275
+      },
+      {
+        "lat": 45.76665,
+        "lon": 10.81341
+      },
+      {
+        "lat": 45.76734,
+        "lon": 10.8134
+      },
+      {
+        "lat": 45.76834,
+        "lon": 10.8141
+      },
+      {
+        "lat": 45.76907,
+        "lon": 10.81491
+      },
+      {
+        "lat": 45.77027,
+        "lon": 10.81547
+      },
+      {
+        "lat": 45.77114,
+        "lon": 10.81606
+      },
+      {
+        "lat": 45.77199,
+        "lon": 10.81636
+      },
+      {
+        "lat": 45.77232,
+        "lon": 10.8172
+      },
+      {
+        "lat": 45.77249,
+        "lon": 10.81812
+      },
+      {
+        "lat": 45.77246,
+        "lon": 10.81933
+      },
+      {
+        "lat": 45.77264,
+        "lon": 10.81985
+      },
+      {
+        "lat": 45.77307,
+        "lon": 10.82037
+      },
+      {
+        "lat": 45.77362,
+        "lon": 10.82073
+      },
+      {
+        "lat": 45.77422,
+        "lon": 10.82106
+      },
+      {
+        "lat": 45.77502,
+        "lon": 10.82134
+      },
+      {
+        "lat": 45.77596,
+        "lon": 10.82169
+      },
+      {
+        "lat": 45.7768,
+        "lon": 10.82226
+      },
+      {
+        "lat": 45.77719,
+        "lon": 10.82338
+      },
+      {
+        "lat": 45.77732,
+        "lon": 10.82435
+      },
+      {
+        "lat": 45.77773,
+        "lon": 10.82504
+      },
+      {
+        "lat": 45.77832,
+        "lon": 10.82518
+      },
+      {
+        "lat": 45.7786,
+        "lon": 10.82582
+      },
+      {
+        "lat": 45.77917,
+        "lon": 10.82619
+      },
+      {
+        "lat": 45.77973,
+        "lon": 10.82673
+      },
+      {
+        "lat": 45.78027,
+        "lon": 10.82708
+      },
+      {
+        "lat": 45.78072,
+        "lon": 10.82735
+      },
+      {
+        "lat": 45.78115,
+        "lon": 10.82787
+      },
+      {
+        "lat": 45.7814,
+        "lon": 10.8284
+      },
+      {
+        "lat": 45.78165,
+        "lon": 10.82908
+      },
+      {
+        "lat": 45.78212,
+        "lon": 10.82928
+      },
+      {
+        "lat": 45.78269,
+        "lon": 10.8295
+      },
+      {
+        "lat": 45.78317,
+        "lon": 10.8298
+      },
+      {
+        "lat": 45.78368,
+        "lon": 10.83004
+      },
+      {
+        "lat": 45.78404,
+        "lon": 10.83043
+      },
+      {
+        "lat": 45.78419,
+        "lon": 10.83102
+      },
+      {
+        "lat": 45.78376,
+        "lon": 10.83122
+      },
+      {
+        "lat": 45.78394,
+        "lon": 10.83182
+      },
+      {
+        "lat": 45.78409,
+        "lon": 10.83233
+      },
+      {
+        "lat": 45.78458,
+        "lon": 10.83289
+      },
+      {
+        "lat": 45.78497,
+        "lon": 10.83329
+      },
+      {
+        "lat": 45.78545,
+        "lon": 10.83361
+      },
+      {
+        "lat": 45.78568,
+        "lon": 10.83407
+      },
+      {
+        "lat": 45.78601,
+        "lon": 10.83449
+      },
+      {
+        "lat": 45.78624,
+        "lon": 10.83506
+      },
+      {
+        "lat": 45.7866,
+        "lon": 10.8354
+      },
+      {
+        "lat": 45.78689,
+        "lon": 10.83612
+      },
+      {
+        "lat": 45.78736,
+        "lon": 10.83657
+      },
+      {
+        "lat": 45.78784,
+        "lon": 10.83702
+      },
+      {
+        "lat": 45.78831,
+        "lon": 10.83759
+      },
+      {
+        "lat": 45.78866,
+        "lon": 10.83831
+      },
+      {
+        "lat": 45.78861,
+        "lon": 10.8389
+      },
+      {
+        "lat": 45.78875,
+        "lon": 10.83959
+      },
+      {
+        "lat": 45.78909,
+        "lon": 10.83987
+      },
+      {
+        "lat": 45.78889,
+        "lon": 10.83997
+      },
+      {
+        "lat": 45.78913,
+        "lon": 10.84049
+      },
+      {
+        "lat": 45.78933,
+        "lon": 10.84109
+      },
+      {
+        "lat": 45.78953,
+        "lon": 10.84173
+      },
+      {
+        "lat": 45.78976,
+        "lon": 10.84233
+      },
+      {
+        "lat": 45.78995,
+        "lon": 10.84291
+      },
+      {
+        "lat": 45.79005,
+        "lon": 10.84346
+      },
+      {
+        "lat": 45.79017,
+        "lon": 10.84409
+      },
+      {
+        "lat": 45.79052,
+        "lon": 10.84447
+      },
+      {
+        "lat": 45.79061,
+        "lon": 10.84489
+      },
+      {
+        "lat": 45.79072,
+        "lon": 10.84556
+      },
+      {
+        "lat": 45.79084,
+        "lon": 10.84634
+      },
+      {
+        "lat": 45.79092,
+        "lon": 10.84722
+      },
+      {
+        "lat": 45.79122,
+        "lon": 10.84831
+      },
+      {
+        "lat": 45.79127,
+        "lon": 10.8491
+      },
+      {
+        "lat": 45.79189,
+        "lon": 10.84939
+      },
+      {
+        "lat": 45.7922,
+        "lon": 10.84983
+      },
+      {
+        "lat": 45.79273,
+        "lon": 10.85032
+      },
+      {
+        "lat": 45.79295,
+        "lon": 10.85106
+      },
+      {
+        "lat": 45.79313,
+        "lon": 10.85171
+      },
+      {
+        "lat": 45.79298,
+        "lon": 10.85253
+      },
+      {
+        "lat": 45.7928,
+        "lon": 10.85319
+      },
+      {
+        "lat": 45.79292,
+        "lon": 10.85383
+      },
+      {
+        "lat": 45.79259,
+        "lon": 10.85427
+      },
+      {
+        "lat": 45.79212,
+        "lon": 10.8543
+      },
+      {
+        "lat": 45.79189,
+        "lon": 10.85426
+      },
+      {
+        "lat": 45.79214,
+        "lon": 10.85495
+      },
+      {
+        "lat": 45.79216,
+        "lon": 10.85553
+      },
+      {
+        "lat": 45.79227,
+        "lon": 10.85629
+      },
+      {
+        "lat": 45.79275,
+        "lon": 10.85664
+      },
+      {
+        "lat": 45.79302,
+        "lon": 10.85699
+      },
+      {
+        "lat": 45.79268,
+        "lon": 10.8574
+      },
+      {
+        "lat": 45.79246,
+        "lon": 10.85802
+      },
+      {
+        "lat": 45.79214,
+        "lon": 10.85807
+      },
+      {
+        "lat": 45.79192,
+        "lon": 10.85855
+      },
+      {
+        "lat": 45.79161,
+        "lon": 10.85855
+      },
+      {
+        "lat": 45.79152,
+        "lon": 10.85907
+      },
+      {
+        "lat": 45.79142,
+        "lon": 10.85952
+      },
+      {
+        "lat": 45.79117,
+        "lon": 10.86009
+      },
+      {
+        "lat": 45.79114,
+        "lon": 10.86065
+      },
+      {
+        "lat": 45.79139,
+        "lon": 10.86115
+      },
+      {
+        "lat": 45.79127,
+        "lon": 10.86155
+      },
+      {
+        "lat": 45.79137,
+        "lon": 10.86211
+      },
+      {
+        "lat": 45.79162,
+        "lon": 10.86265
+      },
+      {
+        "lat": 45.79202,
+        "lon": 10.86293
+      },
+      {
+        "lat": 45.7925,
+        "lon": 10.86321
+      },
+      {
+        "lat": 45.79265,
+        "lon": 10.86351
+      },
+      {
+        "lat": 45.79267,
+        "lon": 10.86407
+      },
+      {
+        "lat": 45.79227,
+        "lon": 10.86439
+      },
+      {
+        "lat": 45.79196,
+        "lon": 10.86472
+      },
+      {
+        "lat": 45.79159,
+        "lon": 10.86519
+      },
+      {
+        "lat": 45.79122,
+        "lon": 10.86549
+      },
+      {
+        "lat": 45.79105,
+        "lon": 10.86587
+      },
+      {
+        "lat": 45.7909,
+        "lon": 10.86651
+      },
+      {
+        "lat": 45.79155,
+        "lon": 10.86659
+      },
+      {
+        "lat": 45.79196,
+        "lon": 10.86682
+      },
+      {
+        "lat": 45.7924,
+        "lon": 10.86707
+      },
+      {
+        "lat": 45.79216,
+        "lon": 10.86746
+      },
+      {
+        "lat": 45.79177,
+        "lon": 10.86794
+      },
+      {
+        "lat": 45.79138,
+        "lon": 10.86821
+      },
+      {
+        "lat": 45.79093,
+        "lon": 10.86846
+      },
+      {
+        "lat": 45.79048,
+        "lon": 10.86885
+      },
+      {
+        "lat": 45.79004,
+        "lon": 10.86895
+      },
+      {
+        "lat": 45.7896,
+        "lon": 10.86914
+      },
+      {
+        "lat": 45.78945,
+        "lon": 10.86954
+      },
+      {
+        "lat": 45.78919,
+        "lon": 10.86971
+      },
+      {
+        "lat": 45.78915,
+        "lon": 10.87003
+      },
+      {
+        "lat": 45.78856,
+        "lon": 10.87016
+      },
+      {
+        "lat": 45.78815,
+        "lon": 10.86978
+      },
+      {
+        "lat": 45.7879,
+        "lon": 10.86971
+      },
+      {
+        "lat": 45.78803,
+        "lon": 10.87028
+      },
+      {
+        "lat": 45.78823,
+        "lon": 10.87086
+      },
+      {
+        "lat": 45.78793,
+        "lon": 10.87075
+      },
+      {
+        "lat": 45.78794,
+        "lon": 10.87142
+      },
+      {
+        "lat": 45.78803,
+        "lon": 10.87198
+      },
+      {
+        "lat": 45.78807,
+        "lon": 10.87255
+      },
+      {
+        "lat": 45.78852,
+        "lon": 10.8727
+      },
+      {
+        "lat": 45.78907,
+        "lon": 10.87271
+      },
+      {
+        "lat": 45.78956,
+        "lon": 10.87274
+      },
+      {
+        "lat": 45.79006,
+        "lon": 10.87295
+      },
+      {
+        "lat": 45.79067,
+        "lon": 10.87281
+      },
+      {
+        "lat": 45.79122,
+        "lon": 10.87305
+      },
+      {
+        "lat": 45.79163,
+        "lon": 10.87312
+      },
+      {
+        "lat": 45.79214,
+        "lon": 10.87313
+      },
+      {
+        "lat": 45.79256,
+        "lon": 10.87348
+      },
+      {
+        "lat": 45.79309,
+        "lon": 10.87371
+      },
+      {
+        "lat": 45.79355,
+        "lon": 10.87394
+      },
+      {
+        "lat": 45.79405,
+        "lon": 10.87394
+      },
+      {
+        "lat": 45.79444,
+        "lon": 10.87408
+      },
+      {
+        "lat": 45.7949,
+        "lon": 10.87431
+      },
+      {
+        "lat": 45.79536,
+        "lon": 10.87434
+      },
+      {
+        "lat": 45.79568,
+        "lon": 10.8748
+      },
+      {
+        "lat": 45.79608,
+        "lon": 10.87547
+      },
+      {
+        "lat": 45.7964,
+        "lon": 10.87586
+      },
+      {
+        "lat": 45.79681,
+        "lon": 10.87571
+      },
+      {
+        "lat": 45.79718,
+        "lon": 10.87563
+      },
+      {
+        "lat": 45.79754,
+        "lon": 10.87605
+      },
+      {
+        "lat": 45.79788,
+        "lon": 10.87596
+      },
+      {
+        "lat": 45.79835,
+        "lon": 10.87616
+      },
+      {
+        "lat": 45.79873,
+        "lon": 10.87659
+      },
+      {
+        "lat": 45.7992,
+        "lon": 10.87681
+      },
+      {
+        "lat": 45.79959,
+        "lon": 10.87734
+      },
+      {
+        "lat": 45.80002,
+        "lon": 10.87761
+      },
+      {
+        "lat": 45.80002,
+        "lon": 10.87702
+      },
+      {
+        "lat": 45.8005,
+        "lon": 10.87734
+      },
+      {
+        "lat": 45.80087,
+        "lon": 10.87745
+      },
+      {
+        "lat": 45.80111,
+        "lon": 10.8774
+      },
+      {
+        "lat": 45.80155,
+        "lon": 10.87778
+      },
+      {
+        "lat": 45.80161,
+        "lon": 10.87709
+      },
+      {
+        "lat": 45.80209,
+        "lon": 10.8774
+      },
+      {
+        "lat": 45.80254,
+        "lon": 10.87738
+      },
+      {
+        "lat": 45.80291,
+        "lon": 10.87781
+      },
+      {
+        "lat": 45.80325,
+        "lon": 10.87763
+      },
+      {
+        "lat": 45.80356,
+        "lon": 10.87858
+      },
+      {
+        "lat": 45.80397,
+        "lon": 10.87929
+      },
+      {
+        "lat": 45.80405,
+        "lon": 10.88011
+      },
+      {
+        "lat": 45.80438,
+        "lon": 10.88109
+      },
+      {
+        "lat": 45.80466,
+        "lon": 10.88198
+      },
+      {
+        "lat": 45.80501,
+        "lon": 10.88283
+      },
+      {
+        "lat": 45.80528,
+        "lon": 10.88369
+      },
+      {
+        "lat": 45.80543,
+        "lon": 10.88446
+      },
+      {
+        "lat": 45.80543,
+        "lon": 10.88528
+      },
+      {
+        "lat": 45.80551,
+        "lon": 10.8859
+      },
+      {
+        "lat": 45.80571,
+        "lon": 10.88588
+      },
+      {
+        "lat": 45.80589,
+        "lon": 10.88658
+      },
+      {
+        "lat": 45.80624,
+        "lon": 10.88656
+      },
+      {
+        "lat": 45.80652,
+        "lon": 10.88712
+      },
+      {
+        "lat": 45.80683,
+        "lon": 10.88703
+      },
+      {
+        "lat": 45.80736,
+        "lon": 10.88642
+      },
+      {
+        "lat": 45.80788,
+        "lon": 10.88633
+      },
+      {
+        "lat": 45.80843,
+        "lon": 10.88625
+      },
+      {
+        "lat": 45.80914,
+        "lon": 10.88631
+      },
+      {
+        "lat": 45.80933,
+        "lon": 10.88706
+      },
+      {
+        "lat": 45.80974,
+        "lon": 10.88724
+      },
+      {
+        "lat": 45.81023,
+        "lon": 10.88729
+      },
+      {
+        "lat": 45.81069,
+        "lon": 10.88771
+      },
+      {
+        "lat": 45.81076,
+        "lon": 10.88858
+      },
+      {
+        "lat": 45.81067,
+        "lon": 10.88935
+      },
+      {
+        "lat": 45.81054,
+        "lon": 10.89029
+      },
+      {
+        "lat": 45.81085,
+        "lon": 10.89106
+      },
+      {
+        "lat": 45.81117,
+        "lon": 10.89178
+      },
+      {
+        "lat": 45.81156,
+        "lon": 10.89242
+      },
+      {
+        "lat": 45.81199,
+        "lon": 10.89305
+      },
+      {
+        "lat": 45.81199,
+        "lon": 10.89361
+      },
+      {
+        "lat": 45.81225,
+        "lon": 10.89421
+      },
+      {
+        "lat": 45.81228,
+        "lon": 10.895
+      },
+      {
+        "lat": 45.81234,
+        "lon": 10.8957
+      },
+      {
+        "lat": 45.81236,
+        "lon": 10.89654
+      },
+      {
+        "lat": 45.81248,
+        "lon": 10.89722
+      },
+      {
+        "lat": 45.81269,
+        "lon": 10.89818
+      },
+      {
+        "lat": 45.81288,
+        "lon": 10.89902
+      },
+      {
+        "lat": 45.81293,
+        "lon": 10.89971
+      },
+      {
+        "lat": 45.81296,
+        "lon": 10.90041
+      },
+      {
+        "lat": 45.81287,
+        "lon": 10.90099
+      },
+      {
+        "lat": 45.81283,
+        "lon": 10.90164
+      },
+      {
+        "lat": 45.81273,
+        "lon": 10.90241
+      },
+      {
+        "lat": 45.81257,
+        "lon": 10.90308
+      },
+      {
+        "lat": 45.8122,
+        "lon": 10.90299
+      },
+      {
+        "lat": 45.81193,
+        "lon": 10.90246
+      },
+      {
+        "lat": 45.81162,
+        "lon": 10.90204
+      },
+      {
+        "lat": 45.81119,
+        "lon": 10.90173
+      },
+      {
+        "lat": 45.8111,
+        "lon": 10.90262
+      },
+      {
+        "lat": 45.81105,
+        "lon": 10.90327
+      },
+      {
+        "lat": 45.8108,
+        "lon": 10.90238
+      },
+      {
+        "lat": 45.81041,
+        "lon": 10.90136
+      },
+      {
+        "lat": 45.80989,
+        "lon": 10.9005
+      },
+      {
+        "lat": 45.80935,
+        "lon": 10.90001
+      },
+      {
+        "lat": 45.80872,
+        "lon": 10.89942
+      },
+      {
+        "lat": 45.80804,
+        "lon": 10.89869
+      },
+      {
+        "lat": 45.80753,
+        "lon": 10.89813
+      },
+      {
+        "lat": 45.80703,
+        "lon": 10.89747
+      },
+      {
+        "lat": 45.80662,
+        "lon": 10.89706
+      },
+      {
+        "lat": 45.80602,
+        "lon": 10.89687
+      },
+      {
+        "lat": 45.80543,
+        "lon": 10.89662
+      },
+      {
+        "lat": 45.80473,
+        "lon": 10.89668
+      },
+      {
+        "lat": 45.80405,
+        "lon": 10.89733
+      },
+      {
+        "lat": 45.80328,
+        "lon": 10.89792
+      },
+      {
+        "lat": 45.80218,
+        "lon": 10.89771
+      },
+      {
+        "lat": 45.80172,
+        "lon": 10.897
+      },
+      {
+        "lat": 45.80097,
+        "lon": 10.89596
+      },
+      {
+        "lat": 45.80038,
+        "lon": 10.89538
+      },
+      {
+        "lat": 45.7998,
+        "lon": 10.89513
+      },
+      {
+        "lat": 45.79956,
+        "lon": 10.89444
+      },
+      {
+        "lat": 45.79929,
+        "lon": 10.89337
+      },
+      {
+        "lat": 45.7992,
+        "lon": 10.89264
+      },
+      {
+        "lat": 45.79877,
+        "lon": 10.89365
+      },
+      {
+        "lat": 45.7983,
+        "lon": 10.89409
+      },
+      {
+        "lat": 45.79784,
+        "lon": 10.89397
+      },
+      {
+        "lat": 45.79733,
+        "lon": 10.89389
+      },
+      {
+        "lat": 45.79699,
+        "lon": 10.89414
+      },
+      {
+        "lat": 45.79644,
+        "lon": 10.89413
+      },
+      {
+        "lat": 45.79597,
+        "lon": 10.89398
+      },
+      {
+        "lat": 45.7955,
+        "lon": 10.89438
+      },
+      {
+        "lat": 45.79488,
+        "lon": 10.89508
+      },
+      {
+        "lat": 45.79421,
+        "lon": 10.89565
+      },
+      {
+        "lat": 45.7936,
+        "lon": 10.89551
+      },
+      {
+        "lat": 45.79315,
+        "lon": 10.89495
+      },
+      {
+        "lat": 45.79263,
+        "lon": 10.89458
+      },
+      {
+        "lat": 45.79189,
+        "lon": 10.89436
+      },
+      {
+        "lat": 45.79143,
+        "lon": 10.89486
+      },
+      {
+        "lat": 45.79137,
+        "lon": 10.89604
+      },
+      {
+        "lat": 45.79134,
+        "lon": 10.89692
+      },
+      {
+        "lat": 45.79106,
+        "lon": 10.89783
+      },
+      {
+        "lat": 45.79072,
+        "lon": 10.89671
+      },
+      {
+        "lat": 45.79037,
+        "lon": 10.89707
+      },
+      {
+        "lat": 45.79049,
+        "lon": 10.89818
+      },
+      {
+        "lat": 45.79066,
+        "lon": 10.89931
+      },
+      {
+        "lat": 45.79055,
+        "lon": 10.90048
+      },
+      {
+        "lat": 45.7905,
+        "lon": 10.9018
+      },
+      {
+        "lat": 45.79013,
+        "lon": 10.90156
+      },
+      {
+        "lat": 45.7901,
+        "lon": 10.90262
+      },
+      {
+        "lat": 45.7902,
+        "lon": 10.90377
+      },
+      {
+        "lat": 45.79024,
+        "lon": 10.9047
+      },
+      {
+        "lat": 45.79019,
+        "lon": 10.90551
+      },
+      {
+        "lat": 45.78991,
+        "lon": 10.90579
+      },
+      {
+        "lat": 45.78951,
+        "lon": 10.90488
+      },
+      {
+        "lat": 45.78912,
+        "lon": 10.90395
+      },
+      {
+        "lat": 45.78861,
+        "lon": 10.90246
+      },
+      {
+        "lat": 45.78847,
+        "lon": 10.90052
+      },
+      {
+        "lat": 45.78808,
+        "lon": 10.89911
+      },
+      {
+        "lat": 45.78789,
+        "lon": 10.8974
+      },
+      {
+        "lat": 45.7874,
+        "lon": 10.89586
+      },
+      {
+        "lat": 45.7865,
+        "lon": 10.89518
+      },
+      {
+        "lat": 45.78575,
+        "lon": 10.89473
+      },
+      {
+        "lat": 45.78555,
+        "lon": 10.89365
+      },
+      {
+        "lat": 45.78511,
+        "lon": 10.89266
+      },
+      {
+        "lat": 45.78569,
+        "lon": 10.89216
+      },
+      {
+        "lat": 45.78591,
+        "lon": 10.89168
+      },
+      {
+        "lat": 45.7862,
+        "lon": 10.89088
+      },
+      {
+        "lat": 45.78628,
+        "lon": 10.89006
+      },
+      {
+        "lat": 45.78658,
+        "lon": 10.88937
+      },
+      {
+        "lat": 45.78703,
+        "lon": 10.88858
+      },
+      {
+        "lat": 45.78714,
+        "lon": 10.88709
+      },
+      {
+        "lat": 45.78659,
+        "lon": 10.88657
+      },
+      {
+        "lat": 45.78604,
+        "lon": 10.88633
+      },
+      {
+        "lat": 45.78529,
+        "lon": 10.88638
+      },
+      {
+        "lat": 45.78483,
+        "lon": 10.8864
+      },
+      {
+        "lat": 45.78421,
+        "lon": 10.8863
+      },
+      {
+        "lat": 45.78432,
+        "lon": 10.88576
+      },
+      {
+        "lat": 45.78482,
+        "lon": 10.8851
+      },
+      {
+        "lat": 45.78524,
+        "lon": 10.88437
+      },
+      {
+        "lat": 45.78546,
+        "lon": 10.88378
+      },
+      {
+        "lat": 45.78558,
+        "lon": 10.88306
+      },
+      {
+        "lat": 45.78539,
+        "lon": 10.88236
+      },
+      {
+        "lat": 45.785,
+        "lon": 10.88222
+      },
+      {
+        "lat": 45.78444,
+        "lon": 10.88298
+      },
+      {
+        "lat": 45.78418,
+        "lon": 10.88276
+      },
+      {
+        "lat": 45.78474,
+        "lon": 10.88172
+      },
+      {
+        "lat": 45.78529,
+        "lon": 10.88073
+      },
+      {
+        "lat": 45.78585,
+        "lon": 10.87987
+      },
+      {
+        "lat": 45.78582,
+        "lon": 10.87949
+      },
+      {
+        "lat": 45.78524,
+        "lon": 10.8796
+      },
+      {
+        "lat": 45.78497,
+        "lon": 10.87925
+      },
+      {
+        "lat": 45.78534,
+        "lon": 10.87881
+      },
+      {
+        "lat": 45.78585,
+        "lon": 10.87859
+      },
+      {
+        "lat": 45.78525,
+        "lon": 10.87872
+      },
+      {
+        "lat": 45.78499,
+        "lon": 10.87842
+      },
+      {
+        "lat": 45.78459,
+        "lon": 10.87904
+      },
+      {
+        "lat": 45.7828,
+        "lon": 10.88049
+      },
+      {
+        "lat": 45.78147,
+        "lon": 10.88074
+      },
+      {
+        "lat": 45.78036,
+        "lon": 10.88338
+      },
+      {
+        "lat": 45.7799,
+        "lon": 10.88352
+      },
+      {
+        "lat": 45.77906,
+        "lon": 10.88413
+      },
+      {
+        "lat": 45.77858,
+        "lon": 10.88441
+      },
+      {
+        "lat": 45.77823,
+        "lon": 10.885
+      },
+      {
+        "lat": 45.77785,
+        "lon": 10.88477
+      },
+      {
+        "lat": 45.77741,
+        "lon": 10.88482
+      },
+      {
+        "lat": 45.77685,
+        "lon": 10.88498
+      },
+      {
+        "lat": 45.77638,
+        "lon": 10.88505
+      },
+      {
+        "lat": 45.77589,
+        "lon": 10.88525
+      },
+      {
+        "lat": 45.77539,
+        "lon": 10.88531
+      },
+      {
+        "lat": 45.77489,
+        "lon": 10.88514
+      },
+      {
+        "lat": 45.77449,
+        "lon": 10.88475
+      },
+      {
+        "lat": 45.77405,
+        "lon": 10.88445
+      },
+      {
+        "lat": 45.7737,
+        "lon": 10.88407
+      },
+      {
+        "lat": 45.77311,
+        "lon": 10.88393
+      },
+      {
+        "lat": 45.77267,
+        "lon": 10.88392
+      },
+      {
+        "lat": 45.7727,
+        "lon": 10.88471
+      },
+      {
+        "lat": 45.77262,
+        "lon": 10.88557
+      },
+      {
+        "lat": 45.77233,
+        "lon": 10.88615
+      },
+      {
+        "lat": 45.77228,
+        "lon": 10.88685
+      },
+      {
+        "lat": 45.77178,
+        "lon": 10.8873
+      },
+      {
+        "lat": 45.77113,
+        "lon": 10.88756
+      },
+      {
+        "lat": 45.77059,
+        "lon": 10.88774
+      },
+      {
+        "lat": 45.77001,
+        "lon": 10.88769
+      },
+      {
+        "lat": 45.76957,
+        "lon": 10.88761
+      },
+      {
+        "lat": 45.76913,
+        "lon": 10.88749
+      },
+      {
+        "lat": 45.76839,
+        "lon": 10.88758
+      },
+      {
+        "lat": 45.76776,
+        "lon": 10.88795
+      },
+      {
+        "lat": 45.76729,
+        "lon": 10.8884
+      },
+      {
+        "lat": 45.76666,
+        "lon": 10.88912
+      },
+      {
+        "lat": 45.76598,
+        "lon": 10.8897
+      },
+      {
+        "lat": 45.7653,
+        "lon": 10.89017
+      },
+      {
+        "lat": 45.76479,
+        "lon": 10.89051
+      },
+      {
+        "lat": 45.76423,
+        "lon": 10.89097
+      },
+      {
+        "lat": 45.76357,
+        "lon": 10.89143
+      },
+      {
+        "lat": 45.76292,
+        "lon": 10.89149
+      },
+      {
+        "lat": 45.76252,
+        "lon": 10.89196
+      },
+      {
+        "lat": 45.76209,
+        "lon": 10.89255
+      },
+      {
+        "lat": 45.76162,
+        "lon": 10.89323
+      },
+      {
+        "lat": 45.76089,
+        "lon": 10.89313
+      },
+      {
+        "lat": 45.75994,
+        "lon": 10.89361
+      },
+      {
+        "lat": 45.75926,
+        "lon": 10.89435
+      },
+      {
+        "lat": 45.7587,
+        "lon": 10.89512
+      },
+      {
+        "lat": 45.75837,
+        "lon": 10.89577
+      },
+      {
+        "lat": 45.75763,
+        "lon": 10.89544
+      },
+      {
+        "lat": 45.75672,
+        "lon": 10.89547
+      },
+      {
+        "lat": 45.75625,
+        "lon": 10.89475
+      },
+      {
+        "lat": 45.75611,
+        "lon": 10.89509
+      },
+      {
+        "lat": 45.75576,
+        "lon": 10.8963
+      },
+      {
+        "lat": 45.75624,
+        "lon": 10.89681
+      },
+      {
+        "lat": 45.7561,
+        "lon": 10.89755
+      },
+      {
+        "lat": 45.75571,
+        "lon": 10.89843
+      },
+      {
+        "lat": 45.75506,
+        "lon": 10.89919
+      },
+      {
+        "lat": 45.75518,
+        "lon": 10.89791
+      },
+      {
+        "lat": 45.75457,
+        "lon": 10.8981
+      },
+      {
+        "lat": 45.75395,
+        "lon": 10.89794
+      },
+      {
+        "lat": 45.75321,
+        "lon": 10.8984
+      },
+      {
+        "lat": 45.75261,
+        "lon": 10.89793
+      },
+      {
+        "lat": 45.75164,
+        "lon": 10.89677
+      },
+      {
+        "lat": 45.75086,
+        "lon": 10.89567
+      },
+      {
+        "lat": 45.75056,
+        "lon": 10.89461
+      },
+      {
+        "lat": 45.74984,
+        "lon": 10.89498
+      },
+      {
+        "lat": 45.74915,
+        "lon": 10.89548
+      },
+      {
+        "lat": 45.74829,
+        "lon": 10.8953
+      },
+      {
+        "lat": 45.74834,
+        "lon": 10.89447
+      },
+      {
+        "lat": 45.74869,
+        "lon": 10.89305
+      },
+      {
+        "lat": 45.74858,
+        "lon": 10.89251
+      },
+      {
+        "lat": 45.74822,
+        "lon": 10.89262
+      },
+      {
+        "lat": 45.74749,
+        "lon": 10.89246
+      },
+      {
+        "lat": 45.74653,
+        "lon": 10.89213
+      },
+      {
+        "lat": 45.7459,
+        "lon": 10.89146
+      },
+      {
+        "lat": 45.7455,
+        "lon": 10.89089
+      },
+      {
+        "lat": 45.74572,
+        "lon": 10.8898
+      },
+      {
+        "lat": 45.74574,
+        "lon": 10.88857
+      },
+      {
+        "lat": 45.74569,
+        "lon": 10.88751
+      },
+      {
+        "lat": 45.74517,
+        "lon": 10.88714
+      },
+      {
+        "lat": 45.74486,
+        "lon": 10.88765
+      },
+      {
+        "lat": 45.74458,
+        "lon": 10.88733
+      },
+      {
+        "lat": 45.74436,
+        "lon": 10.88799
+      },
+      {
+        "lat": 45.74404,
+        "lon": 10.88835
+      },
+      {
+        "lat": 45.74372,
+        "lon": 10.88892
+      },
+      {
+        "lat": 45.74329,
+        "lon": 10.889
+      },
+      {
+        "lat": 45.74265,
+        "lon": 10.88878
+      },
+      {
+        "lat": 45.74212,
+        "lon": 10.88889
+      },
+      {
+        "lat": 45.74158,
+        "lon": 10.88881
+      },
+      {
+        "lat": 45.74121,
+        "lon": 10.88828
+      },
+      {
+        "lat": 45.74025,
+        "lon": 10.88755
+      },
+      {
+        "lat": 45.73947,
+        "lon": 10.88731
+      },
+      {
+        "lat": 45.73893,
+        "lon": 10.88756
+      },
+      {
+        "lat": 45.73806,
+        "lon": 10.88655
+      },
+      {
+        "lat": 45.73745,
+        "lon": 10.88583
+      },
+      {
+        "lat": 45.73679,
+        "lon": 10.88744
+      },
+      {
+        "lat": 45.73647,
+        "lon": 10.88551
+      },
+      {
+        "lat": 45.7363,
+        "lon": 10.88469
+      },
+      {
+        "lat": 45.73624,
+        "lon": 10.88401
+      },
+      {
+        "lat": 45.73605,
+        "lon": 10.8832
+      },
+      {
+        "lat": 45.73573,
+        "lon": 10.88276
+      },
+      {
+        "lat": 45.73554,
+        "lon": 10.88197
+      },
+      {
+        "lat": 45.73541,
+        "lon": 10.88122
+      },
+      {
+        "lat": 45.73497,
+        "lon": 10.8804
+      },
+      {
+        "lat": 45.73451,
+        "lon": 10.87976
+      },
+      {
+        "lat": 45.73402,
+        "lon": 10.87983
+      },
+      {
+        "lat": 45.73375,
+        "lon": 10.87927
+      },
+      {
+        "lat": 45.7335,
+        "lon": 10.87862
+      },
+      {
+        "lat": 45.73314,
+        "lon": 10.87815
+      },
+      {
+        "lat": 45.7327,
+        "lon": 10.87788
+      },
+      {
+        "lat": 45.73239,
+        "lon": 10.87744
+      },
+      {
+        "lat": 45.73158,
+        "lon": 10.87601
+      },
+      {
+        "lat": 45.73148,
+        "lon": 10.87529
+      },
+      {
+        "lat": 45.73132,
+        "lon": 10.87475
+      },
+      {
+        "lat": 45.73129,
+        "lon": 10.87411
+      },
+      {
+        "lat": 45.73116,
+        "lon": 10.87348
+      },
+      {
+        "lat": 45.73111,
+        "lon": 10.8726
+      },
+      {
+        "lat": 45.73076,
+        "lon": 10.87165
+      },
+      {
+        "lat": 45.7314,
+        "lon": 10.87193
+      },
+      {
+        "lat": 45.73186,
+        "lon": 10.87199
+      },
+      {
+        "lat": 45.73237,
+        "lon": 10.87201
+      },
+      {
+        "lat": 45.733,
+        "lon": 10.87223
+      },
+      {
+        "lat": 45.73329,
+        "lon": 10.8716
+      },
+      {
+        "lat": 45.73408,
+        "lon": 10.87154
+      },
+      {
+        "lat": 45.7345,
+        "lon": 10.87209
+      },
+      {
+        "lat": 45.7348,
+        "lon": 10.8728
+      },
+      {
+        "lat": 45.73531,
+        "lon": 10.87311
+      },
+      {
+        "lat": 45.73595,
+        "lon": 10.87257
+      },
+      {
+        "lat": 45.73651,
+        "lon": 10.87228
+      },
+      {
+        "lat": 45.73718,
+        "lon": 10.87214
+      },
+      {
+        "lat": 45.73779,
+        "lon": 10.87181
+      },
+      {
+        "lat": 45.7384,
+        "lon": 10.87134
+      },
+      {
+        "lat": 45.7388,
+        "lon": 10.87109
+      },
+      {
+        "lat": 45.73922,
+        "lon": 10.87196
+      },
+      {
+        "lat": 45.73964,
+        "lon": 10.87243
+      },
+      {
+        "lat": 45.74024,
+        "lon": 10.87267
+      },
+      {
+        "lat": 45.74095,
+        "lon": 10.8731
+      },
+      {
+        "lat": 45.74136,
+        "lon": 10.87376
+      },
+      {
+        "lat": 45.74195,
+        "lon": 10.87391
+      },
+      {
+        "lat": 45.74328,
+        "lon": 10.87412
+      },
+      {
+        "lat": 45.744,
+        "lon": 10.87423
+      },
+      {
+        "lat": 45.74452,
+        "lon": 10.87408
+      },
+      {
+        "lat": 45.74515,
+        "lon": 10.87373
+      },
+      {
+        "lat": 45.74574,
+        "lon": 10.87348
+      },
+      {
+        "lat": 45.74629,
+        "lon": 10.87399
+      },
+      {
+        "lat": 45.74675,
+        "lon": 10.87422
+      },
+      {
+        "lat": 45.74704,
+        "lon": 10.87492
+      },
+      {
+        "lat": 45.74758,
+        "lon": 10.8754
+      },
+      {
+        "lat": 45.74807,
+        "lon": 10.8756
+      },
+      {
+        "lat": 45.74864,
+        "lon": 10.87544
+      },
+      {
+        "lat": 45.74926,
+        "lon": 10.87493
+      },
+      {
+        "lat": 45.7498,
+        "lon": 10.8749
+      },
+      {
+        "lat": 45.75042,
+        "lon": 10.87567
+      },
+      {
+        "lat": 45.75109,
+        "lon": 10.87632
+      },
+      {
+        "lat": 45.75168,
+        "lon": 10.87647
+      },
+      {
+        "lat": 45.75252,
+        "lon": 10.87674
+      },
+      {
+        "lat": 45.75328,
+        "lon": 10.87679
+      },
+      {
+        "lat": 45.75403,
+        "lon": 10.87716
+      },
+      {
+        "lat": 45.75469,
+        "lon": 10.87756
+      },
+      {
+        "lat": 45.7552,
+        "lon": 10.8778
+      },
+      {
+        "lat": 45.75566,
+        "lon": 10.87817
+      },
+      {
+        "lat": 45.75685,
+        "lon": 10.87905
+      },
+      {
+        "lat": 45.75739,
+        "lon": 10.87907
+      },
+      {
+        "lat": 45.75779,
+        "lon": 10.8796
+      },
+      {
+        "lat": 45.75843,
+        "lon": 10.88036
+      },
+      {
+        "lat": 45.76005,
+        "lon": 10.87856
+      },
+      {
+        "lat": 45.7609,
+        "lon": 10.87779
+      },
+      {
+        "lat": 45.76155,
+        "lon": 10.87745
+      },
+      {
+        "lat": 45.76211,
+        "lon": 10.87714
+      },
+      {
+        "lat": 45.76279,
+        "lon": 10.87727
+      },
+      {
+        "lat": 45.76347,
+        "lon": 10.87704
+      },
+      {
+        "lat": 45.76433,
+        "lon": 10.87733
+      },
+      {
+        "lat": 45.76535,
+        "lon": 10.8772
+      },
+      {
+        "lat": 45.7662,
+        "lon": 10.87646
+      },
+      {
+        "lat": 45.76723,
+        "lon": 10.87598
+      },
+      {
+        "lat": 45.76814,
+        "lon": 10.8752
+      },
+      {
+        "lat": 45.76832,
+        "lon": 10.87477
+      },
+      {
+        "lat": 45.76801,
+        "lon": 10.87437
+      },
+      {
+        "lat": 45.76799,
+        "lon": 10.87386
+      },
+      {
+        "lat": 45.76833,
+        "lon": 10.87345
+      },
+      {
+        "lat": 45.76846,
+        "lon": 10.87301
+      },
+      {
+        "lat": 45.76848,
+        "lon": 10.87259
+      },
+      {
+        "lat": 45.7681,
+        "lon": 10.87239
+      },
+      {
+        "lat": 45.76827,
+        "lon": 10.87199
+      },
+      {
+        "lat": 45.76857,
+        "lon": 10.87161
+      },
+      {
+        "lat": 45.76891,
+        "lon": 10.87114
+      },
+      {
+        "lat": 45.76918,
+        "lon": 10.87055
+      },
+      {
+        "lat": 45.76958,
+        "lon": 10.87048
+      },
+      {
+        "lat": 45.76947,
+        "lon": 10.86989
+      },
+      {
+        "lat": 45.76959,
+        "lon": 10.86928
+      },
+      {
+        "lat": 45.76986,
+        "lon": 10.86881
+      },
+      {
+        "lat": 45.77054,
+        "lon": 10.86829
+      },
+      {
+        "lat": 45.7712,
+        "lon": 10.86777
+      },
+      {
+        "lat": 45.7702,
+        "lon": 10.86663
+      },
+      {
+        "lat": 45.77011,
+        "lon": 10.86606
+      },
+      {
+        "lat": 45.77055,
+        "lon": 10.86641
+      },
+      {
+        "lat": 45.77049,
+        "lon": 10.86574
+      },
+      {
+        "lat": 45.77029,
+        "lon": 10.86489
+      },
+      {
+        "lat": 45.76997,
+        "lon": 10.86441
+      },
+      {
+        "lat": 45.76994,
+        "lon": 10.86438
+      },
+      {
+        "lat": 45.76906,
+        "lon": 10.86528
+      },
+      {
+        "lat": 45.76759,
+        "lon": 10.86538
+      },
+      {
+        "lat": 45.76666,
+        "lon": 10.86489
+      },
+      {
+        "lat": 45.76603,
+        "lon": 10.86453
+      },
+      {
+        "lat": 45.76545,
+        "lon": 10.86397
+      },
+      {
+        "lat": 45.76497,
+        "lon": 10.86351
+      },
+      {
+        "lat": 45.76455,
+        "lon": 10.86272
+      },
+      {
+        "lat": 45.76419,
+        "lon": 10.86201
+      },
+      {
+        "lat": 45.76384,
+        "lon": 10.86142
+      },
+      {
+        "lat": 45.76355,
+        "lon": 10.86065
+      },
+      {
+        "lat": 45.76341,
+        "lon": 10.85997
+      },
+      {
+        "lat": 45.76292,
+        "lon": 10.85993
+      },
+      {
+        "lat": 45.76242,
+        "lon": 10.85963
+      },
+      {
+        "lat": 45.76211,
+        "lon": 10.85918
+      },
+      {
+        "lat": 45.76166,
+        "lon": 10.85879
+      },
+      {
+        "lat": 45.76134,
+        "lon": 10.85829
+      },
+      {
+        "lat": 45.76167,
+        "lon": 10.85782
+      },
+      {
+        "lat": 45.76198,
+        "lon": 10.85732
+      },
+      {
+        "lat": 45.7623,
+        "lon": 10.85683
+      },
+      {
+        "lat": 45.76245,
+        "lon": 10.8562
+      },
+      {
+        "lat": 45.76264,
+        "lon": 10.85563
+      },
+      {
+        "lat": 45.76243,
+        "lon": 10.85524
+      },
+      {
+        "lat": 45.76198,
+        "lon": 10.85507
+      },
+      {
+        "lat": 45.76162,
+        "lon": 10.85468
+      },
+      {
+        "lat": 45.76104,
+        "lon": 10.8545
+      },
+      {
+        "lat": 45.76062,
+        "lon": 10.85402
+      },
+      {
+        "lat": 45.76033,
+        "lon": 10.85329
+      },
+      {
+        "lat": 45.75939,
+        "lon": 10.8514
+      },
+      {
+        "lat": 45.75971,
+        "lon": 10.85072
+      },
+      {
+        "lat": 45.7652,
+        "lon": 10.8529
+      },
+      {
+        "lat": 45.76853,
+        "lon": 10.85352
+      },
+      {
+        "lat": 45.77191,
+        "lon": 10.85244
+      },
+      {
+        "lat": 45.77265,
+        "lon": 10.8515
+      },
+      {
+        "lat": 45.77336,
+        "lon": 10.85014
+      },
+      {
+        "lat": 45.7737,
+        "lon": 10.84972
+      },
+      {
+        "lat": 45.77385,
+        "lon": 10.84899
+      },
+      {
+        "lat": 45.77395,
+        "lon": 10.84835
+      },
+      {
+        "lat": 45.77595,
+        "lon": 10.85016
+      },
+      {
+        "lat": 45.78056,
+        "lon": 10.85129
+      },
+      {
+        "lat": 45.78282,
+        "lon": 10.85048
+      },
+      {
+        "lat": 45.78282,
+        "lon": 10.84913
+      },
+      {
+        "lat": 45.78263,
+        "lon": 10.84711
+      },
+      {
+        "lat": 45.78244,
+        "lon": 10.84566
+      },
+      {
+        "lat": 45.7827,
+        "lon": 10.84378
+      },
+      {
+        "lat": 45.78194,
+        "lon": 10.84148
+      },
+      {
+        "lat": 45.78314,
+        "lon": 10.83981
+      },
+      {
+        "lat": 45.78232,
+        "lon": 10.83938
+      },
+      {
+        "lat": 45.783,
+        "lon": 10.83768
+      },
+      {
+        "lat": 45.78317,
+        "lon": 10.8364
+      },
+      {
+        "lat": 45.78211,
+        "lon": 10.8356
+      },
+      {
+        "lat": 45.77942,
+        "lon": 10.83422
+      },
+      {
+        "lat": 45.77555,
+        "lon": 10.83361
+      },
+      {
+        "lat": 45.77181,
+        "lon": 10.83264
+      },
+      {
+        "lat": 45.76908,
+        "lon": 10.83162
+      },
+      {
+        "lat": 45.76882,
+        "lon": 10.83354
+      },
+      {
+        "lat": 45.76751,
+        "lon": 10.83363
+      },
+      {
+        "lat": 45.76631,
+        "lon": 10.83363
+      },
+      {
+        "lat": 45.76555,
+        "lon": 10.83312
+      },
+      {
+        "lat": 45.76462,
+        "lon": 10.83208
+      },
+      {
+        "lat": 45.76387,
+        "lon": 10.83071
+      },
+      {
+        "lat": 45.76306,
+        "lon": 10.82965
+      },
+      {
+        "lat": 45.76224,
+        "lon": 10.82833
+      },
+      {
+        "lat": 45.7629,
+        "lon": 10.82523
+      },
+      {
+        "lat": 45.76089,
+        "lon": 10.82324
+      },
+      {
+        "lat": 45.76008,
+        "lon": 10.82108
+      },
+      {
+        "lat": 45.7592,
+        "lon": 10.81895
+      },
+      {
+        "lat": 45.76024,
+        "lon": 10.81672
+      },
+      {
+        "lat": 45.76062,
+        "lon": 10.81557
+      },
+      {
+        "lat": 45.76018,
+        "lon": 10.81481
+      },
+      {
+        "lat": 45.76108,
+        "lon": 10.8146
+      },
+      {
+        "lat": 45.76184,
+        "lon": 10.81416
+      },
+      {
+        "lat": 45.76246,
+        "lon": 10.81419
+      },
+      {
+        "lat": 45.76316,
+        "lon": 10.81387
+      },
+      {
+        "lat": 45.76379,
+        "lon": 10.81422
+      },
+      {
+        "lat": 45.7644,
+        "lon": 10.81392
+      },
+      {
+        "lat": 45.765,
+        "lon": 10.81399
+      },
+      {
+        "lat": 45.76576,
+        "lon": 10.81382
+      },
+      {
+        "lat": 45.76585,
+        "lon": 10.81265
+      },
+      {
+        "lat": 45.76563,
+        "lon": 10.81139
+      },
+      {
+        "lat": 45.76588,
+        "lon": 10.81026
+      },
+      {
+        "lat": 45.76666,
+        "lon": 10.80999
+      },
+      {
+        "lat": 45.76766,
+        "lon": 10.81064
+      }
+    ],
+    "attribution": "Map © OpenStreetMap contributors © CARTO"
+  },
+  "chart_data": {
+    "x_axis": "time",
+    "timezone": "Europe/Rome",
+    "providers": [
+      {
+        "provider_id": "open-meteo",
+        "label": "Open-Meteo",
+        "is_primary": true,
+        "color": "#0e5b85",
+        "coverage": {
+          "has_apparent_temperature": true,
+          "has_wind_gust": true,
+          "has_precipitation_probability": true
+        },
+        "samples": [
+          {
+            "timestamp": "2026-05-02T06:30:00+02:00",
+            "distance_km": 0.0,
+            "elevation_m": 71.9,
+            "temperature_c": 14.5,
+            "apparent_temperature_c": 13.2,
+            "wind_kph": 3.7,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T06:40:00+02:00",
+            "distance_km": 1.46,
+            "elevation_m": 135.7,
+            "temperature_c": 14.1,
+            "apparent_temperature_c": 12.8,
+            "wind_kph": 4.1,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T06:50:00+02:00",
+            "distance_km": 2.91,
+            "elevation_m": 336.9,
+            "temperature_c": 13.1,
+            "apparent_temperature_c": 11.3,
+            "wind_kph": 4.9,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T07:00:00+02:00",
+            "distance_km": 4.37,
+            "elevation_m": 594.2,
+            "temperature_c": 10.3,
+            "apparent_temperature_c": 7.9,
+            "wind_kph": 6.0,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T07:10:00+02:00",
+            "distance_km": 5.83,
+            "elevation_m": 615.5,
+            "temperature_c": 10.8,
+            "apparent_temperature_c": 9.3,
+            "wind_kph": 2.9,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T07:20:00+02:00",
+            "distance_km": 7.28,
+            "elevation_m": 1013.6,
+            "temperature_c": 8.8,
+            "apparent_temperature_c": 6.5,
+            "wind_kph": 3.1,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T07:30:00+02:00",
+            "distance_km": 8.74,
+            "elevation_m": 1418.8,
+            "temperature_c": 6.8,
+            "apparent_temperature_c": 4.5,
+            "wind_kph": 2.2,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T07:40:00+02:00",
+            "distance_km": 10.2,
+            "elevation_m": 1702.6,
+            "temperature_c": 5.7,
+            "apparent_temperature_c": 3.1,
+            "wind_kph": 0.7,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T07:50:00+02:00",
+            "distance_km": 11.66,
+            "elevation_m": 1954.5,
+            "temperature_c": 4.3,
+            "apparent_temperature_c": 1.4,
+            "wind_kph": 0.8,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T08:00:00+02:00",
+            "distance_km": 13.11,
+            "elevation_m": 1982.3,
+            "temperature_c": 4.3,
+            "apparent_temperature_c": 1.4,
+            "wind_kph": 1.0,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T08:10:00+02:00",
+            "distance_km": 14.57,
+            "elevation_m": 1720.6,
+            "temperature_c": 6.2,
+            "apparent_temperature_c": 3.6,
+            "wind_kph": 1.0,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T08:20:00+02:00",
+            "distance_km": 16.03,
+            "elevation_m": 1621.8,
+            "temperature_c": 6.9,
+            "apparent_temperature_c": 4.4,
+            "wind_kph": 1.4,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T08:30:00+02:00",
+            "distance_km": 17.48,
+            "elevation_m": 1621.1,
+            "temperature_c": 7.1,
+            "apparent_temperature_c": 4.8,
+            "wind_kph": 1.3,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T08:40:00+02:00",
+            "distance_km": 18.94,
+            "elevation_m": 1492.1,
+            "temperature_c": 8.0,
+            "apparent_temperature_c": 5.9,
+            "wind_kph": 1.7,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T08:50:00+02:00",
+            "distance_km": 20.4,
+            "elevation_m": 1394.3,
+            "temperature_c": 8.2,
+            "apparent_temperature_c": 6.2,
+            "wind_kph": 2.5,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T09:00:00+02:00",
+            "distance_km": 21.85,
+            "elevation_m": 1198.4,
+            "temperature_c": 10.4,
+            "apparent_temperature_c": 8.2,
+            "wind_kph": 2.5,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T09:10:00+02:00",
+            "distance_km": 23.31,
+            "elevation_m": 1255.4,
+            "temperature_c": 10.2,
+            "apparent_temperature_c": 8.0,
+            "wind_kph": 2.9,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T09:20:00+02:00",
+            "distance_km": 24.77,
+            "elevation_m": 1301.3,
+            "temperature_c": 10.6,
+            "apparent_temperature_c": 8.5,
+            "wind_kph": 2.4,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T09:30:00+02:00",
+            "distance_km": 26.22,
+            "elevation_m": 1225.4,
+            "temperature_c": 11.3,
+            "apparent_temperature_c": 9.2,
+            "wind_kph": 2.7,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T09:40:00+02:00",
+            "distance_km": 27.68,
+            "elevation_m": 1079.6,
+            "temperature_c": 11.4,
+            "apparent_temperature_c": 8.9,
+            "wind_kph": 4.8,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T09:50:00+02:00",
+            "distance_km": 29.14,
+            "elevation_m": 1074.2,
+            "temperature_c": 11.6,
+            "apparent_temperature_c": 9.2,
+            "wind_kph": 5.1,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T10:00:00+02:00",
+            "distance_km": 30.59,
+            "elevation_m": 1146.3,
+            "temperature_c": 11.5,
+            "apparent_temperature_c": 9.1,
+            "wind_kph": 5.1,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T10:10:00+02:00",
+            "distance_km": 32.05,
+            "elevation_m": 1368.6,
+            "temperature_c": 9.7,
+            "apparent_temperature_c": 7.1,
+            "wind_kph": 5.9,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T10:20:00+02:00",
+            "distance_km": 33.51,
+            "elevation_m": 1373.3,
+            "temperature_c": 11.2,
+            "apparent_temperature_c": 9.4,
+            "wind_kph": 4.2,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T10:30:00+02:00",
+            "distance_km": 34.97,
+            "elevation_m": 1431.4,
+            "temperature_c": 11.0,
+            "apparent_temperature_c": 9.2,
+            "wind_kph": 4.5,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T10:40:00+02:00",
+            "distance_km": 36.42,
+            "elevation_m": 1460.0,
+            "temperature_c": 10.7,
+            "apparent_temperature_c": 10.0,
+            "wind_kph": 1.7,
+            "cloud_cover_pct": 26.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T10:50:00+02:00",
+            "distance_km": 37.88,
+            "elevation_m": 1739.9,
+            "temperature_c": 9.1,
+            "apparent_temperature_c": 8.2,
+            "wind_kph": 1.8,
+            "cloud_cover_pct": 32.5,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T11:00:00+02:00",
+            "distance_km": 39.34,
+            "elevation_m": 1550.9,
+            "temperature_c": 10.6,
+            "apparent_temperature_c": 10.1,
+            "wind_kph": 1.8,
+            "cloud_cover_pct": 39.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T11:10:00+02:00",
+            "distance_km": 40.79,
+            "elevation_m": 1316.2,
+            "temperature_c": 11.3,
+            "apparent_temperature_c": 10.6,
+            "wind_kph": 4.9,
+            "cloud_cover_pct": 13.5,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T11:20:00+02:00",
+            "distance_km": 42.25,
+            "elevation_m": 1276.4,
+            "temperature_c": 11.7,
+            "apparent_temperature_c": 11.1,
+            "wind_kph": 5.1,
+            "cloud_cover_pct": 16.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T11:30:00+02:00",
+            "distance_km": 43.71,
+            "elevation_m": 1256.2,
+            "temperature_c": 12.1,
+            "apparent_temperature_c": 11.6,
+            "wind_kph": 5.2,
+            "cloud_cover_pct": 18.5,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T11:40:00+02:00",
+            "distance_km": 45.16,
+            "elevation_m": 920.7,
+            "temperature_c": 13.8,
+            "apparent_temperature_c": 12.4,
+            "wind_kph": 8.5,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T11:50:00+02:00",
+            "distance_km": 46.62,
+            "elevation_m": 571.5,
+            "temperature_c": 16.4,
+            "apparent_temperature_c": 15.4,
+            "wind_kph": 8.5,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T12:00:00+02:00",
+            "distance_km": 48.08,
+            "elevation_m": 536.8,
+            "temperature_c": 16.7,
+            "apparent_temperature_c": 15.8,
+            "wind_kph": 9.1,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T12:10:00+02:00",
+            "distance_km": 49.53,
+            "elevation_m": 461.3,
+            "temperature_c": 17.3,
+            "apparent_temperature_c": 16.6,
+            "wind_kph": 9.3,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T12:20:00+02:00",
+            "distance_km": 50.99,
+            "elevation_m": 278.0,
+            "temperature_c": 18.3,
+            "apparent_temperature_c": 17.4,
+            "wind_kph": 11.0,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          },
+          {
+            "timestamp": "2026-05-02T12:30:00+02:00",
+            "distance_km": 52.45,
+            "elevation_m": 69.2,
+            "temperature_c": 19.8,
+            "apparent_temperature_c": 19.1,
+            "wind_kph": 11.3,
+            "cloud_cover_pct": 0.0,
+            "precipitation_mm": 0.0
+          }
+        ]
+      }
+    ],
+    "route_profile": [
+      {
+        "timestamp": "2026-05-02T06:30:00+02:00",
+        "distance_km": 0.0,
+        "elevation_m": 71.9
+      },
+      {
+        "timestamp": "2026-05-02T06:40:00+02:00",
+        "distance_km": 1.46,
+        "elevation_m": 135.7
+      },
+      {
+        "timestamp": "2026-05-02T06:50:00+02:00",
+        "distance_km": 2.91,
+        "elevation_m": 336.9
+      },
+      {
+        "timestamp": "2026-05-02T07:00:00+02:00",
+        "distance_km": 4.37,
+        "elevation_m": 594.2
+      },
+      {
+        "timestamp": "2026-05-02T07:10:00+02:00",
+        "distance_km": 5.83,
+        "elevation_m": 615.5
+      },
+      {
+        "timestamp": "2026-05-02T07:20:00+02:00",
+        "distance_km": 7.28,
+        "elevation_m": 1013.6
+      },
+      {
+        "timestamp": "2026-05-02T07:30:00+02:00",
+        "distance_km": 8.74,
+        "elevation_m": 1418.8
+      },
+      {
+        "timestamp": "2026-05-02T07:40:00+02:00",
+        "distance_km": 10.2,
+        "elevation_m": 1702.6
+      },
+      {
+        "timestamp": "2026-05-02T07:50:00+02:00",
+        "distance_km": 11.66,
+        "elevation_m": 1954.5
+      },
+      {
+        "timestamp": "2026-05-02T08:00:00+02:00",
+        "distance_km": 13.11,
+        "elevation_m": 1982.3
+      },
+      {
+        "timestamp": "2026-05-02T08:10:00+02:00",
+        "distance_km": 14.57,
+        "elevation_m": 1720.6
+      },
+      {
+        "timestamp": "2026-05-02T08:20:00+02:00",
+        "distance_km": 16.03,
+        "elevation_m": 1621.8
+      },
+      {
+        "timestamp": "2026-05-02T08:30:00+02:00",
+        "distance_km": 17.48,
+        "elevation_m": 1621.1
+      },
+      {
+        "timestamp": "2026-05-02T08:40:00+02:00",
+        "distance_km": 18.94,
+        "elevation_m": 1492.1
+      },
+      {
+        "timestamp": "2026-05-02T08:50:00+02:00",
+        "distance_km": 20.4,
+        "elevation_m": 1394.3
+      },
+      {
+        "timestamp": "2026-05-02T09:00:00+02:00",
+        "distance_km": 21.85,
+        "elevation_m": 1198.4
+      },
+      {
+        "timestamp": "2026-05-02T09:10:00+02:00",
+        "distance_km": 23.31,
+        "elevation_m": 1255.4
+      },
+      {
+        "timestamp": "2026-05-02T09:20:00+02:00",
+        "distance_km": 24.77,
+        "elevation_m": 1301.3
+      },
+      {
+        "timestamp": "2026-05-02T09:30:00+02:00",
+        "distance_km": 26.22,
+        "elevation_m": 1225.4
+      },
+      {
+        "timestamp": "2026-05-02T09:40:00+02:00",
+        "distance_km": 27.68,
+        "elevation_m": 1079.6
+      },
+      {
+        "timestamp": "2026-05-02T09:50:00+02:00",
+        "distance_km": 29.14,
+        "elevation_m": 1074.2
+      },
+      {
+        "timestamp": "2026-05-02T10:00:00+02:00",
+        "distance_km": 30.59,
+        "elevation_m": 1146.3
+      },
+      {
+        "timestamp": "2026-05-02T10:10:00+02:00",
+        "distance_km": 32.05,
+        "elevation_m": 1368.6
+      },
+      {
+        "timestamp": "2026-05-02T10:20:00+02:00",
+        "distance_km": 33.51,
+        "elevation_m": 1373.3
+      },
+      {
+        "timestamp": "2026-05-02T10:30:00+02:00",
+        "distance_km": 34.97,
+        "elevation_m": 1431.4
+      },
+      {
+        "timestamp": "2026-05-02T10:40:00+02:00",
+        "distance_km": 36.42,
+        "elevation_m": 1460.0
+      },
+      {
+        "timestamp": "2026-05-02T10:50:00+02:00",
+        "distance_km": 37.88,
+        "elevation_m": 1739.9
+      },
+      {
+        "timestamp": "2026-05-02T11:00:00+02:00",
+        "distance_km": 39.34,
+        "elevation_m": 1550.9
+      },
+      {
+        "timestamp": "2026-05-02T11:10:00+02:00",
+        "distance_km": 40.79,
+        "elevation_m": 1316.2
+      },
+      {
+        "timestamp": "2026-05-02T11:20:00+02:00",
+        "distance_km": 42.25,
+        "elevation_m": 1276.4
+      },
+      {
+        "timestamp": "2026-05-02T11:30:00+02:00",
+        "distance_km": 43.71,
+        "elevation_m": 1256.2
+      },
+      {
+        "timestamp": "2026-05-02T11:40:00+02:00",
+        "distance_km": 45.16,
+        "elevation_m": 920.7
+      },
+      {
+        "timestamp": "2026-05-02T11:50:00+02:00",
+        "distance_km": 46.62,
+        "elevation_m": 571.5
+      },
+      {
+        "timestamp": "2026-05-02T12:00:00+02:00",
+        "distance_km": 48.08,
+        "elevation_m": 536.8
+      },
+      {
+        "timestamp": "2026-05-02T12:10:00+02:00",
+        "distance_km": 49.53,
+        "elevation_m": 461.3
+      },
+      {
+        "timestamp": "2026-05-02T12:20:00+02:00",
+        "distance_km": 50.99,
+        "elevation_m": 278.0
+      },
+      {
+        "timestamp": "2026-05-02T12:30:00+02:00",
+        "distance_km": 52.45,
+        "elevation_m": 69.2
+      }
+    ]
+  }
+}
