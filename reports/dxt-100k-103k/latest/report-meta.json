@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "dxt 100k",
+  "generated_at": "2026-05-28T09:02:16.920542+00:00",
+  "participants_count": 415,
+  "rows_evaluated": 415,
+  "qualified_count": 38,
+  "strategy": "participant-first",
+  "race_url": "https://my2.raceresult.com/364696/participants/list?key=57f586e9384a54e94bc198ff32a6d352&listname=pubbliche%7CLista%20iscritti%20per%20nome&page=participants&contest=1&r=all&l=0&openedGroups=%7B%7D&term=",
+  "competition_name": "103K",
+  "score_threshold": 680.0,
+  "published_at": "2026-05-28T09:02:22.861811+00:00",
+  "race_slug": "dxt-100k-103k",
+  "race_name": "dxt 100k",
+  "report_path": "reports/dxt-100k-103k/latest/index.html",
+  "csv_path": "reports/dxt-100k-103k/latest/report.csv",
+  "json_path": "reports/dxt-100k-103k/latest/report.json"
+}
