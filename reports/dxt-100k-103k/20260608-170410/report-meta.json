@@ -12,7 +12,7 @@
   "published_at": "2026-06-08T17:04:10.674048+00:00",
   "race_slug": "dxt-100k-103k",
   "race_name": "dxt 100k",
-  "report_path": "reports/dxt-100k-103k/latest/index.html",
-  "csv_path": "reports/dxt-100k-103k/latest/report.csv",
-  "json_path": "reports/dxt-100k-103k/latest/report.json"
+  "report_path": "reports/dxt-100k-103k/20260608-170410/index.html",
+  "csv_path": "reports/dxt-100k-103k/20260608-170410/report.csv",
+  "json_path": "reports/dxt-100k-103k/20260608-170410/report.json"
 }
