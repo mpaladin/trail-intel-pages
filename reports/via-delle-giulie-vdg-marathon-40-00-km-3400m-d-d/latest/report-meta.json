@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "Via delle giulie",
+  "generated_at": "2026-07-07T06:48:01.045810+00:00",
+  "participants_count": 41,
+  "rows_evaluated": 41,
+  "qualified_count": 7,
+  "strategy": "participant-first",
+  "race_url": "https://www.wedosport.net/lista-iscritti/Via-delle-giulie-2026",
+  "competition_name": "VdG Marathon 40.00 KM, 3400m D+/D-",
+  "score_threshold": 600.0,
+  "published_at": "2026-07-07T06:48:04.849218+00:00",
+  "race_slug": "via-delle-giulie-vdg-marathon-40-00-km-3400m-d-d",
+  "race_name": "Via delle giulie",
+  "report_path": "reports/via-delle-giulie-vdg-marathon-40-00-km-3400m-d-d/latest/index.html",
+  "csv_path": "reports/via-delle-giulie-vdg-marathon-40-00-km-3400m-d-d/latest/report.csv",
+  "json_path": "reports/via-delle-giulie-vdg-marathon-40-00-km-3400m-d-d/latest/report.json"
+}
