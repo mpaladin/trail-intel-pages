@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>trans d&#x27;havet 80</title>
+  <style>
+    
+    :root {
+      color-scheme: light;
+      --page-bg: #f3ece2;
+      --panel: rgba(255, 252, 247, 0.92);
+      --panel-strong: #fffdf9;
+      --panel-soft: #f8f2ea;
+      --text: #1f1c18;
+      --muted: #6a6056;
+      --line: rgba(117, 98, 74, 0.20);
+      --line-strong: rgba(117, 98, 74, 0.32);
+      --shadow: 0 24px 64px rgba(35, 24, 9, 0.10);
+      --accent: #0b6b5f;
+      --accent-strong: #084f46;
+      --accent-soft: rgba(11, 107, 95, 0.16);
+      --hero-start: rgba(11, 107, 95, 0.14);
+      --hero-end: rgba(155, 101, 40, 0.16);
+      --pill-bg: rgba(11, 107, 95, 0.12);
+      --pill-text: #084f46;
+      --warning-bg: #fff3d4;
+      --warning-text: #734700;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Avenir Next", "Segoe UI", sans-serif;
+      font-family: var(--body-font);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 28%),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 32%),
+        radial-gradient(circle at top, #fbf7f1 0%, var(--page-bg) 54%, #e7dccb 100%);
+    }
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 22px 18px 56px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .nav-brand {
+      font-family: var(--heading-font);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .nav-link.is-active {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 32px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, var(--hero-start), var(--hero-end)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -48px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      letter-spacing: -0.01em;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 14ch;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 0.96;
+    }
+    .hero-lead {
+      margin: 14px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.6;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.60);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--panel-strong);
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+    .action-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .action-link.primary {
+      color: #ffffff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .metric-card {
+      min-height: 122px;
+      padding: 16px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 10px;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    .metric-subvalue {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+    .section-stack {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .panel {
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px 16px;
+      margin-bottom: 14px;
+    }
+    .panel h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2.05rem);
+      line-height: 1.02;
+    }
+    .section-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .collection-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .collection-card {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      line-height: 1.04;
+    }
+    .card-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .card-meta {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .warning {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(115, 71, 0, 0.20);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      line-height: 1.55;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .chart-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .chart-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.16rem;
+    }
+    .hist-row {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr) 52px;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .hist-label,
+    .hist-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-track {
+      min-height: 28px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--panel-soft);
+    }
+    .hist-bar {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-empty {
+      background: transparent;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+    .results-table th,
+    .results-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(117, 98, 74, 0.14);
+      text-align: left;
+      vertical-align: top;
+    }
+    .results-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #fbf6ef;
+      color: var(--muted);
+      font-size: 0.79rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .results-table tbody tr:nth-child(even) {
+      background: rgba(248, 242, 234, 0.65);
+    }
+    .rank-cell,
+    .score-cell {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .athlete-cell strong {
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .supporting-cell,
+    .link-cell,
+    .notes-cell {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .notes-cell {
+      min-width: 180px;
+    }
+    .compact-table {
+      max-width: 480px;
+    }
+    .chart-frame {
+      padding: 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+    .chart-frame img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+    }
+    .empty-state {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px dashed var(--line-strong);
+      background: rgba(255, 255, 255, 0.45);
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .page { padding: 16px 12px 34px; }
+      .site-nav { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 26px 22px; }
+      .panel { padding: 20px; }
+      .card-top { flex-direction: column; }
+      .hist-row { grid-template-columns: 72px minmax(0, 1fr) 42px; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { max-width: none; }
+      .meta-chip { white-space: normal; }
+      .results-table th,
+      .results-table td { padding: 9px 10px; }
+    }
+    
+  </style>
+  
+</head>
+<body>
+  <main class="page">
+    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="../../../index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link" href="../../../index.html">Home</a><a class="nav-link is-active" href="../../index.html" aria-current="page">Race Reports</a><a class="nav-link" href="../../../forecasts/index.html">Forecasts</a></div></nav>
+    
+    <section class="hero">
+      <p class="eyebrow">Race Report</p>
+      <h1>trans d&#x27;havet 80</h1>
+      <p class="hero-lead">Screened 289 entrants for Trans D&#x27;Havet Ultra 80.00 KM, 5500m D+/D- and surfaced 33 athletes above the 650 threshold.</p>
+      <div class="meta-row"><span class="meta-chip">Published Jul 21, 2026 at 13:18 UTC</span><span class="meta-chip">Competition Trans D&#x27;Havet Ultra 80.00 KM, 5500m D+/D-</span><span class="meta-chip">Race source <a href="https://www.wedosport.net/lista-iscritti/trans-d-havet-2026" target="_blank" rel="noopener noreferrer">open source page</a></span></div>
+      <div class="action-row"><a class="action-link primary" href="report.csv">Download CSV</a><a class="action-link secondary" href="report.json">Download JSON</a></div>
+      <div class="metric-grid"><div class="metric-card"><div class="metric-label">Athletes screened</div><div class="metric-value">289</div><div class="metric-subvalue">289 rows evaluated</div></div><div class="metric-card"><div class="metric-label">Above threshold</div><div class="metric-value">33</div><div class="metric-subvalue">Leaderboard entries surfaced</div></div><div class="metric-card"><div class="metric-label">Score threshold</div><div class="metric-value">650</div><div class="metric-subvalue">Combined-score cutoff</div></div><div class="metric-card"><div class="metric-label">Ranking strategy</div><div class="metric-value">Participant First</div><div class="metric-subvalue">Ordering rule used for the report</div></div><div class="metric-card"><div class="metric-label">Coverage</div><div class="metric-value">280</div><div class="metric-subvalue">Participants with at least one provider score</div></div></div>
+      <div class="warning">Some provider results were served from stale score-repo snapshots because live lookups failed.</div>
+    </section>
+
+    <section class="section-stack">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Field Snapshot</h2>
+          <span class="pill">Coverage across UTMB, ITRA, and Betrail</span>
+        </div>
+        <p class="section-caption">Quick coverage stats plus score distributions for the full participant field.</p>
+        <div class="metric-grid"><div class="metric-card"><div class="metric-label">UTMB matches</div><div class="metric-value">280</div><div class="metric-subvalue">Athletes with a UTMB profile or index</div></div><div class="metric-card"><div class="metric-label">ITRA matches</div><div class="metric-value">10</div><div class="metric-subvalue">Athletes with an ITRA profile or score</div></div><div class="metric-card"><div class="metric-label">Betrail matches</div><div class="metric-value">15</div><div class="metric-subvalue">Athletes with a Betrail profile or score</div></div><div class="metric-card"><div class="metric-label">Any provider</div><div class="metric-value">280</div><div class="metric-subvalue">Participants matched at least once</div></div><div class="metric-card"><div class="metric-label">Unmatched</div><div class="metric-value">9</div><div class="metric-subvalue">Participants with no provider match</div></div></div>
+        <div class="charts">
+          <section class="chart-card"><h3>UTMB Index</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar" style="width: 19.12%"><span>13</span></div></div><div class="hist-count">13</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>3</span></div></div><div class="hist-count">3</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar" style="width: 10.29%"><span>7</span></div></div><div class="hist-count">7</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar" style="width: 35.29%"><span>24</span></div></div><div class="hist-count">24</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar" style="width: 63.24%"><span>43</span></div></div><div class="hist-count">43</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>68</span></div></div><div class="hist-count">68</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar" style="width: 73.53%"><span>50</span></div></div><div class="hist-count">50</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar" style="width: 57.35%"><span>39</span></div></div><div class="hist-count">39</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 20.59%"><span>14</span></div></div><div class="hist-count">14</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 16.18%"><span>11</span></div></div><div class="hist-count">11</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 11.76%"><span>8</span></div></div><div class="hist-count">8</div></div></section>
+          <section class="chart-card"><h3>ITRA Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar" style="width: 33.33%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar" style="width: 33.33%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>3</span></div></div><div class="hist-count">3</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar" style="width: 33.33%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 33.33%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 66.67%"><span>2</span></div></div><div class="hist-count">2</div></div><div class="hist-row"><div class="hist-label">800-849</div><div class="hist-bar-track"><div class="hist-bar" style="width: 33.33%"><span>1</span></div></div><div class="hist-count">1</div></div></section>
+          <section class="chart-card"><h3>Betrail Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>15</span></div></div><div class="hist-count">15</div></div></section>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Leaderboard</h2>
+          <span class="pill">Top combined-score athletes</span>
+        </div>
+        <p class="section-caption">Highest-ranked athletes above the configured threshold, including provider links and matching notes.</p>
+        <div class="table-wrap"><table class="results-table"><thead><tr><th>Rank</th><th>Athlete</th><th>UTMB</th><th>ITRA</th><th>Betrail</th><th>Combined</th><th>UTMB Match</th><th>ITRA Match</th><th>Betrail Match</th><th>UTMB Link</th><th>ITRA Link</th><th>Betrail Link</th><th>Notes</th></tr></thead><tbody><tr><td class="rank-cell">1</td><td class="athlete-cell"><strong>Simone Vigolo</strong></td><td class="score-cell">800.0</td><td class="score-cell">833.0</td><td class="score-cell">79.7</td><td class="score-cell">813.2</td><td class="supporting-cell">Simone VIGOLO</td><td class="supporting-cell">Simone VIGOLO</td><td class="supporting-cell">VIGOLO SIMONE</td><td class="link-cell"><a href="https://utmb.world/runner/2230221.simone.vigolo" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/VIGOLO.Simone/2230221" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/vigolo.simone/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">&mdash;</td></tr><tr><td class="rank-cell">2</td><td class="athlete-cell"><strong>Andrea Zanconato</strong></td><td class="score-cell">796.0</td><td class="score-cell">-</td><td class="score-cell">79.8</td><td class="score-cell">796.0</td><td class="supporting-cell">Andrea ZANCONATO</td><td class="supporting-cell"></td><td class="supporting-cell">ZANCONATO ANDREA</td><td class="link-cell"><a href="https://utmb.world/runner/5451800.andrea.zanconato" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/zanconato.andrea/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">3</td><td class="athlete-cell"><strong>Giacomo Bernardi</strong></td><td class="score-cell">763.0</td><td class="score-cell">799.0</td><td class="score-cell">68.5</td><td class="score-cell">777.4</td><td class="supporting-cell">Giacomo BERNARDI</td><td class="supporting-cell">Giacomo BERNARDI</td><td class="supporting-cell">BERNARDI GIACOMO</td><td class="link-cell"><a href="https://utmb.world/runner/4152066.giacomo.bernardi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/BERNARDI.Giacomo/4152066" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell"><a href="https://www.betrail.run/runner/bernardi.giacomo/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA stale score repo fallback used</td></tr><tr><td class="rank-cell">4</td><td class="athlete-cell"><strong>Andrea Paladin</strong></td><td class="score-cell">775.0</td><td class="score-cell">-</td><td class="score-cell">79.6</td><td class="score-cell">775.0</td><td class="supporting-cell">Andrea PALADIN</td><td class="supporting-cell"></td><td class="supporting-cell">PALADIN ANDREA</td><td class="link-cell"><a href="https://utmb.world/runner/4249759.andrea.paladin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/paladin.andrea/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">5</td><td class="athlete-cell"><strong>Federico Ganassi Spallanzani</strong></td><td class="score-cell">768.0</td><td class="score-cell">-</td><td class="score-cell">73.5</td><td class="score-cell">768.0</td><td class="supporting-cell">Federico GANASSI</td><td class="supporting-cell"></td><td class="supporting-cell">GANASSI SPALLANZANI FEDERICO</td><td class="link-cell"><a href="https://utmb.world/runner/2693289.federico.ganassi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/ganassi.spallanzani.federico/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">6</td><td class="athlete-cell"><strong>Mirko Marchi</strong></td><td class="score-cell">760.0</td><td class="score-cell">-</td><td class="score-cell">74.8</td><td class="score-cell">760.0</td><td class="supporting-cell">Mirko MARCHI</td><td class="supporting-cell"></td><td class="supporting-cell">MARCHI MIRKO</td><td class="link-cell"><a href="https://utmb.world/runner/4008935.mirko.marchi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/marchi.mirko/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">7</td><td class="athlete-cell"><strong>Ion Coban</strong></td><td class="score-cell">753.0</td><td class="score-cell">-</td><td class="score-cell">73.1</td><td class="score-cell">753.0</td><td class="supporting-cell">Ion COBAN</td><td class="supporting-cell"></td><td class="supporting-cell">COBAN ION</td><td class="link-cell"><a href="https://utmb.world/runner/4833268.ion.coban" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/coban.ion/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">8</td><td class="athlete-cell"><strong>Marco Ferrari</strong></td><td class="score-cell">751.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">751.0</td><td class="supporting-cell">Marco FERRARI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/6747215.marco.ferrari" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">9</td><td class="athlete-cell"><strong>Filip Jovic</strong></td><td class="score-cell">749.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">749.0</td><td class="supporting-cell">Filip JOVIC</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4675496.filip.jovic" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">10</td><td class="athlete-cell"><strong>Alberto Ferretto</strong></td><td class="score-cell">742.0</td><td class="score-cell">-</td><td class="score-cell">69.6</td><td class="score-cell">742.0</td><td class="supporting-cell">Alberto FERRETTO</td><td class="supporting-cell"></td><td class="supporting-cell">FERRETTO Alberto</td><td class="link-cell"><a href="https://utmb.world/runner/588263.alberto.ferretto" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/ferretto.alberto/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">11</td><td class="athlete-cell"><strong>Carlo Martinelli</strong></td><td class="score-cell">733.0</td><td class="score-cell">-</td><td class="score-cell">73.0</td><td class="score-cell">733.0</td><td class="supporting-cell">Carlo MARTINELLI</td><td class="supporting-cell"></td><td class="supporting-cell">MARTINELLI CARLO</td><td class="link-cell"><a href="https://utmb.world/runner/1503041.carlo.martinelli" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/martinelli.carlo/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">12</td><td class="athlete-cell"><strong>Stefano Maran</strong></td><td class="score-cell">732.0</td><td class="score-cell">-</td><td class="score-cell">69.0</td><td class="score-cell">732.0</td><td class="supporting-cell">Stefano MARAN</td><td class="supporting-cell"></td><td class="supporting-cell">MARAN Stefano</td><td class="link-cell"><a href="https://utmb.world/runner/588261.stefano.maran" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/maran.stefano/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">13</td><td class="athlete-cell"><strong>Alberto Perobello</strong></td><td class="score-cell">705.0</td><td class="score-cell">766.0</td><td class="score-cell">-</td><td class="score-cell">729.4</td><td class="supporting-cell">Alberto PEROBELLO</td><td class="supporting-cell">Alberto PEROBELLO</td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/7179328.alberto.perobello" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/PEROBELLO.Alberto/5932796" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA stale score repo fallback used</td></tr><tr><td class="rank-cell">14</td><td class="athlete-cell"><strong>Lorenzo Zarantonello</strong></td><td class="score-cell">727.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">727.0</td><td class="supporting-cell">Lorenzo ZARANTONELLO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4227051.lorenzo.zarantonello" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">15</td><td class="athlete-cell"><strong>Luca Nardi</strong></td><td class="score-cell">718.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">718.0</td><td class="supporting-cell">Luca NARDI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4155382.luca.nardi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">16</td><td class="athlete-cell"><strong>Gregor Höllrigl</strong></td><td class="score-cell">711.0</td><td class="score-cell">-</td><td class="score-cell">72.2</td><td class="score-cell">711.0</td><td class="supporting-cell">Gregor HÖLLRIGL</td><td class="supporting-cell"></td><td class="supporting-cell">HÖLLRIGL GREGOR</td><td class="link-cell"><a href="https://utmb.world/runner/524929.gregor.hollrigl" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/hollrigl.gregor/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">17</td><td class="athlete-cell"><strong>Alberto Onelia</strong></td><td class="score-cell">711.0</td><td class="score-cell">-</td><td class="score-cell">66.4</td><td class="score-cell">711.0</td><td class="supporting-cell">Alberto ONELIA</td><td class="supporting-cell"></td><td class="supporting-cell">ONELIA ALBERTO</td><td class="link-cell"><a href="https://utmb.world/runner/3005365.alberto.onelia" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/onelia.alberto/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">18</td><td class="athlete-cell"><strong>Emanuele Nardello</strong></td><td class="score-cell">710.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">710.0</td><td class="supporting-cell">Emanuele NARDELLO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2536875.emanuele.nardello" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">19</td><td class="athlete-cell"><strong>Mattia Guzzonato</strong></td><td class="score-cell">706.0</td><td class="score-cell">-</td><td class="score-cell">66.3</td><td class="score-cell">706.0</td><td class="supporting-cell">Mattia GUZZONATO</td><td class="supporting-cell"></td><td class="supporting-cell">GUZZONATO MATTIA</td><td class="link-cell"><a href="https://utmb.world/runner/5145814.mattia.guzzonato" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/guzzonato.mattia/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">20</td><td class="athlete-cell"><strong>Lorenzo Franzoi</strong></td><td class="score-cell">695.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">695.0</td><td class="supporting-cell">Lorenzo FRANZOI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/8478972.lorenzo.franzoi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">21</td><td class="athlete-cell"><strong>Luca Nada</strong></td><td class="score-cell">686.0</td><td class="score-cell">-</td><td class="score-cell">67.2</td><td class="score-cell">686.0</td><td class="supporting-cell">Luca NADA</td><td class="supporting-cell"></td><td class="supporting-cell">NADA LUCA</td><td class="link-cell"><a href="https://utmb.world/runner/4515986.luca.nada" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/nada.luca/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">22</td><td class="athlete-cell"><strong>Marco Casagrande</strong></td><td class="score-cell">684.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">684.0</td><td class="supporting-cell">Marco CASAGRANDE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2624835.marco.casagrande" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">23</td><td class="athlete-cell"><strong>Samuele Mioni</strong></td><td class="score-cell">684.0</td><td class="score-cell">-</td><td class="score-cell">66.5</td><td class="score-cell">684.0</td><td class="supporting-cell">Samuele MIONI</td><td class="supporting-cell"></td><td class="supporting-cell">MIONI SAMUELE</td><td class="link-cell"><a href="https://utmb.world/runner/4219652.samuele.mioni" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/mioni.samuele/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">24</td><td class="athlete-cell"><strong>Federico Borghi</strong></td><td class="score-cell">672.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">672.0</td><td class="supporting-cell">Federico BORGHI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/7154468.federico.borghi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">25</td><td class="athlete-cell"><strong>Veronica Maran</strong></td><td class="score-cell">669.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">669.0</td><td class="supporting-cell">Veronica MARAN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1313437.veronica.maran" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">26</td><td class="athlete-cell"><strong>Michel Santagiuliana</strong></td><td class="score-cell">667.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">667.0</td><td class="supporting-cell">Michel SANTAGIULIANA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/5701096.michel.santagiuliana" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">27</td><td class="athlete-cell"><strong>Marco Gattere</strong></td><td class="score-cell">663.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">663.0</td><td class="supporting-cell">Marco GATTERE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4459326.marco.gattere" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">28</td><td class="athlete-cell"><strong>Andrea Corradin</strong></td><td class="score-cell">661.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">661.0</td><td class="supporting-cell">Andrea CORRADIN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/7716703.andrea.corradin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">29</td><td class="athlete-cell"><strong>Marco Beltrame</strong></td><td class="score-cell">656.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">656.0</td><td class="supporting-cell">Marco BELTRAME</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/3151157.marco.beltrame" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">30</td><td class="athlete-cell"><strong>Klodian Jaho</strong></td><td class="score-cell">655.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">655.0</td><td class="supporting-cell">Klodian JAHO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4910576.klodian.jaho" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">31</td><td class="athlete-cell"><strong>Luca Cervato</strong></td><td class="score-cell">655.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">655.0</td><td class="supporting-cell">Luca CERVATO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2212073.luca.cervato" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">32</td><td class="athlete-cell"><strong>Nicola Nardi</strong></td><td class="score-cell">652.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">652.0</td><td class="supporting-cell">Nicola NARDI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/445894.nicola.nardi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">33</td><td class="athlete-cell"><strong>Ivan Cao</strong></td><td class="score-cell">606.0</td><td class="score-cell">660.0</td><td class="score-cell">-</td><td class="score-cell">627.6</td><td class="supporting-cell">Ivan CAO</td><td class="supporting-cell">Ivan CAO</td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/20986.ivan.cao" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell"><a href="https://itra.run/RunnerSpace/CAO.Ivan/20986" target="_blank" rel="noopener noreferrer">ITRA</a></td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA stale score repo fallback used</td></tr></tbody></table></div>
+      </section>
+
+      <section class="panel"><div class="panel-head"><h2>Unmatched Athletes</h2></div><p class="section-caption">9 participant(s) did not match UTMB, ITRA, or Betrail.</p><div class="table-wrap compact-table"><table class="results-table"><thead><tr><th>Athlete</th></tr></thead><tbody><tr><td>Agnese Grotto</td></tr><tr><td>Alison Fraccaro</td></tr><tr><td>Bart Wijnands</td></tr><tr><td>Chiara Pellizzaro</td></tr><tr><td>Daniele Danzo</td></tr><tr><td>L M</td></tr><tr><td>Pierangelo Grotto</td></tr><tr><td>Pietro Saccardo</td></tr><tr><td>Simone Novarese</td></tr></tbody></table></div></section>
+    </section>
+    
+  </main>
+  
+</body>
+</html>

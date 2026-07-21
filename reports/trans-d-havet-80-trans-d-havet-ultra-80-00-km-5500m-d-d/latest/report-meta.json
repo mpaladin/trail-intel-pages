@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "trans d'havet 80",
+  "generated_at": "2026-07-21T13:18:57.407961+00:00",
+  "participants_count": 289,
+  "rows_evaluated": 289,
+  "qualified_count": 33,
+  "strategy": "participant-first",
+  "race_url": "https://www.wedosport.net/lista-iscritti/trans-d-havet-2026",
+  "competition_name": "Trans D'Havet Ultra 80.00 KM, 5500m D+/D-",
+  "score_threshold": 650.0,
+  "published_at": "2026-07-21T13:19:03.369848+00:00",
+  "race_slug": "trans-d-havet-80-trans-d-havet-ultra-80-00-km-5500m-d-d",
+  "race_name": "trans d'havet 80",
+  "report_path": "reports/trans-d-havet-80-trans-d-havet-ultra-80-00-km-5500m-d-d/latest/index.html",
+  "csv_path": "reports/trans-d-havet-80-trans-d-havet-ultra-80-00-km-5500m-d-d/latest/report.csv",
+  "json_path": "reports/trans-d-havet-80-trans-d-havet-ultra-80-00-km-5500m-d-d/latest/report.json"
+}
