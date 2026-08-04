@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "TOR 450",
+  "generated_at": "2026-08-04T19:50:46.563073+00:00",
+  "participants_count": 213,
+  "rows_evaluated": 213,
+  "qualified_count": 16,
+  "strategy": "participant-first",
+  "race_url": "https://live.torxtrail.com/rankings/json/iscritti_1666.json",
+  "competition_name": "",
+  "score_threshold": 680.0,
+  "published_at": "2026-08-04T19:50:52.919499+00:00",
+  "race_slug": "tor-450",
+  "race_name": "TOR 450",
+  "report_path": "reports/tor-450/latest/index.html",
+  "csv_path": "reports/tor-450/latest/report.csv",
+  "json_path": "reports/tor-450/latest/report.json"
+}
