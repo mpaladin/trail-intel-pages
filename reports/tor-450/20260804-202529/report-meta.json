@@ -12,7 +12,7 @@
   "published_at": "2026-08-04T20:25:29.958752+00:00",
   "race_slug": "tor-450",
   "race_name": "TOR 450",
-  "report_path": "reports/tor-450/latest/index.html",
-  "csv_path": "reports/tor-450/latest/report.csv",
-  "json_path": "reports/tor-450/latest/report.json"
+  "report_path": "reports/tor-450/20260804-202529/index.html",
+  "csv_path": "reports/tor-450/20260804-202529/report.csv",
+  "json_path": "reports/tor-450/20260804-202529/report.json"
 }
