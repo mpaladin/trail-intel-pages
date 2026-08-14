@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwissPeaks odissey</title>
+  <style>
+    
+    :root {
+      color-scheme: light;
+      --page-bg: #f3ece2;
+      --panel: rgba(255, 252, 247, 0.92);
+      --panel-strong: #fffdf9;
+      --panel-soft: #f8f2ea;
+      --text: #1f1c18;
+      --muted: #6a6056;
+      --line: rgba(117, 98, 74, 0.20);
+      --line-strong: rgba(117, 98, 74, 0.32);
+      --shadow: 0 24px 64px rgba(35, 24, 9, 0.10);
+      --accent: #0b6b5f;
+      --accent-strong: #084f46;
+      --accent-soft: rgba(11, 107, 95, 0.16);
+      --hero-start: rgba(11, 107, 95, 0.14);
+      --hero-end: rgba(155, 101, 40, 0.16);
+      --pill-bg: rgba(11, 107, 95, 0.12);
+      --pill-text: #084f46;
+      --warning-bg: #fff3d4;
+      --warning-text: #734700;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Avenir Next", "Segoe UI", sans-serif;
+      font-family: var(--body-font);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 28%),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 32%),
+        radial-gradient(circle at top, #fbf7f1 0%, var(--page-bg) 54%, #e7dccb 100%);
+    }
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 22px 18px 56px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .nav-brand {
+      font-family: var(--heading-font);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .nav-link.is-active {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 32px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, var(--hero-start), var(--hero-end)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -48px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 72%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: var(--heading-font);
+      letter-spacing: -0.01em;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 14ch;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 0.96;
+    }
+    .hero-lead {
+      margin: 14px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.6;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 18px;
+    }
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.60);
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--panel-strong);
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+    .action-link:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+    .action-link.primary {
+      color: #ffffff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .metric-card {
+      min-height: 122px;
+      padding: 16px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 10px;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    .metric-subvalue {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+    .section-stack {
+      display: grid;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .panel {
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px 16px;
+      margin-bottom: 14px;
+    }
+    .panel h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2.05rem);
+      line-height: 1.02;
+    }
+    .section-caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .collection-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .collection-card {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      line-height: 1.04;
+    }
+    .card-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .card-meta {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .warning {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(115, 71, 0, 0.20);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      line-height: 1.55;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .chart-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .chart-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.16rem;
+    }
+    .hist-row {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr) 52px;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .hist-label,
+    .hist-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-track {
+      min-height: 28px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--panel-soft);
+    }
+    .hist-bar {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+    .hist-bar-empty {
+      background: transparent;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+    .results-table th,
+    .results-table td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(117, 98, 74, 0.14);
+      text-align: left;
+      vertical-align: top;
+    }
+    .results-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #fbf6ef;
+      color: var(--muted);
+      font-size: 0.79rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .results-table tbody tr:nth-child(even) {
+      background: rgba(248, 242, 234, 0.65);
+    }
+    .rank-cell,
+    .score-cell {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .athlete-cell strong {
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .supporting-cell,
+    .link-cell,
+    .notes-cell {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .notes-cell {
+      min-width: 180px;
+    }
+    .compact-table {
+      max-width: 480px;
+    }
+    .chart-frame {
+      padding: 14px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+    .chart-frame img {
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+    }
+    .empty-state {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px dashed var(--line-strong);
+      background: rgba(255, 255, 255, 0.45);
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .page { padding: 16px 12px 34px; }
+      .site-nav { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 26px 22px; }
+      .panel { padding: 20px; }
+      .card-top { flex-direction: column; }
+      .hist-row { grid-template-columns: 72px minmax(0, 1fr) 42px; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { max-width: none; }
+      .meta-chip { white-space: normal; }
+      .results-table th,
+      .results-table td { padding: 9px 10px; }
+    }
+    
+  </style>
+  
+</head>
+<body>
+  <main class="page">
+    <nav class="site-nav" aria-label="Primary"><a class="nav-brand" href="../../../index.html">TrailIntel Pages</a><div class="nav-links"><a class="nav-link" href="../../../index.html">Home</a><a class="nav-link is-active" href="../../index.html" aria-current="page">Race Reports</a><a class="nav-link" href="../../../forecasts/index.html">Forecasts</a></div></nav>
+    
+    <section class="hero">
+      <p class="eyebrow">Race Report</p>
+      <h1>SwissPeaks odissey</h1>
+      <p class="hero-lead">Screened 93 entrants and surfaced 74 athletes above the 400 threshold.</p>
+      <div class="meta-row"><span class="meta-chip">Published Aug 14, 2026 at 08:06 UTC</span><span class="meta-chip">Race source <a href="https://my4.raceresult.com/371980/participants/list?key=8cdd848e0136f3d299ffb21588766284&amp;listname=Participants%7CParticipants&amp;page=participants&amp;contest=0&amp;r=all&amp;l=0&amp;fav=&amp;openedGroups=%7B%7D&amp;term=&amp;f=Odyssey" target="_blank" rel="noopener noreferrer">open source page</a></span></div>
+      <div class="action-row"><a class="action-link primary" href="report.csv">Download CSV</a><a class="action-link secondary" href="report.json">Download JSON</a></div>
+      <div class="metric-grid"><div class="metric-card"><div class="metric-label">Athletes screened</div><div class="metric-value">93</div><div class="metric-subvalue">93 rows evaluated</div></div><div class="metric-card"><div class="metric-label">Above threshold</div><div class="metric-value">74</div><div class="metric-subvalue">Leaderboard entries surfaced</div></div><div class="metric-card"><div class="metric-label">Score threshold</div><div class="metric-value">400</div><div class="metric-subvalue">Combined-score cutoff</div></div><div class="metric-card"><div class="metric-label">Ranking strategy</div><div class="metric-value">Participant First</div><div class="metric-subvalue">Ordering rule used for the report</div></div><div class="metric-card"><div class="metric-label">Coverage</div><div class="metric-value">91</div><div class="metric-subvalue">Participants with at least one provider score</div></div></div>
+      
+    </section>
+
+    <section class="section-stack">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Field Snapshot</h2>
+          <span class="pill">Coverage across UTMB, ITRA, and Betrail</span>
+        </div>
+        <p class="section-caption">Quick coverage stats plus score distributions for the full participant field.</p>
+        <div class="metric-grid"><div class="metric-card"><div class="metric-label">UTMB matches</div><div class="metric-value">91</div><div class="metric-subvalue">Athletes with a UTMB profile or index</div></div><div class="metric-card"><div class="metric-label">ITRA matches</div><div class="metric-value">0</div><div class="metric-subvalue">Athletes with an ITRA profile or score</div></div><div class="metric-card"><div class="metric-label">Betrail matches</div><div class="metric-value">2</div><div class="metric-subvalue">Athletes with a Betrail profile or score</div></div><div class="metric-card"><div class="metric-label">Any provider</div><div class="metric-value">91</div><div class="metric-subvalue">Participants matched at least once</div></div><div class="metric-card"><div class="metric-label">Unmatched</div><div class="metric-value">2</div><div class="metric-subvalue">Participants with no provider match</div></div></div>
+        <div class="charts">
+          <section class="chart-card"><h3>UTMB Index</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar" style="width: 52.38%"><span>11</span></div></div><div class="hist-count">11</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">100-149</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">150-199</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">200-249</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">250-299</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">300-349</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">350-399</div><div class="hist-bar-track"><div class="hist-bar" style="width: 14.29%"><span>3</span></div></div><div class="hist-count">3</div></div><div class="hist-row"><div class="hist-label">400-449</div><div class="hist-bar-track"><div class="hist-bar" style="width: 42.86%"><span>9</span></div></div><div class="hist-count">9</div></div><div class="hist-row"><div class="hist-label">450-499</div><div class="hist-bar-track"><div class="hist-bar" style="width: 76.19%"><span>16</span></div></div><div class="hist-count">16</div></div><div class="hist-row"><div class="hist-label">500-549</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>21</span></div></div><div class="hist-count">21</div></div><div class="hist-row"><div class="hist-label">550-599</div><div class="hist-bar-track"><div class="hist-bar" style="width: 52.38%"><span>11</span></div></div><div class="hist-count">11</div></div><div class="hist-row"><div class="hist-label">600-649</div><div class="hist-bar-track"><div class="hist-bar" style="width: 47.62%"><span>10</span></div></div><div class="hist-count">10</div></div><div class="hist-row"><div class="hist-label">650-699</div><div class="hist-bar-track"><div class="hist-bar" style="width: 23.81%"><span>5</span></div></div><div class="hist-count">5</div></div><div class="hist-row"><div class="hist-label">700-749</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div><div class="hist-row"><div class="hist-label">750-799</div><div class="hist-bar-track"><div class="hist-bar" style="width: 6.00%"><span>1</span></div></div><div class="hist-count">1</div></div></section>
+          <section class="chart-card"><h3>ITRA Score</h3><div class="empty-state">No scores available.</div></section>
+          <section class="chart-card"><h3>Betrail Score</h3><div class="hist-row"><div class="hist-label">0-49</div><div class="hist-bar-track"><div class="hist-bar hist-bar-empty"></div></div><div class="hist-count">0</div></div><div class="hist-row"><div class="hist-label">50-99</div><div class="hist-bar-track"><div class="hist-bar" style="width: 100.00%"><span>2</span></div></div><div class="hist-count">2</div></div></section>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Leaderboard</h2>
+          <span class="pill">Top combined-score athletes</span>
+        </div>
+        <p class="section-caption">Highest-ranked athletes above the configured threshold, including provider links and matching notes.</p>
+        <div class="table-wrap"><table class="results-table"><thead><tr><th>Rank</th><th>Athlete</th><th>UTMB</th><th>ITRA</th><th>Betrail</th><th>Combined</th><th>UTMB Match</th><th>ITRA Match</th><th>Betrail Match</th><th>UTMB Link</th><th>ITRA Link</th><th>Betrail Link</th><th>Notes</th></tr></thead><tbody><tr><td class="rank-cell">1</td><td class="athlete-cell"><strong>MIGNANO Marco</strong></td><td class="score-cell">764.0</td><td class="score-cell">-</td><td class="score-cell">73.8</td><td class="score-cell">764.0</td><td class="supporting-cell">Marco MIGNANO</td><td class="supporting-cell"></td><td class="supporting-cell">MIGNANO MARCO</td><td class="link-cell"><a href="https://utmb.world/runner/4475678.marco.mignano" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/mignano.marco/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">2</td><td class="athlete-cell"><strong>CHRISTIN-BENOIT Julien</strong></td><td class="score-cell">705.0</td><td class="score-cell">-</td><td class="score-cell">69.7</td><td class="score-cell">705.0</td><td class="supporting-cell">Julien CHRISTIN-BENOIT</td><td class="supporting-cell"></td><td class="supporting-cell">CHRISTIN-BENOIT JULIEN</td><td class="link-cell"><a href="https://utmb.world/runner/626238.julien.christinbenoit" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell"><a href="https://www.betrail.run/runner/christin-benoit.julien/overview" target="_blank" rel="noopener noreferrer">Betrail</a></td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">3</td><td class="athlete-cell"><strong>WANG Xiaolin</strong></td><td class="score-cell">682.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">682.0</td><td class="supporting-cell">Xiaolin WANG</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1731685.xiaolin.wang" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">4</td><td class="athlete-cell"><strong>SANTIN Lorenzo Franco</strong></td><td class="score-cell">672.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">672.0</td><td class="supporting-cell">Lorenzo Franco SANTIN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/5571908.lorenzofranco.santin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">5</td><td class="athlete-cell"><strong>LUCCIONI Laurent</strong></td><td class="score-cell">657.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">657.0</td><td class="supporting-cell">Laurent LUCCIONI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/423006.laurent.luccioni" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">6</td><td class="athlete-cell"><strong>GERVAIX François</strong></td><td class="score-cell">656.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">656.0</td><td class="supporting-cell">François GERVAIX</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/100042.francois.gervaix" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">7</td><td class="athlete-cell"><strong>BUNJUAR Supat</strong></td><td class="score-cell">653.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">653.0</td><td class="supporting-cell">Supat BUNJUAR</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/766173.supat.bunjuar" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">8</td><td class="athlete-cell"><strong>THÉVOZ Florian</strong></td><td class="score-cell">644.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">644.0</td><td class="supporting-cell">Florian THEVOZ</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/19879.florian.thevoz" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">9</td><td class="athlete-cell"><strong>POLLA Aristide</strong></td><td class="score-cell">643.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">643.0</td><td class="supporting-cell">Aristide Thomas POLLA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4465698.aristidethomas.polla" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">10</td><td class="athlete-cell"><strong>ZIMMERMANN Denise</strong></td><td class="score-cell">642.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">642.0</td><td class="supporting-cell">Denise ZIMMERMANN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/12641.denise.zimmermann" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">11</td><td class="athlete-cell"><strong>BODNAR Dariia</strong></td><td class="score-cell">635.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">635.0</td><td class="supporting-cell">Dariia BODNAR</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1337161.dariia.bodnar" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">12</td><td class="athlete-cell"><strong>LECLERQ Mickaël</strong></td><td class="score-cell">634.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">634.0</td><td class="supporting-cell">Mickael LECLERQ</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/584244.mickael.leclerq" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">13</td><td class="athlete-cell"><strong>DURY Gerald</strong></td><td class="score-cell">634.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">634.0</td><td class="supporting-cell">Gerald DURY</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2388175.gerald.dury" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">14</td><td class="athlete-cell"><strong>CORDEIRO Arthur</strong></td><td class="score-cell">629.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">629.0</td><td class="supporting-cell">Arthur CORDEIRO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/655118.arthur.cordeiro" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">15</td><td class="athlete-cell"><strong>KUCHIMI Taro</strong></td><td class="score-cell">625.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">625.0</td><td class="supporting-cell">Taro KUCHIMI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/474491.taro.kuchimi" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">16</td><td class="athlete-cell"><strong>KHALID Sam</strong></td><td class="score-cell">617.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">617.0</td><td class="supporting-cell">Sam KHALID</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/5625937.sam.khalid" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">17</td><td class="athlete-cell"><strong>BEKKER Ancel</strong></td><td class="score-cell">602.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">602.0</td><td class="supporting-cell">Ancel BEKKER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4599680.ancel.bekker" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">18</td><td class="athlete-cell"><strong>COCHET Ludovic</strong></td><td class="score-cell">597.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">597.0</td><td class="supporting-cell">Ludovic COCHET</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/324397.ludovic.cochet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">19</td><td class="athlete-cell"><strong>WALSH Philip</strong></td><td class="score-cell">593.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">593.0</td><td class="supporting-cell">Philip WALSH</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/711635.philip.walsh" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">20</td><td class="athlete-cell"><strong>ÁLVARO Soriano Clariana</strong></td><td class="score-cell">587.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">587.0</td><td class="supporting-cell">Alvaro SORIANO CLARIANA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/154299.alvaro.sorianoclariana" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">21</td><td class="athlete-cell"><strong>VANHAECKE Nicolas</strong></td><td class="score-cell">583.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">583.0</td><td class="supporting-cell">Nicolas VANHAECKE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/5766162.nicolas.vanhaecke" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">22</td><td class="athlete-cell"><strong>FEVET Cyril</strong></td><td class="score-cell">580.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">580.0</td><td class="supporting-cell">Cyril FEVET</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/24981.cyril.fevet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">23</td><td class="athlete-cell"><strong>LIU Shangpeng</strong></td><td class="score-cell">569.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">569.0</td><td class="supporting-cell">Shangpeng LIU</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/5158578.shangpeng.liu" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">24</td><td class="athlete-cell"><strong>MANDEL Etienne</strong></td><td class="score-cell">568.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">568.0</td><td class="supporting-cell">Etienne MANDEL</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/239703.etienne.mandel" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">25</td><td class="athlete-cell"><strong>DISPAS Céline</strong></td><td class="score-cell">565.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">565.0</td><td class="supporting-cell">Céline DISPAS</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1157707.celine.dispas" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">26</td><td class="athlete-cell"><strong>KOLBEINSSON Sigurdur Oli</strong></td><td class="score-cell">553.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">553.0</td><td class="supporting-cell">Sigurdur Oli KOLBEINSSON</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2312819.sigurduroli.kolbeinsson" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">27</td><td class="athlete-cell"><strong>LI Mui Chun</strong></td><td class="score-cell">551.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">551.0</td><td class="supporting-cell">Mui Chun LI</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1213941.muichun.li" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">28</td><td class="athlete-cell"><strong>HJELMÉR Magnus</strong></td><td class="score-cell">550.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">550.0</td><td class="supporting-cell">Magnus HJELMER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/19155.magnus.hjelmer" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">29</td><td class="athlete-cell"><strong>CHALVET Laurent</strong></td><td class="score-cell">549.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">549.0</td><td class="supporting-cell">Laurent CHALVET</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/498761.laurent.chalvet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">30</td><td class="athlete-cell"><strong>MOOG Paul</strong></td><td class="score-cell">548.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">548.0</td><td class="supporting-cell">Paul MOOG</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/83.paul.moog" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">31</td><td class="athlete-cell"><strong>PLANTEFEVE Gaëtan</strong></td><td class="score-cell">547.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">547.0</td><td class="supporting-cell">Gaëtan PLANTEFEVE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1000.gaetan.plantefeve" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">32</td><td class="athlete-cell"><strong>GIGOU Nicolas</strong></td><td class="score-cell">544.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">544.0</td><td class="supporting-cell">Nicolas GIGOU</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/725598.nicolas.gigou" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">33</td><td class="athlete-cell"><strong>LORIDAN Jeremy</strong></td><td class="score-cell">537.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">537.0</td><td class="supporting-cell">Jeremy LORIDAN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/656143.jeremy.loridan" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">34</td><td class="athlete-cell"><strong>CIANTRA Maurizio</strong></td><td class="score-cell">536.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">536.0</td><td class="supporting-cell">Maurizio CIANTRA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/21294.maurizio.ciantra" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">35</td><td class="athlete-cell"><strong>PUGIN Roland</strong></td><td class="score-cell">529.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">529.0</td><td class="supporting-cell">Roland PUGIN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/144330.roland.pugin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">36</td><td class="athlete-cell"><strong>PARK Sukhee</strong></td><td class="score-cell">529.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">529.0</td><td class="supporting-cell">Sukhee PARK</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1135191.sukhee.park" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">37</td><td class="athlete-cell"><strong>ORTIBUS Maaike</strong></td><td class="score-cell">528.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">528.0</td><td class="supporting-cell">Maaike ORTIBUS</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2345427.maaike.ortibus" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">38</td><td class="athlete-cell"><strong>RICKENBACHER Mario</strong></td><td class="score-cell">528.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">528.0</td><td class="supporting-cell">Mario RICKENBACHER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/3298985.mario.rickenbacher" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">39</td><td class="athlete-cell"><strong>BÜRGLER Roman</strong></td><td class="score-cell">526.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">526.0</td><td class="supporting-cell">Roman BÜRGLER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/288227.roman.burgler" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">40</td><td class="athlete-cell"><strong>MORTIMER Peter</strong></td><td class="score-cell">523.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">523.0</td><td class="supporting-cell">Peter MORTIMER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/537589.peter.mortimer" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">41</td><td class="athlete-cell"><strong>MAJEK Fabrice</strong></td><td class="score-cell">523.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">523.0</td><td class="supporting-cell">Fabrice MAJEK</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/218165.fabrice.majek" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">42</td><td class="athlete-cell"><strong>BELIN Christophe</strong></td><td class="score-cell">521.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">521.0</td><td class="supporting-cell">Christophe BELIN</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/569227.christophe.belin" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">43</td><td class="athlete-cell"><strong>MILEWICZ Daniel</strong></td><td class="score-cell">519.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">519.0</td><td class="supporting-cell">Daniel MILEWICZ</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/323956.daniel.milewicz" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">44</td><td class="athlete-cell"><strong>RAUCY Emmanuel</strong></td><td class="score-cell">514.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">514.0</td><td class="supporting-cell">Emmanuel RAUCY</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/7652060.emmanuel.raucy" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">45</td><td class="athlete-cell"><strong>KERVAREC Simon</strong></td><td class="score-cell">513.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">513.0</td><td class="supporting-cell">Simon KERVAREC</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/3695421.simon.kervarec" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">46</td><td class="athlete-cell"><strong>DOSSENA Paolo</strong></td><td class="score-cell">513.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">513.0</td><td class="supporting-cell">Paolo DOSSENA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/21293.paolo.dossena" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">47</td><td class="athlete-cell"><strong>DEROUCH Daphné</strong></td><td class="score-cell">504.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">504.0</td><td class="supporting-cell">Daphne DEROUCH</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/301355.daphne.derouch" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token.</td></tr><tr><td class="rank-cell">48</td><td class="athlete-cell"><strong>JULISSON Gunnar</strong></td><td class="score-cell">504.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">504.0</td><td class="supporting-cell">Gunnar JULISSON</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/150955.gunnar.julisson" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">49</td><td class="athlete-cell"><strong>OBER Pierrot</strong></td><td class="score-cell">500.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">500.0</td><td class="supporting-cell">Pierrot OBER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/451910.pierrot.ober" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">50</td><td class="athlete-cell"><strong>THIERRY Michel</strong></td><td class="score-cell">499.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">499.0</td><td class="supporting-cell">Thierry MICHEL</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4994188.thierry.michel" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">51</td><td class="athlete-cell"><strong>LALLEMAND Marc</strong></td><td class="score-cell">492.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">492.0</td><td class="supporting-cell">Marc LALLEMAND</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/3707621.marc.lallemand" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">52</td><td class="athlete-cell"><strong>RIGARD Mickaël</strong></td><td class="score-cell">488.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">488.0</td><td class="supporting-cell">Mickael RIGARD</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/525549.mickael.rigard" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">53</td><td class="athlete-cell"><strong>CURTIL Raphael</strong></td><td class="score-cell">488.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">488.0</td><td class="supporting-cell">Raphael CURTIL</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/313624.raphael.curtil" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">54</td><td class="athlete-cell"><strong>CASTELLINO Alberto</strong></td><td class="score-cell">485.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">485.0</td><td class="supporting-cell">Alberto CASTELLINO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/59084.alberto.castellino" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">55</td><td class="athlete-cell"><strong>SIANTI Candra</strong></td><td class="score-cell">484.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">484.0</td><td class="supporting-cell">Sianti CANDRA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/3047343.sianti.candra" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">56</td><td class="athlete-cell"><strong>ROERIG Hans-Martin</strong></td><td class="score-cell">475.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">475.0</td><td class="supporting-cell">Hans-Martin ROERIG</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1479243.hansmartin.roerig" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">57</td><td class="athlete-cell"><strong>HORIOT Stephane</strong></td><td class="score-cell">473.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">473.0</td><td class="supporting-cell">Stéphane HORIOT</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/592195.stephane.horiot" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">58</td><td class="athlete-cell"><strong>PELLETIER Line</strong></td><td class="score-cell">470.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">470.0</td><td class="supporting-cell">Line PELLETIER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4204856.line.pelletier" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">59</td><td class="athlete-cell"><strong>ASSASSA Yann Joel</strong></td><td class="score-cell">468.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">468.0</td><td class="supporting-cell">Yann Joel ASSASSA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/1522581.yannjoel.assassa" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">60</td><td class="athlete-cell"><strong>FERRERO Jerome</strong></td><td class="score-cell">460.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">460.0</td><td class="supporting-cell">Jerome FERRERO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2163013.jerome.ferrero" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">61</td><td class="athlete-cell"><strong>CALVO REQUENA Albert</strong></td><td class="score-cell">457.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">457.0</td><td class="supporting-cell">Albert CALVO-REQUENA</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/274069.albert.calvorequena" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">62</td><td class="athlete-cell"><strong>COMPAÑ OLMO Jose Manuel</strong></td><td class="score-cell">455.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">455.0</td><td class="supporting-cell">Jose-Manuel COMPAN-OLMO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/677988.josemanuel.companolmo" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">63</td><td class="athlete-cell"><strong>RONDARD Gregory</strong></td><td class="score-cell">454.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">454.0</td><td class="supporting-cell">Gregory RONDARD</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/43829.gregory.rondard" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">64</td><td class="athlete-cell"><strong>BARRETTE Xavier</strong></td><td class="score-cell">454.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">454.0</td><td class="supporting-cell">Xavier BARRETTE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/3043749.xavier.barrette" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">65</td><td class="athlete-cell"><strong>MOROSO Jean-François</strong></td><td class="score-cell">453.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">453.0</td><td class="supporting-cell">Jean-François MOROSO</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/2024923.jeanfrancois.moroso" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">66</td><td class="athlete-cell"><strong>ROHMER Laurent</strong></td><td class="score-cell">439.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">439.0</td><td class="supporting-cell">Laurent ROHMER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/509916.laurent.rohmer" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">67</td><td class="athlete-cell"><strong>VINCENDET Jean-Baptiste</strong></td><td class="score-cell">439.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">439.0</td><td class="supporting-cell">Jean Baptiste VINCENDET</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/499212.jeanbaptiste.vincendet" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">68</td><td class="athlete-cell"><strong>HORNYAK Valéric</strong></td><td class="score-cell">437.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">437.0</td><td class="supporting-cell">Valeric HORNYAK</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/27564.valeric.hornyak" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">69</td><td class="athlete-cell"><strong>RENIERE Aude</strong></td><td class="score-cell">433.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">433.0</td><td class="supporting-cell">Aude RENIERE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4310478.aude.reniere" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">70</td><td class="athlete-cell"><strong>BOYDENS Wim</strong></td><td class="score-cell">433.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">433.0</td><td class="supporting-cell">Wim BOYDENS</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/78694.wim.boydens" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">71</td><td class="athlete-cell"><strong>POUEY Guillaume</strong></td><td class="score-cell">413.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">413.0</td><td class="supporting-cell">Guillaume POUEY</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/297438.guillaume.pouey" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">72</td><td class="athlete-cell"><strong>DARIDE Grégory</strong></td><td class="score-cell">405.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">405.0</td><td class="supporting-cell">Grégory DARIDE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/883473.gregory.daride" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">73</td><td class="athlete-cell"><strong>BANGERTER Urs</strong></td><td class="score-cell">405.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">405.0</td><td class="supporting-cell">Urs BANGERTER</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/4194454.urs.bangerter" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr><tr><td class="rank-cell">74</td><td class="athlete-cell"><strong>DEBREE Laurent</strong></td><td class="score-cell">405.0</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">405.0</td><td class="supporting-cell">Laurent DEBREE</td><td class="supporting-cell"></td><td class="supporting-cell"></td><td class="link-cell"><a href="https://utmb.world/runner/199332.laurent.debree" target="_blank" rel="noopener noreferrer">UTMB</a></td><td class="link-cell">&mdash;</td><td class="link-cell">&mdash;</td><td class="notes-cell">ITRA unavailable: Could not obtain ITRA CSRF token. (stopped after 8 consecutive failures)</td></tr></tbody></table></div>
+      </section>
+
+      <section class="panel"><div class="panel-head"><h2>Unmatched Athletes</h2></div><p class="section-caption">2 participant(s) did not match UTMB, ITRA, or Betrail.</p><div class="table-wrap compact-table"><table class="results-table"><thead><tr><th>Athlete</th></tr></thead><tbody><tr><td>DO Duc</td></tr><tr><td>SELLEM Oz</td></tr></tbody></table></div></section>
+    </section>
+    
+  </main>
+  
+</body>
+</html>

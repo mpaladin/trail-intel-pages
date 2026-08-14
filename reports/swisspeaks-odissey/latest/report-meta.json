@@ -1,0 +1,18 @@
+{
+  "report_kind": "race",
+  "title": "SwissPeaks odissey",
+  "generated_at": "2026-08-14T08:06:09.148179+00:00",
+  "participants_count": 93,
+  "rows_evaluated": 93,
+  "qualified_count": 74,
+  "strategy": "participant-first",
+  "race_url": "https://my4.raceresult.com/371980/participants/list?key=8cdd848e0136f3d299ffb21588766284&listname=Participants%7CParticipants&page=participants&contest=0&r=all&l=0&fav=&openedGroups=%7B%7D&term=&f=Odyssey",
+  "competition_name": "",
+  "score_threshold": 400.0,
+  "published_at": "2026-08-14T08:06:13.210301+00:00",
+  "race_slug": "swisspeaks-odissey",
+  "race_name": "SwissPeaks odissey",
+  "report_path": "reports/swisspeaks-odissey/latest/index.html",
+  "csv_path": "reports/swisspeaks-odissey/latest/report.csv",
+  "json_path": "reports/swisspeaks-odissey/latest/report.json"
+}
